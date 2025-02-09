@@ -4,6 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// ✅ Tailwind CSS を CDN で使用
+const script = document.createElement("script");
+script.src = "https://cdn.tailwindcss.com";
+document.head.appendChild(script);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
