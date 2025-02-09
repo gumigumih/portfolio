@@ -8,6 +8,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 🔥 これを追加（書き込み権限を付与）
 
     steps:
       - name: Checkout repository
