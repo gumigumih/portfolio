@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from "react";
 import CryptoJS from "crypto-js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -5,14 +6,18 @@ import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
 
 const PASSWORD_HASH = process.env.REACT_APP_PASSWORD_HASH;
 
-export function Login({ onAuthenticate }) {
+type LoginProps = {
+  onAuthenticate: (password: string) => void;
+};
+
+export function Login({ onAuthenticate }: LoginProps) {
   const [input, setInput] = useState("");
   const [error, setError] = useState("");
 
   const handleLogin = () => {
     const hashedInput = CryptoJS.SHA256(input).toString();
     if (hashedInput === PASSWORD_HASH) {
-      onAuthenticate();
+      onAuthenticate(input);
       setError("");
     } else {
       setError("パスワードが違います。もう一度お試しください。");

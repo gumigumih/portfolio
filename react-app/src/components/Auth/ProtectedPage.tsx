@@ -1,19 +1,20 @@
+import React from 'react';
 import { useRef } from "react";
 import useScrollSnap from "react-use-scroll-snap";
 import mainvisual from "../../assets/images/mainvisual@2x.png";
 
 export function ProtectedPage() {
-  const containerRef = useRef(null);
-  useScrollSnap({ ref: containerRef, duration: 300, delay: 100 });
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  useScrollSnap({ ref: containerRef as React.MutableRefObject<HTMLDivElement>, duration: 300 });
 
   return (
     <div ref={containerRef} className="w-screen h-screen overflow-y-scroll snap-y snap-mandatory">
       <div className="max-w-screen-xl w-full mx-auto">
 
         {/* セクション 1 */}
-        <div className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center bg-gray-100 relative">
+        <div className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-end bg-gray-100 relative">
           <img src={mainvisual} alt="MainVisual" className="absolute h-full left-0 bottom-0" />
-          <h1 className="text-2xl font-bold text-gray-800 montserrat-500">WADA MEGUMI</h1>
+          <h1 className="text-4xl font-bold text-gray-800 montserrat-500">WADA MEGUMI</h1>
           <p className="mt-4 text-gray-600">ここに保護されたコンテンツを表示します。</p>
         </div>
 
