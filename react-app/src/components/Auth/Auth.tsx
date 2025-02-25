@@ -7,7 +7,7 @@ export default function Auth() {
   const [authenticated, setAuthenticated] = useState(false);
 
   return (
-    <div className="flex h-screen items-center justify-center bg-gradient-to-br from-[#29b7e3]/60 via-[#e0609c]/60 to-[#e9c96b]/60 bg-fixed text-gray-800 font-sans">
+    <div className="flex h-screen items-center justify-center bg-[#f0f0f3] text-gray-800 font-['Zen_Maru_Gothic']">
       {authenticated ? <ProtectedPage /> : <Login onAuthenticate={() => setAuthenticated(true)} />}
     </div>
   );
