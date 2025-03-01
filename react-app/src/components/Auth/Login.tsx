@@ -10,7 +10,7 @@ type LoginProps = {
   onAuthenticate: (password: string) => void;
 };
 
-export function Login({ onAuthenticate }: LoginProps) {
+export default function Login({ onAuthenticate }: LoginProps) {
   const [input, setInput] = useState("");
   const [error, setError] = useState("");
 
