@@ -4,6 +4,7 @@ import useScrollSnap from "react-use-scroll-snap";
 import imageMainvisual from "../../assets/images/mainvisual@2x.png";
 import SkillCircle from "../Slide/SkillCircle";
 import SkillMap from "../Slide/SkillMap";
+import AchievementsTimeline from "../Slide/AchievementsTimeline";
 
 export default function ProtectedPage() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -35,6 +36,13 @@ export default function ProtectedPage() {
           <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2vw,2rem)] left-[min(2vw,2rem)] font-bold text-gray-600">テクニカルスキル</h2>
 
           <SkillMap />
+        </div>
+
+        {/* セクション 4 */}
+        <div className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+          <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2vw,2rem)] left-[min(2vw,2rem)] font-bold text-gray-600 z-10">実績</h2>
+
+          <AchievementsTimeline />
         </div>
 
       </div>

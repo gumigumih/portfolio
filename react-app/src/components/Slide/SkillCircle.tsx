@@ -13,10 +13,10 @@ type CircleSectionProps = {
 const CircleSection: React.FC<CircleSectionProps> = ({ title, titlePosition, color, position, skills, skillsPosition }) => {
   return (
     <div className={`absolute w-[min(35vw,35rem)] h-[min(35vw,35rem)] rounded-full ${position}`}>
-      <h3 className={`absolute ${titlePosition} text-[min(2.5vw,2.5rem)] font-bold bg-[#fefefe]`}>
+      <h3 className={`absolute ${titlePosition} text-[min(2.5vw,2.5rem)] font-bold bg-[#fafafa]`}>
         <span className={`bg-[linear-gradient(transparent_70%,${color}_30%)]`}>{title}</span>
       </h3>
-      <ul className={`absolute ${skillsPosition} text-[min(1.5vw,1.5rem)] bg-[#fefefe]/80`}>
+      <ul className={`absolute ${skillsPosition} text-[min(1.5vw,1.5rem)] bg-[#fafafa]/80`}>
         {skills.map((skill, index) => (
           <li key={index} className="whitespace-pre-line">{skill}</li>
         ))}
