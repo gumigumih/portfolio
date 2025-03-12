@@ -1,7 +1,10 @@
 import React from "react";
-import image1 from "../../assets/images/works/1/image1.png";
-import image2 from "../../assets/images/works/1/image2.png";
-import image3 from "../../assets/images/works/1/image3.png";
+import image1 from "../../assets/images/works/7/image1.png";
+import image2 from "../../assets/images/works/7/image2.png";
+import image3 from "../../assets/images/works/7/image3.png";
+import image4 from "../../assets/images/works/7/image4.png";
+import image5 from "../../assets/images/works/7/image5.png";
+import image6 from "../../assets/images/works/7/image6.png";
 
 export default function Work7() {
   return (
@@ -28,6 +31,8 @@ export default function Work7() {
               <ul className="ml-[min(1.3vw,1.3rem)] space-y-1 list-disc text-[min(1vw,1rem)]">
                 <li className='marker:text-gray-300'>プロジェクト全体の進行管理・タスク管理</li>
                 <li className='marker:text-gray-300'>関係者との調整・制作フローの管理</li>
+                <li className='marker:text-gray-300'>音声ガイドシステムの要件整理</li>
+                <li className='marker:text-gray-300'>WEBサイトの構成改善整理案の作成</li>
               </ul>
             </div>
           </li>
@@ -54,26 +59,43 @@ export default function Work7() {
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">デザイン</h4>
               <ul className="ml-[min(1.3vw,1.3rem)] space-y-1 list-disc text-[min(1vw,1rem)]">
-                <li className='marker:text-gray-300'>音声ガイドアプリのUI/UXデザイン設計・実装
-              </li>
+                <li className='marker:text-gray-300'>音声ガイドLPデザイン・実装</li>
+                <li className='marker:text-gray-300'>音声ガイドアプリのUI/UXデザイン設計・実装</li>
               </ul>
             </div>
           </li>
         </ul>
       </div>
 
-      <div className='absolute top-[min(17vw,17rem)] left-[min(30vw,30rem)]'>
-        <div className="w-[min(40vw,40rem)]">
-          <img src={image1} alt="" className="" />
+      <div className='absolute top-[min(15vw,15rem)] left-[min(30vw,30rem)] mr-[min(2vw,2rem)]'>
+        <div className="flex gap-[min(2vw,2rem)]">
+        <div className="mt-[min(2vw,2rem)] w-[60%]">
+            <img src={image1} alt="" />
+            <p className="text-[min(1vw,1rem)]">WEB看板＋ARマンガ</p>
+          </div>
+          <div className="mt-[min(2vw,2rem)] w-[60%]">
+            <img src={image6} alt="" />
+            <p className="text-[min(1vw,1rem)]">WEBサイトの構成改善整理案</p>
+          </div>
+          <div className="mt-[min(2vw,2rem)] w-[40%]">
+            <img src={image2} alt="" />
+            <p className="text-[min(1vw,1rem)]">音声ガイドのLP<br />
+              <a href="https://audioguide.bushido-powerspot.jp/" target="_blank" rel="noreferrer" className="text-blue-500 underline">https://audioguide.bushido-powerspot.jp/</a>
+            </p>
+          </div>
         </div>
         <div className="flex gap-[min(2vw,2rem)]">
-          <div className="mt-[min(2vw,2rem)]">
-            <img src={image2} alt="" />
-            <h3 className="text-[min(1vw,1rem)]">設営の様子</h3>
-          </div>
-          <div className="mt-[min(2vw,2rem)]">
+          <div className="mt-[min(2vw,2rem)] flex-1">
             <img src={image3} alt="" />
-            <h3 className="text-[min(1vw,1rem)]">VR機材の設営手順の標準化</h3>
+            <p className="text-[min(1vw,1rem)]">音声ガイド要件・仕様</p>
+          </div>
+          <div className="mt-[min(2vw,2rem)] flex-1">
+            <img src={image4} alt="" />
+            <p className="text-[min(1vw,1rem)]">音声ガイド管理画面</p>
+          </div>
+          <div className="mt-[min(2vw,2rem)] flex-1">
+            <img src={image5} alt="" />
+            <p className="text-[min(1vw,1rem)]">音声ガイド体験画面</p>
           </div>
         </div>
       </div>

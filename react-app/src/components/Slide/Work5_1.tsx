@@ -1,7 +1,8 @@
 import React from "react";
-import image1 from "../../assets/images/works/1/image1.png";
-import image2 from "../../assets/images/works/1/image2.png";
-import image3 from "../../assets/images/works/1/image3.png";
+import image1 from "../../assets/images/works/5/image1.jpg";
+import image2 from "../../assets/images/works/5/image2.png";
+import image3 from "../../assets/images/works/5/image3.png";
+import image4 from "../../assets/images/works/5/image4.png";
 
 export default function Work5() {
   return (
@@ -27,6 +28,8 @@ export default function Work5() {
               <ul className="ml-[min(1.3vw,1.3rem)] space-y-1 list-disc text-[min(1vw,1rem)]">
                 <li className='marker:text-gray-300'>プロジェクト全体の進行管理・タスク管理</li>
                 <li className='marker:text-gray-300'>関係者との調整・制作フローの管理</li>
+                <li className='marker:text-gray-300'>各制作物の要件整理</li>
+                <li className='marker:text-gray-300'>多言語化に伴う翻訳管理</li>
               </ul>
             </div>
           </li>
@@ -52,7 +55,7 @@ export default function Work5() {
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">デザイン</h4>
               <ul className="ml-[min(1.3vw,1.3rem)] space-y-1 list-disc text-[min(1vw,1rem)]">
-              <li className='marker:text-gray-300'>外注制作のWEBサイトの品質管理・改善提案</li>
+              <li className='marker:text-gray-300'>外注制作のWEBサイトを品質チェック・改善<br/>機能追加・デザイン調整を行い、リリース対応</li>
               <li className='marker:text-gray-300'>After Effectsを用いたアニメーション動画の制作</li>
               </ul>
             </div>
@@ -60,18 +63,25 @@ export default function Work5() {
         </ul>
       </div>
 
-      <div className='absolute top-[min(15vw,15rem)] left-[min(30vw,30rem)]'>
-        <div className="w-[min(40vw,40rem)]">
-          <img src={image1} alt="" className="" />
-        </div>
-        <div className="flex gap-[min(2vw,2rem)]">
-          <div className="mt-[min(2vw,2rem)]">
-            <img src={image2} alt="" />
-            <h3 className="text-[min(1vw,1rem)]">設営の様子</h3>
+      <div className='absolute top-[min(13vw,13rem)] left-[min(30vw,30rem)] mr-[min(2vw,2rem)]'>
+        <div className="flex gap-[min(2vw,2rem)] w-[80%]">
+          <div className="mt-[min(2vw,2rem)] w-[57%]">
+            <img src={image1} alt="" />
+            <p className="text-[min(1vw,1rem)]">ARマンガを試す様子</p>
           </div>
-          <div className="mt-[min(2vw,2rem)]">
+          <div className="mt-[min(2vw,2rem)] w-[43%]">
+            <img src={image2} alt="" />
+            <p className="text-[min(1vw,1rem)]">WEB看板＋ARマンガ</p>
+          </div>
+        </div>
+        <div className="flex gap-[min(2vw,2rem)] w-[70%]">
+          <div className="mt-[min(2vw,2rem)] w-[68%]">
             <img src={image3} alt="" />
-            <h3 className="text-[min(1vw,1rem)]">VR機材の設営手順の標準化</h3>
+            <p className="text-[min(1vw,1rem)]">現地体験プログラムの説明・補助タブレット</p>
+          </div>
+          <div className="mt-[min(2vw,2rem)] w-[32%]">
+            <img src={image4} alt="" />
+            <p className="text-[min(1vw,1rem)]">体験写真を保管するシステム</p>
           </div>
         </div>
       </div>

@@ -1,7 +1,5 @@
 import React from "react";
-import image1 from "../../assets/images/works/1/image1.png";
-import image2 from "../../assets/images/works/1/image2.png";
-import image3 from "../../assets/images/works/1/image3.png";
+import image1 from "../../assets/images/works/4/image1.png";
 
 export default function Work4() {
   return (
@@ -33,18 +31,13 @@ export default function Work4() {
         </ul>
       </div>
 
-      <div className='absolute top-[min(17vw,17rem)] left-[min(30vw,30rem)]'>
-        <div className="w-[min(40vw,40rem)]">
-          <img src={image1} alt="" className="" />
-        </div>
+      <div className='absolute top-[min(15vw,15rem)] left-[min(30vw,30rem)] mr-[min(2vw,2rem)]'>
         <div className="flex gap-[min(2vw,2rem)]">
           <div className="mt-[min(2vw,2rem)]">
-            <img src={image2} alt="" />
-            <h3 className="text-[min(1vw,1rem)]">設営の様子</h3>
-          </div>
-          <div className="mt-[min(2vw,2rem)]">
-            <img src={image3} alt="" />
-            <h3 className="text-[min(1vw,1rem)]">VR機材の設営手順の標準化</h3>
+            <img src={image1} alt="" />
+            <p className="text-[min(1vw,1rem)]">バーチャル名刺背景ジェネレーター<br />
+              <a href="https://online-meishi.biz/" target="_blank" rel="noreferrer" className="text-blue-500 underline">https://online-meishi.biz/</a>
+            </p>
           </div>
         </div>
       </div>

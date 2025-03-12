@@ -1,7 +1,8 @@
 import React from "react";
-import image1 from "../../assets/images/works/1/image1.png";
-import image2 from "../../assets/images/works/1/image2.png";
-import image3 from "../../assets/images/works/1/image3.png";
+import image1 from "../../assets/images/works/3/image1.png";
+import image2 from "../../assets/images/works/3/image2.png";
+import image3 from "../../assets/images/works/3/image3.png";
+import image4 from "../../assets/images/works/3/image4.png";
 
 export default function Work3() {
   return (
@@ -56,18 +57,25 @@ export default function Work3() {
         </ul>
       </div>
 
-      <div className='absolute top-[min(17vw,17rem)] left-[min(30vw,30rem)]'>
-        <div className="w-[min(40vw,40rem)]">
-          <img src={image1} alt="" className="" />
-        </div>
-        <div className="flex gap-[min(2vw,2rem)]">
+      <div className='absolute top-[min(15vw,15rem)] left-[min(30vw,30rem)] mr-[min(2vw,2rem)]'>
+        <div className="flex gap-[min(2vw,2rem)] w-[80%]">
           <div className="mt-[min(2vw,2rem)]">
-            <img src={image2} alt="" />
-            <h3 className="text-[min(1vw,1rem)]">設営の様子</h3>
+            <img src={image1} alt="" />
+            <p className="text-[min(1vw,1rem)]">プロジェクト全体構成</p>
           </div>
           <div className="mt-[min(2vw,2rem)]">
+            <img src={image2} alt="" />
+            <p className="text-[min(1vw,1rem)]">3D神社</p>
+          </div>
+        </div>
+        <div className="flex gap-[min(2vw,2rem)] w-[70%]">
+          <div className="mt-[min(2vw,2rem)]">
             <img src={image3} alt="" />
-            <h3 className="text-[min(1vw,1rem)]">VR機材の設営手順の標準化</h3>
+            <p className="text-[min(1vw,1rem)]">UI設計</p>
+          </div>
+          <div className="mt-[min(2vw,2rem)]">
+            <img src={image4} alt="" />
+            <p className="text-[min(1vw,1rem)]">UIデザイン</p>
           </div>
         </div>
       </div>

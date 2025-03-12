@@ -45,18 +45,18 @@ export default function Work8() {
         </ul>
       </div>
 
-      <div className='absolute top-[min(17vw,17rem)] left-[min(30vw,30rem)]'>
+      <div className='absolute top-[min(15vw,15rem)] left-[min(30vw,30rem)] mr-[min(2vw,2rem)]'>
         <div className="w-[min(40vw,40rem)]">
-          <img src={image1} alt="" className="" />
+          <img src={image1} alt="" />
         </div>
         <div className="flex gap-[min(2vw,2rem)]">
           <div className="mt-[min(2vw,2rem)]">
             <img src={image2} alt="" />
-            <h3 className="text-[min(1vw,1rem)]">設営の様子</h3>
+            <p className="text-[min(1vw,1rem)]">設営の様子</p>
           </div>
           <div className="mt-[min(2vw,2rem)]">
             <img src={image3} alt="" />
-            <h3 className="text-[min(1vw,1rem)]">VR機材の設営手順の標準化</h3>
+            <p className="text-[min(1vw,1rem)]">VR機材の設営手順の標準化</p>
           </div>
         </div>
       </div>
