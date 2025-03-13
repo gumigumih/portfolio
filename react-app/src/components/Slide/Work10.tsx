@@ -25,8 +25,8 @@ export default function Work10() {
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">マネジメント</h4>
               <ul className="ml-[min(1.3vw,1.3rem)] space-y-1 list-disc text-[min(1vw,1rem)]">
-                <li className='marker:text-gray-300'>3Dキャラクター制作の進行管理</li>
-                <li className='marker:text-gray-300'>外注3Dキャラクター制作の管理</li>
+                <li className='marker:text-gray-300'>プロジェクト全体の管理</li>
+                <li className='marker:text-gray-300'>3Dキャラクター制作の外注管理</li>
               </ul>
             </div>
           </li>
