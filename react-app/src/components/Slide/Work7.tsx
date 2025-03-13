@@ -16,9 +16,9 @@ export default function Work7() {
 
       <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
-          過去の歴史体験型バスツアーのWEBサイトを大幅改修し、情報整理と利便性を向上。<br />
-          WEB看板、ARマンガ、満足度計測を追加し、AI音声生成を活用した多言語対応の音声ガイドを開発。<br />
-          三浦半島と鎌倉の武士の歴史を伝えるデジタルコンテンツを提供。
+          本プロジェクトは、過去の歴史体験型バスツアーのWEBサイトを改修し、情報整理と利便性を向上させる取り組みです。<br />
+          WEB看板、ARマンガ、満足度計測機能を追加し、AI音声生成を活用した多言語対応の音声ガイドを開発しました。<br />
+          三浦半島と鎌倉の武士の歴史を伝えるデジタルコンテンツを提供しています。
         </p>
 
         <h3 className="mt-[min(2vw,2rem)] text-[min(1vw,1rem)] font-bold text-gray-400">役割</h3>

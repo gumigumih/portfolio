@@ -14,8 +14,8 @@ export default function Work5() {
 
       <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
-          文化庁・観光庁の補助金を活用し、三浦半島エリアの文化財と仏閣にまつわる武士の歴史をテーマにしたデジタル歴史体験コンテンツを開発。<br />
-          VR、WebAR、タブレットアプリ、WEBサイト、アニメーションを活用し、観光地でのインタラクティブな歴史体験を提供。
+          本プロジェクトは、三浦半島エリアの文化財や仏閣にまつわる武士の歴史をテーマにしたデジタル歴史体験コンテンツの開発です。<br />
+          文化庁・観光庁の補助金を活用し、VR、WebAR、タブレットアプリ、WEBサイト、アニメーションを組み合わせ、観光地でのインタラクティブな歴史体験を提供しました。
         </p>
 
         <h3 className="mt-[min(2vw,2rem)] text-[min(1vw,1rem)] font-bold text-gray-400">役割</h3>

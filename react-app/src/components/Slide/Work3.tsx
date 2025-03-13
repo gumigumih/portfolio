@@ -14,9 +14,9 @@ export default function Work3() {
 
       <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
-          お菓子のパッケージにQRコードを掲載し、受験・行楽シーズン向けのARコンテンツを制作。<br />
-          合格祈願AR、ひらがなクイズ、顔ハメフィルターを実装し、特設サイトの進行管理を担当。<br />
-          顧客との信頼構築により、継続受注を獲得しました。
+          本プロジェクトは、お菓子のパッケージにQRコードを掲載し、ARコンテンツを活用したプロモーションを行うものです。<br />
+          受験・行楽シーズン向けに、合格祈願AR、ひらがなクイズ、顔ハメフィルターを制作し、特設サイト制作の進行管理を担当しました。<br />
+          顧客との信頼構築を通じて、継続受注につなげることができました。
         </p>
 
         <h3 className="mt-[min(2vw,2rem)] text-[min(1vw,1rem)] font-bold text-gray-400">役割</h3>

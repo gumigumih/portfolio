@@ -16,9 +16,9 @@ export default function Work8() {
 
       <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
-          文化財の3DスキャンデータをWEB上で公開するシステムを開発。<br />
-          ユーザーがスクロール操作でカメラアングルを変えながら文化財を鑑賞できるインターフェースを実装。<br />
-          複数の文化財データを別々のWEBサイトに埋め込みできるよう、3Dビューアーの基本機能をVue.jsでプラグイン化。
+          本プロジェクトは、文化財の3DスキャンデータをWEB上で公開するシステムの開発です。<br />
+          ユーザーがスクロール操作でカメラアングルを変えながら文化財を鑑賞できるインターフェースを実装しました。<br />
+          また、複数の文化財データを別々のWEBサイトに埋め込みできるよう、3Dビューアーの基本機能をVue.jsでプラグイン化しました。
         </p>
 
         <h3 className="mt-[min(2vw,2rem)] text-[min(1vw,1rem)] font-bold text-gray-400">役割</h3>
