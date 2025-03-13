@@ -9,8 +9,8 @@ import Work1 from "../Slide/Work1";
 import Work2 from "../Slide/Work2";
 import Work3 from "../Slide/Work3";
 import Work4 from "../Slide/Work4";
-import Work5_1 from "../Slide/Work5_1";
-import Work5_2 from "../Slide/Work5_2";
+import Work5p1 from "../Slide/Work5_1";
+import Work5p2 from "../Slide/Work5_2";
 import Work6 from "../Slide/Work6";
 import Work7 from "../Slide/Work7";
 import Work8 from "../Slide/Work8";
@@ -68,11 +68,11 @@ export default function ProtectedPage() {
         </div>
 
         <div id="work5" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work5_1 />
+          <Work5p1 />
         </div>
 
         <div id="" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work5_2 />
+          <Work5p2 />
         </div>
 
         <div id="work6" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
