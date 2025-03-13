@@ -145,12 +145,12 @@ export default function SlideNav() {
     <div>
       {/* 📌 OUTLINE メニュー */}
       <div
-        className={`transition-all fixed left-4 top-[min(3vw,3rem)] bg-white/80 backdrop-blur-lg shadow-md rounded-lg cursor-pointer z-10 ${
+        className={`transition-all fixed left-4 top-[min(3vw,3rem)] bg-white/80 backdrop-blur-lg shadow-md rounded-lg cursor-pointer z-20 ${
           isOutlineOpen ? "p-[min(0.8vw,0.8rem)]" : "px-[min(0.8vw,0.8rem)] py-0"
         }`}
         onClick={() => setIsOutlineOpen(!isOutlineOpen)}
       >
-        <h3 className="text-[min(1vw,1rem)] font-bold">
+        <h3 className="text-[min(1vw,1rem)] font-bold pointer-event-none">
           {isOutlineOpen ? "≪ OUTLINE" : "≫ OUTLINE"}
         </h3>
         <nav
@@ -176,7 +176,9 @@ export default function SlideNav() {
         </nav>
       </div>
 
-      <div className="fixed top-0 left-0 w-full bg-gray-100 z-20">
+      <div className={`fixed top-0 left-0 w-full bg-gray-100
+        ${isTimelineOpen ? "z-30" : "z-10"
+      }`}>
         <button
           className="absolute top-[min(1vw,1rem)] left-[min(1vw,1rem)] px-[min(0.8vw,0.8rem)] bg-white/80 backdrop-blur-lg shadow-md rounded-lg text-[min(1vw,1rem)] font-semibold"
           onClick={() => setIsTimelineOpen(!isTimelineOpen)}
@@ -185,7 +187,9 @@ export default function SlideNav() {
         </button>
 
         <div
-          className={`overflow-hidden transition-all duration-500 ease-in-out ${isTimelineOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"}`}
+          className={`overflow-hidden transition-all duration-500 ease-in-out
+            ${isTimelineOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+          }`}
         >
           <div className="py-[min(1vw,1rem)] pr-[min(2vw,2rem)] ml-[min(6vw,6rem)] overflow-x-scroll">
             <div className="w-[min(105vw,105rem)]">

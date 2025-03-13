@@ -6,12 +6,12 @@ import image3 from "../../assets/images/works/1/image3.png";
 export default function Work1() {
   return (
     <div>
-      <h2 className="absolute top-[min(4vw,4rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
+      <h2 className="absolute top-[min(2vw,2rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
         <div className="text-[min(1vw,1rem)]">2018年10月～2019年3月</div>
         <div className="text-[min(2vw,2rem)]">にじさんじのくじじゅうじ</div>
       </h2>
 
-      <div className="absolute top-[min(9vw,9rem)] left-[min(2vw,2rem)] w-full">
+      <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
           AbemaTV「にじさんじのくじじゅうじ」のVR収録を支援。VR機材の設置・設定、3Dスタジオデータの制作進行管理、VRM変換を担当。<br />
           スプレッドシートで準備素材を管理し、設営手順を標準化。VRセンサーのトラブルを減らし、収録準備の効率を向上させました。
@@ -44,7 +44,7 @@ export default function Work1() {
         </ul>
       </div>
 
-      <div className='absolute top-[min(15vw,15rem)] left-[min(30vw,30rem)] mr-[min(2vw,2rem)]'>
+      <div className='absolute top-[min(13vw,13rem)] left-[min(30vw,30rem)] mr-[min(2vw,2rem)]'>
         <div className="flex gap-[min(2vw,2rem)]">
           <div className="mt-[min(2vw,2rem)]">
           <img src={image1} alt="" className="w-[60%]" />

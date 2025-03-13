@@ -45,7 +45,7 @@ export default function W1MajorProjects() {
         </a>
       </div>
       <p className="text-[min(1vw,1rem)] mt-[min(2vw,2rem)]">
-        このポートフォリオでは、特にマネジメント経験が強いプロジェクトを優先的に紹介しています。<br />
+        このポートフォリオでは、カテゴリーごとに実績を紹介しています。<br />
         詳細な職歴の流れは職務経歴書をご覧ください。
       </p>
     </div>

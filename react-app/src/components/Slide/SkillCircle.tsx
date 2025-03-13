@@ -16,7 +16,7 @@ const CircleSection: React.FC<CircleSectionProps> = ({ title, titlePosition, col
       <h3 className={`absolute ${titlePosition} text-[min(2.5vw,2.5rem)] font-bold bg-[#fafafa]`}>
         <span className={`bg-[linear-gradient(transparent_70%,${color}_30%)]`}>{title}</span>
       </h3>
-      <ul className={`absolute ${skillsPosition} text-[min(1.5vw,1.5rem)] bg-[#fafafa]/80`}>
+      <ul className={`absolute ${skillsPosition} text-[min(1.2vw,1.2rem)] bg-[#fafafa]/80`}>
         {skills.map((skill, index) => (
           <li key={index} className="whitespace-pre-line">{skill}</li>
         ))}
@@ -27,8 +27,8 @@ const CircleSection: React.FC<CircleSectionProps> = ({ title, titlePosition, col
 
 const SkillCircle: React.FC = () => {
   return (
-    <div className="w-full h-full mt-[min(2vw,2rem)] flex flex-col justify-center items-center relative">
-      <div className="absolute w-[min(50vw,50rem)] h-[min(50vw,50rem)] mx-auto">
+    <div className="w-full h-full mt-[min(1.0vw,1.0rem)] flex flex-col justify-center items-center relative">
+      <div className="absolute w-[min(48vw,48rem)] h-[min(48vw,48rem)] mx-auto">
         {/* 3つの円を配置 */}
         <div className="absolute w-[min(35vw,35rem)] h-[min(35vw,35rem)] rounded-full border border-gray-800 top-0 left-1/2 transform -translate-x-1/2"></div>
         <div className="absolute w-[min(35vw,35rem)] h-[min(35vw,35rem)] rounded-full border border-gray-800 bottom-0 left-0 transform"></div>

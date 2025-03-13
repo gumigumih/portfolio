@@ -9,12 +9,12 @@ import image6 from "../../assets/images/works/8/image6.png";
 export default function Work8() {
   return (
     <div>
-      <h2 className="absolute top-[min(4vw,4rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
+      <h2 className="absolute top-[min(2vw,2rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
         <div className="text-[min(1vw,1rem)]">2022年9月〜2023年3月</div>
         <div className="text-[min(2vw,2rem)]">文化財3DスキャンWEB公開システム開発</div>
       </h2>
 
-      <div className="absolute top-[min(9vw,9rem)] left-[min(2vw,2rem)] w-full">
+      <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
           文化財の3DスキャンデータをWEB上で公開するシステムを開発。<br />
           ユーザーがスクロール操作でカメラアングルを変えながら文化財を鑑賞できるインターフェースを実装。<br />
@@ -48,7 +48,7 @@ export default function Work8() {
         </ul>
       </div>
 
-      <div className='absolute top-[min(15vw,15rem)] left-[min(30vw,30rem)] mr-[min(2vw,2rem)]'>
+      <div className='absolute top-[min(13vw,13rem)] left-[min(30vw,30rem)] mr-[min(2vw,2rem)]'>
         <div className="flex gap-[min(2vw,2rem)]">
           <div className="mt-[min(2vw,2rem)]">
             <img src={image1} alt="" />
