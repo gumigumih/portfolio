@@ -4,12 +4,12 @@ import image1 from "../../assets/images/works/4/image1.png";
 export default function Work4() {
   return (
     <div>
-      <h2 className="absolute top-[min(4vw,4rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
+      <h2 className="absolute top-[min(2vw,2rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
         <div className="text-[min(1vw,1rem)]">2020年4月</div>
         <div className="text-[min(2vw,2rem)]">バーチャル名刺背景ジェネレーター</div>
       </h2>
 
-      <div className="absolute top-[min(9vw,9rem)] left-[min(2vw,2rem)] w-full">
+      <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
           オンライン会議向けに、名前やロゴ、QRコードを含むカスタム背景を生成できるツールを開発。<br />
           Vue.jsを使用し、発案からリリースまで3日で完了。<br />
@@ -31,7 +31,7 @@ export default function Work4() {
         </ul>
       </div>
 
-      <div className='absolute top-[min(15vw,15rem)] left-[min(30vw,30rem)] mr-[min(2vw,2rem)]'>
+      <div className='absolute top-[min(13vw,13rem)] left-[min(30vw,30rem)] mr-[min(2vw,2rem)]'>
         <div className="flex gap-[min(2vw,2rem)]">
           <div className="mt-[min(2vw,2rem)]">
             <img src={image1} alt="" />

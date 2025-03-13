@@ -7,12 +7,12 @@ import image4 from "../../assets/images/works/5/image4.png";
 export default function Work5() {
   return (
     <div>
-      <h2 className="absolute top-[min(4vw,4rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
+      <h2 className="absolute top-[min(2vw,2rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
         <div className="text-[min(1vw,1rem)]">2020年8月～2021年3月、2021年7月〜2022年3月</div>
         <div className="text-[min(2vw,2rem)]">歴史体験型デジタルコンテンツ開発</div>
       </h2>
 
-      <div className="absolute top-[min(9vw,9rem)] left-[min(2vw,2rem)] w-full">
+      <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
           文化庁・観光庁の補助金を活用し、三浦半島エリアの文化財と仏閣にまつわる武士の歴史をテーマにしたデジタル歴史体験コンテンツを開発。<br />
           VR、WebAR、タブレットアプリ、WEBサイト、アニメーションを活用し、観光地でのインタラクティブな歴史体験を提供。
@@ -29,6 +29,7 @@ export default function Work5() {
                 <li className='marker:text-gray-300'>プロジェクト全体の進行管理・タスク管理</li>
                 <li className='marker:text-gray-300'>関係者との調整・制作フローの管理</li>
                 <li className='marker:text-gray-300'>各制作物の要件整理</li>
+                <li className='marker:text-gray-300'>開発チーム・外注デザイナーの調整</li>
                 <li className='marker:text-gray-300'>多言語化に伴う翻訳管理</li>
               </ul>
             </div>

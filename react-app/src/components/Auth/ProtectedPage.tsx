@@ -1,6 +1,7 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import useScrollSnap from "react-use-scroll-snap";
 import imageMainvisual from "../../assets/images/mainvisual@2x.png";
+import imageHeart from "../../assets/images/heart.png";
 import SkillCircle from "../Slide/SkillCircle";
 import SkillMap from "../Slide/SkillMap";
 import SlideNav from "../Slide/SlideNav";
@@ -30,7 +31,7 @@ export default function ProtectedPage() {
     <div ref={containerRef} className="w-screen h-screen overflow-y-scroll snap-y snap-mandatory">
       <SlideNav />
 
-      <div className="max-w-screen-2xl w-full ml-auto">
+      <div className="max-w-screen-xl w-full ml-auto">
 
         <div className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-end relative">
           <img src={imageMainvisual} alt="MainVisual" className="absolute h-full left-0 bottom-0" />
@@ -125,6 +126,31 @@ export default function ProtectedPage() {
 
         <div id="work9" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
           <Work9 />
+        </div>
+
+        <div id="" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-end relative">
+          <div className="w-full">
+            <img src={imageHeart} alt="" className="w-[40%] mx-auto -mt-[min(3vw,3rem)]" />
+            <p className="text-center text-[min(1.5vw,1.5rem)] mt-[min(2vw,2rem)]">
+              私は、プロダクトの品質向上とスムーズな運用を支えるディレクションを行っています。<br />
+              技術とデザインの両面から、開発チーム・デザインチームと連携し、スムーズに進行できる環境を整えます。<br />
+              また、ユーザーにとって使いやすい形を追求し、継続的に改善できる仕組みを作ることを大切にしています。
+            </p>
+          </div>
+        </div>
+
+        <div id="" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-end relative">
+          <div className="w-full">
+            <p className="text-center text-[min(1.5vw,1.5rem)] mt-[min(3vw,3rem)]">
+              最後までご覧いただきありがとうございます。<br />
+              開発・デザイン・運用の連携をスムーズにし、より良いプロダクトを作ることに貢献したいと考えています。<br />
+              ぜひお話しする機会をいただければ幸いです。お気軽にご連絡ください。
+            </p>
+            <p className="text-center text-[min(1.5vw,1.5rem)] mt-[min(3vw,3rem)]">
+              和田 愛<br />
+              megumi.love.ramen@gmail.com
+            </p>
+          </div>
         </div>
 
       </div>

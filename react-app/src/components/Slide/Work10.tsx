@@ -5,12 +5,12 @@ import image2 from "../../assets/images/works/10/image2.png";
 export default function Work10() {
   return (
     <div>
-      <h2 className="absolute top-[min(4vw,4rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
+      <h2 className="absolute top-[min(2vw,2rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
         <div className="text-[min(1vw,1rem)]">2023年2月〜2023年5月、2023年12月～2024年2月</div>
         <div className="text-[min(2vw,2rem)]">TV番組「マヂカルラブリーの全力！アニシャド応援部」3Dキャラクター制作・撮影支援</div>
       </h2>
 
-      <div className="absolute top-[min(9vw,9rem)] left-[min(2vw,2rem)] w-full">
+      <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
           TV番組「マヂカルラブリーの全力！アニシャド応援部」向けに、3Dキャラクター制作と撮影サポートを実施。<br />
           モーション撮影ツール「NICE CAMERA」を活用し、撮影したモーションデータの調整・追加を担当。<br />

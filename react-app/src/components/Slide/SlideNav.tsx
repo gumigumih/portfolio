@@ -144,15 +144,18 @@ export default function SlideNav() {
   return (
     <div>
       {/* 📌 OUTLINE メニュー */}
-      <div className="fixed left-4 top-[min(3vw,3rem)] bg-white/80 backdrop-blur-lg shadow-md rounded-lg p-[min(0.8vw,0.8rem)] cursor-pointer"
+      <div
+        className={`transition-all fixed left-4 top-[min(3vw,3rem)] bg-white/80 backdrop-blur-lg shadow-md rounded-lg cursor-pointer z-20 ${
+          isOutlineOpen ? "p-[min(0.8vw,0.8rem)]" : "px-[min(0.8vw,0.8rem)] py-0"
+        }`}
         onClick={() => setIsOutlineOpen(!isOutlineOpen)}
       >
-        <h3 className="text-[min(1vw,1rem)] font-bold">
+        <h3 className="text-[min(1vw,1rem)] font-bold pointer-event-none">
           {isOutlineOpen ? "≪ OUTLINE" : "≫ OUTLINE"}
         </h3>
         <nav
           className={`transition-all duration-300 ease-in-out overflow-hidden ${
-            isOutlineOpen ? "max-h-[500px] opacity-100 pt-[min(0.8vw,0.8rem)]" : "max-h-0 opacity-0 pt-0"
+            isOutlineOpen ? "max-h-[500px] max-w-[500px] opacity-100 pt-[min(0.8vw,0.8rem)]" : "max-h-0 max-w-0 opacity-0 pt-0"
           }`}
           onClick={(e) => {
             e.stopPropagation();
@@ -173,7 +176,9 @@ export default function SlideNav() {
         </nav>
       </div>
 
-      <div className="fixed top-0 left-0 w-full bg-gray-100 z-10">
+      <div className={`fixed top-0 left-0 w-full bg-gray-100
+        ${isTimelineOpen ? "z-30" : "z-10"
+      }`}>
         <button
           className="absolute top-[min(1vw,1rem)] left-[min(1vw,1rem)] px-[min(0.8vw,0.8rem)] bg-white/80 backdrop-blur-lg shadow-md rounded-lg text-[min(1vw,1rem)] font-semibold"
           onClick={() => setIsTimelineOpen(!isTimelineOpen)}
@@ -182,7 +187,9 @@ export default function SlideNav() {
         </button>
 
         <div
-          className={`overflow-hidden transition-all duration-500 ease-in-out ${isTimelineOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"}`}
+          className={`overflow-hidden transition-all duration-500 ease-in-out
+            ${isTimelineOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+          }`}
         >
           <div className="py-[min(1vw,1rem)] pr-[min(2vw,2rem)] ml-[min(6vw,6rem)] overflow-x-scroll">
             <div className="w-[min(105vw,105rem)]">
