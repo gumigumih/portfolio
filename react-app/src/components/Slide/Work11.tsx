@@ -25,7 +25,8 @@ export default function Work11() {
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">マネジメント</h4>
               <ul className="ml-[min(1.3vw,1.3rem)] space-y-1 list-disc text-[min(1vw,1rem)]">
-                <li className='marker:text-gray-300'>全体のスケジュール調整と進捗管理</li>
+                <li className='marker:text-gray-300'>プロジェクト全体の管理</li>
+                <li className='marker:text-gray-300'>開発チーム管理</li>
                 <li className='marker:text-gray-300'>関係者との調整・制作フローの管理</li>
                 <li className='marker:text-gray-300'>展示会向け資料作成・デモ実施</li>
               </ul>
