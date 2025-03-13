@@ -16,7 +16,7 @@ const skills = {
     { name: "DB設計", level: 3 },
   ],
   "デザイン": [
-    { name: "Photoshop", level: 5 },
+    { name: "Photoshop", level: 4 },
     { name: "Illustrator", level: 4 },
     { name: "Adobe XD", level: 3 },
     { name: "Premiere Pro", level: 1 },

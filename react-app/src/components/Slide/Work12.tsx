@@ -16,7 +16,7 @@ export default function Work12() {
 
       <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
-          NICE CAMERAは、PC一台でアバターを使ったリモート会議やライブ配信を支援する仮想カメラソフトウェア。<br />
+          NICE CAMERAは、PC一台でアバターを使ったリモート会議やライブ配信を支援する仮想カメラソフトウェアです。<br />
           開発チームのディレクターとして、サーバー設計やUI/UXデザインを担当し、テストとデプロイの自動化を導入してリリースサイクルを短縮。<br />
           インフラ運用やカスタマーサポート、広報・展示会対応にも関与し、開発効率とユーザー満足度の向上を実現。
         </p>
