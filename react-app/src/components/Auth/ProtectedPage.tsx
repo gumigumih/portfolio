@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import useScrollSnap from "react-use-scroll-snap";
 import imageMainvisual from "../../assets/images/mainvisual@2x.png";
 import SkillCircle from "../Slide/SkillCircle";

@@ -144,7 +144,10 @@ export default function SlideNav() {
   return (
     <div>
       {/* 📌 OUTLINE メニュー */}
-      <div className="fixed left-4 top-[min(3vw,3rem)] bg-white/80 backdrop-blur-lg shadow-md rounded-lg p-[min(0.8vw,0.8rem)] cursor-pointer"
+      <div
+        className={`transition-all fixed left-4 top-[min(3vw,3rem)] bg-white/80 backdrop-blur-lg shadow-md rounded-lg cursor-pointer z-10 ${
+          isOutlineOpen ? "p-[min(0.8vw,0.8rem)]" : "px-[min(0.8vw,0.8rem)] py-0"
+        }`}
         onClick={() => setIsOutlineOpen(!isOutlineOpen)}
       >
         <h3 className="text-[min(1vw,1rem)] font-bold">
@@ -152,7 +155,7 @@ export default function SlideNav() {
         </h3>
         <nav
           className={`transition-all duration-300 ease-in-out overflow-hidden ${
-            isOutlineOpen ? "max-h-[500px] opacity-100 pt-[min(0.8vw,0.8rem)]" : "max-h-0 opacity-0 pt-0"
+            isOutlineOpen ? "max-h-[500px] max-w-[500px] opacity-100 pt-[min(0.8vw,0.8rem)]" : "max-h-0 max-w-0 opacity-0 pt-0"
           }`}
           onClick={(e) => {
             e.stopPropagation();
@@ -173,7 +176,7 @@ export default function SlideNav() {
         </nav>
       </div>
 
-      <div className="fixed top-0 left-0 w-full bg-gray-100 z-10">
+      <div className="fixed top-0 left-0 w-full bg-gray-100 z-20">
         <button
           className="absolute top-[min(1vw,1rem)] left-[min(1vw,1rem)] px-[min(0.8vw,0.8rem)] bg-white/80 backdrop-blur-lg shadow-md rounded-lg text-[min(1vw,1rem)] font-semibold"
           onClick={() => setIsTimelineOpen(!isTimelineOpen)}
