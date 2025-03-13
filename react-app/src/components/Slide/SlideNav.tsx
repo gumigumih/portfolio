@@ -21,28 +21,24 @@ const projects = [
   }, {
     start: { year: 2019, month: 5 },
     end: { year: 2019, month: 5 },
-    bgClass: "bg-[#55FFDC]/50",
     text: "Youtube管理アプリ",
     row: 2,
     jumpTo: "work2"
   }, {
     start: { year: 2019, month: 5 },
     end: { year: 2020, month: 4 },
-    bgClass: "bg-[linear-gradient(#55FFDC_50%,#FEEE16_50%)] opacity-50",
     text: "お菓子パッケージARコンテンツ",
     row: 1,
     jumpTo: "work3"
   }, {
     start: { year: 2020, month: 4 },
     end: { year: 2020, month: 4 },
-    bgClass: "bg-[#55FFDC]/50",
     text: "バーチャル名刺背景ジェネレーター",
     row: 2,
     jumpTo: "work4"
   }, {
     start: { year: 2020, month: 8 },
     end: { year: 2021, month: 3 },
-    bgClass: "bg-[linear-gradient(#FF72D0_33%,#55FFDC_33%,#55FFDC_66%,#FEEE16_66%)] opacity-50",
     text: "歴史体験型デジタルコンテンツ開発",
     textClass: "tracking-[min(0.2vw,0.2rem)]",
     row: 1,
@@ -50,35 +46,30 @@ const projects = [
   }, {
     start: { year: 2021, month: 7 },
     end: { year: 2022, month: 3 },
-    bgClass: "bg-[linear-gradient(#FF72D0_33%,#55FFDC_33%,#55FFDC_66%,#FEEE16_66%)] opacity-50",
     text: "",
     row: 1,
     jumpTo: "work5"
   }, {
     start: { year: 2022, month: 10 },
     end: { year: 2023, month: 2 },
-    bgClass: "bg-[linear-gradient(#FF72D0_33%,#55FFDC_33%,#55FFDC_66%,#FEEE16_66%)] opacity-50",
     text: "歴史体験型デジタルコンテンツ活用",
     row: 1,
     jumpTo: "work6"
   }, {
     start: { year: 2024, month: 1 },
     end: { year: 2024, month: 1 },
-    bgClass: "bg-[linear-gradient(#FF72D0_33%,#55FFDC_33%,#55FFDC_66%,#FEEE16_66%)] opacity-50",
     text: "",
     row: 1,
     jumpTo: "work6"
   }, {
     start: { year: 2024, month: 7 },
     end: { year: 2025, month: 3 },
-    bgClass: "bg-[linear-gradient(#FF72D0_33%,#55FFDC_33%,#55FFDC_66%,#FEEE16_66%)] opacity-50",
     text: "歴史体験型デジタルコンテンツ強化・開発",
     row: 1,
     jumpTo: "work7"
   }, {
     start: { year: 2022, month: 9 },
     end: { year: 2023, month: 3 },
-    bgClass: "bg-[#55FFDC]/50",
     text: "文化財3Dスキャンプロジェクト",
     textClass: "right-0",
     row: 2,
@@ -86,7 +77,6 @@ const projects = [
   }, {
     start: { year: 2023, month: 6 },
     end: { year: 2023, month: 7 },
-    bgClass: "bg-[#55FFDC]/50",
     text: "Youtube24時間配信システム",
     row: 2,
     jumpTo: "work9"
@@ -94,20 +84,17 @@ const projects = [
     start: { year: 2023, month: 2 },
     end: { year: 2023, month: 5 },
     text: "TV番組3Dキャラ支援",
-    bgClass: "bg-[#FF72D0]/50",
     textClass: "left-[min(1vw,1rem)] tracking-[min(0.2vw,0.2rem)]",
     row: 3,
     jumpTo: "work10"
   }, {
     start: { year: 2023, month: 12 },
     end: { year: 2024, month: 2 },
-    bgClass: "bg-[#FF72D0]/50",
     text: "",
     row: 3
   }, {
     start: { year: 2023, month: 4 },
     end: { year: 2023, month: 9 },
-    bgClass: "bg-[linear-gradient(#FF72D0_50%,#FEEE16_50%)] opacity-50",
     text: "アバター個別相談アプリ",
     textClass: "right-0",
     row: 5,
@@ -115,14 +102,12 @@ const projects = [
   }, {
     start: { year: 2020, month: 6 },
     end: { year: 2025, month: 3 },
-    bgClass: "bg-[linear-gradient(#FF72D0_33%,#55FFDC_33%,#55FFDC_66%,#FEEE16_66%)] opacity-50",
     text: "NICE CAMERA（アバタートラッキングアプリ）",
     row: 4,
     jumpTo: "work12"
   }, {
     start: { year: 2024, month: 3 },
     end: { year: 2025, month: 3 },
-    bgClass: "bg-[linear-gradient(#FF72D0_33%,#55FFDC_33%,#55FFDC_66%,#FEEE16_66%)] opacity-50",
     text: "AI-Kata S2P",
     row: 5,
     jumpTo: "work13"
