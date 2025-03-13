@@ -31,7 +31,7 @@ export default function ProtectedPage() {
     <div ref={containerRef} className="w-screen h-screen overflow-y-scroll snap-y snap-mandatory">
       <SlideNav />
 
-      <div className="max-w-screen-xl w-full ml-auto">
+      <div className="max-w-screen-2xl w-full mx-auto">
 
         <div className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-end relative">
           <img src={imageMainvisual} alt="MainVisual" className="absolute h-full left-0 bottom-0" />
