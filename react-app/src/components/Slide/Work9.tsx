@@ -1,7 +1,6 @@
 import React from "react";
 import image1 from "../../assets/images/works/9/image1.png";
 import image2 from "../../assets/images/works/9/image2.png";
-import image3 from "../../assets/images/works/1/image3.png";
 
 export default function Work9() {
   return (
