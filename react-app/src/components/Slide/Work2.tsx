@@ -13,8 +13,8 @@ export default function Work2() {
 
       <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
-          YouTubeの非公開日時予約プロセスを、GASとVue.YouTubeの非公開日時予約プロセスを、GASとVue.jsを用いたWEBアプリに刷新。<br />
-          スプレッドシートをデータベースとして活用し、直感的なUIと強化されたセキュリティを実現。<br />
+          本プロジェクトは、YouTubeの非公開日時予約プロセスを効率化するGAS WEBアプリの開発です。<br />
+          GASとVue.jsを用いて、スプレッドシートをデータベースとして活用し、直感的なWEB UIを設計・実装しました。<br />
           GASの最適化により処理時間を60秒から2秒に短縮し、業務効率を大幅に向上させました。
         </p>
 

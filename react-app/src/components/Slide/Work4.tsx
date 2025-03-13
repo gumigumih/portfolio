@@ -11,9 +11,9 @@ export default function Work4() {
 
       <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
-          オンライン会議向けに、名前やロゴ、QRコードを含むカスタム背景を生成できるツールを開発。<br />
-          Vue.jsを使用し、発案からリリースまで3日で完了。<br />
-          リリース後1か月で10,000ユーザーを獲得し、500人以上が日常的に利用する人気ツールに成長しました。
+          本プロダクトは、オンライン会議向けに、名前やロゴ、QRコードを含むカスタム背景を生成できるツールです。<br />
+          Vue.jsを使用し、発案からリリースまで3日で開発を完了しました。<br />
+          リリース後1か月で10,000ユーザーを獲得し、500人以上が日常的に利用する人気ツールへと成長しました。
         </p>
 
         <h3 className="mt-[min(2vw,2rem)] text-[min(1vw,1rem)] font-bold text-gray-400">役割</h3>

@@ -13,8 +13,9 @@ export default function Work1() {
 
       <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
-          AbemaTV「にじさんじのくじじゅうじ」のVR収録を支援。VR機材の設置・設定、3Dスタジオデータの制作進行管理、VRM変換を担当。<br />
-          スプレッドシートで準備素材を管理し、設営手順を標準化。VRセンサーのトラブルを減らし、収録準備の効率を向上させました。
+          本プロジェクトは、AbemaTV「にじさんじのくじじゅうじ」のVR収録を支援するものです。<br />
+          VR機材の設置・設定、3Dスタジオデータの制作進行管理、VRM変換を担当しました。<br />
+          スプレッドシートで準備素材を管理し、設営手順を標準化することで、VRセンサーのトラブルを減らし、収録準備の効率を向上させました。
         </p>
 
         <h3 className="mt-[min(2vw,2rem)] text-[min(1vw,1rem)] font-bold text-gray-400">役割</h3>

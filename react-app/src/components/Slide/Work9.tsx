@@ -12,9 +12,9 @@ export default function Work9() {
 
       <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
-          YouTube向けの自動動画配信管理システムを開発。ストリーミング配信専用パソコンを不用にし、複数配信を1つのサーバーで管理。<br />
-          動画の時間帯ごとの切り替え、ストリーミング状況のモニタリングを行い、配信中断時には自動再配信を実行。<br />
-          Slack通知機能を搭載し、24/7の連続ストリーミングを効率的に運用可能にした。
+          本プロジェクトは、YouTube向けの自動動画配信管理システムの開発です。<br />
+          配信ごとに必要だった専用パソコンを不要にし、サクラVPS上で複数配信を一括管理できるようにしました。<br />
+          ストリーミングの自動切り替え・モニタリング・再配信機能を実装し、24時間365日の運用を効率化しました。
         </p>
 
         <h3 className="mt-[min(2vw,2rem)] text-[min(1vw,1rem)] font-bold text-gray-400">役割</h3>

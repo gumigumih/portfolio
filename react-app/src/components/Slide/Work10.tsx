@@ -12,9 +12,9 @@ export default function Work10() {
 
       <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
-          TV番組「マヂカルラブリーの全力！アニシャド応援部」向けに、3Dキャラクター制作と撮影サポートを実施。<br />
-          モーション撮影ツール「NICE CAMERA」を活用し、撮影したモーションデータの調整・追加を担当。<br />
-          クラウドソーシングで制作された3Dキャラクターの品質を向上させるため、ブラッシュアップを行い、安定した品質を実現した。
+          本プロジェクトは、TV番組「マヂカルラブリーの全力！アニシャド応援部」向けの3Dキャラクター制作・撮影支援です。<br />
+          モーション撮影ツール「NICE CAMERA」を活用し、モーションデータの調整・追加を担当しました。<br />
+          クラウドソーシングで制作された3Dキャラクターをブラッシュアップし、一定の品質を確保しました。
         </p>
 
         <h3 className="mt-[min(2vw,2rem)] text-[min(1vw,1rem)] font-bold text-gray-400">役割</h3>

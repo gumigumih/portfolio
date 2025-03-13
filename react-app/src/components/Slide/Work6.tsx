@@ -12,11 +12,9 @@ export default function Work6() {
 
       <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
-          過去に制作した歴史体験型デジタルコンテンツを活用し、バスツアーの企画・制作を実施。<br />
-          三浦半島の魅力を発信するため、ツアーのWEBサイトを制作。<br />
-          観光体験の価値を高め、地域振興につなげるプロジェクト。
+          本プロジェクトは、クライアントが企画・制作したバスツアー向けに、過去の歴史体験型デジタルコンテンツを活用する取り組みです。<br />
+          三浦半島の魅力を発信するため、ツアーのWEBサイトを制作しました。
         </p>
-
         <h3 className="mt-[min(2vw,2rem)] text-[min(1vw,1rem)] font-bold text-gray-400">役割</h3>
         <ul className="mt-2 space-y-4">
           {/* マネジメント */}

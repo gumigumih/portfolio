@@ -12,9 +12,9 @@ export default function Work11() {
 
       <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
-          福岡県の委託事業として、引きこもり支援を目的としたアバター相談アプリを開発。<br />
-          アバターを通じた対話で心理的負担を軽減し、支援をより身近なものに。<br />
-          ユーザー体験を重視し、クライアントとの調整を行いながら、3Dアバターのデザインやシステムの最適化を進めた。
+          本プロジェクトは、福岡県の委託事業として開発した、引きこもり支援のためのアバター相談アプリです。<br />
+          アバターを通じた対話で心理的負担を軽減し、支援をより身近なものにしました。<br />
+          クライアントとの調整を行いながら、3Dアバターのデザインとシステムの最適化を進めました。
         </p>
 
         <h3 className="mt-[min(2vw,2rem)] text-[min(1vw,1rem)] font-bold text-gray-400">役割</h3>
