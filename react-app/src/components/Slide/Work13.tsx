@@ -16,7 +16,7 @@ export default function Work13() {
 
       <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
-          本プロジェクトは、ユーザーの描いたオリジナルイラストをAIが解析し、キャラクターを生成する創造力支援ツール「AI-KATA S2P」の開発・リリース支援です。<br />
+          AI-KATA S2Pは、ユーザーの描いたオリジナルイラストをAIが解析し、キャラクターを生成する創造力支援ツールです。<br />
           展示バージョンからリリースバージョンへの移行を進めるため、システム設計・機能改善・料金プラン設計を担当しました。<br />
           さらに、インフラ運用・広報・カスタマーサポート・アプリストア対応・法務対応にも関与し、安定した運用とリリースを支援しました。
         </p>
