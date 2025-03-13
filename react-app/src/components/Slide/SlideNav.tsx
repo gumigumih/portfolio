@@ -209,7 +209,7 @@ export default function SlideNav() {
                       }}
                     >
                       <div
-                        className={`absolute rounded-full shadow w-full h-full cursor-pointer hover:border-2 hover:border-gray-500 ${project.bgClass ? project.bgClass : 'bg-white'}`}
+                        className={`absolute rounded-full shadow w-full h-full cursor-pointer hover:border-2 hover:border-gray-500 bg-white`}
                         onClick={() => {
                           setIsTimelineOpen(!isTimelineOpen);
                           const targetId = project.jumpTo || "";
