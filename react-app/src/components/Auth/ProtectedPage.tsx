@@ -1,10 +1,12 @@
-import React from 'react';
-import { useRef } from "react";
+import React, { useState, useRef } from "react";
 import useScrollSnap from "react-use-scroll-snap";
 import imageMainvisual from "../../assets/images/mainvisual@2x.png";
 import SkillCircle from "../Slide/SkillCircle";
 import SkillMap from "../Slide/SkillMap";
-import AchievementsTimeline from "../Slide/AchievementsTimeline";
+import SlideNav from "../Slide/SlideNav";
+import W1MajorProjects from "../Slide/W1MajorProjects";
+import W2ExternalTeamManagement from "../Slide/W2ExternalTeamManagement";
+import W3ClientWork from "../Slide/W3ClientWork";
 import Work1 from "../Slide/Work1";
 import Work2 from "../Slide/Work2";
 import Work3 from "../Slide/Work3";
@@ -26,7 +28,9 @@ export default function ProtectedPage() {
 
   return (
     <div ref={containerRef} className="w-screen h-screen overflow-y-scroll snap-y snap-mandatory">
-      <div className="max-w-screen-2xl w-full mx-auto">
+      <SlideNav />
+
+      <div className="max-w-screen-2xl w-full ml-auto">
 
         <div className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-end relative">
           <img src={imageMainvisual} alt="MainVisual" className="absolute h-full left-0 bottom-0" />
@@ -37,34 +41,22 @@ export default function ProtectedPage() {
           </div>
         </div>
 
-        <div className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+        <div id='ability' className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
           <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(1.5vw,1.5rem)] font-bold text-gray-600">能力</h2>
 
           <SkillCircle />
         </div>
 
-        <div className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+        <div id='skill' className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
           <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">テクニカルスキル</h2>
 
           <SkillMap />
         </div>
 
-        <div id="work1" className="snap-start w-full aspect-[16/9] relative">
-          <AchievementsTimeline />
+        <div id='majorProjects' className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+          <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">実績</h2>
 
-          <Work1 />
-        </div>
-
-        <div id="work2" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work2 />
-        </div>
-
-        <div id="work3" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work3 />
-        </div>
-
-        <div id="work4" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work4 />
+          <W1MajorProjects />
         </div>
 
         <div id="work5" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
@@ -83,28 +75,56 @@ export default function ProtectedPage() {
           <Work7 />
         </div>
 
-        <div id="work8" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work8 />
-        </div>
-
-        <div id="work9" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work9 />
-        </div>
-
-        <div id="work10" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work10 />
-        </div>
-
-        <div id="work11" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work11 />
-        </div>
-
         <div id="work12" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
           <Work12 />
         </div>
 
         <div id="work13" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
           <Work13 />
+        </div>
+
+        <div id='externalTeamManagement' className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+          <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">実績</h2>
+
+          <W2ExternalTeamManagement />
+        </div>
+
+        <div id="work11" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+          <Work11 />
+        </div>
+
+        <div id="work10" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+          <Work10 />
+        </div>
+
+        <div id='clientWork' className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+          <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">実績</h2>
+
+          <W3ClientWork />
+        </div>
+
+        <div id="work1" className="snap-start w-full aspect-[16/9] relative">
+          <Work1 />
+        </div>
+
+        <div id="work3" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+          <Work3 />
+        </div>
+
+        <div id="work4" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+          <Work4 />
+        </div>
+
+        <div id="work2" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+          <Work2 />
+        </div>
+
+        <div id="work8" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+          <Work8 />
+        </div>
+
+        <div id="work9" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+          <Work9 />
         </div>
 
       </div>

@@ -1,7 +1,10 @@
 import React from "react";
-import image1 from "../../assets/images/works/1/image1.png";
-import image2 from "../../assets/images/works/1/image2.png";
-import image3 from "../../assets/images/works/1/image3.png";
+import image1 from "../../assets/images/works/8/image1.png";
+import image2 from "../../assets/images/works/8/image2.png";
+import image3 from "../../assets/images/works/8/image3.png";
+import image4 from "../../assets/images/works/8/image4.png";
+import image5 from "../../assets/images/works/8/image5.png";
+import image6 from "../../assets/images/works/8/image6.png";
 
 export default function Work8() {
   return (
@@ -15,7 +18,7 @@ export default function Work8() {
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
           文化財の3DスキャンデータをWEB上で公開するシステムを開発。<br />
           ユーザーがスクロール操作でカメラアングルを変えながら文化財を鑑賞できるインターフェースを実装。<br />
-          複数の文化財データを効率的に管理できるよう、3Dビューアーの基本機能をVue.jsでプラグイン化。
+          複数の文化財データを別々のWEBサイトに埋め込みできるよう、3Dビューアーの基本機能をVue.jsでプラグイン化。
         </p>
 
         <h3 className="mt-[min(2vw,2rem)] text-[min(1vw,1rem)] font-bold text-gray-400">役割</h3>
@@ -46,17 +49,44 @@ export default function Work8() {
       </div>
 
       <div className='absolute top-[min(15vw,15rem)] left-[min(30vw,30rem)] mr-[min(2vw,2rem)]'>
-        <div className="w-[min(40vw,40rem)]">
-          <img src={image1} alt="" />
-        </div>
         <div className="flex gap-[min(2vw,2rem)]">
           <div className="mt-[min(2vw,2rem)]">
+            <img src={image1} alt="" />
+            <p className="text-[min(1vw,1rem)]">須磨寺<br />
+              <a href="https://hacosco.com/suma/" target="_blank" rel="noreferrer" className="text-blue-500 underline">https://hacosco.com/suma/</a>
+            </p>
+          </div>
+          <div className="mt-[min(2vw,2rem)]">
             <img src={image2} alt="" />
-            <p className="text-[min(1vw,1rem)]">設営の様子</p>
+            <p className="text-[min(1vw,1rem)]">針尾送信所<br />
+              <a href="https://hacosco.com/hario/" target="_blank" rel="noreferrer" className="text-blue-500 underline">https://hacosco.com/hario/</a>
+            </p>
           </div>
           <div className="mt-[min(2vw,2rem)]">
             <img src={image3} alt="" />
-            <p className="text-[min(1vw,1rem)]">VR機材の設営手順の標準化</p>
+            <p className="text-[min(1vw,1rem)]">竹田城跡<br />
+              <a href="https://hacosco.com/takeda/" target="_blank" rel="noreferrer" className="text-blue-500 underline">https://hacosco.com/takeda/</a>
+            </p>
+          </div>
+        </div>
+        <div className="flex gap-[min(2vw,2rem)]">
+          <div className="mt-[min(2vw,2rem)]">
+            <img src={image4} alt="" />
+            <p className="text-[min(1vw,1rem)]">熊本の近代化遺産 三池炭鉱万田坑と三角西港<br />
+              <a href="https://hacosco.com/kumamoto-heritage/" target="_blank" rel="noreferrer" className="text-blue-500 underline">https://hacosco.com/kumamoto-heritage/</a>
+            </p>
+          </div>
+          <div className="mt-[min(2vw,2rem)]">
+            <img src={image5} alt="" />
+            <p className="text-[min(1vw,1rem)]">姫路城<br />
+              <a href="https://hacosco.com/himeji-castle/" target="_blank" rel="noreferrer" className="text-blue-500 underline">https://hacosco.com/himeji-castle/</a>
+            </p>
+          </div>
+          <div className="mt-[min(2vw,2rem)]">
+            <img src={image6} alt="" />
+            <p className="text-[min(1vw,1rem)]">神戸市兵庫区の近代化遺産 湊川隧道<br />
+              <a href="https://hacosco.com/hyogoku/" target="_blank" rel="noreferrer" className="text-blue-500 underline">https://hacosco.com/hyogoku/</a>
+            </p>
           </div>
         </div>
       </div>

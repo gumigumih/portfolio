@@ -1,7 +1,6 @@
 import React from "react";
-import image1 from "../../assets/images/works/1/image1.png";
-import image2 from "../../assets/images/works/1/image2.png";
-import image3 from "../../assets/images/works/1/image3.png";
+import image1 from "../../assets/images/works/11/image1.png";
+import image2 from "../../assets/images/works/11/image2.png";
 
 export default function Work11() {
   return (
@@ -51,7 +50,8 @@ export default function Work11() {
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">デザイン</h4>
               <ul className="ml-[min(1.3vw,1.3rem)] space-y-1 list-disc text-[min(1vw,1rem)]">
-                <li className='marker:text-gray-300'>3Dアバターのデザイン企画・制作・最適化</li>
+                <li className='marker:text-gray-300'>アプリのUI・UXデザイン</li>
+                <li className='marker:text-gray-300'>3Dアバター制作</li>
               </ul>
             </div>
           </li>
@@ -59,17 +59,14 @@ export default function Work11() {
       </div>
 
       <div className='absolute top-[min(15vw,15rem)] left-[min(30vw,30rem)] mr-[min(2vw,2rem)]'>
-        <div className="w-[min(40vw,40rem)]">
-          <img src={image1} alt="" />
-        </div>
         <div className="flex gap-[min(2vw,2rem)]">
           <div className="mt-[min(2vw,2rem)]">
-            <img src={image2} alt="" />
-            <p className="text-[min(1vw,1rem)]">設営の様子</p>
+            <img src={image1} alt="" />
+            <p className="text-[min(1vw,1rem)]">VRoidで制作したモデル</p>
           </div>
           <div className="mt-[min(2vw,2rem)]">
-            <img src={image3} alt="" />
-            <p className="text-[min(1vw,1rem)]">VR機材の設営手順の標準化</p>
+            <img src={image2} alt="" />
+            <p className="text-[min(1vw,1rem)]">UIデザイン・画面説明・サーバ構成</p>
           </div>
         </div>
       </div>

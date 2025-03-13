@@ -1,6 +1,6 @@
 import React from "react";
-import image1 from "../../assets/images/works/1/image1.png";
-import image2 from "../../assets/images/works/1/image2.png";
+import image1 from "../../assets/images/works/9/image1.png";
+import image2 from "../../assets/images/works/9/image2.png";
 import image3 from "../../assets/images/works/1/image3.png";
 
 export default function Work9() {
@@ -13,8 +13,8 @@ export default function Work9() {
 
       <div className="absolute top-[min(9vw,9rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
-          YouTube向けの自動動画配信管理システムを開発。<br />
-          動画のスケジュール設定や自動切り替え、ストリーミング状況のモニタリングを行い、配信中断時には自動再配信を実行。<br />
+          YouTube向けの自動動画配信管理システムを開発。ストリーミング配信専用パソコンを不用にし、複数配信を1つのサーバーで管理。<br />
+          動画の時間帯ごとの切り替え、ストリーミング状況のモニタリングを行い、配信中断時には自動再配信を実行。<br />
           Slack通知機能を搭載し、24/7の連続ストリーミングを効率的に運用可能にした。
         </p>
 
@@ -38,17 +38,14 @@ export default function Work9() {
       </div>
 
       <div className='absolute top-[min(15vw,15rem)] left-[min(30vw,30rem)] mr-[min(2vw,2rem)]'>
-        <div className="w-[min(40vw,40rem)]">
-          <img src={image1} alt="" />
-        </div>
         <div className="flex gap-[min(2vw,2rem)]">
-          <div className="mt-[min(2vw,2rem)]">
-            <img src={image2} alt="" />
-            <p className="text-[min(1vw,1rem)]">設営の様子</p>
+          <div className="mt-[min(2vw,2rem)] w-[52%]">
+            <img src={image1} alt="" />
+            <p className="text-[min(1vw,1rem)]">ライブ配信</p>
           </div>
-          <div className="mt-[min(2vw,2rem)]">
-            <img src={image3} alt="" />
-            <p className="text-[min(1vw,1rem)]">VR機材の設営手順の標準化</p>
+          <div className="mt-[min(2vw,2rem)] w-[48%]">
+            <img src={image2} alt="" />
+            <p className="text-[min(1vw,1rem)]">管理画面</p>
           </div>
         </div>
       </div>

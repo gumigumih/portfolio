@@ -1,7 +1,6 @@
 import React from "react";
-import image1 from "../../assets/images/works/1/image1.png";
-import image2 from "../../assets/images/works/1/image2.png";
-import image3 from "../../assets/images/works/1/image3.png";
+import image1 from "../../assets/images/works/10/image1.png";
+import image2 from "../../assets/images/works/10/image2.png";
 
 export default function Work10() {
   return (
@@ -50,7 +49,7 @@ export default function Work10() {
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">デザイン</h4>
               <ul className="ml-[min(1.3vw,1.3rem)] space-y-1 list-disc text-[min(1vw,1rem)]">
-                <li className='marker:text-gray-300'>外注3Dキャラクターのブラッシュアップ・品質向上</li>
+                <li className='marker:text-gray-300'>外注3Dキャラクターの品質チェック・改善<br/>形状修正・デザイン調整を行い、納品対応</li>
               </ul>
             </div>
           </li>
@@ -58,17 +57,14 @@ export default function Work10() {
       </div>
 
       <div className='absolute top-[min(17vw,17rem)] left-[min(32vw,32rem)]'>
-        <div className="w-[min(40vw,40rem)]">
-          <img src={image1} alt="" />
-        </div>
-        <div className="flex gap-[min(2vw,2rem)]">
-          <div className="mt-[min(2vw,2rem)]">
-            <img src={image2} alt="" />
-            <p className="text-[min(1vw,1rem)]">設営の様子</p>
+      <div className="flex gap-[min(2vw,2rem)]">
+          <div className="mt-[min(2vw,2rem)] w-[80%]">
+            <img src={image1} alt="" />
+            <p className="text-[min(1vw,1rem)]">外注から納品された3Dモデルを形状修正・メッシュ修正・テクスチャ調整・シェーダー調整（blender/unity）</p>
           </div>
-          <div className="mt-[min(2vw,2rem)]">
-            <img src={image3} alt="" />
-            <p className="text-[min(1vw,1rem)]">VR機材の設営手順の標準化</p>
+          <div className="mt-[min(2vw,2rem)] w-[20%]">
+            <img src={image2} alt="" />
+            <p className="text-[min(1vw,1rem)]">後頭部の髪の毛を全て作り直し</p>
           </div>
         </div>
       </div>
