@@ -23,7 +23,7 @@ export default function Work6() {
         <ul className="mt-2 space-y-4">
           {/* マネジメント */}
           <li className="flex items-start space-x-3">
-            <span className="w-[min(1.2vw,1.2rem)] h-[min(1.2vw,1.2rem) rounded-full bg-[#FF72D0] mt-[min(1vw,1rem)]"></span>
+            <span className="w-[min(1.2vw,1.2rem)] h-[min(1.2vw,1.2rem) ]rounded-full bg-[#FF72D0] mt-[min(1vw,1rem)]"></span>
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">マネジメント</h4>
               <ul className="ml-[min(1.3vw,1.3rem)] space-y-[min(1vw,1rem)] list-disc text-[min(1vw,1rem)]">
@@ -38,7 +38,7 @@ export default function Work6() {
 
           {/* エンジニアリング */}
           <li className="flex items-start space-x-3">
-            <span className="w-[min(1.2vw,1.2rem)] h-[min(1.2vw,1.2rem) rounded-full bg-[#55FFDC] mt-[min(1vw,1rem)]"></span>
+            <span className="w-[min(1.2vw,1.2rem)] h-[min(1.2vw,1.2rem) ]rounded-full bg-[#55FFDC] mt-[min(1vw,1rem)]"></span>
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">エンジニアリング</h4>
               <ul className="ml-[min(1.3vw,1.3rem)] space-y-[min(1vw,1rem)] list-disc text-[min(1vw,1rem)]">
