@@ -26,10 +26,10 @@ export default function Work14() {
         <ul className="mt-2 space-y-4">
           {/* マネジメント */}
           <li className="flex items-start space-x-3">
-            <span className="w-4 h-4 rounded-full bg-[#FF72D0] mt-1"></span>
+            <span className="w-[min(1.2vw,1.2rem)] h-[min(1.2vw,1.2rem) rounded-full bg-[#FF72D0] mt-[min(1vw,1rem)]"></span>
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">マネジメント</h4>
-              <ul className="ml-[min(1.3vw,1.3rem)] space-y-1 list-disc text-[min(0.9vw,0.9rem)]">
+              <ul className="ml-[min(1.3vw,1.3rem)] space-y-[min(1vw,1rem)] list-disc text-[min(0.9vw,0.9rem)]">
                 <li className='marker:text-gray-300'>開発チームの管理・スケジュール調整・進捗管理</li>
                 <li className='marker:text-gray-300'>料金プランの試算・策定・販売モデルの設計</li>
                 <li className='marker:text-gray-300'>広報・マーケティング施策の企画・実行・SNS運用</li>
@@ -43,10 +43,10 @@ export default function Work14() {
 
           {/* エンジニアリング */}
           <li className="flex items-start space-x-3">
-            <span className="w-4 h-4 rounded-full bg-[#55FFDC] mt-1"></span>
+            <span className="w-[min(1.2vw,1.2rem)] h-[min(1.2vw,1.2rem) rounded-full bg-[#55FFDC] mt-[min(1vw,1rem)]"></span>
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">エンジニアリング</h4>
-              <ul className="ml-[min(1.3vw,1.3rem)] space-y-1 list-disc text-[min(0.9vw,0.9rem)]">
+              <ul className="ml-[min(1.3vw,1.3rem)] space-y-[min(1vw,1rem)] list-disc text-[min(0.9vw,0.9rem)]">
                 <li className='marker:text-gray-300'>サーバー設計・データベース設計・API設計</li>
                 <li className='marker:text-gray-300'>サーバー機能の開発・API実装</li>
                 <li className='marker:text-gray-300'>本番環境リリース・CI/CDの導入・アップデート管理</li>
@@ -59,10 +59,10 @@ export default function Work14() {
 
           {/* デザイン */}
           <li className="flex items-start space-x-3">
-            <span className="w-4 h-4 rounded-full bg-[#FEEE16] mt-1"></span>
+            <span className="w-[min(1.2vw,1.2rem)] h-[min(1.2vw,1.2rem) rounded-full bg-[#FEEE16] mt-[min(1vw,1rem)]"></span>
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">デザイン</h4>
-              <ul className="ml-[min(1.3vw,1.3rem)] space-y-1 list-disc text-[min(0.9vw,0.9rem)]">
+              <ul className="ml-[min(1.3vw,1.3rem)] space-y-[min(1vw,1rem)] list-disc text-[min(0.9vw,0.9rem)]">
                 <li className='marker:text-gray-300'>ソフトウェアのUI設計・デザイン<br/>ユーザーエクスペリエンスの最適化</li>
                 <li className='marker:text-gray-300'>展示会・プロモーション用資料のデザイン</li>
               </ul>

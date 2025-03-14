@@ -23,10 +23,10 @@ export default function Work6() {
         <ul className="mt-2 space-y-4">
           {/* マネジメント */}
           <li className="flex items-start space-x-3">
-            <span className="w-4 h-4 rounded-full bg-[#FF72D0] mt-1"></span>
+            <span className="w-[min(1.2vw,1.2rem)] h-[min(1.2vw,1.2rem) rounded-full bg-[#FF72D0] mt-[min(1vw,1rem)]"></span>
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">マネジメント</h4>
-              <ul className="ml-[min(1.3vw,1.3rem)] space-y-1 list-disc text-[min(1vw,1rem)]">
+              <ul className="ml-[min(1.3vw,1.3rem)] space-y-[min(1vw,1rem)] list-disc text-[min(1vw,1rem)]">
                 <li className='marker:text-gray-300'>プロジェクト全体の進行管理・タスク管理</li>
                 <li className='marker:text-gray-300'>関係者との調整・制作フローの管理</li>
                 <li className='marker:text-gray-300'>各制作物の要件整理</li>
@@ -38,10 +38,10 @@ export default function Work6() {
 
           {/* エンジニアリング */}
           <li className="flex items-start space-x-3">
-            <span className="w-4 h-4 rounded-full bg-[#55FFDC] mt-1"></span>
+            <span className="w-[min(1.2vw,1.2rem)] h-[min(1.2vw,1.2rem) rounded-full bg-[#55FFDC] mt-[min(1vw,1rem)]"></span>
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">エンジニアリング</h4>
-              <ul className="ml-[min(1.3vw,1.3rem)] space-y-1 list-disc text-[min(1vw,1rem)]">
+              <ul className="ml-[min(1.3vw,1.3rem)] space-y-[min(1vw,1rem)] list-disc text-[min(1vw,1rem)]">
                 <li className='marker:text-gray-300'>WebARコンテンツ（ARマンガ）の開発（Vue.js）</li>
                 <li className='marker:text-gray-300'>満足度計測フォームの開発</li>
               </ul>

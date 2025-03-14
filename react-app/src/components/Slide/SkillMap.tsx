@@ -37,7 +37,7 @@ const skills = {
 
 export default function SkillMap() {
   return (
-    <div className="grid grid-cols-3 gap-8 w-[80%]">
+    <div className="grid grid-cols-3 gap-[min(2.5vw,2.5rem)] w-[80%]">
       {Object.entries(skills).map(([category, skillList], index) => (
         <div key={index}>
           <h2 className="text-[min(2.5vw,2.5rem)] font-bold text-center">
@@ -53,7 +53,7 @@ export default function SkillMap() {
               {category}
             </span>
           </h2>
-          <ul className="mt-[min(2vw,2rem)] space-y-3">
+          <ul className="mt-[min(2vw,2rem)] space-y-[min(1.5vw,1.5rem)]">
             {skillList.map((skill, idx) => (
               <li key={idx} className="flex items-center justify-between">
                 <span className="whitespace-pre-line text-[min(1.2vw,1.2rem)]">{skill.name}</span>

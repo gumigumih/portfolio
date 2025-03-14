@@ -21,10 +21,10 @@ export default function Work11() {
         <ul className="mt-2 space-y-4">
           {/* マネジメント */}
           <li className="flex items-start space-x-3">
-            <span className="w-4 h-4 rounded-full bg-[#FF72D0] mt-1"></span>
+            <span className="w-[min(1.2vw,1.2rem)] h-[min(1.2vw,1.2rem) rounded-full bg-[#FF72D0] mt-[min(1vw,1rem)]"></span>
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">マネジメント</h4>
-              <ul className="ml-[min(1.3vw,1.3rem)] space-y-1 list-disc text-[min(1vw,1rem)]">
+              <ul className="ml-[min(1.3vw,1.3rem)] space-y-[min(1vw,1rem)] list-disc text-[min(1vw,1rem)]">
                 <li className='marker:text-gray-300'>プロジェクト全体の管理</li>
                 <li className='marker:text-gray-300'>3Dキャラクター制作の外注管理</li>
                 <li className='marker:text-gray-300'>モーション撮影の進行管理</li>
@@ -34,10 +34,10 @@ export default function Work11() {
 
           {/* エンジニアリング */}
           <li className="flex items-start space-x-3">
-            <span className="w-4 h-4 rounded-full bg-[#55FFDC] mt-1"></span>
+            <span className="w-[min(1.2vw,1.2rem)] h-[min(1.2vw,1.2rem) rounded-full bg-[#55FFDC] mt-[min(1vw,1rem)]"></span>
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">エンジニアリング</h4>
-              <ul className="ml-[min(1.3vw,1.3rem)] space-y-1 list-disc text-[min(1vw,1rem)]">
+              <ul className="ml-[min(1.3vw,1.3rem)] space-y-[min(1vw,1rem)] list-disc text-[min(1vw,1rem)]">
                 <li className='marker:text-gray-300'>モーション撮影データの収録・調整</li>
                 <li className='marker:text-gray-300'>「NICE CAMERA」へのモーションデータ追加</li>
               </ul>
@@ -46,10 +46,10 @@ export default function Work11() {
 
           {/* デザイン */}
           <li className="flex items-start space-x-3">
-            <span className="w-4 h-4 rounded-full bg-[#FEEE16] mt-1"></span>
+            <span className="w-[min(1.2vw,1.2rem)] h-[min(1.2vw,1.2rem) rounded-full bg-[#FEEE16] mt-[min(1vw,1rem)]"></span>
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">デザイン</h4>
-              <ul className="ml-[min(1.3vw,1.3rem)] space-y-1 list-disc text-[min(1vw,1rem)]">
+              <ul className="ml-[min(1.3vw,1.3rem)] space-y-[min(1vw,1rem)] list-disc text-[min(1vw,1rem)]">
                 <li className='marker:text-gray-300'>外注3Dキャラクターの品質チェック・改善<br/>形状修正・デザイン調整を行い、納品対応</li>
               </ul>
             </div>

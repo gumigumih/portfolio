@@ -22,10 +22,10 @@ export default function Work1() {
         <ul className="mt-2 space-y-4">
           {/* マネジメント */}
           <li className="flex items-start space-x-3">
-            <span className="w-4 h-4 rounded-full bg-[#FF72D0] mt-1"></span>
+            <span className="w-[min(1.2vw,1.2rem)] h-[min(1.2vw,1.2rem) rounded-full bg-[#FF72D0] mt-[min(1vw,1rem)]"></span>
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">マネジメント</h4>
-              <ul className="ml-[min(1.3vw,1.3rem)] space-y-1 list-disc text-[min(1vw,1rem)]">
+              <ul className="ml-[min(1.3vw,1.3rem)] space-y-[min(1vw,1rem)] list-disc text-[min(1vw,1rem)]">
                 <li className='marker:text-gray-300'>3Dスタジオデータの制作進行管理</li>
               </ul>
             </div>
@@ -33,10 +33,10 @@ export default function Work1() {
 
           {/* エンジニアリング */}
           <li className="flex items-start space-x-3">
-            <span className="w-4 h-4 rounded-full bg-[#55FFDC] mt-1"></span>
+            <span className="w-[min(1.2vw,1.2rem)] h-[min(1.2vw,1.2rem) rounded-full bg-[#55FFDC] mt-[min(1vw,1rem)]"></span>
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">エンジニアリング</h4>
-              <ul className="ml-[min(1.3vw,1.3rem)] space-y-1 list-disc text-[min(1vw,1rem)]">
+              <ul className="ml-[min(1.3vw,1.3rem)] space-y-[min(1vw,1rem)] list-disc text-[min(1vw,1rem)]">
                 <li className='marker:text-gray-300'>VR機材の設置と設定</li>
                 <li className='marker:text-gray-300'>3DキャラクターのVRM形式変換</li>
               </ul>

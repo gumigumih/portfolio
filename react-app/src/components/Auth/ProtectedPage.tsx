@@ -153,7 +153,7 @@ export default function ProtectedPage() {
             </p>
             <p className="text-center text-[min(1.5vw,1.5rem)] mt-[min(3vw,3rem)]">
               和田 愛<br />
-              megumi.love.ramen@gmail.com
+              info@meggumi.com
             </p>
           </div>
         </div>
