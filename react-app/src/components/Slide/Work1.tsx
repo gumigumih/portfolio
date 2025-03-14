@@ -14,7 +14,7 @@ export default function Work1() {
       <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
           本プロジェクトでは、AbemaTV「にじさんじのくじじゅうじ」のVR収録を支援するものです。<br />
-          毎週の生放送において、演者9人・カメラマン4人、計13人分のVR機材の設営を担当し、VR機材の設置・設定、3Dスタジオデータの制作進行管理、VRM変換を行いました。<br />
+          毎週の生放送において、演者9人・カメラマン4人、計13人分のVR機材の設営を担当し、3Dスタジオデータの制作進行管理、3DキャラクターのVRM変換を行いました。<br />
           また、スプレッドシートで準備素材を管理し、設営手順を標準化することで、VRセンサーのトラブルを減らし、収録準備の効率を向上させました。
         </p>
 
