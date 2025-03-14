@@ -17,9 +17,11 @@ export default function W1MajorProjects() {
           }}
         >
           歴史体験型デジタルコンテンツ開発<br />
+          歴史体験型デジタルコンテンツ活用・バスツアー企画<br />
+          新規バスツアー企画・音声ガイド開発<br />
           <span className='text-[0.8em]'>（文化庁・観光庁補助金事業）</span>
         </a>
-        <a href='#work12' className='border border-gray-700 rounded-lg block p-2'
+        <a href='#work13' className='border border-gray-700 rounded-lg block p-2'
           onClick={(event) => {
             event.preventDefault(); // デフォルトのページジャンプを防ぐ
             const targetId = event.currentTarget.getAttribute('href')?.substring(1); // `#` を削除
@@ -31,7 +33,7 @@ export default function W1MajorProjects() {
           NICE CAMERA<br />
           <span className='text-[0.8em]'>（リモート会議・ライブ配信向けアバターソフト）</span>
         </a>
-        <a href='#work13' className='border border-gray-700 rounded-lg block p-2'
+        <a href='#work14' className='border border-gray-700 rounded-lg block p-2'
           onClick={(event) => {
             event.preventDefault(); // デフォルトのページジャンプを防ぐ
             const targetId = event.currentTarget.getAttribute('href')?.substring(1); // `#` を削除

@@ -8,14 +8,16 @@ export default function Work5() {
   return (
     <div>
       <h2 className="absolute top-[min(2vw,2rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
-        <div className="text-[min(1vw,1rem)]">2020年8月～2021年3月、2021年7月〜2022年3月</div>
-        <div className="text-[min(2vw,2rem)]">歴史体験型デジタルコンテンツ開発</div>
+        <div className="text-[min(1vw,1rem)]">2020年8月～2021年3月</div>
+        <div className="text-[min(2vw,2rem)]">[三浦半島・鎌倉] 歴史体験型デジタルコンテンツ開発</div>
       </h2>
 
       <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
-          本プロジェクトは、三浦半島エリアの文化財や仏閣にまつわる武士の歴史をテーマにしたデジタル歴史体験コンテンツの開発です。<br />
-          文化庁・観光庁の補助金を活用し、VR、WebAR、タブレットアプリ、WEBサイト、アニメーションを組み合わせ、観光地でのインタラクティブな歴史体験を提供しました。
+          本プロジェクトは、クライアントが文化庁の補助金を申請し実施した、三浦半島の歴史体験型デジタルコンテンツ開発です。<br />
+          三浦一族の物語を伝えるため、WEBサイトを制作し、4つの寺に多言語対応のWEB看板とARマンガを設置しました。<br />
+          また、鎌倉時代の武士文化を体験できる写経・彩色・彫像のプログラム、仏師の儀式と武士の祈りを再現したVR体験を開発し、それぞれ専用のWEBサイトを制作しました。<br />
+          予約管理には外部サービス「Select-Type」を導入しました。
         </p>
 
         <h3 className="mt-[min(2vw,2rem)] text-[min(1vw,1rem)] font-bold text-gray-400">役割</h3>

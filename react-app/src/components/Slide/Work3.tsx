@@ -15,8 +15,7 @@ export default function Work3() {
       <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
           本プロジェクトは、お菓子のパッケージにQRコードを掲載し、ARコンテンツを活用したプロモーションを行うものです。<br />
-          受験・行楽シーズン向けに、合格祈願AR、ひらがなクイズ、顔ハメフィルターを制作し、特設サイト制作の進行管理を担当しました。<br />
-          顧客との信頼構築を通じて、継続受注につなげることができました。
+          受験・行楽シーズン向けに、合格祈願AR、ひらがなクイズ、顔ハメフィルターの制作を担当しました。
         </p>
 
         <h3 className="mt-[min(2vw,2rem)] text-[min(1vw,1rem)] font-bold text-gray-400">役割</h3>
@@ -28,7 +27,7 @@ export default function Work3() {
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">マネジメント</h4>
               <ul className="ml-[min(1.3vw,1.3rem)] space-y-1 list-disc text-[min(1vw,1rem)]">
                 <li className='marker:text-gray-300'>全体のスケジュール調整と進捗管理</li>
-                <li className='marker:text-gray-300'>3Dコンテンツのディレクションとクオリティ管理</li>
+                <li className='marker:text-gray-300'>3Dモデルの制作管理</li>
               </ul>
             </div>
           </li>

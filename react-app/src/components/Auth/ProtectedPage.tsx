@@ -22,6 +22,7 @@ import Work10 from "../Slide/Work10";
 import Work11 from "../Slide/Work11";
 import Work12 from "../Slide/Work12";
 import Work13 from "../Slide/Work13";
+import Work14 from "../Slide/Work14";
 
 export default function ProtectedPage() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -76,12 +77,16 @@ export default function ProtectedPage() {
           <Work7 />
         </div>
 
-        <div id="work12" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work12 />
+        <div id="work8" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+          <Work8 />
         </div>
 
         <div id="work13" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
           <Work13 />
+        </div>
+
+        <div id="work14" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+          <Work14 />
         </div>
 
         <div id='externalTeamManagement' className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
@@ -90,12 +95,12 @@ export default function ProtectedPage() {
           <W2ExternalTeamManagement />
         </div>
 
-        <div id="work11" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work11 />
+        <div id="work12" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+          <Work12 />
         </div>
 
-        <div id="work10" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work10 />
+        <div id="work11" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+          <Work11 />
         </div>
 
         <div id='clientWork' className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
@@ -120,15 +125,15 @@ export default function ProtectedPage() {
           <Work2 />
         </div>
 
-        <div id="work8" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work8 />
-        </div>
-
         <div id="work9" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
           <Work9 />
         </div>
 
-        <div id="" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-end relative">
+        <div id="work10" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+          <Work10 />
+        </div>
+
+        <div id="last" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-end relative">
           <div className="w-full">
             <img src={imageHeart} alt="" className="w-[40%] mx-auto -mt-[min(3vw,3rem)]" />
             <p className="text-center text-[min(1.5vw,1.5rem)] mt-[min(2vw,2rem)]">

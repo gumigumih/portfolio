@@ -26,7 +26,9 @@ export default function Work2() {
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">エンジニアリング</h4>
               <ul className="ml-[min(1.3vw,1.3rem)] space-y-1 list-disc text-[min(1vw,1rem)]">
-                <li className='marker:text-gray-300'>WEBアプリの実装</li>
+                <li className='marker:text-gray-300'>WEBアプリの実装（Vue.jsを使用したSPA開発）</li>
+                <li className='marker:text-gray-300'>GASの最適化によるパフォーマンス改善<br/>（処理時間60秒 → 2秒）</li>
+                <li className='marker:text-gray-300'>WEB UIの設計・実装、業務フローの効率化</li>
               </ul>
             </div>
           </li>

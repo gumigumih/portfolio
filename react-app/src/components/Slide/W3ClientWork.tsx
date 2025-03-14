@@ -51,7 +51,7 @@ export default function W3ClientWork() {
         >
           YouTube非公開日時予約管理WEBアプリ
         </a>
-        <a href='#work8' className='border border-gray-700 rounded-lg block p-2'
+        <a href='#work9' className='border border-gray-700 rounded-lg block p-2'
           onClick={(event) => {
             event.preventDefault(); // デフォルトのページジャンプを防ぐ
             const targetId = event.currentTarget.getAttribute('href')?.substring(1); // `#` を削除
@@ -62,7 +62,7 @@ export default function W3ClientWork() {
         >
           文化財3DスキャンWEB公開システム
         </a>
-        <a href='#work9' className='border border-gray-700 rounded-lg block p-2'
+        <a href='#work10' className='border border-gray-700 rounded-lg block p-2'
           onClick={(event) => {
             event.preventDefault(); // デフォルトのページジャンプを防ぐ
             const targetId = event.currentTarget.getAttribute('href')?.substring(1); // `#` を削除

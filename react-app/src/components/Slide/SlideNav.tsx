@@ -1,13 +1,15 @@
 import React from "react";
 import { useState } from "react";
+import parse from 'html-react-parser';
 
 // OUTLINE の項目
 const outlineLinks = [
   { id: "ability", title: "能力" },
   { id: "skill", title: "テクニカルスキル" },
-  { id: "majorProjects", title: "実績 大規模プロジェクト" },
-  { id: "externalTeamManagement", title: "実績 外注管理・チームマネジメント" },
-  { id: "clientWork", title: "実績 クライアントワーク" },
+  { id: "majorProjects", title: "<span class='text-[0.9em]'>実績</span><br/>大規模プロジェクト" },
+  { id: "externalTeamManagement", title: "<span class='text-[0.9em]'>実績</span><br/>外注管理・チームマネジメント" },
+  { id: "clientWork", title: "<span class='text-[0.9em]'>実績</span><br/>クライアントワーク" },
+  { id: "last", title: "さいごに" },
 ];
 
 const projects = [
@@ -41,76 +43,76 @@ const projects = [
     end: { year: 2021, month: 3 },
     text: "歴史体験型デジタルコンテンツ開発",
     textClass: "tracking-[min(0.2vw,0.2rem)]",
-    row: 1,
+    row: 3,
     jumpTo: "work5"
   }, {
     start: { year: 2021, month: 7 },
     end: { year: 2022, month: 3 },
     text: "",
-    row: 1,
-    jumpTo: "work5"
+    row: 3,
+    jumpTo: "work6"
   }, {
     start: { year: 2022, month: 10 },
     end: { year: 2023, month: 2 },
-    text: "歴史体験型デジタルコンテンツ活用",
-    row: 1,
-    jumpTo: "work6"
+    text: "歴史体験コンテンツ活用・バスツアー企画",
+    row: 3,
+    jumpTo: "work7"
   }, {
     start: { year: 2024, month: 1 },
     end: { year: 2024, month: 1 },
     text: "",
-    row: 1,
-    jumpTo: "work6"
+    row: 3,
+    jumpTo: "work7"
   }, {
     start: { year: 2024, month: 7 },
     end: { year: 2025, month: 3 },
-    text: "歴史体験型デジタルコンテンツ強化・開発",
-    row: 1,
-    jumpTo: "work7"
+    text: "新規バスツアー企画・音声ガイド開発",
+    row: 3,
+    jumpTo: "work8"
   }, {
     start: { year: 2022, month: 9 },
     end: { year: 2023, month: 3 },
     text: "文化財3Dスキャンプロジェクト",
     textClass: "right-0",
-    row: 2,
-    jumpTo: "work8"
+    row: 1,
+    jumpTo: "work9"
   }, {
     start: { year: 2023, month: 6 },
     end: { year: 2023, month: 7 },
     text: "Youtube24時間配信システム",
-    row: 2,
-    jumpTo: "work9"
+    row: 1,
+    jumpTo: "work10"
   }, {
     start: { year: 2023, month: 2 },
     end: { year: 2023, month: 5 },
     text: "TV番組3Dキャラ支援",
     textClass: "left-[min(1vw,1rem)] tracking-[min(0.2vw,0.2rem)]",
-    row: 3,
-    jumpTo: "work10"
+    row: 2,
+    jumpTo: "work11"
   }, {
     start: { year: 2023, month: 12 },
     end: { year: 2024, month: 2 },
     text: "",
-    row: 3
+    row: 2
   }, {
     start: { year: 2023, month: 4 },
     end: { year: 2023, month: 9 },
     text: "アバター個別相談アプリ",
     textClass: "right-0",
     row: 5,
-    jumpTo: "work11"
+    jumpTo: "work12"
   }, {
     start: { year: 2020, month: 6 },
     end: { year: 2025, month: 3 },
     text: "NICE CAMERA（アバタートラッキングアプリ）",
     row: 4,
-    jumpTo: "work12"
+    jumpTo: "work13"
   }, {
     start: { year: 2024, month: 3 },
     end: { year: 2025, month: 3 },
-    text: "AI-Kata S2P",
+    text: "AI-KATA S2P",
     row: 5,
-    jumpTo: "work13"
+    jumpTo: "work14"
   },
 ];
 
@@ -130,8 +132,8 @@ export default function SlideNav() {
     <div>
       {/* 📌 OUTLINE メニュー */}
       <div
-        className={`transition-all fixed left-4 top-[min(3vw,3rem)] bg-white/80 backdrop-blur-lg shadow-md rounded-lg cursor-pointer z-20 ${
-          isOutlineOpen ? "p-[min(0.8vw,0.8rem)]" : "px-[min(0.8vw,0.8rem)] py-0"
+        className={`transition-all fixed top-[min(3vw,3rem)] left-[min(1vw,1rem)] bg-white/80 backdrop-blur-lg shadow-md rounded-lg cursor-pointer z-20 ${
+          isOutlineOpen ? "py-[min(0.3vw,0.3rem)] px-[min(0.8vw,0.8rem)]" : "px-[min(0.8vw,0.8rem)] py-0"
         }`}
         onClick={() => setIsOutlineOpen(!isOutlineOpen)}
       >
@@ -140,21 +142,21 @@ export default function SlideNav() {
         </h3>
         <nav
           className={`transition-all duration-300 ease-in-out overflow-hidden ${
-            isOutlineOpen ? "max-h-[500px] max-w-[500px] opacity-100 pt-[min(0.8vw,0.8rem)]" : "max-h-0 max-w-0 opacity-0 pt-0"
+            isOutlineOpen ? "max-h-[500px] max-w-[min(10vw,10rem)] opacity-100 pt-[min(0.3vw,0.3rem)]" : "max-h-0 max-w-0 opacity-0 pt-0"
           }`}
           onClick={(e) => {
             e.stopPropagation();
           }}
         >
-          <ul className="space-y-2">
+          <ul>
             {outlineLinks.map((item) => (
               <li key={item.id}
                 onClick={(e) => {
                   document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="text-[min(1vw,1rem)] text-gray-700 hover:text-blue-500 transition duration-200"
+                className="text-[min(1vw,1rem)] text-gray-700 hover:text-blue-500 transition duration-200 py-[min(0.3vw,0.3rem)] border-b last:border-0"
               >
-                {item.title}
+                {parse(item.title)}
               </li>
             ))}
           </ul>

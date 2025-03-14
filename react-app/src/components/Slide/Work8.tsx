@@ -10,15 +10,15 @@ export default function Work8() {
   return (
     <div>
       <h2 className="absolute top-[min(2vw,2rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
-        <div className="text-[min(1vw,1rem)]">2022年9月〜2023年3月</div>
-        <div className="text-[min(2vw,2rem)]">文化財3DスキャンWEB公開システム開発</div>
+        <div className="text-[min(1vw,1rem)]">2024年7月〜2025年3月</div>
+        <div className="text-[min(2vw,2rem)]">[三浦半島・鎌倉] 新規バスツアー企画・音声ガイド開発</div>
       </h2>
 
       <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
-          本プロジェクトは、文化財の3DスキャンデータをWEB上で公開するシステムの開発です。<br />
-          ユーザーがスクロール操作でカメラアングルを変えながら文化財を鑑賞できるインターフェースを実装しました。<br />
-          また、複数の文化財データを別々のWEBサイトに埋め込みできるよう、3Dビューアーの基本機能をVue.jsでプラグイン化しました。
+          本プロジェクトは、クライアントが文化庁・観光庁の補助金を申請し実施した、新しいバスツアーの企画および音声ガイド制作の取り組みです。<br />
+          ツアーは三浦按針・ペリー・ヴェルニーゆかりの地を巡る内容で、観光体験をより深めるためWEB看板とARマンガを制作しました。<br />
+          また、AI音声生成を活用した多言語対応の音声ガイドを開発し、4つの神社に導入しました。併せて、バスツアーのWEBサイトを改修し、情報整理と利便性の向上を図りました。
         </p>
 
         <h3 className="mt-[min(2vw,2rem)] text-[min(1vw,1rem)] font-bold text-gray-400">役割</h3>
@@ -29,7 +29,10 @@ export default function Work8() {
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">マネジメント</h4>
               <ul className="ml-[min(1.3vw,1.3rem)] space-y-1 list-disc text-[min(1vw,1rem)]">
-                <li className='marker:text-gray-300'>チーム管理・スケジュール調整・進行管理</li>
+                <li className='marker:text-gray-300'>プロジェクト全体の進行管理・タスク管理</li>
+                <li className='marker:text-gray-300'>関係者との調整・制作フローの管理</li>
+                <li className='marker:text-gray-300'>音声ガイドシステムの要件整理</li>
+                <li className='marker:text-gray-300'>WEBサイトの構成改善整理案の作成</li>
               </ul>
             </div>
           </li>
@@ -40,8 +43,24 @@ export default function Work8() {
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">エンジニアリング</h4>
               <ul className="ml-[min(1.3vw,1.3rem)] space-y-1 list-disc text-[min(1vw,1rem)]">
-                <li className='marker:text-gray-300'>3Dビューアーの機能設計・UI設計</li>
-                <li className='marker:text-gray-300'>3Dビューアーの開発・Vue.jsによるプラグイン化</li>
+                <li className='marker:text-gray-300'>WebARコンテンツ（ARマンガ）の開発（Vue.js）</li>
+                <li className='marker:text-gray-300'>満足度計測フォームの開発</li>
+                <li className='marker:text-gray-300'>音声ガイドシステムのシステム設計・データ管理</li>
+                <li className='marker:text-gray-300'>AI音声生成APIの導入・実装</li>
+                <li className='marker:text-gray-300'>サーバー監視・障害対応</li>
+                <li className='marker:text-gray-300'>エラー検知・Slack通知システムの導入・運用</li>
+              </ul>
+            </div>
+          </li>
+
+          {/* デザイン */}
+          <li className="flex items-start space-x-3">
+            <span className="w-4 h-4 rounded-full bg-[#FEEE16] mt-1"></span>
+            <div>
+              <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">デザイン</h4>
+              <ul className="ml-[min(1.3vw,1.3rem)] space-y-1 list-disc text-[min(1vw,1rem)]">
+                <li className='marker:text-gray-300'>音声ガイドLPデザイン・実装</li>
+                <li className='marker:text-gray-300'>音声ガイドアプリのUI/UXデザイン設計・実装</li>
               </ul>
             </div>
           </li>
@@ -50,43 +69,35 @@ export default function Work8() {
 
       <div className='absolute top-[min(13vw,13rem)] left-[min(30vw,30rem)] mr-[min(2vw,2rem)]'>
         <div className="flex gap-[min(2vw,2rem)]">
-          <div className="mt-[min(2vw,2rem)]">
+        <div className="mt-[min(2vw,2rem)] w-[60%]">
             <img src={image1} alt="" />
-            <p className="text-[min(1vw,1rem)]">須磨寺<br />
-              <a href="https://hacosco.com/suma/" target="_blank" rel="noreferrer" className="text-blue-500 underline">https://hacosco.com/suma/</a>
+            <p className="text-[min(1vw,1rem)]">WEB看板＋ARマンガ</p>
+          </div>
+          <div className="mt-[min(2vw,2rem)] w-[60%]">
+            <img src={image6} alt="" />
+            <p className="text-[min(1vw,1rem)]">WEBサイトの構成改善整理案<br />
+              <a href="https://miura.bushido-powerspot.jp/" target="_blank" rel="noreferrer" className="text-blue-500 underline">https://miura.bushido-powerspot.jp/</a>
             </p>
           </div>
-          <div className="mt-[min(2vw,2rem)]">
+          <div className="mt-[min(2vw,2rem)] w-[40%]">
             <img src={image2} alt="" />
-            <p className="text-[min(1vw,1rem)]">針尾送信所<br />
-              <a href="https://hacosco.com/hario/" target="_blank" rel="noreferrer" className="text-blue-500 underline">https://hacosco.com/hario/</a>
-            </p>
-          </div>
-          <div className="mt-[min(2vw,2rem)]">
-            <img src={image3} alt="" />
-            <p className="text-[min(1vw,1rem)]">竹田城跡<br />
-              <a href="https://hacosco.com/takeda/" target="_blank" rel="noreferrer" className="text-blue-500 underline">https://hacosco.com/takeda/</a>
+            <p className="text-[min(1vw,1rem)]">音声ガイドのLP<br />
+              <a href="https://audioguide.bushido-powerspot.jp/" target="_blank" rel="noreferrer" className="text-blue-500 underline">https://audioguide.bushido-powerspot.jp/</a>
             </p>
           </div>
         </div>
         <div className="flex gap-[min(2vw,2rem)]">
-          <div className="mt-[min(2vw,2rem)]">
+          <div className="mt-[min(2vw,2rem)] flex-1">
+            <img src={image3} alt="" />
+            <p className="text-[min(1vw,1rem)]">音声ガイド要件・仕様</p>
+          </div>
+          <div className="mt-[min(2vw,2rem)] flex-1">
             <img src={image4} alt="" />
-            <p className="text-[min(1vw,1rem)]">熊本の近代化遺産 三池炭鉱万田坑と三角西港<br />
-              <a href="https://hacosco.com/kumamoto-heritage/" target="_blank" rel="noreferrer" className="text-blue-500 underline">https://hacosco.com/kumamoto-heritage/</a>
-            </p>
+            <p className="text-[min(1vw,1rem)]">音声ガイド管理画面</p>
           </div>
-          <div className="mt-[min(2vw,2rem)]">
+          <div className="mt-[min(2vw,2rem)] flex-1">
             <img src={image5} alt="" />
-            <p className="text-[min(1vw,1rem)]">姫路城<br />
-              <a href="https://hacosco.com/himeji-castle/" target="_blank" rel="noreferrer" className="text-blue-500 underline">https://hacosco.com/himeji-castle/</a>
-            </p>
-          </div>
-          <div className="mt-[min(2vw,2rem)]">
-            <img src={image6} alt="" />
-            <p className="text-[min(1vw,1rem)]">神戸市兵庫区の近代化遺産 湊川隧道<br />
-              <a href="https://hacosco.com/hyogoku/" target="_blank" rel="noreferrer" className="text-blue-500 underline">https://hacosco.com/hyogoku/</a>
-            </p>
+            <p className="text-[min(1vw,1rem)]">音声ガイド体験画面</p>
           </div>
         </div>
       </div>
