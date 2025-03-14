@@ -53,7 +53,7 @@ export default function SkillMap() {
               {category}
             </span>
           </h2>
-          <ul className="mt-[min(2vw,2rem)] space-y-[min(1.5vw,1.5rem)]">
+          <ul className="mt-[min(2vw,2rem)] space-y-[min(1vw,1rem)]">
             {skillList.map((skill, idx) => (
               <li key={idx} className="flex items-center justify-between">
                 <span className="whitespace-pre-line text-[min(1.2vw,1.2rem)]">{skill.name}</span>
