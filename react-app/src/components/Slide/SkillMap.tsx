@@ -63,7 +63,7 @@ export default function SkillMap() {
                     .map((_, i) => (
                       <div
                         key={i}
-                        className={`w-5 h-5 ${
+                        className={`w-[min(1.2vw,1.2rem)] h-[min(1.2vw,1.2rem)] ${
                           i < skill.level ?
                             (category === "エンジニアリング" ? "bg-[#55FFDC]" :
                               category === "デザイン" ? "bg-[#FEEE16]" : "bg-gray-500") + " rounded-sm"
