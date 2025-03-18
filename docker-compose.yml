@@ -7,6 +7,6 @@ services:
       - NODE_ENV=development
       - CHOKIDAR_USEPOLLING=true
       - WATCHPACK_POLLING=true
-    command: sh -c 'cd react-app && npm run start'
+    command: "npm run start"
     ports:
-      - '3000:3000'
+      - "3000:3000"
