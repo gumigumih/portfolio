@@ -5,17 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 // ✅ Tailwind CSS を CDN で使用
-const script = document.createElement("script");
-script.src = "https://cdn.tailwindcss.com";
+const script = document.createElement('script');
+script.src = 'https://cdn.tailwindcss.com';
 document.head.appendChild(script);
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function

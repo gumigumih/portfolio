@@ -1,7 +1,7 @@
 import React from 'react';
-import { useState } from "react";
-import Login from "./Login";
-import ProtectedPage from "./ProtectedPage";
+import { useState } from 'react';
+import Login from './Login';
+import ProtectedPage from './ProtectedPage';
 
 export default function Auth() {
   const [authenticated, setAuthenticated] = useState(false);

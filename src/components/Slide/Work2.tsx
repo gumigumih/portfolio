@@ -1,7 +1,7 @@
-import React from "react";
-import image1 from "../../assets/images/works/2/image1.png";
-import image2 from "../../assets/images/works/2/image2.png";
-import image3 from "../../assets/images/works/2/image3.png";
+import React from 'react';
+import image1 from '../../assets/images/works/2/image1.png';
+import image2 from '../../assets/images/works/2/image2.png';
+import image3 from '../../assets/images/works/2/image3.png';
 
 export default function Work2() {
   return (
@@ -13,8 +13,10 @@ export default function Work2() {
 
       <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
-          本プロジェクトは、YouTubeの非公開日時予約プロセスを効率化するGAS WEBアプリの開発です。<br />
-          GASとVue.jsを用いて、スプレッドシートをデータベースとして活用し、直感的なWEB UIを設計・実装しました。<br />
+          本プロジェクトは、YouTubeの非公開日時予約プロセスを効率化するGAS WEBアプリの開発です。
+          <br />
+          GASとVue.jsを用いて、スプレッドシートをデータベースとして活用し、直感的なWEB UIを設計・実装しました。
+          <br />
           GASの最適化により処理時間を60秒から2秒に短縮し、業務効率を大幅に向上させました。
         </p>
 
@@ -26,17 +28,21 @@ export default function Work2() {
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">エンジニアリング</h4>
               <ul className="ml-[min(1.3vw,1.3rem)] space-y-[min(1vw,1rem)] list-disc text-[min(1vw,1rem)]">
-                <li className='marker:text-gray-300'>WEBアプリの実装（Vue.jsを使用したSPA開発）</li>
-                <li className='marker:text-gray-300'>GASの最適化によるパフォーマンス改善<br/>（処理時間60秒 → 2秒）</li>
-                <li className='marker:text-gray-300'>WEB UIの設計・実装、業務フローの効率化</li>
+                <li className="marker:text-gray-300">WEBアプリの実装（Vue.jsを使用したSPA開発）</li>
+                <li className="marker:text-gray-300">
+                  GASの最適化によるパフォーマンス改善
+                  <br />
+                  （処理時間60秒 → 2秒）
+                </li>
+                <li className="marker:text-gray-300">WEB UIの設計・実装、業務フローの効率化</li>
               </ul>
             </div>
           </li>
         </ul>
       </div>
 
-      <div className='absolute top-[min(13vw,13rem)] left-[min(30vw,30rem)] mr-[min(2vw,2rem)]'>
-      <div className="flex gap-[min(2vw,2rem)] w-[80%]">
+      <div className="absolute top-[min(13vw,13rem)] left-[min(30vw,30rem)] mr-[min(2vw,2rem)]">
+        <div className="flex gap-[min(2vw,2rem)] w-[80%]">
           <div className="mt-[min(2vw,2rem)]">
             <img src={image1} alt="" />
             <p className="text-[min(1vw,1rem)]">システム構成</p>

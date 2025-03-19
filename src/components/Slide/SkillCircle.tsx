@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 // Props の型を定義
 type CircleSectionProps = {
@@ -10,7 +10,14 @@ type CircleSectionProps = {
   skillsPosition: string;
 };
 
-const CircleSection: React.FC<CircleSectionProps> = ({ title, titlePosition, color, position, skills, skillsPosition }) => {
+const CircleSection: React.FC<CircleSectionProps> = ({
+  title,
+  titlePosition,
+  color,
+  position,
+  skills,
+  skillsPosition,
+}) => {
   return (
     <div className={`absolute w-[min(35vw,35rem)] h-[min(35vw,35rem)] rounded-full ${position}`}>
       <h3 className={`absolute ${titlePosition} text-[min(2.5vw,2.5rem)] font-bold bg-[#fafafa]`}>
@@ -18,7 +25,9 @@ const CircleSection: React.FC<CircleSectionProps> = ({ title, titlePosition, col
       </h3>
       <ul className={`absolute ${skillsPosition} text-[min(1.2vw,1.2rem)] bg-[#fafafa]/80`}>
         {skills.map((skill, index) => (
-          <li key={index} className="whitespace-pre-line">{skill}</li>
+          <li key={index} className="whitespace-pre-line">
+            {skill}
+          </li>
         ))}
       </ul>
     </div>
@@ -36,7 +45,8 @@ const SkillCircle: React.FC = () => {
       </div>
 
       <div className="absolute bg-gray-800 py-[min(0.5vw,0.5rem)] px-[min(1.5vw,1.5rem)] text-white text-[min(2vw,2rem)] text-center font-bold">
-        エンジニアリングとデザインの経験を活かして<br />
+        エンジニアリングとデザインの経験を活かして
+        <br />
         プロジェクト全体をマネジメントします
       </div>
 
@@ -47,7 +57,7 @@ const SkillCircle: React.FC = () => {
           titlePosition="bottom-[55%] left-[50%] -translate-x-1/2"
           color="#FF72D0"
           position="top-0 left-1/2 transform -translate-x-1/2"
-          skills={["#プロジェクトマネジメント", "#外注管理", "#提案・見積もり"]}
+          skills={['#プロジェクトマネジメント', '#外注管理', '#提案・見積もり']}
           skillsPosition="bottom-[70%] left-[50%] -translate-x-1/2 w-[min(19vw,19rem)]"
         />
 
@@ -56,7 +66,7 @@ const SkillCircle: React.FC = () => {
           titlePosition="top-[55%] right-[45%] w-[min(20vw,20rem)]"
           color="#55FFDC"
           position="bottom-0 left-0"
-          skills={["#システム・DB設計", "#フロントエンド・\nバックエンド開発", "#API設計・実装"]}
+          skills={['#システム・DB設計', '#フロントエンド・\nバックエンド開発', '#API設計・実装']}
           skillsPosition="top-[70%] right-[45%]"
         />
 
@@ -65,7 +75,7 @@ const SkillCircle: React.FC = () => {
           titlePosition="top-[55%] left-[45%]"
           color="#FEEE16"
           position="bottom-0 right-0"
-          skills={["#UI/UXデザイン", "#プロトタイピング", "#ロゴ・バナー・\nチラシデザイン"]}
+          skills={['#UI/UXデザイン', '#プロトタイピング', '#ロゴ・バナー・\nチラシデザイン']}
           skillsPosition="top-[70%] left-[45%] w-[min(13.5vw,13.5rem)]"
         />
       </div>

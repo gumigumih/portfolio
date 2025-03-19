@@ -1,7 +1,7 @@
-import React from "react";
-import image1 from "../../assets/images/works/1/image1.png";
-import image2 from "../../assets/images/works/1/image2.png";
-import image3 from "../../assets/images/works/1/image3.png";
+import React from 'react';
+import image1 from '../../assets/images/works/1/image1.png';
+import image2 from '../../assets/images/works/1/image2.png';
+import image3 from '../../assets/images/works/1/image3.png';
 
 export default function Work1() {
   return (
@@ -13,8 +13,10 @@ export default function Work1() {
 
       <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
-          本プロジェクトでは、AbemaTV「にじさんじのくじじゅうじ」のVR収録を支援するものです。<br />
-          毎週の生放送において、演者9人・カメラマン4人、計13人分のVR機材の設営を担当し、3Dスタジオデータの制作進行管理、3DキャラクターのVRM変換を行いました。<br />
+          本プロジェクトでは、AbemaTV「にじさんじのくじじゅうじ」のVR収録を支援するものです。
+          <br />
+          毎週の生放送において、演者9人・カメラマン4人、計13人分のVR機材の設営を担当し、3Dスタジオデータの制作進行管理、3DキャラクターのVRM変換を行いました。
+          <br />
           また、スプレッドシートで準備素材を管理し、設営手順を標準化することで、VRセンサーのトラブルを減らし、収録準備の効率を向上させました。
         </p>
 
@@ -26,7 +28,7 @@ export default function Work1() {
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">マネジメント</h4>
               <ul className="ml-[min(1.3vw,1.3rem)] space-y-[min(1vw,1rem)] list-disc text-[min(1vw,1rem)]">
-                <li className='marker:text-gray-300'>3Dスタジオデータの制作進行管理</li>
+                <li className="marker:text-gray-300">3Dスタジオデータの制作進行管理</li>
               </ul>
             </div>
           </li>
@@ -37,18 +39,18 @@ export default function Work1() {
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">エンジニアリング</h4>
               <ul className="ml-[min(1.3vw,1.3rem)] space-y-[min(1vw,1rem)] list-disc text-[min(1vw,1rem)]">
-                <li className='marker:text-gray-300'>VR機材の設置と設定</li>
-                <li className='marker:text-gray-300'>3DキャラクターのVRM形式変換</li>
+                <li className="marker:text-gray-300">VR機材の設置と設定</li>
+                <li className="marker:text-gray-300">3DキャラクターのVRM形式変換</li>
               </ul>
             </div>
           </li>
         </ul>
       </div>
 
-      <div className='absolute top-[min(13vw,13rem)] left-[min(30vw,30rem)] mr-[min(2vw,2rem)]'>
+      <div className="absolute top-[min(13vw,13rem)] left-[min(30vw,30rem)] mr-[min(2vw,2rem)]">
         <div className="flex gap-[min(2vw,2rem)]">
           <div className="mt-[min(2vw,2rem)]">
-          <img src={image1} alt="" className="w-[60%]" />
+            <img src={image1} alt="" className="w-[60%]" />
             <p className="text-[min(1vw,1rem)]">番組クレジット</p>
           </div>
         </div>

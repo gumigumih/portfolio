@@ -1,39 +1,41 @@
-import React, { useRef } from "react";
-import useScrollSnap from "react-use-scroll-snap";
-import imageMainvisual from "../../assets/images/mainvisual@2x.png";
-import imageHeart from "../../assets/images/heart.png";
-import SkillCircle from "../Slide/SkillCircle";
-import SkillMap from "../Slide/SkillMap";
-import SlideNav from "../Slide/SlideNav";
-import W1MajorProjects from "../Slide/W1MajorProjects";
-import W2ExternalTeamManagement from "../Slide/W2ExternalTeamManagement";
-import W3ClientWork from "../Slide/W3ClientWork";
-import Work1 from "../Slide/Work1";
-import Work2 from "../Slide/Work2";
-import Work3 from "../Slide/Work3";
-import Work4 from "../Slide/Work4";
-import Work5p1 from "../Slide/Work5_1";
-import Work5p2 from "../Slide/Work5_2";
-import Work6 from "../Slide/Work6";
-import Work7 from "../Slide/Work7";
-import Work8 from "../Slide/Work8";
-import Work9 from "../Slide/Work9";
-import Work10 from "../Slide/Work10";
-import Work11 from "../Slide/Work11";
-import Work12 from "../Slide/Work12";
-import Work13 from "../Slide/Work13";
-import Work14 from "../Slide/Work14";
+import React, { useRef } from 'react';
+import useScrollSnap from 'react-use-scroll-snap';
+import imageMainvisual from '../../assets/images/mainvisual@2x.png';
+import imageHeart from '../../assets/images/heart.png';
+import SkillCircle from '../Slide/SkillCircle';
+import SkillMap from '../Slide/SkillMap';
+import SlideNav from '../Slide/SlideNav';
+import W1MajorProjects from '../Slide/W1MajorProjects';
+import W2ExternalTeamManagement from '../Slide/W2ExternalTeamManagement';
+import W3ClientWork from '../Slide/W3ClientWork';
+import Work1 from '../Slide/Work1';
+import Work2 from '../Slide/Work2';
+import Work3 from '../Slide/Work3';
+import Work4 from '../Slide/Work4';
+import Work5p1 from '../Slide/Work5_1';
+import Work5p2 from '../Slide/Work5_2';
+import Work6 from '../Slide/Work6';
+import Work7 from '../Slide/Work7';
+import Work8 from '../Slide/Work8';
+import Work9 from '../Slide/Work9';
+import Work10 from '../Slide/Work10';
+import Work11 from '../Slide/Work11';
+import Work12 from '../Slide/Work12';
+import Work13 from '../Slide/Work13';
+import Work14 from '../Slide/Work14';
 
 export default function ProtectedPage() {
   const containerRef = useRef<HTMLDivElement | null>(null);
-  useScrollSnap({ ref: containerRef as React.MutableRefObject<HTMLDivElement>, duration: 300 });
+  useScrollSnap({
+    ref: containerRef as React.MutableRefObject<HTMLDivElement>,
+    duration: 300,
+  });
 
   return (
     <div ref={containerRef} className="w-screen h-screen overflow-y-scroll snap-y snap-mandatory">
       <SlideNav />
 
       <div className="max-w-screen-2xl w-full mx-auto">
-
         <div className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-end relative">
           <img src={imageMainvisual} alt="MainVisual" className="absolute h-full left-0 bottom-0" />
           <div className="pt-[min(4vw,4rem)] mr-[min(5vw,5rem)] font-[Montserrat] font-medium text-right">
@@ -43,20 +45,32 @@ export default function ProtectedPage() {
           </div>
         </div>
 
-        <div id='ability' className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(1.5vw,1.5rem)] font-bold text-gray-600">能力</h2>
+        <div
+          id="ability"
+          className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative"
+        >
+          <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(1.5vw,1.5rem)] font-bold text-gray-600">
+            能力
+          </h2>
 
           <SkillCircle />
         </div>
 
-        <div id='skill' className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">テクニカルスキル</h2>
+        <div id="skill" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+          <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
+            テクニカルスキル
+          </h2>
 
           <SkillMap />
         </div>
 
-        <div id='majorProjects' className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">実績</h2>
+        <div
+          id="majorProjects"
+          className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative"
+        >
+          <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
+            実績
+          </h2>
 
           <W1MajorProjects />
         </div>
@@ -89,8 +103,13 @@ export default function ProtectedPage() {
           <Work14 />
         </div>
 
-        <div id='externalTeamManagement' className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">実績</h2>
+        <div
+          id="externalTeamManagement"
+          className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative"
+        >
+          <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
+            実績
+          </h2>
 
           <W2ExternalTeamManagement />
         </div>
@@ -103,8 +122,13 @@ export default function ProtectedPage() {
           <Work11 />
         </div>
 
-        <div id='clientWork' className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">実績</h2>
+        <div
+          id="clientWork"
+          className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative"
+        >
+          <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
+            実績
+          </h2>
 
           <W3ClientWork />
         </div>
@@ -137,8 +161,10 @@ export default function ProtectedPage() {
           <div className="w-full">
             <img src={imageHeart} alt="" className="w-[40%] mx-auto -mt-[min(3vw,3rem)]" />
             <p className="text-center text-[min(1.5vw,1.5rem)] mt-[min(2vw,2rem)]">
-              私は、プロダクトの品質向上とスムーズな運用を支えるディレクションを行っています。<br />
-              技術とデザインの両面から、開発チーム・デザインチームと連携し、スムーズに進行できる環境を整えます。<br />
+              私は、プロダクトの品質向上とスムーズな運用を支えるディレクションを行っています。
+              <br />
+              技術とデザインの両面から、開発チーム・デザインチームと連携し、スムーズに進行できる環境を整えます。
+              <br />
               また、ユーザーにとって使いやすい形を追求し、継続的に改善できる仕組みを作ることを大切にしています。
             </p>
           </div>
@@ -147,8 +173,10 @@ export default function ProtectedPage() {
         <div id="" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-end relative">
           <div className="w-full">
             <p className="text-center text-[min(1.5vw,1.5rem)] mt-[min(3vw,3rem)]">
-              最後までご覧いただきありがとうございます。<br />
-              開発・デザイン・運用の連携をスムーズにし、より良いプロダクトを作ることに貢献したいと考えています。<br />
+              最後までご覧いただきありがとうございます。
+              <br />
+              開発・デザイン・運用の連携をスムーズにし、より良いプロダクトを作ることに貢献したいと考えています。
+              <br />
               ぜひお話しする機会をいただければ幸いです。お気軽にご連絡ください。
             </p>
             <p className="text-center text-[min(1.5vw,1.5rem)] mt-[min(3vw,3rem)]">
@@ -157,7 +185,6 @@ export default function ProtectedPage() {
             </p>
           </div>
         </div>
-
       </div>
     </div>
   );

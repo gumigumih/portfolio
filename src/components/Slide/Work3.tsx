@@ -1,8 +1,8 @@
-import React from "react";
-import image1 from "../../assets/images/works/3/image1.png";
-import image2 from "../../assets/images/works/3/image2.png";
-import image3 from "../../assets/images/works/3/image3.png";
-import image4 from "../../assets/images/works/3/image4.png";
+import React from 'react';
+import image1 from '../../assets/images/works/3/image1.png';
+import image2 from '../../assets/images/works/3/image2.png';
+import image3 from '../../assets/images/works/3/image3.png';
+import image4 from '../../assets/images/works/3/image4.png';
 
 export default function Work3() {
   return (
@@ -14,7 +14,8 @@ export default function Work3() {
 
       <div className="absolute top-[min(7vw,7rem)] left-[min(2vw,2rem)] w-full">
         <p className="text-gray-600 text-[min(1.2vw,1.2rem)] text-justify">
-          本プロジェクトは、お菓子のパッケージにQRコードを掲載し、ARコンテンツを活用したプロモーションを行うものです。<br />
+          本プロジェクトは、お菓子のパッケージにQRコードを掲載し、ARコンテンツを活用したプロモーションを行うものです。
+          <br />
           受験・行楽シーズン向けに、合格祈願AR、ひらがなクイズ、顔ハメフィルターの制作を担当しました。
         </p>
 
@@ -26,8 +27,8 @@ export default function Work3() {
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">マネジメント</h4>
               <ul className="ml-[min(1.3vw,1.3rem)] space-y-[min(1vw,1rem)] list-disc text-[min(1vw,1rem)]">
-                <li className='marker:text-gray-300'>全体のスケジュール調整と進捗管理</li>
-                <li className='marker:text-gray-300'>3Dモデルの制作管理</li>
+                <li className="marker:text-gray-300">全体のスケジュール調整と進捗管理</li>
+                <li className="marker:text-gray-300">3Dモデルの制作管理</li>
               </ul>
             </div>
           </li>
@@ -38,7 +39,7 @@ export default function Work3() {
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">エンジニアリング</h4>
               <ul className="ml-[min(1.3vw,1.3rem)] space-y-[min(1vw,1rem)] list-disc text-[min(1vw,1rem)]">
-                <li className='marker:text-gray-300'>AR体験の設計と実装</li>
+                <li className="marker:text-gray-300">AR体験の設計と実装</li>
               </ul>
             </div>
           </li>
@@ -49,14 +50,14 @@ export default function Work3() {
             <div>
               <h4 className="font-semibold text-[min(1.2vw,1.2rem)]">デザイン</h4>
               <ul className="ml-[min(1.3vw,1.3rem)] space-y-[min(1vw,1rem)] list-disc text-[min(1vw,1rem)]">
-                <li className='marker:text-gray-300'>ARコンテンツのUIデザイン</li>
+                <li className="marker:text-gray-300">ARコンテンツのUIデザイン</li>
               </ul>
             </div>
           </li>
         </ul>
       </div>
 
-      <div className='absolute top-[min(13vw,13rem)] left-[min(30vw,30rem)] mr-[min(2vw,2rem)]'>
+      <div className="absolute top-[min(13vw,13rem)] left-[min(30vw,30rem)] mr-[min(2vw,2rem)]">
         <div className="flex gap-[min(2vw,2rem)] w-[80%]">
           <div className="mt-[min(2vw,2rem)]">
             <img src={image1} alt="" />
