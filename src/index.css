@@ -1,10 +1,9 @@
-/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Zen+Maru+Gothic&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Zen+Maru+Gothic&display=swap');
-
 html {
-  font-size: 16px;
+    font-size: 16px;
 }

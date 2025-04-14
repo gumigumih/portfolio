@@ -4,7 +4,7 @@ import CryptoJS from 'crypto-js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
-const PASSWORD_HASH = process.env.REACT_APP_PASSWORD_HASH;
+const PASSWORD_HASH = import.meta.env.VITE_PASSWORD_HASH;
 
 type LoginProps = {
   onAuthenticate: (password: string) => void;
