@@ -177,7 +177,7 @@ export default function SlideNav() {
             {outlineLinks.map((item) => (
               <li
                 key={item.id}
-                onClick={(e) => {
+                onClick={() => {
                   document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' });
                 }}
                 className="text-[min(1vw,1rem)] text-gray-700 hover:text-blue-500 transition duration-200 py-[min(0.3vw,0.3rem)] border-b last:border-0"
