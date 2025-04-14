@@ -1,4 +1,3 @@
-import React from 'react';
 
 // Props の型を定義
 type CircleSectionProps = {

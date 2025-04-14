@@ -1,4 +1,3 @@
-import React from 'react';
 import image1 from '../../assets/images/works/4/image1.png';
 
 export default function Work4() {

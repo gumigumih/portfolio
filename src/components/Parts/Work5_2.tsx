@@ -1,4 +1,3 @@
-import React from 'react';
 import image5 from '../../assets/images/works/5/image5.png';
 import image6 from '../../assets/images/works/5/image6.png';
 import image7 from '../../assets/images/works/5/image7.png';
