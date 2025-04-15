@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import useScrollSnap from 'react-use-scroll-snap';
 import imageMainvisual from '../../assets/images/mainvisual@2x.png';
 import imageHeart from '../../assets/images/heart.png';
 import SkillCircle from '../Parts/SkillCircle';
@@ -25,18 +24,12 @@ import Work13 from '../Parts/Work13';
 import Work14 from '../Parts/Work14';
 
 export default function ProtectedPage() {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  useScrollSnap({
-    ref: containerRef as React.MutableRefObject<HTMLDivElement>,
-    duration: 300,
-  });
-
   return (
-    <div ref={containerRef} className="w-screen h-screen overflow-y-scroll snap-y snap-mandatory">
+    <div className="w-screen">
       <SlideNav />
 
-      <div className="max-w-screen-2xl w-full mx-auto">
-        <div className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-end relative">
+      <div className="max-w-screen-2xl w-full h-screen mx-auto">
+        <div className="w-full aspect-[16/9] flex flex-col justify-center items-end relative">
           <img src={imageMainvisual} alt="MainVisual" className="absolute h-full left-0 bottom-0" />
           <div className="pt-[min(4vw,4rem)] mr-[min(5vw,5rem)] font-[Montserrat] font-medium text-right">
             <h1 className="text-[min(6vw,6rem)]">MEGUMI WADA</h1>
@@ -47,7 +40,7 @@ export default function ProtectedPage() {
 
         <div
           id="ability"
-          className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative"
+          className="w-full aspect-[16/9] flex flex-col justify-center items-center relative"
         >
           <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(1.5vw,1.5rem)] font-bold text-gray-600">
             能力
@@ -56,7 +49,7 @@ export default function ProtectedPage() {
           <SkillCircle />
         </div>
 
-        <div id="skill" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+        <div id="skill" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
           <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
             テクニカルスキル
           </h2>
@@ -66,7 +59,7 @@ export default function ProtectedPage() {
 
         <div
           id="majorProjects"
-          className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative"
+          className="w-full aspect-[16/9] flex flex-col justify-center items-center relative"
         >
           <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
             実績
@@ -75,37 +68,37 @@ export default function ProtectedPage() {
           <W1MajorProjects />
         </div>
 
-        <div id="work5" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+        <div id="work5" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
           <Work5p1 />
         </div>
 
-        <div id="" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+        <div id="" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
           <Work5p2 />
         </div>
 
-        <div id="work6" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+        <div id="work6" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
           <Work6 />
         </div>
 
-        <div id="work7" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+        <div id="work7" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
           <Work7 />
         </div>
 
-        <div id="work8" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+        <div id="work8" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
           <Work8 />
         </div>
 
-        <div id="work13" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+        <div id="work13" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
           <Work13 />
         </div>
 
-        <div id="work14" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+        <div id="work14" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
           <Work14 />
         </div>
 
         <div
           id="externalTeamManagement"
-          className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative"
+          className="w-full aspect-[16/9] flex flex-col justify-center items-center relative"
         >
           <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
             実績
@@ -114,17 +107,17 @@ export default function ProtectedPage() {
           <W2ExternalTeamManagement />
         </div>
 
-        <div id="work12" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+        <div id="work12" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
           <Work12 />
         </div>
 
-        <div id="work11" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+        <div id="work11" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
           <Work11 />
         </div>
 
         <div
           id="clientWork"
-          className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative"
+          className="w-full aspect-[16/9] flex flex-col justify-center items-center relative"
         >
           <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
             実績
@@ -133,31 +126,31 @@ export default function ProtectedPage() {
           <W3ClientWork />
         </div>
 
-        <div id="work1" className="snap-start w-full aspect-[16/9] relative">
+        <div id="work1" className="w-full aspect-[16/9] relative">
           <Work1 />
         </div>
 
-        <div id="work3" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+        <div id="work3" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
           <Work3 />
         </div>
 
-        <div id="work4" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+        <div id="work4" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
           <Work4 />
         </div>
 
-        <div id="work2" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+        <div id="work2" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
           <Work2 />
         </div>
 
-        <div id="work9" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+        <div id="work9" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
           <Work9 />
         </div>
 
-        <div id="work10" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
+        <div id="work10" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
           <Work10 />
         </div>
 
-        <div id="last" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-end relative">
+        <div id="last" className="w-full aspect-[16/9] flex flex-col justify-center items-end relative">
           <div className="w-full">
             <img src={imageHeart} alt="" className="w-[40%] mx-auto -mt-[min(3vw,3rem)]" />
             <p className="text-center text-[min(1.5vw,1.5rem)] mt-[min(2vw,2rem)]">
@@ -170,7 +163,7 @@ export default function ProtectedPage() {
           </div>
         </div>
 
-        <div id="" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-end relative">
+        <div id="" className="w-full aspect-[16/9] flex flex-col justify-center items-end relative">
           <div className="w-full">
             <p className="text-center text-[min(1.5vw,1.5rem)] mt-[min(3vw,3rem)]">
               最後までご覧いただきありがとうございます。
