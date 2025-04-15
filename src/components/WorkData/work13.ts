@@ -50,28 +50,24 @@ const projectData = {
   slides: [
     {
       title: 'WEBサイト',
+      description: 'プロダクト紹介・機能説明・価格案内を網羅した公式WEBサイト。SEOとUIを意識した設計を行いました。',
       images: [image1],
       link: 'https://nicecamera.kidsplates.jp/',
     },
     {
-      title: 'アカウント管理画面',
-      images: [image2],
-    },
-    {
-      title: 'Admin管理画面',
-      images: [image3],
+      title: 'アカウント管理画面・Admin管理画面',
+      description: 'ユーザー登録・課金管理を行うアカウント管理画面と、運営側のモニタリング・設定を行う管理画面を構築しました。',
+      images: [image2, image3],
     },
     {
       title: 'UIデザイン',
+      description: 'アプリの操作を直感的に行えるように、アイコン設計・色設計・レイアウト最適化などを行いました。',
       images: [image4],
     },
     {
-      title: '展示会 会場',
-      images: [image5],
-    },
-    {
-      title: '展示会 チラシ',
-      images: [image6],
+      title: '展示会 会場・チラシ',
+      description: '展示会での来場者に向けたデモブースの構成と、配布用チラシ・説明資料のデザイン・編集を担当しました。',
+      images: [image5, image6],
     },
   ],
 };

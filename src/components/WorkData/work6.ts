@@ -34,15 +34,18 @@ const projectData = {
   slides: [
     {
       title: 'WEB看板＋ARマンガ',
+      description: '現地に設置された看板のQRコードを読み込むと、各国語対応のWEB看板が表示され、そのままARマンガを閲覧。歴史背景を楽しく学べる仕組みで、体験後にはアンケート回答も促されます。',
       images: [image2, image1],
     },
     {
       title: '北条家の物語のWEBサイト',
+      description: '北条家ゆかりの地を紹介する特設WEBサイト。北条家の物語を視覚的に楽しんでもらう構成です。',
       images: [image3],
       link: 'https://kamakurabushi.com/',
     },
     {
       title: '和賀江嶋のAR',
+      description: '日本最古の築港遺跡「和賀江嶋」を3Dで復元し、GPS連動のAR体験として提供。現地の看板から閲覧することで、リアルな視点で歴史を体感できます。',
       images: [image4],
     },
   ],

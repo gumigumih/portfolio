@@ -50,27 +50,23 @@ const projectData = {
   slides: [
     {
       title: 'WEBサイト',
+      description: 'サービス概要や利用方法、料金プランを分かりやすく掲載し、問い合わせ・利用登録へスムーズに誘導できる構成にしました。',
       images: [image1],
       link: 'https://aikatas2p.kidsplates.jp/',
     },
     {
-      title: 'アカウント管理画面',
-      images: [image2],
+      title: 'アカウント管理画面・Admin管理画面',
+      description: 'ユーザー向けにアカウント管理・課金情報の確認機能を提供し、運営者向けにデータ管理・状況把握ができる管理画面を開発しました。',
+      images: [image2, image3],
     },
     {
-      title: 'Admin管理画面',
-      images: [image3],
-    },
-    {
-      title: 'UIデザイン（その1）',
-      images: [image4],
-    },
-    {
-      title: 'UIデザイン（その2）',
-      images: [image5],
+      title: 'UIデザイン',
+      description: 'AIキャラクター生成という独自性を活かしつつ、直感的な操作感を意識したUI設計を行いました。利用者の年齢層に配慮したトーン設計も含まれます。',
+      images: [image4, image5],
     },
     {
       title: '展示会 チラシ',
+      description: 'サービスの特長が一目で伝わるよう、利用シーンを交えたチラシを制作。展示ブースでの配布用としてデザインしました。',
       images: [image6],
     },
   ],

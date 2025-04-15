@@ -152,26 +152,28 @@ export default function ProtectedPage() {
         <WorkSection {...Work10Data} />
       </div>
 
-      <div id="last" className="relative bg-white shadow-lg border border-gray-300 rounded-[1rem] p-[3rem] max-w-4xl mx-auto my-20">
-        <img src={imageHeart} alt="" className="w-[20%] mx-auto mb-[2rem]" />
-        <p className="text-[1.2rem] leading-relaxed text-gray-700">
-          私は、プロダクトの品質向上とスムーズな運用を支えるディレクションを行っています。
-          <br />
-          技術とデザインの両面から、開発チーム・デザインチームと連携し、
-          <br />
-          ユーザーにとって使いやすい形を追求しながら、継続的に改善できる仕組みを作ることを大切にしています。
-          <br />
-          <br />
-          開発・デザイン・運用の連携をスムーズにし、より良いプロダクトを作ることに貢献したいと考えています。
-          <br />
-          最後までご覧いただきありがとうございました。
-          <br />
-          ぜひお話しする機会をいただければ幸いです。お気軽にご連絡ください。
-        </p>
-        <p className="text-center text-[1.2rem] mt-[3rem] font-serif text-gray-700">
-          和田 愛<br />
-          <a href="mailto:info@meggumi.com" className="underline text-blue-500">info@meggumi.com</a>
-        </p>
+      <div
+        id="last"
+        className="relative bg-white shadow-lg rounded-[1rem] p-[3rem] max-w-4xl mx-auto my-20 
+                  before:content-[''] before:absolute before:inset-0 before:bg-[linear-gradient(to_bottom,transparent_23%,#e5e7eb_24%,transparent_25%)] 
+                  before:bg-[length:100%_2.5rem] before:z-0"
+      >
+        <div className="relative z-10">
+          <img src={imageHeart} alt="" className="w-[40%] mx-auto mb-[2rem]" />
+          <p className="text-[1.2rem] leading-relaxed text-gray-700">
+            私は、プロダクトの品質を高め、円滑な開発と運用を支えるディレクションを行っています。<br />
+            技術とデザインの両面からチームと連携し、ユーザーにとって使いやすく、継続的に改善できる仕組みをつくることを大切にしています。<br />
+            <br />
+            開発・デザイン・運用の橋渡し役として、チームがスムーズに進められる環境を整え、より良いものづくりに貢献したいと考えています。<br />
+            <br />
+            最後までご覧いただき、ありがとうございました。<br />
+            もしご興味を持っていただけましたら、ぜひお気軽にご連絡ください。
+          </p>
+          <p className="text-center text-[1.2rem] mt-[3rem] text-gray-700">
+            和田 愛<br />
+            <a href="mailto:info@meggumi.com" className="underline text-blue-500">info@meggumi.com</a>
+          </p>
+        </div>
       </div>
 
     </div>

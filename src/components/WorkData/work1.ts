@@ -28,14 +28,17 @@ const projectData = {
   slides: [
     {
       title: '番組クレジット',
+      description: '番組放送内のクレジットにて、技術協力として名前が掲載されました。',
       images: [image1],
     },
     {
       title: '設営の様子',
+      description: '演者9名とカメラマン4名、合計13名のVR収録機材を毎週設営。VR空間上でのパフォーマンスを支える環境づくりを担いました。',
       images: [image2],
     },
     {
       title: 'VR機材の設営手順の標準化',
+      description: '設営トラブルを減らすため、VRセンサーの設営手順を標準化。収録準備の効率が大幅に向上しました。',
       images: [image3],
     },
   ],

@@ -46,24 +46,29 @@ const projectData = {
   slides: [
     {
       title: 'WEB看板＋ARマンガ',
+      description: 'ARマンガは現地に設置されたWEB看板からQRコードでアクセスでき、多言語対応で地域の歴史を視覚的に伝えるコンテンツとして活用されました。',
       images: [image1],
     },
     {
       title: 'WEBサイトの構成改善整理案',
+      description: 'ツアー紹介WEBサイトの情報設計を見直し、ユーザーが迷わずアクセスできるよう導線や構成の改善案を提案・反映しました。',
       images: [image6],
       link: 'https://miura.bushido-powerspot.jp/',
     },
     {
       title: '音声ガイドのLP',
+      description: '観光客向けに音声ガイドの利用方法や特徴をわかりやすく伝えるためのLPを新たにデザイン・実装しました。',
       images: [image2],
       link: 'https://audioguide.bushido-powerspot.jp/',
     },
     {
       title: '音声ガイド要件・仕様',
+      description: '多言語・複数地点対応の音声ガイドを効率的に運用するため、機能要件やシナリオ設計をドキュメント化し、開発に落とし込みました。',
       images: [image3],
     },
     {
       title: '音声ガイド管理画面・体験画面',
+      description: 'ガイド音声の登録・更新を行う管理画面、およびユーザーが実際に利用する体験画面をUI/UX設計から実装まで担当しました。',
       images: [image4, image5],
     },
   ],

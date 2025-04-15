@@ -35,21 +35,20 @@ const projectData = {
   slides: [
     {
       title: 'プロジェクト全体構成',
+      description: 'ARコンテンツをパッケージ商品ごとに展開。QRコードからアクセス可能な構成としました。',
       images: [image1],
     },
     {
       title: '3D神社',
+      description: '合格祈願向けに神社の3Dモデルを制作。実際の神社の雰囲気をARで再現し、受験生の願掛け体験として活用されました。',
       images: [image2],
     },
     {
-      title: 'UI設計',
-      images: [image3],
+      title: 'UI設計・UIデザイン',
+      description: '子どもでも操作しやすいUIを意識し、イラストや色使いを工夫しました。画面デザインを担当しました。',
+      images: [image3, image4],
     },
-    {
-      title: 'UIデザイン',
-      images: [image4],
-    },
-  ],
+  ],  
 };
 
 export default projectData;

@@ -22,6 +22,7 @@ const projectData = {
   slides: [
     {
       title: 'WEBサイト',
+      description: 'バスツアーの内容や日程、体験内容を紹介するWEBサイト。訪問地の見どころや、過去に制作されたARマンガ・WEB看板の活用シーンも交えて、ツアーの魅力を発信しました。',
       images: [image1, image2],
       link: 'https://miura.bushido-powerspot.jp/',
     },

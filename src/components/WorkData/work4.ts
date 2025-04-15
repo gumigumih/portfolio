@@ -19,6 +19,7 @@ const projectData = {
   slides: [
     {
       title: 'バーチャル名刺背景ジェネレーター',
+      description: 'オンライン会議やウェビナーで活用できる背景画像を、名前・所属・QRコード付きで自動生成。誰でも簡単に使えるUIと、リアルタイムプレビュー機能を実装しました。',
       images: [image1],
       link: 'https://online-meishi.biz/',
     },

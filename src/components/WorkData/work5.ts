@@ -48,12 +48,39 @@ const projectData = {
     },
   ],
   slides: [
-    { title: 'WEB看板＋ARマンガ', images: [image1, image2] },
-    { title: '現地体験プログラムの説明・補助タブレット', images: [image3, image4] },
-    { title: 'アニメーション制作工程', images: [image5, image6] },
-    { title: 'WEBサイト➀ 三浦一族紹介サイト', images: [image7], link: 'https://unkeibushido.com/' },
-    { title: 'WEBサイト➁ 現地体験プログラム紹介サイト', images: [image8], link: 'https://kamakurabushi.com/' },
-    { title: 'WEBサイト➂ VR発願体験紹介サイト', images: [image9], link: 'https://virtualunkei.com/' },
+    {
+      title: 'WEB看板＋ARマンガ',
+      description: '現地に設置された看板のQRコードを読み込むと、各国語対応のWEB看板が表示され、そのままARマンガを閲覧。歴史背景を楽しく学べる仕組みで、体験後にはアンケート回答も促されます。',
+      images: [image1, image2]
+    },
+    {
+      title: '現地体験プログラムの説明・補助タブレット',
+      description: '現地で行われる写経・彩色・彫像などの体験プログラムをわかりやすく案内する補助タブレットを導入。操作性と視認性を意識し、観光客にもやさしい設計を実現しました。',
+      images: [image3, image4]
+    },
+    {
+      title: 'アニメーション制作工程',
+      description: '歴史の魅力を伝えるアニメーション動画の制作工程。絵コンテをもとに外注イラストレーターに作画を依頼し、After Effectsによるアニメーション制作は自身で担当しました。',
+      images: [image5, image6]
+    },
+    {
+      title: 'WEBサイト➀ 三浦一族紹介サイト',
+      description: '三浦一族の歴史を紹介するWEBサイト。歴史背景・物語構成を直感的に伝える構成で、観光前の予習や現地での理解促進に活用されました。',
+      images: [image7],
+      link: 'https://unkeibushido.com/',
+    },
+    {
+      title: 'WEBサイト➁ 現地体験プログラム紹介サイト',
+      description: '寺院で体験できる写経・彩色・彫像などのプログラム内容を紹介したサイト。予約システムと連携し、体験参加者の利便性向上と情報提供を両立しています。',
+      images: [image8],
+      link: 'https://kamakurabushi.com/',
+    },
+    {
+      title: 'WEBサイト➂ VR発願体験紹介サイト',
+      description: '仏師の儀式や武士の祈りを再現したVR体験の専用サイト。体験の背景・意図を丁寧に説明し、仮想空間での歴史的没入体験を補完しています。',
+      images: [image9],
+      link: 'https://virtualunkei.com/',
+    },
   ],
 };
 
