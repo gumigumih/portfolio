@@ -55,7 +55,7 @@ const projects = [
     start: { year: 2020, month: 8 },
     end: { year: 2021, month: 3 },
     text: '歴史体験型デジタルコンテンツ開発',
-    textClass: 'tracking-[min(0.2vw,0.2rem)]',
+    textClass: 'tracking-[0.2rem]',
     row: 3,
     jumpTo: 'work5',
   },
@@ -106,7 +106,7 @@ const projects = [
     start: { year: 2023, month: 2 },
     end: { year: 2023, month: 5 },
     text: 'TV番組3Dキャラ支援',
-    textClass: 'left-[min(1vw,1rem)] tracking-[min(0.2vw,0.2rem)]',
+    textClass: 'left-[1rem] tracking-[0.2rem]',
     row: 2,
     jumpTo: 'work11',
   },
@@ -153,15 +153,15 @@ export default function SlideNav() {
   const [isOutlineOpen, setIsOutlineOpen] = useState(true);
 
   return (
-    <div className='sticky top-0 ml-[min(-12vw,-12rem)]'>
+    <div className='sticky top-0 ml-[min(-12vw,-12rem)] max-md:hidden z-50'>
       {/* 📌 OUTLINE メニュー */}
       <div
-        className={`transition-all absolute top-[min(3vw,3rem)] left-[min(1vw,1rem)] bg-white/80 backdrop-blur-lg shadow-md rounded-lg cursor-pointer z-20 ${
-          isOutlineOpen ? 'py-[min(0.3vw,0.3rem)] px-[min(0.8vw,0.8rem)]' : 'px-[min(0.8vw,0.8rem)] py-0'
+        className={`transition-all absolute top-[3rem] left-[1rem] bg-white/80 backdrop-blur-lg shadow-md rounded-lg cursor-pointer z-20 ${
+          isOutlineOpen ? 'py-[0.3rem] px-[0.8rem]' : 'px-[0.8rem] py-0'
         }`}
       >
         <button
-          className="text-[min(1vw,1rem)] font-bold pointer-event-none w-full text-left"
+          className="text-[1rem] font-bold pointer-event-none w-full text-left"
           onClick={() => setIsOutlineOpen(!isOutlineOpen)}
         >
           {isOutlineOpen ? '≪ OUTLINE' : '≫ OUTLINE'}
@@ -169,7 +169,7 @@ export default function SlideNav() {
         <nav
           className={`transition-all duration-300 ease-in-out overflow-hidden ${
             isOutlineOpen
-              ? 'max-h-[500px] max-w-[min(10vw,10rem)] opacity-100 pt-[min(0.3vw,0.3rem)]'
+              ? 'max-h-[500px] max-w-[10rem] opacity-100 pt-[0.3rem]'
               : 'max-h-0 max-w-0 opacity-0 pt-0'
           }`}
         >
@@ -180,7 +180,7 @@ export default function SlideNav() {
                 onClick={() => {
                   document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="text-[min(1vw,1rem)] text-gray-700 hover:text-blue-500 transition duration-200 py-[min(0.3vw,0.3rem)] border-b last:border-0"
+                className="text-[1rem] text-gray-700 hover:text-blue-500 transition duration-200 py-[0.3rem] border-b last:border-0"
               >
                 {parse(item.title)}
               </li>
@@ -195,7 +195,7 @@ export default function SlideNav() {
         ${isTimelineOpen ? 'z-30' : 'z-10'}`}
       >
         <button
-          className="absolute top-[min(1vw,1rem)] left-[min(1vw,1rem)] px-[min(0.8vw,0.8rem)] bg-white/80 backdrop-blur-lg shadow-md rounded-lg text-[min(1vw,1rem)] font-semibold"
+          className="absolute top-[1rem] left-[1rem] px-[0.8rem] bg-white/80 backdrop-blur-lg shadow-md rounded-lg text-[1rem] font-semibold"
           onClick={() => setIsTimelineOpen(!isTimelineOpen)}
         >
           {isTimelineOpen ? '≪ TIMELINE' : '≫ TIMELINE'}
@@ -206,9 +206,9 @@ export default function SlideNav() {
             className={`mx-[-100%] px-[100%] bg-gray-100 overflow-hidden transition-all duration-500 ease-in-out
               ${isTimelineOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}
           >
-            <div className="py-[min(1vw,1rem)] pr-[min(2vw,2rem)] ml-[min(6vw,6rem)] overflow-x-scroll">
-              <div className="w-[min(105vw,105rem)]">
-                <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
+            <div className="py-[1rem] pr-[2rem] ml-[6rem] overflow-x-scroll">
+              <div className="w-[105rem]">
+                <h2 className="text-[1.5rem] absolute top-[2.5rem] left-[2rem] font-bold text-gray-600">
                   実績
                 </h2>
 
@@ -219,7 +219,7 @@ export default function SlideNav() {
                 </div>
 
                 <div
-                  className="relative w-full mt-[min(1vw,1rem)]"
+                  className="relative w-full mt-[1rem]"
                   style={{
                     height: `min(${totalRows * (barHeight + barSpaceY)}vw,${totalRows * (barHeight + barSpaceY)}rem)`,
                   }}
@@ -253,7 +253,7 @@ export default function SlideNav() {
                           }}
                         ></div>
                         <span
-                          className={`absolute px-2 text-gray-700 text-[min(1vw,1rem)] font-semibold whitespace-nowrap pointer-events-none z-10 ${project.textClass}`}
+                          className={`absolute px-2 text-gray-700 text-[1rem] font-semibold whitespace-nowrap pointer-events-none z-10 ${project.textClass}`}
                         >
                           {project.text}
                         </span>
