@@ -35,10 +35,10 @@ const skills = {
 
 export default function SkillMap() {
   return (
-    <div className="grid grid-cols-3 gap-[min(2.5vw,2.5rem)] mt-[min(2.5vw,2.5rem)] w-[80%]">
+    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-[2.5rem] mt-[2.5rem] w-[80%] mx-auto">
       {Object.entries(skills).map(([category, skillList], index) => (
         <div key={index}>
-          <h2 className="text-[min(2.5vw,2.5rem)] font-bold text-center">
+          <h2 className="text-[2.5rem] font-bold text-center">
             <span
               className={`bg-[linear-gradient(transparent_70%,${
                 category === 'エンジニアリング' ? '#55FFDC' : category === 'デザイン' ? '#FEEE16' : '#E3E8EB'
@@ -47,17 +47,17 @@ export default function SkillMap() {
               {category}
             </span>
           </h2>
-          <ul className="mt-[min(2vw,2rem)] space-y-[min(1vw,1rem)]">
+          <ul className="mt-[2rem] space-y-[1rem]">
             {skillList.map((skill, idx) => (
               <li key={idx} className="flex items-center justify-between">
-                <span className="whitespace-pre-line text-[min(1.2vw,1.2rem)]">{skill.name}</span>
+                <span className="whitespace-pre-line text-[1.2rem]">{skill.name}</span>
                 <div className="flex space-x-1">
                   {Array(5)
                     .fill(0)
                     .map((_, i) => (
                       <div
                         key={i}
-                        className={`w-[min(1.2vw,1.2rem)] h-[min(1.2vw,1.2rem)] ${
+                        className={`w-[1.2rem] h-[1.2rem] ${
                           i < skill.level
                             ? (category === 'エンジニアリング'
                                 ? 'bg-[#55FFDC]'

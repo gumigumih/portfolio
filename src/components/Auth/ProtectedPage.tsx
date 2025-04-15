@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
-import useScrollSnap from 'react-use-scroll-snap';
-import imageMainvisual from '../../assets/images/mainvisual@2x.png';
+import imageMainvisual from '../../assets/images/mainvisual.png';
 import imageHeart from '../../assets/images/heart.png';
 import SkillCircle from '../Parts/SkillCircle';
 import SkillMap from '../Parts/SkillMap';
@@ -8,184 +7,175 @@ import SlideNav from '../Parts/SlideNav';
 import W1MajorProjects from '../Parts/W1MajorProjects';
 import W2ExternalTeamManagement from '../Parts/W2ExternalTeamManagement';
 import W3ClientWork from '../Parts/W3ClientWork';
-import Work1 from '../Parts/Work1';
-import Work2 from '../Parts/Work2';
-import Work3 from '../Parts/Work3';
-import Work4 from '../Parts/Work4';
-import Work5p1 from '../Parts/Work5_1';
-import Work5p2 from '../Parts/Work5_2';
-import Work6 from '../Parts/Work6';
-import Work7 from '../Parts/Work7';
-import Work8 from '../Parts/Work8';
-import Work9 from '../Parts/Work9';
-import Work10 from '../Parts/Work10';
-import Work11 from '../Parts/Work11';
-import Work12 from '../Parts/Work12';
-import Work13 from '../Parts/Work13';
-import Work14 from '../Parts/Work14';
+import WorkSection from '../Parts/WorkSection';
+import Work1Data from '../WorkData/work1.ts';
+import Work2Data from '../WorkData/work2.ts';
+import Work3Data from '../WorkData/work3.ts';
+import Work4Data from '../WorkData/work4.ts';
+import Work5Data from '../WorkData/work5.ts';
+import Work6Data from '../WorkData/work6.ts';
+import Work7Data from '../WorkData/work7.ts';
+import Work8Data from '../WorkData/work8.ts';
+import Work9Data from '../WorkData/work9.ts';
+import Work10Data from '../WorkData/work10.ts';
+import Work11Data from '../WorkData/work11.ts';
+import Work12Data from '../WorkData/work12.ts';
+import Work13Data from '../WorkData/work13.ts';
+import Work14Data from '../WorkData/work14.ts';
 
 export default function ProtectedPage() {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  useScrollSnap({
-    ref: containerRef as React.MutableRefObject<HTMLDivElement>,
-    duration: 300,
-  });
-
   return (
-    <div ref={containerRef} className="w-screen h-screen overflow-y-scroll snap-y snap-mandatory">
+    <div className="relative max-w-screen-2xl w-full mx-auto md:pl-[12rem]">
       <SlideNav />
 
-      <div className="max-w-screen-2xl w-full mx-auto">
-        <div className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-end relative">
-          <img src={imageMainvisual} alt="MainVisual" className="absolute h-full left-0 bottom-0" />
-          <div className="pt-[min(4vw,4rem)] mr-[min(5vw,5rem)] font-[Montserrat] font-medium text-right">
-            <h1 className="text-[min(6vw,6rem)]">MEGUMI WADA</h1>
-            <p className="text-[min(2.5vw,2.5rem)] -mt-[min(2vw,2rem)] text-gray-600">(旧姓 HAYASHIBARA)</p>
-            <p className="text-[min(4vw,4rem)]">Director</p>
-          </div>
-        </div>
+      <div
+        id="top"
+        className="w-full aspect-auto md:aspect-[16/9] flex flex-col md:flex-row justify-between items-center md:items-end relative"
+      >
+        {/* メインビジュアル */}
+        <img
+          src={imageMainvisual}
+          alt="MainVisual"
+          className="mt-20 md:mt-0 w-1/3 md:w-2/5 h-auto object-cover md:absolute md:left-0 md:bottom-0"
+        />
 
-        <div
-          id="ability"
-          className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative"
-        >
-          <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(1.5vw,1.5rem)] font-bold text-gray-600">
-            能力
-          </h2>
-
-          <SkillCircle />
-        </div>
-
-        <div id="skill" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
-            テクニカルスキル
-          </h2>
-
-          <SkillMap />
-        </div>
-
-        <div
-          id="majorProjects"
-          className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative"
-        >
-          <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
-            実績
-          </h2>
-
-          <W1MajorProjects />
-        </div>
-
-        <div id="work5" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work5p1 />
-        </div>
-
-        <div id="" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work5p2 />
-        </div>
-
-        <div id="work6" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work6 />
-        </div>
-
-        <div id="work7" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work7 />
-        </div>
-
-        <div id="work8" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work8 />
-        </div>
-
-        <div id="work13" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work13 />
-        </div>
-
-        <div id="work14" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work14 />
-        </div>
-
-        <div
-          id="externalTeamManagement"
-          className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative"
-        >
-          <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
-            実績
-          </h2>
-
-          <W2ExternalTeamManagement />
-        </div>
-
-        <div id="work12" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work12 />
-        </div>
-
-        <div id="work11" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work11 />
-        </div>
-
-        <div
-          id="clientWork"
-          className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative"
-        >
-          <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
-            実績
-          </h2>
-
-          <W3ClientWork />
-        </div>
-
-        <div id="work1" className="snap-start w-full aspect-[16/9] relative">
-          <Work1 />
-        </div>
-
-        <div id="work3" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work3 />
-        </div>
-
-        <div id="work4" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work4 />
-        </div>
-
-        <div id="work2" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work2 />
-        </div>
-
-        <div id="work9" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work9 />
-        </div>
-
-        <div id="work10" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-          <Work10 />
-        </div>
-
-        <div id="last" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-end relative">
-          <div className="w-full">
-            <img src={imageHeart} alt="" className="w-[40%] mx-auto -mt-[min(3vw,3rem)]" />
-            <p className="text-center text-[min(1.5vw,1.5rem)] mt-[min(2vw,2rem)]">
-              私は、プロダクトの品質向上とスムーズな運用を支えるディレクションを行っています。
-              <br />
-              技術とデザインの両面から、開発チーム・デザインチームと連携し、スムーズに進行できる環境を整えます。
-              <br />
-              また、ユーザーにとって使いやすい形を追求し、継続的に改善できる仕組みを作ることを大切にしています。
-            </p>
-          </div>
-        </div>
-
-        <div id="" className="snap-start w-full aspect-[16/9] flex flex-col justify-center items-end relative">
-          <div className="w-full">
-            <p className="text-center text-[min(1.5vw,1.5rem)] mt-[min(3vw,3rem)]">
-              最後までご覧いただきありがとうございます。
-              <br />
-              開発・デザイン・運用の連携をスムーズにし、より良いプロダクトを作ることに貢献したいと考えています。
-              <br />
-              ぜひお話しする機会をいただければ幸いです。お気軽にご連絡ください。
-            </p>
-            <p className="text-center text-[min(1.5vw,1.5rem)] mt-[min(3vw,3rem)]">
-              和田 愛<br />
-              info@meggumi.com
-            </p>
-          </div>
+        {/* テキストエリア */}
+        <div className="md:absolute md:top-1/2 md:right-0 z-10 px-5 md:pr-[min(5vw,5rem)] font-[Montserrat] font-medium text-center md:text-right w-full md:w-auto">
+          <h1 className="text-[min(8vw,4rem)] md:text-[min(6vw,6rem)]">MEGUMI WADA</h1>
+          <p className="text-[min(3vw,1.5rem)] md:text-[min(2.5vw,2.5rem)] -mt-2 text-gray-600">(旧姓 HAYASHIBARA)</p>
+          <p className="text-[min(5vw,2rem)] md:text-[min(4vw,4rem)]">Director</p>
         </div>
       </div>
+
+      <div id="ability">
+        <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
+          <span className="flex-grow h-px bg-gray-300"></span>
+          能力
+          <span className="flex-grow h-px bg-gray-300"></span>
+        </h2>
+        <SkillCircle />
+      </div>
+
+      <div id="skill">
+        <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
+          <span className="flex-grow h-px bg-gray-300"></span>
+          テクニカルスキル
+          <span className="flex-grow h-px bg-gray-300"></span>
+        </h2>
+
+        <SkillMap />
+      </div>
+
+      <div id="majorProjects">
+        <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
+          <span className="flex-grow h-px bg-gray-300"></span>
+          実績
+          <span className="flex-grow h-px bg-gray-300"></span>
+        </h2>
+
+        <W1MajorProjects />
+      </div>
+
+      <div id="work5">
+        <WorkSection {...Work5Data} />
+      </div>
+
+      <div id="work6">
+        <WorkSection {...Work6Data} />
+      </div>
+
+      <div id="work7">
+        <WorkSection {...Work7Data} />
+      </div>
+
+      <div id="work8">
+        <WorkSection {...Work8Data} />
+      </div>
+
+      <div id="work13">
+        <WorkSection {...Work13Data} />
+      </div>
+
+      <div id="work14">
+        <WorkSection {...Work14Data} />
+      </div>
+
+      <div id="externalTeamManagement">
+        <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
+          <span className="flex-grow h-px bg-gray-300"></span>
+          実績
+          <span className="flex-grow h-px bg-gray-300"></span>
+        </h2>
+
+        <W2ExternalTeamManagement />
+      </div>
+
+      <div id="work12">
+        <WorkSection {...Work12Data} />
+      </div>
+
+      <div id="work11">
+        <WorkSection {...Work11Data} />
+      </div>
+
+      <div id="clientWork">
+        <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
+          <span className="flex-grow h-px bg-gray-300"></span>
+          実績
+          <span className="flex-grow h-px bg-gray-300"></span>
+        </h2>
+
+        <W3ClientWork />
+      </div>
+
+      <div id="work1" className="w-full aspect-[16/9] relative">
+        <WorkSection {...Work1Data} />
+      </div>
+
+      <div id="work3">
+        <WorkSection {...Work3Data} />
+      </div>
+
+      <div id="work4">
+        <WorkSection {...Work4Data} />
+      </div>
+
+      <div id="work2">
+        <WorkSection {...Work2Data} />
+      </div>
+
+      <div id="work9">
+        <WorkSection {...Work9Data} />
+      </div>
+
+      <div id="work10">
+        <WorkSection {...Work10Data} />
+      </div>
+
+      <div
+        id="last"
+        className="relative bg-white shadow-lg rounded-[1rem] p-[3rem] max-w-4xl mx-auto my-20 
+                  before:content-[''] before:absolute before:inset-0 before:bg-[linear-gradient(to_bottom,transparent_23%,#e5e7eb_24%,transparent_25%)] 
+                  before:bg-[length:100%_2.5rem] before:z-0"
+      >
+        <div className="relative z-10">
+          <img src={imageHeart} alt="" className="w-[40%] mx-auto mb-[2rem]" />
+          <p className="text-[1.2rem] leading-relaxed text-gray-700">
+            私は、プロダクトの品質を高め、円滑な開発と運用を支えるディレクションを行っています。<br />
+            技術とデザインの両面からチームと連携し、ユーザーにとって使いやすく、継続的に改善できる仕組みをつくることを大切にしています。<br />
+            <br />
+            開発・デザイン・運用の橋渡し役として、チームがスムーズに進められる環境を整え、より良いものづくりに貢献したいと考えています。<br />
+            <br />
+            最後までご覧いただき、ありがとうございました。<br />
+            もしご興味を持っていただけましたら、ぜひお気軽にご連絡ください。
+          </p>
+          <p className="text-center text-[1.2rem] mt-[3rem] text-gray-700">
+            和田 愛<br />
+            <a href="mailto:info@meggumi.com" className="underline text-blue-500">info@meggumi.com</a>
+          </p>
+        </div>
+      </div>
+
     </div>
   );
 }

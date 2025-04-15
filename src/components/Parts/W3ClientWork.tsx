@@ -1,11 +1,11 @@
 
 export default function W3ClientWork() {
   return (
-    <div>
-      <h3 className="text-[min(2.5vw,2.5rem)] font-bold mt-[min(2vw,2rem)] text-center">
+    <div className="w-full px-10 flex flex-col items-center">
+      <h3 className="text-[2.5rem] font-bold mt-[2rem] text-center">
         <span className={`bg-[linear-gradient(transparent_70%,#E3E8EB_30%)]`}>クライアントワーク・その他</span>
       </h3>
-      <div className="mt-[min(2vw,2rem)] space-y-4 text-center w-[min(50vw,50rem)] text-[min(1.5vw,1.5rem)] font-bold">
+      <div className="mt-[2rem] space-y-4 text-center w-full max-w-[50rem] text-[1.5rem] font-bold">
         <a
           href="#work1"
           className="border border-gray-700 rounded-lg block p-2"
@@ -85,7 +85,7 @@ export default function W3ClientWork() {
           24時間365日ストリーミング配信管理システム
         </a>
       </div>
-      <p className="text-[min(1vw,1rem)] mt-[min(2vw,2rem)]">
+      <p className="text-[1rem] mt-[2rem]">
         このポートフォリオでは、カテゴリーごとに実績を紹介しています。
         <br />
         詳細な職歴の流れは職務経歴書をご覧ください。

@@ -18,13 +18,13 @@ const CircleSection: React.FC<CircleSectionProps> = ({
   skillsPosition,
 }) => {
   return (
-    <div className={`absolute w-[min(35vw,35rem)] h-[min(35vw,35rem)] rounded-full ${position}`}>
-      <h3 className={`absolute ${titlePosition} text-[min(2.5vw,2.5rem)] font-bold bg-[#fafafa]`}>
+    <div className={`absolute w-full aspect-square rounded-full ${position}`}>
+      <h3 className={`absolute ${titlePosition} text-nowrap text-[4vw] md:text-[2rem] lg:text-[2.5rem] font-bold bg-[#fafafa]`}>
         <span className={`bg-[linear-gradient(transparent_70%,${color}_30%)]`}>{title}</span>
       </h3>
-      <ul className={`absolute ${skillsPosition} text-[min(1.2vw,1.2rem)] bg-[#fafafa]/80`}>
+      <ul className={`absolute ${skillsPosition} text-[2.5vw] md:text-[1.2rem] lg:text-[1.5rem] bg-[#fafafa]/80`}>
         {skills.map((skill, index) => (
-          <li key={index} className="whitespace-pre-line">
+          <li key={index} className="whitespace-pre-line text-nowrap">
             {skill}
           </li>
         ))}
@@ -35,47 +35,47 @@ const CircleSection: React.FC<CircleSectionProps> = ({
 
 const SkillCircle: React.FC = () => {
   return (
-    <div className="w-full h-full mt-[min(1.0vw,1.0rem)] flex flex-col justify-center items-center relative">
-      <div className="absolute w-[min(48vw,48rem)] h-[min(48vw,48rem)] mx-auto">
+    <div className="relative w-full max-w-[90vw] md:max-w-[36rem] lg:max-w-[48rem] aspect-square mx-auto mt-[1.0rem] flex flex-col justify-center items-center">
+      <div className="absolute w-full h-full">
         {/* 3つの円を配置 */}
-        <div className="absolute w-[min(35vw,35rem)] h-[min(35vw,35rem)] rounded-full border border-gray-800 top-0 left-1/2 transform -translate-x-1/2"></div>
-        <div className="absolute w-[min(35vw,35rem)] h-[min(35vw,35rem)] rounded-full border border-gray-800 bottom-0 left-0 transform"></div>
-        <div className="absolute w-[min(35vw,35rem)] h-[min(35vw,35rem)] rounded-full border border-gray-800 bottom-0 right-0 transform"></div>
+        <div className="absolute w-[60vw] md:w-[26rem] lg:w-[35rem] aspect-square rounded-full border border-gray-800 top-0 left-1/2 -translate-x-1/2"></div>
+        <div className="absolute w-[60vw] md:w-[26rem] lg:w-[35rem] aspect-square rounded-full border border-gray-800 bottom-0 left-0"></div>
+        <div className="absolute w-[60vw] md:w-[26rem] lg:w-[35rem] aspect-square rounded-full border border-gray-800 bottom-0 right-0"></div>
       </div>
 
-      <div className="absolute bg-gray-800 py-[min(0.5vw,0.5rem)] px-[min(1.5vw,1.5rem)] text-white text-[min(2vw,2rem)] text-center font-bold">
+      <div className="absolute bg-gray-800 py-2 px-4 text-white text-center font-bold text-nowrap text-[3.5vw] md:text-[1.5rem] lg:text-[2rem]">
         エンジニアリングとデザインの経験を活かして
         <br />
         プロジェクト全体をマネジメントします
       </div>
 
-      <div className="absolute w-[min(50vw,50rem)] h-[min(50vw,50rem)] mx-auto">
+      <div className="absolute w-full h-full">
         {/* 各セクションをコンポーネント化 */}
         <CircleSection
           title="マネジメント"
-          titlePosition="bottom-[55%] left-[50%] -translate-x-1/2"
+          titlePosition="bottom-[65%] left-1/2 -translate-x-1/2 text-center"
           color="#FF72D0"
           position="top-0 left-1/2 transform -translate-x-1/2"
           skills={['#プロジェクトマネジメント', '#外注管理', '#提案・見積もり']}
-          skillsPosition="bottom-[70%] left-[50%] -translate-x-1/2 w-[min(19vw,19rem)]"
+          skillsPosition="bottom-[75%] left-1/2 -translate-x-1/2"
         />
 
         <CircleSection
           title="エンジニアリング"
-          titlePosition="top-[55%] right-[45%] w-[min(20vw,20rem)]"
+          titlePosition="top-[65%] right-[55%]"
           color="#55FFDC"
           position="bottom-0 left-0"
           skills={['#システム・DB設計', '#フロントエンド・\nバックエンド開発', '#API設計・実装']}
-          skillsPosition="top-[70%] right-[45%]"
+          skillsPosition="top-[75%] right-[55%]"
         />
 
         <CircleSection
           title="デザイン"
-          titlePosition="top-[55%] left-[45%]"
+          titlePosition="top-[65%] left-[55%]"
           color="#FEEE16"
           position="bottom-0 right-0"
           skills={['#UI/UXデザイン', '#プロトタイピング', '#ロゴ・バナー・\nチラシデザイン']}
-          skillsPosition="top-[70%] left-[45%] w-[min(13.5vw,13.5rem)]"
+          skillsPosition="top-[75%] left-[55%]"
         />
       </div>
     </div>
