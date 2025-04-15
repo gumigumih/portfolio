@@ -31,31 +31,37 @@ const projectData = {
   slides: [
     {
       title: '須磨寺',
+      description: '',
       images: [image1],
       link: 'https://hacosco.com/suma/',
     },
     {
       title: '針尾送信所',
+      description: '',
       images: [image2],
       link: 'https://hacosco.com/hario/',
     },
     {
       title: '竹田城跡',
+      description: '',
       images: [image3],
       link: 'https://hacosco.com/takeda/',
     },
     {
       title: '熊本の近代化遺産 三池炭鉱万田坑と三角西港',
+      description: '',
       images: [image4],
       link: 'https://hacosco.com/kumamoto-heritage/',
     },
     {
       title: '姫路城',
+      description: '',
       images: [image5],
       link: 'https://hacosco.com/himeji-castle/',
     },
     {
       title: '神戸市兵庫区の近代化遺産 湊川隧道',
+      description: '',
       images: [image6],
       link: 'https://hacosco.com/hyogoku/',
     },
