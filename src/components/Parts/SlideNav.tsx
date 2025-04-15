@@ -3,6 +3,7 @@ import parse from 'html-react-parser';
 
 // OUTLINE の項目
 const outlineLinks = [
+  { id: 'top', title: 'TOP' },
   { id: 'ability', title: '能力' },
   { id: 'skill', title: 'テクニカルスキル' },
   {
@@ -152,26 +153,25 @@ export default function SlideNav() {
   const [isOutlineOpen, setIsOutlineOpen] = useState(true);
 
   return (
-    <div>
+    <div className='sticky top-0 ml-[min(-12vw,-12rem)]'>
       {/* 📌 OUTLINE メニュー */}
       <div
-        className={`transition-all fixed top-[min(3vw,3rem)] left-[min(1vw,1rem)] bg-white/80 backdrop-blur-lg shadow-md rounded-lg cursor-pointer z-20 ${
+        className={`transition-all absolute top-[min(3vw,3rem)] left-[min(1vw,1rem)] bg-white/80 backdrop-blur-lg shadow-md rounded-lg cursor-pointer z-20 ${
           isOutlineOpen ? 'py-[min(0.3vw,0.3rem)] px-[min(0.8vw,0.8rem)]' : 'px-[min(0.8vw,0.8rem)] py-0'
         }`}
-        onClick={() => setIsOutlineOpen(!isOutlineOpen)}
       >
-        <h3 className="text-[min(1vw,1rem)] font-bold pointer-event-none">
+        <button
+          className="text-[min(1vw,1rem)] font-bold pointer-event-none w-full text-left"
+          onClick={() => setIsOutlineOpen(!isOutlineOpen)}
+        >
           {isOutlineOpen ? '≪ OUTLINE' : '≫ OUTLINE'}
-        </h3>
+        </button>
         <nav
           className={`transition-all duration-300 ease-in-out overflow-hidden ${
             isOutlineOpen
               ? 'max-h-[500px] max-w-[min(10vw,10rem)] opacity-100 pt-[min(0.3vw,0.3rem)]'
               : 'max-h-0 max-w-0 opacity-0 pt-0'
           }`}
-          onClick={(e) => {
-            e.stopPropagation();
-          }}
         >
           <ul>
             {outlineLinks.map((item) => (
@@ -189,8 +189,9 @@ export default function SlideNav() {
         </nav>
       </div>
 
+      {/* 📌 TIMELINE メニュー */}
       <div
-        className={`fixed top-0 left-0 w-full bg-gray-100
+        className={`absolute top-0 left-0 w-full
         ${isTimelineOpen ? 'z-30' : 'z-10'}`}
       >
         <button
@@ -200,64 +201,66 @@ export default function SlideNav() {
           {isTimelineOpen ? '≪ TIMELINE' : '≫ TIMELINE'}
         </button>
 
-        <div
-          className={`overflow-hidden transition-all duration-500 ease-in-out
-            ${isTimelineOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}
-        >
-          <div className="py-[min(1vw,1rem)] pr-[min(2vw,2rem)] ml-[min(6vw,6rem)] overflow-x-scroll">
-            <div className="w-[min(105vw,105rem)]">
-              <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
-                実績
-              </h2>
+        <div className='w-full overflow-x-hidden'>
+          <div
+            className={`mx-[-100%] px-[100%] bg-gray-100 overflow-hidden transition-all duration-500 ease-in-out
+              ${isTimelineOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}
+          >
+            <div className="py-[min(1vw,1rem)] pr-[min(2vw,2rem)] ml-[min(6vw,6rem)] overflow-x-scroll">
+              <div className="w-[min(105vw,105rem)]">
+                <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
+                  実績
+                </h2>
 
-              <div className="flex justify-around text-gray-700 font-semibold text-sm">
-                {Array.from({ length: totalYears }, (_, i) => (
-                  <span key={i}>{minYear + i}</span>
-                ))}
-              </div>
+                <div className="flex justify-around text-gray-700 font-semibold text-sm">
+                  {Array.from({ length: totalYears }, (_, i) => (
+                    <span key={i}>{minYear + i}</span>
+                  ))}
+                </div>
 
-              <div
-                className="relative w-full mt-[min(1vw,1rem)]"
-                style={{
-                  height: `min(${totalRows * (barHeight + barSpaceY)}vw,${totalRows * (barHeight + barSpaceY)}rem)`,
-                }}
-              >
-                {projects.map((project, index) => {
-                  const startMonthIndex = (project.start.year - minYear) * 12 + (project.start.month - 1);
-                  const startOffset = (startMonthIndex / totalMonths) * 100;
-                  const durationMonths =
-                    (project.end.year - project.start.year) * 12 + (project.end.month - project.start.month) + 1;
-                  const durationWidth = (durationMonths / totalMonths) * 100;
-                  const rowOffset = project.row - 1; // 各行のオフセットを計算
-                  console.log(rowOffset, durationMonths);
+                <div
+                  className="relative w-full mt-[min(1vw,1rem)]"
+                  style={{
+                    height: `min(${totalRows * (barHeight + barSpaceY)}vw,${totalRows * (barHeight + barSpaceY)}rem)`,
+                  }}
+                >
+                  {projects.map((project, index) => {
+                    const startMonthIndex = (project.start.year - minYear) * 12 + (project.start.month - 1);
+                    const startOffset = (startMonthIndex / totalMonths) * 100;
+                    const durationMonths =
+                      (project.end.year - project.start.year) * 12 + (project.end.month - project.start.month) + 1;
+                    const durationWidth = (durationMonths / totalMonths) * 100;
+                    const rowOffset = project.row - 1; // 各行のオフセットを計算
+                    console.log(rowOffset, durationMonths);
 
-                  return (
-                    <div
-                      key={index}
-                      className="absolute flex justify-content items-center"
-                      style={{
-                        top: `min(${rowOffset * (barHeight + barSpaceY)}vw,${rowOffset * (barHeight + barSpaceY)}rem)`,
-                        left: `${startOffset}%`,
-                        width: `${durationWidth}%`,
-                        height: `${barHeight}vw`,
-                      }}
-                    >
+                    return (
                       <div
-                        className={`absolute rounded-full shadow w-full h-full cursor-pointer hover:border-2 hover:border-gray-500 bg-white`}
-                        onClick={() => {
-                          setIsTimelineOpen(!isTimelineOpen);
-                          const targetId = project.jumpTo || '';
-                          document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
+                        key={index}
+                        className="absolute flex justify-content items-center"
+                        style={{
+                          top: `min(${rowOffset * (barHeight + barSpaceY)}vw,${rowOffset * (barHeight + barSpaceY)}rem)`,
+                          left: `${startOffset}%`,
+                          width: `${durationWidth}%`,
+                          height: `${barHeight}vw`,
                         }}
-                      ></div>
-                      <span
-                        className={`absolute px-2 text-gray-700 text-[min(1vw,1rem)] font-semibold whitespace-nowrap pointer-events-none z-10 ${project.textClass}`}
                       >
-                        {project.text}
-                      </span>
-                    </div>
-                  );
-                })}
+                        <div
+                          className={`absolute rounded-full shadow w-full h-full cursor-pointer hover:border-2 hover:border-gray-500 bg-white`}
+                          onClick={() => {
+                            setIsTimelineOpen(!isTimelineOpen);
+                            const targetId = project.jumpTo || '';
+                            document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
+                          }}
+                        ></div>
+                        <span
+                          className={`absolute px-2 text-gray-700 text-[min(1vw,1rem)] font-semibold whitespace-nowrap pointer-events-none z-10 ${project.textClass}`}
+                        >
+                          {project.text}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>
