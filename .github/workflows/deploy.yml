@@ -34,10 +34,10 @@ jobs:
           npm run build
 
       - name: Add CNAME file
-        run: echo "portfolio.meggumi.com" > build/CNAME # 🔥 CNAME を正しい場所に追加
+        run: echo "portfolio.meggumi.com" > dist/CNAME # 🔥 CNAME を正しい場所に追加
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build # 🔥 build に変更
+          publish_dir: ./dist # 🔥 build に変更
