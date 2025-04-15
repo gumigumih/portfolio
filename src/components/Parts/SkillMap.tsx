@@ -35,7 +35,7 @@ const skills = {
 
 export default function SkillMap() {
   return (
-    <div className="grid grid-cols-3 gap-[min(2.5vw,2.5rem)] mt-[min(2.5vw,2.5rem)] w-[80%]">
+    <div className="grid grid-cols-3 gap-[min(2.5vw,2.5rem)] mt-[min(2.5vw,2.5rem)] w-[80%] mx-auto">
       {Object.entries(skills).map(([category, skillList], index) => (
         <div key={index}>
           <h2 className="text-[min(2.5vw,2.5rem)] font-bold text-center">

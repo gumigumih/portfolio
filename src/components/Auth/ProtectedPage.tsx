@@ -7,21 +7,21 @@ import SlideNav from '../Parts/SlideNav';
 import W1MajorProjects from '../Parts/W1MajorProjects';
 import W2ExternalTeamManagement from '../Parts/W2ExternalTeamManagement';
 import W3ClientWork from '../Parts/W3ClientWork';
-import Work1 from '../Parts/Work1';
-import Work2 from '../Parts/Work2';
-import Work3 from '../Parts/Work3';
-import Work4 from '../Parts/Work4';
-import Work5p1 from '../Parts/Work5_1';
-import Work5p2 from '../Parts/Work5_2';
-import Work6 from '../Parts/Work6';
-import Work7 from '../Parts/Work7';
-import Work8 from '../Parts/Work8';
-import Work9 from '../Parts/Work9';
-import Work10 from '../Parts/Work10';
-import Work11 from '../Parts/Work11';
-import Work12 from '../Parts/Work12';
-import Work13 from '../Parts/Work13';
-import Work14 from '../Parts/Work14';
+import WorkSection from '../Parts/WorkSection';
+import Work1Data from '../WorkData/work1.ts';
+import Work2Data from '../WorkData/work2.ts';
+import Work3Data from '../WorkData/work3.ts';
+import Work4Data from '../WorkData/work4.ts';
+import Work5Data from '../WorkData/work5.ts';
+import Work6Data from '../WorkData/work6.ts';
+import Work7Data from '../WorkData/work7.ts';
+import Work8Data from '../WorkData/work8.ts';
+import Work9Data from '../WorkData/work9.ts';
+import Work10Data from '../WorkData/work10.ts';
+import Work11Data from '../WorkData/work11.ts';
+import Work12Data from '../WorkData/work12.ts';
+import Work13Data from '../WorkData/work13.ts';
+import Work14Data from '../WorkData/work14.ts';
 
 export default function ProtectedPage() {
   return (
@@ -37,113 +37,112 @@ export default function ProtectedPage() {
         </div>
       </div>
 
-      <div id="ability" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-        <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(1.5vw,1.5rem)] font-bold text-gray-600">
+      <div id="ability">
+        <h2 className="my-20 flex items-center gap-4 text-[min(1.5vw,1.5rem)] font-bold text-gray-600 text-center">
+          <span className="flex-grow h-px bg-gray-300"></span>
           能力
+          <span className="flex-grow h-px bg-gray-300"></span>
         </h2>
-
         <SkillCircle />
       </div>
 
-      <div id="skill" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-        <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
+      <div id="skill">
+        <h2 className="my-20 flex items-center gap-4 text-[min(1.5vw,1.5rem)] font-bold text-gray-600 text-center">
+          <span className="flex-grow h-px bg-gray-300"></span>
           テクニカルスキル
+          <span className="flex-grow h-px bg-gray-300"></span>
         </h2>
 
         <SkillMap />
       </div>
 
-      <div id="majorProjects" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-        <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
+      <div id="majorProjects">
+        <h2 className="my-20 flex items-center gap-4 text-[min(1.5vw,1.5rem)] font-bold text-gray-600 text-center">
+          <span className="flex-grow h-px bg-gray-300"></span>
           実績
+          <span className="flex-grow h-px bg-gray-300"></span>
         </h2>
 
         <W1MajorProjects />
       </div>
 
-      <div id="work5" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-        <Work5p1 />
+      <div id="work5">
+        <WorkSection {...Work5Data} />
       </div>
 
-      <div id="" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-        <Work5p2 />
+      <div id="work6">
+        <WorkSection {...Work6Data} />
       </div>
 
-      <div id="work6" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-        <Work6 />
+      <div id="work7">
+        <WorkSection {...Work7Data} />
       </div>
 
-      <div id="work7" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-        <Work7 />
+      <div id="work8">
+        <WorkSection {...Work8Data} />
       </div>
 
-      <div id="work8" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-        <Work8 />
+      <div id="work13">
+        <WorkSection {...Work13Data} />
       </div>
 
-      <div id="work13" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-        <Work13 />
+      <div id="work14">
+        <WorkSection {...Work14Data} />
       </div>
 
-      <div id="work14" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-        <Work14 />
-      </div>
-
-      <div
-        id="externalTeamManagement"
-        className="w-full aspect-[16/9] flex flex-col justify-center items-center relative"
-      >
-        <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
+      <div id="externalTeamManagement">
+        <h2 className="my-20 flex items-center gap-4 text-[min(1.5vw,1.5rem)] font-bold text-gray-600 text-center">
+          <span className="flex-grow h-px bg-gray-300"></span>
           実績
+          <span className="flex-grow h-px bg-gray-300"></span>
         </h2>
 
         <W2ExternalTeamManagement />
       </div>
 
-      <div id="work12" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-        <Work12 />
+      <div id="work12">
+        <WorkSection {...Work12Data} />
       </div>
 
-      <div id="work11" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-        <Work11 />
+      <div id="work11">
+        <WorkSection {...Work11Data} />
       </div>
 
-      <div
-        id="clientWork"
-        className="w-full aspect-[16/9] flex flex-col justify-center items-center relative"
-      >
-        <h2 className="text-[min(1.5vw,1.5rem)] absolute top-[min(2.5vw,2.5rem)] left-[min(2vw,2rem)] font-bold text-gray-600">
+      <div id="clientWork">
+        <h2 className="my-20 flex items-center gap-4 text-[min(1.5vw,1.5rem)] font-bold text-gray-600 text-center">
+          <span className="flex-grow h-px bg-gray-300"></span>
           実績
+          <span className="flex-grow h-px bg-gray-300"></span>
         </h2>
 
         <W3ClientWork />
       </div>
 
       <div id="work1" className="w-full aspect-[16/9] relative">
-        <Work1 />
+        <WorkSection {...Work1Data} />
       </div>
 
-      <div id="work3" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-        <Work3 />
+      <div id="work3">
+        <WorkSection {...Work3Data} />
       </div>
 
-      <div id="work4" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-        <Work4 />
+      <div id="work4">
+        <WorkSection {...Work4Data} />
       </div>
 
-      <div id="work2" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-        <Work2 />
+      <div id="work2">
+        <WorkSection {...Work2Data} />
       </div>
 
-      <div id="work9" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-        <Work9 />
+      <div id="work9">
+        <WorkSection {...Work9Data} />
       </div>
 
-      <div id="work10" className="w-full aspect-[16/9] flex flex-col justify-center items-center relative">
-        <Work10 />
+      <div id="work10">
+        <WorkSection {...Work10Data} />
       </div>
 
-      <div id="last" className="w-full aspect-[16/9] flex flex-col justify-center items-end relative">
+      <div id="last">
         <div className="w-full">
           <img src={imageHeart} alt="" className="w-[40%] mx-auto -mt-[min(3vw,3rem)]" />
           <p className="text-center text-[min(1.5vw,1.5rem)] mt-[min(2vw,2rem)]">

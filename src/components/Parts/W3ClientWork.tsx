@@ -1,7 +1,7 @@
 
 export default function W3ClientWork() {
   return (
-    <div>
+    <div className="w-full flex flex-col items-center">
       <h3 className="text-[min(2.5vw,2.5rem)] font-bold mt-[min(2vw,2rem)] text-center">
         <span className={`bg-[linear-gradient(transparent_70%,#E3E8EB_30%)]`}>クライアントワーク・その他</span>
       </h3>

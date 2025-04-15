@@ -35,12 +35,12 @@ const CircleSection: React.FC<CircleSectionProps> = ({
 
 const SkillCircle: React.FC = () => {
   return (
-    <div className="w-full h-full mt-[min(1.0vw,1.0rem)] flex flex-col justify-center items-center relative">
-      <div className="absolute w-[min(48vw,48rem)] h-[min(48vw,48rem)] mx-auto">
+    <div className="relative w-[min(48vw,48rem)] h-[min(48vw,48rem)] mx-auto mt-[min(1.0vw,1.0rem)] flex flex-col justify-center items-center">
+      <div className="absolute w-full h-full">
         {/* 3つの円を配置 */}
-        <div className="absolute w-[min(35vw,35rem)] h-[min(35vw,35rem)] rounded-full border border-gray-800 top-0 left-1/2 transform -translate-x-1/2"></div>
-        <div className="absolute w-[min(35vw,35rem)] h-[min(35vw,35rem)] rounded-full border border-gray-800 bottom-0 left-0 transform"></div>
-        <div className="absolute w-[min(35vw,35rem)] h-[min(35vw,35rem)] rounded-full border border-gray-800 bottom-0 right-0 transform"></div>
+        <div className="absolute w-[min(35vw,35rem)] h-[min(35vw,35rem)] rounded-full border border-gray-800 top-0 left-[50%] -translate-x-1/2"></div>
+        <div className="absolute w-[min(35vw,35rem)] h-[min(35vw,35rem)] rounded-full border border-gray-800 bottom-0 left-0"></div>
+        <div className="absolute w-[min(35vw,35rem)] h-[min(35vw,35rem)] rounded-full border border-gray-800 bottom-0 right-0"></div>
       </div>
 
       <div className="absolute bg-gray-800 py-[min(0.5vw,0.5rem)] px-[min(1.5vw,1.5rem)] text-white text-[min(2vw,2rem)] text-center font-bold">
@@ -49,7 +49,7 @@ const SkillCircle: React.FC = () => {
         プロジェクト全体をマネジメントします
       </div>
 
-      <div className="absolute w-[min(50vw,50rem)] h-[min(50vw,50rem)] mx-auto">
+      <div className="absolute w-full h-full">
         {/* 各セクションをコンポーネント化 */}
         <CircleSection
           title="マネジメント"
