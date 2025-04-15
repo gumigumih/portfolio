@@ -9,9 +9,11 @@ import 'react-medium-image-zoom/dist/styles.css';
 
 type SlideData = {
   title: string;
+  description?: string;
   images: string[];
   link?: string;
 };
+
 
 type Props = {
   period: string;

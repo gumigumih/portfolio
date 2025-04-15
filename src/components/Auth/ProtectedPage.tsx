@@ -1,4 +1,3 @@
-import React, { useRef } from 'react';
 import imageMainvisual from '../../assets/images/mainvisual.png';
 import imageHeart from '../../assets/images/heart.png';
 import SkillCircle from '../Parts/SkillCircle';
