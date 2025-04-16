@@ -1,9 +1,7 @@
-import { useState, useEffect, useCallback } from 'react';
-import CryptoJS from 'crypto-js';
+import { useState, useCallback } from 'react';
+import { verifyPassword } from '../../utils/auth';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
-
-const PASSWORD_HASH = import.meta.env.VITE_PASSWORD_HASH;
 
 type LoginProps = {
   onAuthenticate: (password: string) => void;
@@ -13,26 +11,14 @@ export default function Login({ onAuthenticate }: LoginProps) {
   const [input, setInput] = useState('');
   const [error, setError] = useState('');
 
-  const handleLogin = useCallback(
-    (password?: string) => {
-      const hashedInput = CryptoJS.SHA256(password || input).toString();
-      if (hashedInput === PASSWORD_HASH) {
-        onAuthenticate(password || input);
-        setError('');
-      } else {
-        setError('パスワードが違います。もう一度お試しください。');
-      }
-    },
-    [input, onAuthenticate],
-  );
-
-  useEffect(() => {
-    const searchParams = new URLSearchParams(window.location.search);
-    const urlPassword = searchParams.get('pwd');
-    if (urlPassword) {
-      handleLogin(urlPassword);
+  const handleLogin = useCallback(() => {
+    if (verifyPassword(input)) {
+      onAuthenticate(input);
+      setError('');
+    } else {
+      setError('パスワードが違います。もう一度お試しください。');
     }
-  }, [handleLogin]);
+  }, [input, onAuthenticate]);
 
   return (
     <div className="backdrop-blur-lg bg-white/30 shadow-sm rounded-lg p-8 max-w-md w-full border border-white/20">
@@ -52,7 +38,7 @@ export default function Login({ onAuthenticate }: LoginProps) {
         className="w-full mt-4 px-4 py-2 border border-gray-300 rounded-lg bg-white/40 backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-blue-400"
       />
       <button
-        onClick={() => handleLogin()}
+        onClick={handleLogin}
         className="w-full bg-[#e0609c]/80 hover:bg-[#e0609c]/100 text-white font-semibold py-2 px-4 rounded-lg mt-4 transition duration-200 backdrop-blur-md border border-white/40"
       >
         ログイン
