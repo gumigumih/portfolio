@@ -49,7 +49,7 @@ export default function Login({ onAuthenticate }: LoginProps) {
         placeholder="パスワード"
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        className="w-full mt-4 px-4 py-2 border rounded-lg bg-white/40 backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+        className="w-full mt-4 px-4 py-2 border border-gray-300 rounded-lg bg-white/40 backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-blue-400"
       />
       <button
         onClick={() => handleLogin()}

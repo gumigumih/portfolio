@@ -180,7 +180,7 @@ export default function SlideNav() {
                 onClick={() => {
                   document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="text-[1rem] text-gray-700 hover:text-blue-500 transition duration-200 py-[0.3rem] border-b last:border-0"
+                className="text-[1rem] text-gray-700 hover:text-blue-500 transition duration-200 py-[0.3rem] border-b border-gray-300 last:border-0"
               >
                 {parse(item.title)}
               </li>
