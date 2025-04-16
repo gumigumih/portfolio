@@ -1,5 +1,4 @@
 import imageMainvisual from '../../assets/images/mainvisual.png';
-import imageHeart from '../../assets/images/heart.png';
 import SkillCircle from '../Parts/SkillCircle';
 import SkillMap from '../Parts/SkillMap';
 import SlideNav from '../Parts/SlideNav';
@@ -21,6 +20,7 @@ import Work11Data from '../WorkData/work11.ts';
 import Work12Data from '../WorkData/work12.ts';
 import Work13Data from '../WorkData/work13.ts';
 import Work14Data from '../WorkData/work14.ts';
+import HeartShape from '../Parts/HeartShape';
 
 export default function ProtectedPage() {
   return (
@@ -158,7 +158,13 @@ export default function ProtectedPage() {
                   before:bg-[length:100%_2.5rem] before:z-0"
       >
         <div className="relative z-10">
-          <img src={imageHeart} alt="" className="w-[40%] mx-auto mb-[2rem]" />
+          <div className="relative w-[100px] h-[100px] mx-auto mb-10 animate-pulse duration-700">
+            <div className="absolute inset-0 blur-sm">
+              <HeartShape />
+            </div>
+            
+            <HeartShape />
+          </div>
           <p className="text-[1.2rem] leading-relaxed text-gray-700">
             私は、プロダクトの品質を高め、円滑な開発と運用を支えるディレクションを行っています。<br />
             技術とデザインの両面からチームと連携し、ユーザーにとって使いやすく、継続的に改善できる仕組みをつくることを大切にしています。<br />
@@ -168,10 +174,24 @@ export default function ProtectedPage() {
             最後までご覧いただき、ありがとうございました。<br />
             もしご興味を持っていただけましたら、ぜひお気軽にご連絡ください。
           </p>
-          <p className="text-center text-[1.2rem] mt-[3rem] text-gray-700">
-            和田 愛<br />
-            <a href="mailto:info@meggumi.com" className="underline text-blue-500">info@meggumi.com</a>
+          <p className="text-right text-[1.2rem] mt-[3rem] text-gray-700">
+            <span className="block text-[1.4rem] text-pink-500 mb-1">和田 愛</span>
+            <a
+              href="mailto:info@meggumi.com"
+              className="inline-flex items-center gap-2 text-pink-400 underline hover:text-pink-600 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                className="w-5 h-5 text-pink-400"
+              >
+                <path d="M12 12.713l11.985-8.713H.015L12 12.713zM12 14.999l-12-8.714V20h24V6.285L12 14.999z" />
+              </svg>
+              info@meggumi.com
+            </a>
           </p>
+
         </div>
       </div>
 
