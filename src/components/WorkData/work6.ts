@@ -13,7 +13,7 @@ const projectData = {
   roles: [
     {
       title: 'マネジメント',
-      color: '#FF72D0',
+      color: 'bg-pink-400',
       items: [
         'プロジェクト全体の進行管理・タスク管理',
         '関係者との調整・制作フローの管理',
@@ -24,7 +24,7 @@ const projectData = {
     },
     {
       title: 'エンジニアリング',
-      color: '#55FFDC',
+      color: 'bg-teal-300',
       items: [
         'WebARコンテンツ（ARマンガ）の開発（Vue.js）',
         '満足度計測フォームの開発',

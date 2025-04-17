@@ -9,7 +9,7 @@ const projectData = {
   roles: [
     {
       title: 'エンジニアリング',
-      color: '#55FFDC',
+      color: 'bg-teal-300',
       items: [
         '画像生成ロジックの設計',
         'Vue.jsを使用した実装',

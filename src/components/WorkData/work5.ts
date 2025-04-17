@@ -18,7 +18,7 @@ const projectData = {
   roles: [
     {
       title: 'マネジメント',
-      color: '#FF72D0',
+      color: 'bg-pink-400',
       items: [
         'プロジェクト全体の進行管理・タスク管理',
         '関係者との調整・制作フローの管理',
@@ -29,7 +29,7 @@ const projectData = {
     },
     {
       title: 'エンジニアリング',
-      color: '#55FFDC',
+      color: 'bg-teal-300',
       items: [
         'WebARコンテンツ（ARマンガ）の開発（Vue.js）',
         '満足度計測フォームの開発',
@@ -40,7 +40,7 @@ const projectData = {
     },
     {
       title: 'デザイン',
-      color: '#FEEE16',
+      color: 'bg-yellow-300',
       items: [
         '外注制作のWEBサイトを品質チェック・改善\n機能追加・デザイン調整を行い、リリース対応',
         'After Effectsを用いたアニメーション動画の制作',

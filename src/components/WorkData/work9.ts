@@ -14,14 +14,14 @@ const projectData = {
   roles: [
     {
       title: 'マネジメント',
-      color: '#FF72D0',
+      color: 'bg-pink-400',
       items: [
         'チーム管理・スケジュール調整・進行管理',
       ],
     },
     {
       title: 'エンジニアリング',
-      color: '#55FFDC',
+      color: 'bg-teal-300',
       items: [
         '3Dビューアーの機能設計・UI設計',
         '3Dビューアーの開発・Vue.jsによるプラグイン化',

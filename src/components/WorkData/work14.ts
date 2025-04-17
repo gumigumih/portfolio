@@ -17,7 +17,7 @@ const projectData = {
   roles: [
     {
       title: 'マネジメント',
-      color: '#FF72D0',
+      color: 'bg-pink-400',
       items: [
         '開発チームの管理・スケジュール調整・進捗管理',
         '料金プランの試算・策定・販売モデルの設計',
@@ -30,7 +30,7 @@ const projectData = {
     },
     {
       title: 'エンジニアリング',
-      color: '#55FFDC',
+      color: 'bg-teal-300',
       items: [
         'サーバー設計・データベース設計・API設計',
         'サーバー機能の開発・API実装',
@@ -42,7 +42,7 @@ const projectData = {
     },
     {
       title: 'デザイン',
-      color: '#FEEE16',
+      color: 'bg-yellow-300',
       items: [
         'ソフトウェアのUI設計・デザイン\nユーザーエクスペリエンスの最適化',
         '展示会・プロモーション用資料のデザイン',

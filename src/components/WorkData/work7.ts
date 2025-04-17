@@ -10,12 +10,12 @@ const projectData = {
   roles: [
     {
       title: 'マネジメント',
-      color: '#FF72D0',
+      color: 'bg-pink-400',
       items: ['関係者との調整・制作フローの管理'],
     },
     {
       title: 'デザイン',
-      color: '#FEEE16',
+      color: 'bg-yellow-300',
       items: ['WordPressテーマのカスタマイズ・最適化'],
     },
   ],

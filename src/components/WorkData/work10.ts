@@ -10,7 +10,7 @@ const projectData = {
   roles: [
     {
       title: 'エンジニアリング',
-      color: '#55FFDC',
+      color: 'bg-teal-300',
       items: [
         'WEBアプリの設計・開発',
         '配信管理システムの実装',

@@ -10,7 +10,7 @@ const projectData = {
   roles: [
     {
       title: 'マネジメント',
-      color: '#FF72D0',
+      color: 'bg-pink-400',
       items: [
         'プロジェクト全体の管理',
         '開発チーム管理',
@@ -20,7 +20,7 @@ const projectData = {
     },
     {
       title: 'エンジニアリング',
-      color: '#55FFDC',
+      color: 'bg-teal-300',
       items: [
         '要件整理・画面フロー設計',
         '品質管理・テスト・デバッグ作業の監督',
@@ -28,7 +28,7 @@ const projectData = {
     },
     {
       title: 'デザイン',
-      color: '#FEEE16',
+      color: 'bg-yellow-300',
       items: [
         'アプリのUI・UXデザイン',
         '3Dアバター制作',

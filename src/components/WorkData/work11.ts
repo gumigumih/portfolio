@@ -10,7 +10,7 @@ const projectData = {
   roles: [
     {
       title: 'マネジメント',
-      color: '#FF72D0',
+      color: 'bg-pink-400',
       items: [
         'プロジェクト全体の管理',
         '3Dキャラクター制作の外注管理',
@@ -19,7 +19,7 @@ const projectData = {
     },
     {
       title: 'エンジニアリング',
-      color: '#55FFDC',
+      color: 'bg-teal-300',
       items: [
         'モーション撮影データの収録・調整',
         '「NICE CAMERA」へのモーションデータ追加',
@@ -27,7 +27,7 @@ const projectData = {
     },
     {
       title: 'デザイン',
-      color: '#FEEE16',
+      color: 'bg-yellow-300',
       items: [
         '外注3Dキャラクターの品質チェック・改善\n形状修正・デザイン調整を行い、納品対応',
       ],

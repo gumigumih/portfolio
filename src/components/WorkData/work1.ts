@@ -11,14 +11,14 @@ const projectData = {
   roles: [
     {
       title: 'マネジメント',
-      color: '#FF72D0',
+      color: 'bg-pink-400',
       items: [
         '3Dスタジオデータの制作進行管理',
       ],
     },
     {
       title: 'エンジニアリング',
-      color: '#55FFDC',
+      color: 'bg-teal-300',
       items: [
         'VR機材の設置と設定',
         '3DキャラクターのVRM形式変換',

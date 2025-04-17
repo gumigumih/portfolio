@@ -42,7 +42,7 @@ export default function WorkSection({ period, heading, description, roles, slide
         {roles.map((role, i) => (
           <div key={i} className="flex-1 min-w-[250px]">
             <h4 className="font-semibold text-[1.2rem] flex items-center">
-              <span className={`inline-block mr-2 w-[1.2rem] h-[1.2rem] rounded-full`} style={{ backgroundColor: role.color }}></span>
+              <span className={`inline-block mr-2 w-[1.2rem] h-[1.2rem] rounded-full ${role.color}`}></span>
               {role.title}
             </h4>
             <ul className="mt-3 ml-10 space-y-[1rem] list-disc text-[1rem]">
