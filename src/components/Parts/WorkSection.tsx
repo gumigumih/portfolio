@@ -69,7 +69,7 @@ export default function WorkSection({ period, heading, description, roles, slide
             <div className={`flex gap-2 justify-center items-start w-full`}>
               {slide.images.map((img, i) => (
                 <Zoom key={i}>
-                  <img src={img} alt="" className="w-fit max-h-80 object-contain cursor-zoom-in" />
+                  <img src={img} alt="" className="max-h-80 cursor-zoom-in" />
                 </Zoom>
               ))}
             </div>
