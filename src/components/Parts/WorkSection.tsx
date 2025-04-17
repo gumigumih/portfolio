@@ -63,7 +63,7 @@ export default function WorkSection({ period, heading, description, roles, slide
         className="mt-10 bg-gray-100 rounded-lg"
       >
         {slides.map((slide, index) => (
-          <SwiperSlide key={index} className="py-10 px-4 md:px-20 flex flex-col items-center">
+          <SwiperSlide key={index} className="pt-10 pb-15 px-4 md:px-20 flex flex-col items-center">
             <p className="text-[1rem] mb-5">{slide.title}</p>
             <p className="text-[1rem] mb-5 text-justify text-gray-500">{slide.description ?? ""}</p>
             <div className={`flex gap-2 justify-center items-start w-full`}>

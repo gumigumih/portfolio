@@ -50,7 +50,7 @@ export default function SkillMap() {
     <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-[2.5rem] mt-[2.5rem] w-[80%] mx-auto">
       {Object.entries(skills).map(([category, { color, skillColor, skills: skillList }]) => (
         <div key={category}>
-          <h2 className="text-[2.5rem] font-bold text-center">
+          <h2 className="text-[2rem] md:text-[2.5rem] font-bold text-center">
             <span className="relative inline-block">
               <span className={`absolute inset-x-0 bottom-1 h-4 ${color}`}></span>
               <span className="relative z-1">{category}</span>

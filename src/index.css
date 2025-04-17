@@ -2,6 +2,31 @@
 
 @import 'tailwindcss';
 
+@media (max-width: 768px) {
+  .swiper-button-prev {
+    top: auto !important;
+    bottom: 0 !important;
+    padding: 0 1rem !important;
+    z-index: 11 !important;
+    &:after {
+      font-size: 1.5rem !important;
+    }
+  }
+
+  .swiper-button-next {
+    top: auto !important;
+    bottom: 0 !important;
+    padding: 0 1rem !important;
+    z-index: 11 !important;
+    &:after {
+      font-size: 1.5rem !important;
+    }
+  }
+}
+.swiper-pagination {
+  margin-bottom: 0.5rem !important;
+}
+
 html {
   font-size: 14px;
 }
