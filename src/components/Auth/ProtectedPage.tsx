@@ -62,7 +62,7 @@ export default function ProtectedPage() {
       </FadeInSection>
 
       <FadeInSection>
-        <div id="ability">
+        <div id="productManagementSkills">
           <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
             <span className="flex-grow h-px bg-gray-300"></span>
             プロダクトマネジメントスキル
@@ -73,7 +73,7 @@ export default function ProtectedPage() {
       </FadeInSection>
 
       <FadeInSection>
-        <div id="skill">
+        <div id="technicalSkills">
           <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
             <span className="flex-grow h-px bg-gray-300"></span>
             テクニカルスキル

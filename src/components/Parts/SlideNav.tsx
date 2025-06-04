@@ -4,8 +4,9 @@ import parse from 'html-react-parser';
 // OUTLINE の項目
 const outlineLinks = [
   { id: 'top', title: 'TOP' },
-  { id: 'ability', title: '能力' },
-  { id: 'skill', title: 'テクニカルスキル' },
+  { id: 'ability', title: '強み' },
+  { id: 'productManagementSkills', title: 'プロダクトマネジメントスキル' },
+  { id: 'technicalSkills', title: 'テクニカルスキル' },
   {
     id: 'majorProjects',
     title: "<span class='text-[0.9em]'>実績</span><br/>大規模プロジェクト",
