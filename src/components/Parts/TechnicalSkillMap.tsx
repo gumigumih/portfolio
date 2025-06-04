@@ -1,8 +1,7 @@
-
 const skills = {
-  エンジニアリング: {
-    color: 'bg-teal-300/40',
-    skillColor: 'bg-teal-300',
+  "エンジニアリング": {
+    color: 'bg-slate-400/40',
+    skillColor: 'bg-slate-400',
     skills: [
       { name: 'HTML/CSS/JS', level: 5 },
       { name: '- Vue.js', level: 3 },
@@ -18,9 +17,9 @@ const skills = {
       { name: 'DB設計', level: 3 },
     ],
   },
-  デザイン: {
-    color: 'bg-yellow-300/40',
-    skillColor: 'bg-yellow-300',
+  "デザイン": {
+    color: 'bg-slate-400/40',
+    skillColor: 'bg-slate-400',
     skills: [
       { name: 'Photoshop', level: 4 },
       { name: 'Illustrator', level: 4 },
@@ -31,7 +30,7 @@ const skills = {
       { name: 'Unity', level: 2 },
     ],
   },
-  その他: {
+  "その他": {
     color: 'bg-slate-400/40',
     skillColor: 'bg-slate-400',
     skills: [

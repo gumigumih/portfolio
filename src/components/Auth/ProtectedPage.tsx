@@ -1,6 +1,7 @@
 import imageMainvisual from '../../assets/images/mainvisual.png';
-import SkillCircle from '../Parts/SkillCircle.tsx';
-import SkillMap from '../Parts/SkillMap.tsx';
+import SkillMatrix from '../Parts/SkillMatrix.tsx';
+import ProductManagementSkills from '../Parts/ProductManagementSkills.tsx';
+import TechnicalSkillMap from '../Parts/TechnicalSkillMap.tsx';
 import SlideNav from '../Parts/SlideNav.tsx';
 import W1MajorProjects from '../Parts/W1MajorProjects.tsx';
 import W2ExternalTeamManagement from '../Parts/W2ExternalTeamManagement.tsx';
@@ -53,10 +54,21 @@ export default function ProtectedPage() {
         <div id="ability">
           <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
             <span className="flex-grow h-px bg-gray-300"></span>
-            能力
+            強み
             <span className="flex-grow h-px bg-gray-300"></span>
           </h2>
-          <SkillCircle />
+          <SkillMatrix />
+        </div>
+      </FadeInSection>
+
+      <FadeInSection>
+        <div id="ability">
+          <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
+            <span className="flex-grow h-px bg-gray-300"></span>
+            プロダクトマネジメントスキル
+            <span className="flex-grow h-px bg-gray-300"></span>
+          </h2>
+          <ProductManagementSkills />
         </div>
       </FadeInSection>
 
@@ -68,7 +80,7 @@ export default function ProtectedPage() {
             <span className="flex-grow h-px bg-gray-300"></span>
           </h2>
 
-          <SkillMap />
+          <TechnicalSkillMap />
         </div>
       </FadeInSection>
 
