@@ -1,6 +1,6 @@
-import image1 from '../../assets/images/works/1/image1.png';
-import image2 from '../../assets/images/works/1/image2.png';
-import image3 from '../../assets/images/works/1/image3.png';
+import image1 from '../../../assets/images/works/1/image1.png';
+import image2 from '../../../assets/images/works/1/image2.png';
+import image3 from '../../../assets/images/works/1/image3.png';
 
 const projectData = {
   period: '2018年10月～2019年3月',

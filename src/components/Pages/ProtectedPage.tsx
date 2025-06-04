@@ -1,28 +1,29 @@
 import imageMainvisual from '../../assets/images/mainvisual.png';
-import SkillMatrix from '../Parts/SkillMatrix.tsx';
-import ProductManagementSkills from '../Parts/ProductManagementSkills.tsx';
-import TechnicalSkillMap from '../Parts/TechnicalSkillMap.tsx';
-import SlideNav from '../Parts/SlideNav.tsx';
-import W1MajorProjects from '../Parts/W1MajorProjects.tsx';
-import W2ExternalTeamManagement from '../Parts/W2ExternalTeamManagement.tsx';
-import W3ClientWork from '../Parts/W3ClientWork.tsx';
-import WorkSection from '../Parts/WorkSection.tsx';
-import Work1Data from '../WorkData/work1.ts';
-import Work2Data from '../WorkData/work2.ts';
-import Work3Data from '../WorkData/work3.ts';
-import Work4Data from '../WorkData/work4.ts';
-import Work5Data from '../WorkData/work5.ts';
-import Work6Data from '../WorkData/work6.ts';
-import Work7Data from '../WorkData/work7.ts';
-import Work8Data from '../WorkData/work8.ts';
-import Work9Data from '../WorkData/work9.ts';
-import Work10Data from '../WorkData/work10.ts';
-import Work11Data from '../WorkData/work11.ts';
-import Work12Data from '../WorkData/work12.ts';
-import Work13Data from '../WorkData/work13.ts';
-import Work14Data from '../WorkData/work14.ts';
-import HeartShape from '../Parts/HeartShape.tsx';
-import FadeInSection from '../Parts/FadeInSection.tsx';
+import SkillMatrix from '../Skills/SkillMatrix.tsx';
+import ProductManagementSkills from '../Skills/ProductManagementSkills.tsx';
+import TechnicalSkillMap from '../Skills/TechnicalSkillMap.tsx';
+import SlideNav from '../Layout/SlideNav.tsx';
+import MajorProjects from '../Works/MajorProjects.tsx';
+import TourismProjects from '../Works/TourismProjects.tsx';
+import PromotionProjects from '../Works/PromotionProjects.tsx';
+import AvatarSupport from '../Works/AvatarSupport.tsx';
+import WorkSection from '../Layout/WorkSection.tsx';
+import Work1Data from '../Works/Data/work1.ts';
+import Work2Data from '../Works/Data/work2.ts';
+import Work3Data from '../Works/Data/work3.ts';
+import Work4Data from '../Works/Data/work4.ts';
+import Work5Data from '../Works/Data/work5.ts';
+import Work6Data from '../Works/Data/work6.ts';
+import Work7Data from '../Works/Data/work7.ts';
+import Work8Data from '../Works/Data/work8.ts';
+import Work9Data from '../Works/Data/work9.ts';
+import Work10Data from '../Works/Data/work10.ts';
+import Work11Data from '../Works/Data/work11.ts';
+import Work12Data from '../Works/Data/work12.ts';
+import Work13Data from '../Works/Data/work13.ts';
+import Work14Data from '../Works/Data/work14.ts';
+import HeartShape from '../UI/HeartShape.tsx';
+import FadeInSection from '../UI/FadeInSection.tsx';
 
 export default function ProtectedPage() {
   return (
@@ -88,11 +89,43 @@ export default function ProtectedPage() {
         <div id="majorProjects">
           <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
             <span className="flex-grow h-px bg-gray-300"></span>
-            実績
+            プロダクト開発・運営
             <span className="flex-grow h-px bg-gray-300"></span>
           </h2>
 
-          <W1MajorProjects />
+          <MajorProjects />
+        </div>
+      </FadeInSection>
+
+      {/* プロダクト開発・運営の案件 */}
+      <FadeInSection>
+        <div id="work13">
+          <WorkSection {...Work13Data} />
+        </div>
+      </FadeInSection>
+
+      <FadeInSection>
+        <div id="work14">
+          <WorkSection {...Work14Data} />
+        </div>
+      </FadeInSection>
+
+      <FadeInSection>
+        <div id="externalTeamManagement">
+          <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
+            <span className="flex-grow h-px bg-gray-300"></span>
+            観光・地域振興系
+            <span className="flex-grow h-px bg-gray-300"></span>
+          </h2>
+
+          <TourismProjects />
+        </div>
+      </FadeInSection>
+
+      {/* 観光・地域振興系の案件 */}
+      <FadeInSection>
+        <div id="work9">
+          <WorkSection {...Work9Data} />
         </div>
       </FadeInSection>
 
@@ -121,29 +154,18 @@ export default function ProtectedPage() {
       </FadeInSection>
 
       <FadeInSection>
-        <div id="work13">
-          <WorkSection {...Work13Data} />
-        </div>
-      </FadeInSection>
-
-      <FadeInSection>
-        <div id="work14">
-          <WorkSection {...Work14Data} />
-        </div>
-      </FadeInSection>
-
-      <FadeInSection>
-        <div id="externalTeamManagement">
+        <div id="clientWork">
           <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
             <span className="flex-grow h-px bg-gray-300"></span>
-            実績
+            アバター活用支援
             <span className="flex-grow h-px bg-gray-300"></span>
           </h2>
 
-          <W2ExternalTeamManagement />
+          <AvatarSupport />
         </div>
       </FadeInSection>
 
+      {/* アバター活用支援の案件 */}
       <FadeInSection>
         <div id="work12">
           <WorkSection {...Work12Data} />
@@ -157,20 +179,33 @@ export default function ProtectedPage() {
       </FadeInSection>
 
       <FadeInSection>
-        <div id="clientWork">
-          <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
-            <span className="flex-grow h-px bg-gray-300"></span>
-            実績
-            <span className="flex-grow h-px bg-gray-300"></span>
-          </h2>
-
-          <W3ClientWork />
+        <div id="work1">
+          <WorkSection {...Work1Data} />
         </div>
       </FadeInSection>
 
       <FadeInSection>
-        <div id="work1" className="w-full aspect-[16/9] relative">
-          <WorkSection {...Work1Data} />
+        <div id="promotion">
+          <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
+            <span className="flex-grow h-px bg-gray-300"></span>
+            販促・その他
+            <span className="flex-grow h-px bg-gray-300"></span>
+          </h2>
+
+          <PromotionProjects />
+        </div>
+      </FadeInSection>
+
+      {/* 販促・その他の案件 */}
+      <FadeInSection>
+        <div id="work10">
+          <WorkSection {...Work10Data} />
+        </div>
+      </FadeInSection>
+
+      <FadeInSection>
+        <div id="work2">
+          <WorkSection {...Work2Data} />
         </div>
       </FadeInSection>
 
@@ -183,24 +218,6 @@ export default function ProtectedPage() {
       <FadeInSection>
         <div id="work4">
           <WorkSection {...Work4Data} />
-        </div>
-      </FadeInSection>
-
-      <FadeInSection>
-        <div id="work2">
-          <WorkSection {...Work2Data} />
-        </div>
-      </FadeInSection>
-
-      <FadeInSection>
-        <div id="work9">
-          <WorkSection {...Work9Data} />
-        </div>
-      </FadeInSection>
-
-      <FadeInSection>
-        <div id="work10">
-          <WorkSection {...Work10Data} />
         </div>
       </FadeInSection>
 
@@ -251,3 +268,4 @@ export default function ProtectedPage() {
     </div>
   );
 }
+

@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { verifyPassword } from '../../utils/auth';
 import Login from './Login';
-import ProtectedPage from './ProtectedPage';
-import LoadingAnimation from '../Parts/LoadingAnimation'; // ← 前のローダー
+import ProtectedPage from '../Pages/ProtectedPage';
+import LoadingAnimation from '../UI/LoadingAnimation'; // ← 前のローダー
 
 export default function Auth() {
   const [authenticated, setAuthenticated] = useState(false);

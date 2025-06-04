@@ -9,15 +9,19 @@ const outlineLinks = [
   { id: 'technicalSkills', title: 'テクニカルスキル' },
   {
     id: 'majorProjects',
-    title: "<span class='text-[0.9em]'>実績</span><br/>大規模プロジェクト",
+    title: "<span class='text-[0.9em]'>実績</span><br/>プロダクト開発・運営",
   },
   {
     id: 'externalTeamManagement',
-    title: "<span class='text-[0.9em]'>実績</span><br/>外注管理・チームマネジメント",
+    title: "<span class='text-[0.9em]'>実績</span><br/>観光・地域振興系",
   },
   {
     id: 'clientWork',
-    title: "<span class='text-[0.9em]'>実績</span><br/>クライアントワーク",
+    title: "<span class='text-[0.9em]'>実績</span><br/>アバター活用支援",
+  },
+  {
+    id: 'promotion',
+    title: "<span class='text-[0.9em]'>実績</span><br/>販促・その他",
   },
   { id: 'last', title: 'さいごに' },
 ];

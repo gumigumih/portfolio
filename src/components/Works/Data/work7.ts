@@ -1,5 +1,5 @@
-import image1 from '../../assets/images/works/7/image1.png';
-import image2 from '../../assets/images/works/7/image2.png';
+import image1 from '../../../assets/images/works/7/image1.png';
+import image2 from '../../../assets/images/works/7/image2.png';
 
 const projectData = {
   period: '2022年10月〜2023年2月、2024年1月',

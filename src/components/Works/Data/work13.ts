@@ -1,9 +1,9 @@
-import image1 from '../../assets/images/works/13/image1.png';
-import image2 from '../../assets/images/works/13/image2.png';
-import image3 from '../../assets/images/works/13/image3.png';
-import image4 from '../../assets/images/works/13/image4.png';
-import image5 from '../../assets/images/works/13/image5.jpg';
-import image6 from '../../assets/images/works/13/image6.png';
+import image1 from '../../../assets/images/works/13/image1.png';
+import image2 from '../../../assets/images/works/13/image2.png';
+import image3 from '../../../assets/images/works/13/image3.png';
+import image4 from '../../../assets/images/works/13/image4.png';
+import image5 from '../../../assets/images/works/13/image5.jpg';
+import image6 from '../../../assets/images/works/13/image6.png';
 
 const projectData = {
   period: '2020年6月～2025年3月',

@@ -1,12 +1,12 @@
-import image1 from '../../assets/images/works/5/image1.jpg';
-import image2 from '../../assets/images/works/5/image2.png';
-import image3 from '../../assets/images/works/5/image3.png';
-import image4 from '../../assets/images/works/5/image4.png';
-import image5 from '../../assets/images/works/5/image5.png';
-import image6 from '../../assets/images/works/5/image6.png';
-import image7 from '../../assets/images/works/5/image7.png';
-import image8 from '../../assets/images/works/5/image8.png';
-import image9 from '../../assets/images/works/5/image9.png';
+import image1 from '../../../assets/images/works/5/image1.jpg';
+import image2 from '../../../assets/images/works/5/image2.png';
+import image3 from '../../../assets/images/works/5/image3.png';
+import image4 from '../../../assets/images/works/5/image4.png';
+import image5 from '../../../assets/images/works/5/image5.png';
+import image6 from '../../../assets/images/works/5/image6.png';
+import image7 from '../../../assets/images/works/5/image7.png';
+import image8 from '../../../assets/images/works/5/image8.png';
+import image9 from '../../../assets/images/works/5/image9.png';
 
 const projectData = {
   period: '2020年8月～2021年3月',

@@ -1,11 +1,11 @@
-import image1a from '../../assets/images/works/14/image1a.png';
-import image1b from '../../assets/images/works/14/image1b.png';
-import image1c from '../../assets/images/works/14/image1c.png';
-import image2 from '../../assets/images/works/14/image2.png';
-import image3 from '../../assets/images/works/14/image3.png';
-import image4 from '../../assets/images/works/14/image4.png';
-import image5 from '../../assets/images/works/14/image5.png';
-import image6 from '../../assets/images/works/14/image6.png';
+import image1a from '../../../assets/images/works/14/image1a.png';
+import image1b from '../../../assets/images/works/14/image1b.png';
+import image1c from '../../../assets/images/works/14/image1c.png';
+import image2 from '../../../assets/images/works/14/image2.png';
+import image3 from '../../../assets/images/works/14/image3.png';
+import image4 from '../../../assets/images/works/14/image4.png';
+import image5 from '../../../assets/images/works/14/image5.png';
+import image6 from '../../../assets/images/works/14/image6.png';
 
 const projectData = {
   period: '2024年4月～2025年3月',
