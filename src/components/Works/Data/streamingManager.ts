@@ -2,8 +2,13 @@ import image1 from '../../../assets/images/works/10/image1.png';
 import image2 from '../../../assets/images/works/10/image2.png';
 
 const projectData = {
+  type: 'promotion',
   period: '2023年6月～7月',
-  heading: '24時間365日ストリーミング配信管理システム',
+  startDate: { year: 2023, month: 6 },
+  endDate: { year: 2023, month: 7 },
+  heading: 'ストリーミング配信管理システム',
+  lead: '24時間365日自動動画配信管理システム',
+  coverImage: image1,
   description: `本プロジェクトは、YouTube向けの自動動画配信管理システムの開発です。
 配信ごとに必要だった専用パソコンを不要にし、サクラVPS上で複数配信を一括管理できるようにしました。
 ストリーミングの自動切り替え・モニタリング・再配信機能を実装し、24時間365日の運用を効率化しました。`,
@@ -33,4 +38,4 @@ const projectData = {
   ],
 };
 
-export default projectData;
+export default projectData; 

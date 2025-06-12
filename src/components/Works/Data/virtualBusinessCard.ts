@@ -1,8 +1,13 @@
 import image1 from '../../../assets/images/works/4/image1.png';
 
 const projectData = {
+  type: 'product',
   period: '2020年4月',
+  startDate: { year: 2020, month: 4 },
+  endDate: { year: 2020, month: 4 },
   heading: 'バーチャル名刺背景ジェネレーター',
+  lead: 'オンライン会議向けカスタム背景生成ツール',
+  coverImage: image1,
   description: `本プロダクトは、オンライン会議向けに、名前やロゴ、QRコードを含むカスタム背景を生成できるツールです。
 発案から開発・リリースまで3日で完了し、Vue.jsを使用して実装しました。
 リリース後1か月で10,000ユーザーを獲得し、500人以上が日常的に利用する人気ツールへと成長しました。`,
@@ -26,4 +31,4 @@ const projectData = {
   ],
 };
 
-export default projectData;
+export default projectData; 

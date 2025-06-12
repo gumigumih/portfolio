@@ -6,8 +6,13 @@ import image5 from '../../../assets/images/works/9/image5.png';
 import image6 from '../../../assets/images/works/9/image6.png';
 
 const projectData = {
-  period: '2022年9月〜2023年3月',
-  heading: '文化財3DスキャンWEB公開システム開発',
+  type: 'tourism',
+  period: '2022年9月～2023年3月',
+  startDate: { year: 2022, month: 9 },
+  endDate: { year: 2023, month: 3 },
+  heading: '文化財3DスキャンWEB公開システム',
+  lead: '文化財の3DスキャンデータをWEB上で公開するシステム',
+  coverImage: image1,
   description: `本プロジェクトは、文化財の3DスキャンデータをWEB上で公開するシステムの開発です。
 ユーザーがスクロール操作でカメラアングルを次々と切り替えながら、魅せたい場所と角度を意図的に演出し、音声ガイドも再生できるインターフェースを実装しました。
 また、複数の文化財データをWEBサイトに埋め込めるよう、3Dビューアーの基本機能をVue.jsでプラグイン化しました。`,
@@ -62,4 +67,4 @@ const projectData = {
   ],
 };
 
-export default projectData;
+export default projectData; 

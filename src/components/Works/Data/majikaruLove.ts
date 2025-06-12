@@ -2,8 +2,13 @@ import image1 from '../../../assets/images/works/11/image1.png';
 import image2 from '../../../assets/images/works/11/image2.png';
 
 const projectData = {
-  period: '2023年2月〜2023年5月、2023年12月～2024年2月',
-  heading: 'TV番組「マヂカルラブリーの全力！アニシャド応援部」3Dキャラクター制作・撮影支援',
+  type: 'avatar',
+  period: '2023年2月～2024年2月',
+  startDate: { year: 2023, month: 2 },
+  endDate: { year: 2024, month: 2 },
+  heading: 'マヂカルラブリーの全力！アニシャド応援部',
+  lead: '3Dキャラクター制作・撮影支援',
+  coverImage: image1,
   description: `本プロジェクトは、TV番組「マヂカルラブリーの全力！アニシャド応援部」向けの3Dキャラクター制作・撮影支援です。
 モーション撮影ツール「NICE CAMERA」を活用し、モーションデータの調整・追加を担当しました。
 クラウドソーシングで制作された3Dキャラクターをブラッシュアップし、一定の品質を確保しました。`,
@@ -47,4 +52,4 @@ const projectData = {
   ]
 };
 
-export default projectData;
+export default projectData; 

@@ -1,3 +1,18 @@
+import { useState, useEffect, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../contexts/AuthContext';
+import { ProjectType } from '../Works/Data/types';
+import NiceCameraData from '../Works/Data/niceCamera';
+import AiKataS2pData from '../Works/Data/aiKataS2p';
+import MiuraKamakuraData from '../Works/Data/miuraKamakura';
+import FukuokaVsapoData from '../Works/Data/fukuokaVsapo';
+import MajikaruLoveData from '../Works/Data/majikaruLove';
+import VirtualBusinessCardData from '../Works/Data/virtualBusinessCard';
+import StreamingManagerData from '../Works/Data/streamingManager';
+import CulturalHeritage3DData from '../Works/Data/culturalHeritage3D';
+import NijisanjiKujiData from '../Works/Data/nijisanjiKuji';
+import YoutubeSchedulerData from '../Works/Data/youtubeScheduler';
+import SnackARData from '../Works/Data/snackAR';
 import imageMainvisual from '../../assets/images/mainvisual.png';
 import SkillMatrix from '../Skills/SkillMatrix.tsx';
 import ProductManagementSkills from '../Skills/ProductManagementSkills.tsx';
@@ -7,25 +22,129 @@ import MajorProjects from '../Works/MajorProjects.tsx';
 import TourismProjects from '../Works/TourismProjects.tsx';
 import PromotionProjects from '../Works/PromotionProjects.tsx';
 import AvatarSupport from '../Works/AvatarSupport.tsx';
-import WorkSection from '../Layout/WorkSection.tsx';
-import Work1Data from '../Works/Data/work1.ts';
-import Work2Data from '../Works/Data/work2.ts';
-import Work3Data from '../Works/Data/work3.ts';
-import Work4Data from '../Works/Data/work4.ts';
-import Work5Data from '../Works/Data/work5.ts';
-import Work6Data from '../Works/Data/work6.ts';
-import Work7Data from '../Works/Data/work7.ts';
-import Work8Data from '../Works/Data/work8.ts';
-import Work9Data from '../Works/Data/work9.ts';
-import Work10Data from '../Works/Data/work10.ts';
-import Work11Data from '../Works/Data/work11.ts';
-import Work12Data from '../Works/Data/work12.ts';
-import Work13Data from '../Works/Data/work13.ts';
-import Work14Data from '../Works/Data/work14.ts';
 import HeartShape from '../UI/HeartShape.tsx';
 import FadeInSection from '../UI/FadeInSection.tsx';
+import WorkCard from '../Works/WorkCard.tsx';
+import WorkDetail from '../Works/WorkDetail.tsx';
+
+type ProjectData = {
+  period: string;
+  heading: string;
+  description: string;
+  endDate: {
+    year: number;
+    month: number;
+  };
+  roles: {
+    title: string;
+    color: string;
+    items: string[];
+  }[];
+  slides: {
+    title: string;
+    description?: string;
+    images: string[];
+    link?: string;
+  }[];
+  challenges?: {
+    title: string;
+    description: string;
+    solution: string;
+  }[];
+  techStack?: {
+    frontend: string[];
+    backend: string[];
+    infrastructure: string[];
+    tools: string[];
+  };
+  achievements?: {
+    title: string;
+    value: string;
+    description: string;
+  }[];
+  timeline?: {
+    period: string;
+    title: string;
+    description: string;
+    achievements: string[];
+  }[];
+  coverImage?: string;
+  type: string;
+};
+
+const projectData: { [key: string]: ProjectData } = {
+  virtualBusinessCard: VirtualBusinessCardData,
+  culturalHeritage3D: CulturalHeritage3DData,
+  streamingManager: StreamingManagerData,
+  miuraKamakura: MiuraKamakuraData,
+  majikaruLove: MajikaruLoveData,
+  fukuokaVsapo: FukuokaVsapoData,
+  niceCamera: NiceCameraData,
+  aiKataS2p: AiKataS2pData,
+  nijisanjiKuji: NijisanjiKujiData,
+  youtubeScheduler: YoutubeSchedulerData,
+  snackAR: SnackARData,
+};
+
+type ProjectType = 'product' | 'tourism' | 'avatar' | 'promotion';
 
 export default function ProtectedPage() {
+  const [selectedProject, setSelectedProject] = useState<string | null>(null);
+  const [selectedType, setSelectedType] = useState<ProjectType | 'all'>('all');
+
+  const filteredProjects = useMemo(() => {
+    if (selectedType === 'all') {
+      return Object.entries(projectData).sort((a, b) => {
+        const dateA = new Date(a[1].endDate.year, a[1].endDate.month - 1);
+        const dateB = new Date(b[1].endDate.year, b[1].endDate.month - 1);
+        return dateB.getTime() - dateA.getTime();
+      });
+    }
+
+    return Object.entries(projectData)
+      .filter(([_, project]) => project.type === selectedType)
+      .sort((a, b) => {
+        const dateA = new Date(a[1].endDate.year, a[1].endDate.month - 1);
+        const dateB = new Date(b[1].endDate.year, b[1].endDate.month - 1);
+        return dateB.getTime() - dateA.getTime();
+      });
+  }, [selectedType, projectData]);
+
+  const typeLabels: { [key in ProjectType | 'all']: string } = {
+    all: 'すべて',
+    product: 'プロダクト開発・運営',
+    tourism: '観光・地域振興系',
+    avatar: 'アバター活用支援',
+    promotion: '販促・その他',
+  };
+
+  const typeColors: { [key in ProjectType]: string } = {
+    product: 'bg-blue-500',
+    tourism: 'bg-green-500',
+    avatar: 'bg-purple-500',
+    promotion: 'bg-orange-500',
+  };
+
+  useEffect(() => {
+    if (selectedProject) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [selectedProject]);
+
+  const handleProjectClick = (projectId: string) => {
+    setSelectedProject(projectId);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedProject(null);
+  };
+
   return (
     <div className="relative max-w-screen-2xl w-full mx-auto md:pl-[12rem]">
       <SlideNav />
@@ -80,148 +199,141 @@ export default function ProtectedPage() {
             テクニカルスキル
             <span className="flex-grow h-px bg-gray-300"></span>
           </h2>
-
           <TechnicalSkillMap />
         </div>
       </FadeInSection>
 
       <FadeInSection>
-        <div id="majorProjects">
+        <div id="projects">
           <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
             <span className="flex-grow h-px bg-gray-300"></span>
-            プロダクト開発・運営
+            プロジェクト一覧
             <span className="flex-grow h-px bg-gray-300"></span>
           </h2>
 
-          <MajorProjects />
+          {/* フィルタリングUI */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {Object.entries(typeLabels).map(([type, label]) => (
+              <button
+                key={type}
+                onClick={() => setSelectedType(type as ProjectType | 'all')}
+                className={`px-4 py-2 rounded-full text-[1rem] font-medium transition-colors
+                  ${selectedType === type
+                    ? `${type === 'all' ? 'bg-gray-800' : typeColors[type as ProjectType]} text-white`
+                    : 'bg-white text-gray-600 hover:bg-gray-100'
+                  }`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+          
+          {/* プロダクト開発・運営 */}
+          {selectedType === 'all' || selectedType === 'product' ? (
+            <div className="mb-16 px-10">
+              <h3 className="text-xl font-bold text-gray-800 mb-8">プロダクト開発・運営</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredProjects
+                  .filter(([, project]) => project.type === 'product')
+                  .map(([projectId, project]) => (
+                    <WorkCard
+                      key={projectId}
+                      project={project}
+                      onClick={() => handleProjectClick(projectId)}
+                    />
+                  ))}
+              </div>
+            </div>
+          ) : null}
+
+          {/* 観光・地域振興系 */}
+          {selectedType === 'all' || selectedType === 'tourism' ? (
+            <div className="mb-16 px-10">
+              <h3 className="text-xl font-bold text-gray-800 mb-8">観光・地域振興系</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredProjects
+                  .filter(([, project]) => project.type === 'tourism')
+                  .map(([projectId, project]) => (
+                    <WorkCard
+                      key={projectId}
+                      project={project}
+                      onClick={() => handleProjectClick(projectId)}
+                    />
+                  ))}
+              </div>
+            </div>
+          ) : null}
+
+          {/* アバター活用支援 */}
+          {selectedType === 'all' || selectedType === 'avatar' ? (
+            <div className="mb-16 px-10">
+              <h3 className="text-xl font-bold text-gray-800 mb-8">アバター活用支援</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredProjects
+                  .filter(([, project]) => project.type === 'avatar')
+                  .map(([projectId, project]) => (
+                    <WorkCard
+                      key={projectId}
+                      project={project}
+                      onClick={() => handleProjectClick(projectId)}
+                    />
+                  ))}
+              </div>
+            </div>
+          ) : null}
+
+          {/* 販促・その他 */}
+          {selectedType === 'all' || selectedType === 'promotion' ? (
+            <div className="mb-16 px-10">
+              <h3 className="text-xl font-bold text-gray-800 mb-8">販促・その他</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredProjects
+                  .filter(([, project]) => project.type === 'promotion')
+                  .map(([projectId, project]) => (
+                    <WorkCard
+                      key={projectId}
+                      project={project}
+                      onClick={() => handleProjectClick(projectId)}
+                    />
+                  ))}
+              </div>
+            </div>
+          ) : null}
         </div>
       </FadeInSection>
 
-      {/* プロダクト開発・運営の案件 */}
-      <FadeInSection>
-        <div id="work13">
-          <WorkSection {...Work13Data} />
+      {/* モーダル */}
+      {selectedProject && (
+        <div 
+          className="fixed inset-0 bg-white/50 bg-opacity-50 z-50 flex items-center justify-center p-0 md:p-4"
+          onClick={handleCloseModal}
+        >
+          <div 
+            className="bg-white shadow-lg rounded-none md:rounded-lg w-full h-full md:max-w-7xl md:max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={handleCloseModal}
+              className="fixed top-4 right-4 md:top-6 md:right-6 text-gray-500 hover:text-gray-700 z-50 bg-white rounded-full p-2 shadow-md"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <div className="p-4 md:p-6">
+              <WorkDetail {...projectData[selectedProject]} />
+            </div>
+          </div>
         </div>
-      </FadeInSection>
+      )}
 
       <FadeInSection>
-        <div id="work14">
-          <WorkSection {...Work14Data} />
-        </div>
-      </FadeInSection>
+        <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
+          <span className="flex-grow h-px bg-gray-300"></span>
+          さいごに
+          <span className="flex-grow h-px bg-gray-300"></span>
+        </h2>
 
-      <FadeInSection>
-        <div id="externalTeamManagement">
-          <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
-            <span className="flex-grow h-px bg-gray-300"></span>
-            観光・地域振興系
-            <span className="flex-grow h-px bg-gray-300"></span>
-          </h2>
-
-          <TourismProjects />
-        </div>
-      </FadeInSection>
-
-      {/* 観光・地域振興系の案件 */}
-      <FadeInSection>
-        <div id="work9">
-          <WorkSection {...Work9Data} />
-        </div>
-      </FadeInSection>
-
-      <FadeInSection>
-        <div id="work5">
-          <WorkSection {...Work5Data} />
-        </div>
-      </FadeInSection>
-
-      <FadeInSection>
-        <div id="work6">
-          <WorkSection {...Work6Data} />
-        </div>
-      </FadeInSection>
-
-      <FadeInSection>
-        <div id="work7">
-          <WorkSection {...Work7Data} />
-        </div>
-      </FadeInSection>
-
-      <FadeInSection>
-        <div id="work8">
-          <WorkSection {...Work8Data} />
-        </div>
-      </FadeInSection>
-
-      <FadeInSection>
-        <div id="clientWork">
-          <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
-            <span className="flex-grow h-px bg-gray-300"></span>
-            アバター活用支援
-            <span className="flex-grow h-px bg-gray-300"></span>
-          </h2>
-
-          <AvatarSupport />
-        </div>
-      </FadeInSection>
-
-      {/* アバター活用支援の案件 */}
-      <FadeInSection>
-        <div id="work12">
-          <WorkSection {...Work12Data} />
-        </div>
-      </FadeInSection>
-
-      <FadeInSection>
-        <div id="work11">
-          <WorkSection {...Work11Data} />
-        </div>
-      </FadeInSection>
-
-      <FadeInSection>
-        <div id="work1">
-          <WorkSection {...Work1Data} />
-        </div>
-      </FadeInSection>
-
-      <FadeInSection>
-        <div id="promotion">
-          <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
-            <span className="flex-grow h-px bg-gray-300"></span>
-            販促・その他
-            <span className="flex-grow h-px bg-gray-300"></span>
-          </h2>
-
-          <PromotionProjects />
-        </div>
-      </FadeInSection>
-
-      {/* 販促・その他の案件 */}
-      <FadeInSection>
-        <div id="work10">
-          <WorkSection {...Work10Data} />
-        </div>
-      </FadeInSection>
-
-      <FadeInSection>
-        <div id="work2">
-          <WorkSection {...Work2Data} />
-        </div>
-      </FadeInSection>
-
-      <FadeInSection>
-        <div id="work3">
-          <WorkSection {...Work3Data} />
-        </div>
-      </FadeInSection>
-
-      <FadeInSection>
-        <div id="work4">
-          <WorkSection {...Work4Data} />
-        </div>
-      </FadeInSection>
-
-      <FadeInSection>
         <div
           id="last"
           className="relative bg-white shadow-lg rounded-[1rem] p-[3rem] max-w-4xl mx-auto my-20 
@@ -237,10 +349,14 @@ export default function ProtectedPage() {
               <HeartShape />
             </div>
             <p className="text-[1.2rem] leading-relaxed text-gray-700">
-              私は、プロダクトの品質を高め、円滑な開発と運用を支えるディレクションを行っています。<br />
-              技術とデザインの両面からチームと連携し、ユーザーにとって使いやすく、継続的に改善できる仕組みをつくることを大切にしています。<br />
+              私は、ToCとToBの両方の領域で、それぞれの特性を活かしたプロダクトマネジメントを目指しています。<br />
+              ToCでは、ユーザーの心に響く価値提案と、明確な立ち位置の確立を通じて、<br />
+              持続的な成長を実現するプロダクトづくりを大切にしています。<br />
               <br />
-              開発・デザイン・運用の橋渡し役として、チームがスムーズに進められる環境を整え、より良いものづくりに貢献したいと考えています。<br />
+              ToBでは、顧客の課題やニーズを深く理解し、<br />
+              ビジネスプロセスの改善と効率化を通じて、具体的な価値提供を実現します。<br />
+              技術・デザイン・ビジネスの知見を活かし、<br />
+              プロダクトの成功と組織の成長に貢献したいと考えています。<br />
               <br />
               最後までご覧いただき、ありがとうございました。<br />
               もしご興味を持っていただけましたら、ぜひお気軽にご連絡ください。

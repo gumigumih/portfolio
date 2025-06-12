@@ -3,8 +3,13 @@ import image2 from '../../../assets/images/works/2/image2.png';
 import image3 from '../../../assets/images/works/2/image3.png';
 
 const projectData = {
+  type: 'promotion',
   period: '2019年4月～5月',
-  heading: 'YouTube非公開日時予約管理WEBアプリ',
+  startDate: { year: 2019, month: 4 },
+  endDate: { year: 2019, month: 5 },
+  heading: 'YouTube Scheduler',
+  lead: '非公開日時予約管理WEBアプリ',
+  coverImage: image1,
   description: `本プロジェクトは、YouTubeの非公開日時予約プロセスを効率化するGAS WEBアプリの開発です。
 GASとVue.jsを用いて、スプレッドシートをデータベースとして活用し、直感的なWEB UIを設計・実装しました。
 GASの最適化により処理時間を60秒から2秒に短縮し、業務効率を大幅に向上させました。`,
@@ -38,4 +43,4 @@ GASの最適化により処理時間を60秒から2秒に短縮し、業務効�
   ],
 };
 
-export default projectData;
+export default projectData; 

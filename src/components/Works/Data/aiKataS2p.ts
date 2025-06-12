@@ -6,10 +6,16 @@ import image3 from '../../../assets/images/works/14/image3.png';
 import image4 from '../../../assets/images/works/14/image4.png';
 import image5 from '../../../assets/images/works/14/image5.png';
 import image6 from '../../../assets/images/works/14/image6.png';
+import image1 from '../../../assets/images/works/14/image1.png';
 
 const projectData = {
+  type: 'product',
   period: '2024年4月～2025年3月',
-  heading: 'AI-KATA S2P 開発・リリース支援',
+  startDate: { year: 2024, month: 4 },
+  endDate: { year: 2025, month: 3 },
+  heading: 'AI-KATA S2P',
+  lead: 'AIによるイラスト解析・キャラクター生成ツール',
+  coverImage: image1a,
   description: `AI-KATA S2Pは、ユーザーの描いたオリジナルイラストをAIが解析し、キャラクターを生成する創造力を育むツールです。
 展示バージョンからリリースバージョンへの移行を進め、システム設計・機能改善・料金プラン設計、アカウント管理とStripeを用いたサブスクリプション課金を実装しました。
 また、アプリストア対応（説明文・スクショ作成）や、利用規約・法人向け契約書の作成を担当。
@@ -74,4 +80,4 @@ const projectData = {
   ],
 };
 
-export default projectData;
+export default projectData; 

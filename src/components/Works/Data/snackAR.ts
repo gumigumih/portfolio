@@ -4,8 +4,13 @@ import image3 from '../../../assets/images/works/3/image3.png';
 import image4 from '../../../assets/images/works/3/image4.png';
 
 const projectData = {
-  period: '2019年5月〜2020年4月',
-  heading: 'ARコンテンツによるお菓子パッケージプロモーション',
+  type: 'promotion',
+  period: '2019年5月～2020年4月',
+  startDate: { year: 2019, month: 5 },
+  endDate: { year: 2020, month: 4 },
+  heading: 'お菓子販促コンテンツ',
+  lead: 'ARコンテンツによるお菓子パッケージプロモーション',
+  coverImage: image1,
   description: `本プロジェクトは、お菓子のパッケージにQRコードを掲載し、ARコンテンツを活用したプロモーションを行うものです。
 受験・行楽シーズン向けに、合格祈願AR、ひらがなクイズ、顔ハメフィルターの制作を担当しました。`,
   roles: [
@@ -51,4 +56,4 @@ const projectData = {
   ],  
 };
 
-export default projectData;
+export default projectData; 

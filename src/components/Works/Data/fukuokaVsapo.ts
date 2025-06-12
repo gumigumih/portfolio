@@ -2,9 +2,14 @@ import image1 from '../../../assets/images/works/12/image1.png';
 import image2 from '../../../assets/images/works/12/image2.png';
 
 const projectData = {
-  period: '2023年4月～2023年9月',
-  heading: 'アバター個別相談アプリ「FukuokaVsapo©」開発',
-  description: `本プロジェクトは、福岡県の委託事業として開発した、支援者と相談者が利用するアバター相談アプリです。
+  type: 'avatar',
+  period: '2023年4月～9月',
+  startDate: { year: 2023, month: 4 },
+  endDate: { year: 2023, month: 9 },
+  heading: 'FukuokaVsapo',
+  lead: 'アバター個別相談アプリ',
+  coverImage: image1,
+  description: `本プロジェクトは、福岡市の観光案内をアバターで行うアプリの開発です。
 クライアントの要件を整理し、仕様決定・UI/UXデザイン・3Dアバター制作を担当しました。
 相談の予約システムとアカウント管理は別企業が開発し、アプリからログイン後、予約がある場合に入室できるようAPI連携を実装しました。`,
   roles: [
@@ -49,4 +54,4 @@ const projectData = {
   ],
 };
 
-export default projectData;
+export default projectData; 
