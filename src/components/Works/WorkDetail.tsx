@@ -16,21 +16,18 @@ type SlideData = {
 
 type TimelineItem = {
   period: string;
-  title: string;
-  description: string;
+  phase: string;
   roles: string[];
-  challenges?: {
-    title: string;
+  activities?: {
+    category: string;
     description: string;
-    solution: string;
   }[];
-  achievements: string[];
+  achievements?: string[];
 };
 
 type Challenge = {
-  title: string;
+  category: string;
   description: string;
-  solution: string;
 };
 
 type TechStack = {
@@ -94,19 +91,15 @@ export default function WorkDetail({ period, heading, description, roles, slides
 
       {challenges && challenges.length > 0 && (
         <div className="mt-10">
-          <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">課題と解決策</h3>
+          <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">課題と成果</h3>
           <div className="space-y-6">
             {challenges.map((challenge, index) => (
               <div key={index} className="bg-gray-50 p-6 rounded-lg">
-                <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-3">{challenge.title}</h4>
+                <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-3">{challenge.category}</h4>
                 <div className="space-y-4">
                   <div>
                     <p className="text-gray-600 font-medium mb-2">課題</p>
                     <p className="text-gray-600">{challenge.description}</p>
-                  </div>
-                  <div>
-                    <p className="text-gray-600 font-medium mb-2">解決策</p>
-                    <p className="text-gray-600">{challenge.solution}</p>
                   </div>
                 </div>
               </div>
@@ -163,10 +156,9 @@ export default function WorkDetail({ period, heading, description, roles, slides
                   </div>
                   <div className="bg-gray-50 p-6 rounded-lg">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                      <h4 className="text-[1.2rem] font-semibold text-gray-700">{item.title}</h4>
+                      <h4 className="text-[1.2rem] font-semibold text-gray-700">{item.phase}</h4>
                       <span className="text-gray-500 text-sm mt-1 md:mt-0">{item.period}</span>
                     </div>
-                    <p className="text-gray-600 mb-4">{item.description}</p>
                     <div className="mb-4">
                       <h5 className="text-gray-700 font-medium mb-2">役割</h5>
                       <ul className="space-y-2">
@@ -178,37 +170,34 @@ export default function WorkDetail({ period, heading, description, roles, slides
                         ))}
                       </ul>
                     </div>
-                    {item.challenges && item.challenges.length > 0 && (
+                    {item.activities && item.activities.length > 0 && (
                       <div className="mb-4">
-                        <h5 className="text-gray-700 font-medium mb-2">課題と解決策</h5>
-                        {item.challenges.map((challenge, idx) => (
+                        <h5 className="text-gray-700 font-medium mb-2">取り組み</h5>
+                        {item.activities.map((activity, idx) => (
                           <div key={idx} className="mb-3">
-                            <h6 className="text-gray-600 font-medium mb-1">{challenge.title}</h6>
+                            <h6 className="text-gray-600 font-medium mb-1">{activity.category}</h6>
                             <div className="ml-4">
-                              <p className="text-gray-600 text-sm mb-1">
-                                <span className="font-medium">課題：</span>
-                                {challenge.description}
-                              </p>
                               <p className="text-gray-600 text-sm">
-                                <span className="font-medium">解決策：</span>
-                                {challenge.solution}
+                                {activity.description}
                               </p>
                             </div>
                           </div>
                         ))}
                       </div>
                     )}
-                    <div>
-                      <h5 className="text-gray-700 font-medium mb-2">成果</h5>
-                      <ul className="space-y-2">
-                        {item.achievements.map((achievement, idx) => (
-                          <li key={idx} className="flex items-start">
-                            <span className="text-blue-500 mr-2">•</span>
-                            <span className="text-gray-600">{achievement}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    {item.achievements && item.achievements.length > 0 && (
+                      <div>
+                        <h5 className="text-gray-700 font-medium mb-2">成果</h5>
+                        <ul className="space-y-2">
+                          {item.achievements.map((achievement, idx) => (
+                            <li key={idx} className="flex items-start">
+                              <span className="text-blue-500 mr-2">•</span>
+                              <span className="text-gray-600">{achievement}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
