@@ -7,57 +7,63 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'react-medium-image-zoom/dist/styles.css';
 
-type SlideData = {
+interface SlideData {
   title: string;
   description?: string;
   images: string[];
   link?: string;
-};
+}
 
-type TimelineItem = {
+interface TimelineItem {
   period: string;
   phase: string;
+  description: string;
   roles: string[];
   activities?: {
     category: string;
     description: string;
   }[];
   achievements?: string[];
-};
+  personalAchievements?: string[];
+}
 
-type Challenge = {
-  category: string;
+interface Challenge {
+  title: string;
   description: string;
-};
+  solution: string;
+}
 
-type TechStack = {
+interface TechStack {
   frontend: string[];
   backend: string[];
   infrastructure: string[];
   tools: string[];
-};
+}
 
-type Achievement = {
+interface Achievement {
   title: string;
   value: string;
   description: string;
-};
+}
 
-type Props = {
+interface Props {
   period: string;
   heading: string;
   description: string;
   roles: {
-    title: string;
-    color: string;
-    items: string[];
-  }[];
+    overall: string[];
+    details: {
+      title: string;
+      color: string;
+      items: string[];
+    }[];
+  };
   slides: SlideData[];
   challenges?: Challenge[];
   techStack?: TechStack;
   achievements?: Achievement[];
   timeline?: TimelineItem[];
-};
+}
 
 export default function WorkDetail({ period, heading, description, roles, slides, challenges, techStack, achievements, timeline }: Props) {
   return (
@@ -72,33 +78,51 @@ export default function WorkDetail({ period, heading, description, roles, slides
 
       <div className="mt-10">
         <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">役割</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {roles.map((role, i) => (
-            <div key={i} className="bg-gray-50 p-6 rounded-lg">
-              <h4 className="font-semibold text-[1.2rem] flex items-center mb-4">
-                <span className={`inline-block mr-2 w-[1.2rem] h-[1.2rem] rounded-full ${role.color}`}></span>
-                {role.title}
-              </h4>
-              <ul className="space-y-3 list-disc text-[1rem] ml-4">
-                {role.items.map((item, idx) => (
-                  <li key={idx} className="text-gray-600">{item}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+        
+        {/* 全体の役割 */}
+        <div className="mb-8">
+          <div className="flex items-center gap-2 text-[1.2rem] text-gray-700 bg-gray-50 p-6 rounded-lg">
+            {roles.overall.map((role, index) => (
+              <div key={role} className="flex items-center">
+                <span>{role}</span>
+                {index < roles.overall.length - 1 && (
+                  <span className="mx-2 text-gray-400">/</span>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 役割詳細 */}
+        <div>
+          <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-4">役割詳細</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {roles.details.map((role) => (
+              <div key={role.title} className="bg-gray-50 p-6 rounded-lg">
+                <h5 className="font-semibold text-[1.1rem] flex items-center mb-4">
+                  <span className={`inline-block mr-2 w-[1.1rem] h-[1.1rem] rounded-full ${role.color}`}></span>
+                  {role.title}
+                </h5>
+                <ul className="space-y-3 list-disc text-[1rem] ml-6 [&>li::marker]:text-gray-400">
+                  {role.items.map((item) => (
+                    <li key={item} className="text-gray-600">{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
       {challenges && challenges.length > 0 && (
         <div className="mt-10">
-          <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">課題と成果</h3>
+          <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">課題背景</h3>
           <div className="space-y-6">
             {challenges.map((challenge, index) => (
               <div key={index} className="bg-gray-50 p-6 rounded-lg">
-                <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-3">{challenge.category}</h4>
+                <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-3">{challenge.title}</h4>
                 <div className="space-y-4">
                   <div>
-                    <p className="text-gray-600 font-medium mb-2">課題</p>
                     <p className="text-gray-600">{challenge.description}</p>
                   </div>
                 </div>
@@ -131,7 +155,7 @@ export default function WorkDetail({ period, heading, description, roles, slides
               <div key={category} className="bg-gray-50 p-6 rounded-lg">
                 <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-3 capitalize">{category}</h4>
                 <div className="flex flex-wrap gap-2">
-                  {technologies.map((tech, index) => (
+                  {technologies.map((tech: string, index: number) => (
                     <span key={index} className="px-3 py-1 bg-gray-200 rounded-full text-gray-700 text-sm">
                       {tech}
                     </span>
@@ -160,19 +184,11 @@ export default function WorkDetail({ period, heading, description, roles, slides
                       <span className="text-gray-500 text-sm mt-1 md:mt-0">{item.period}</span>
                     </div>
                     <div className="mb-4">
-                      <h5 className="text-gray-700 font-medium mb-2">役割</h5>
-                      <ul className="space-y-2">
-                        {item.roles.map((role, idx) => (
-                          <li key={idx} className="flex items-start">
-                            <span className="text-green-500 mr-2">•</span>
-                            <span className="text-gray-600">{role}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      <p className="text-gray-600 whitespace-pre-wrap">{item.description}</p>
                     </div>
                     {item.activities && item.activities.length > 0 && (
                       <div className="mb-4">
-                        <h5 className="text-gray-700 font-medium mb-2">取り組み</h5>
+                        <h5 className="text-gray-700 font-bold mb-2">実施内容</h5>
                         {item.activities.map((activity, idx) => (
                           <div key={idx} className="mb-3">
                             <h6 className="text-gray-600 font-medium mb-1">{activity.category}</h6>
@@ -185,13 +201,23 @@ export default function WorkDetail({ period, heading, description, roles, slides
                         ))}
                       </div>
                     )}
-                    {item.achievements && item.achievements.length > 0 && (
+                    <div className="mb-4">
+                      <h5 className="text-gray-700 font-bold mb-2">担当</h5>
+                      <div className="flex flex-wrap gap-2">
+                        {item.roles.map((role, idx) => (
+                          <span key={idx} className="px-3 py-1 bg-gray-200 rounded-full text-gray-700 text-sm">
+                            {role}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    {item.personalAchievements && item.personalAchievements.length > 0 && (
                       <div>
-                        <h5 className="text-gray-700 font-medium mb-2">成果</h5>
+                        <h5 className="text-gray-700 font-bold mb-2">工夫したこと・成果</h5>
                         <ul className="space-y-2">
-                          {item.achievements.map((achievement, idx) => (
+                          {item.personalAchievements.map((achievement, idx) => (
                             <li key={idx} className="flex items-start">
-                              <span className="text-blue-500 mr-2">•</span>
+                              <span className="text-purple-500 mr-2">•</span>
                               <span className="text-gray-600">{achievement}</span>
                             </li>
                           ))}
@@ -206,33 +232,47 @@ export default function WorkDetail({ period, heading, description, roles, slides
         </div>
       )}
 
-      <Swiper
-        modules={[Navigation, Pagination]}
-        spaceBetween={50}
-        slidesPerView={1}
-        navigation
-        pagination={{ clickable: true }}
-        className="mt-10 bg-gray-100 rounded-lg"
-      >
-        {slides.map((slide, index) => (
-          <SwiperSlide key={index} className="pt-10 pb-15 px-4 md:px-20 flex flex-col items-center">
-            <p className="text-[1rem] mb-5">{slide.title}</p>
-            <p className="text-[1rem] mb-5 text-justify text-gray-500">{slide.description ?? ""}</p>
-            <div className={`flex gap-2 justify-center items-start w-full`}>
-              {slide.images.map((img, i) => (
-                <Zoom key={i}>
-                  <img src={img} alt="" className="max-h-80 cursor-zoom-in" />
-                </Zoom>
-              ))}
-            </div>
-            {slide.link && (
-              <a href={slide.link} target="_blank" rel="noreferrer" className="mt-4 text-blue-500 underline break-all">
-                {slide.link}
-              </a>
-            )}
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className="mt-10">
+        <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">具体的な制作物</h3>
+        <Swiper
+          modules={[Navigation, Pagination]}
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          className="bg-gray-50 rounded-lg"
+        >
+          {slides.map((slide, index) => (
+            <SwiperSlide key={index} className="pt-10 pb-15 px-4 md:px-20">
+              <div className="max-w-4xl mx-auto">
+                <h3 className="text-[1.5rem] font-bold text-gray-700 mb-4">{slide.title}</h3>
+                <p className="text-[1.1rem] mb-8 text-justify text-gray-600 leading-relaxed">{slide.description ?? ""}</p>
+                <div className={`grid ${slide.images.length > 1 ? 'grid-cols-2' : 'grid-cols-1'} gap-6`}>
+                  {slide.images.map((img, i) => (
+                    <div key={i} className="flex justify-center">
+                      <Zoom>
+                        <img src={img} alt="" className="max-h-[500px] w-auto object-contain cursor-zoom-in rounded-lg shadow-md" />
+                      </Zoom>
+                    </div>
+                  ))}
+                </div>
+                {slide.link && (
+                  <div className="mt-6 text-center">
+                    <a 
+                      href={slide.link} 
+                      target="_blank" 
+                      rel="noreferrer" 
+                      className="inline-block px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                    >
+                      サイトを見る
+                    </a>
+                  </div>
+                )}
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 }
