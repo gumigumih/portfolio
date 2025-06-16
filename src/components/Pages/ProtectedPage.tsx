@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { ProjectType } from '../Works/Data/types';
 import NiceCameraData from '../Works/Data/niceCamera';
@@ -91,6 +91,8 @@ type ProjectType = 'product' | 'tourism' | 'avatar' | 'promotion';
 export default function ProtectedPage() {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
   const [selectedType, setSelectedType] = useState<ProjectType | 'all'>('all');
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const filteredProjects = useMemo(() => {
     if (selectedType === 'all') {
@@ -139,11 +141,24 @@ export default function ProtectedPage() {
 
   const handleProjectClick = (projectId: string) => {
     setSelectedProject(projectId);
+    navigate(`/projects/${projectId}`, { replace: true });
   };
 
   const handleCloseModal = () => {
     setSelectedProject(null);
+    navigate('/', { replace: true });
   };
+
+  // URLからプロジェクトIDを取得してモーダルを開く
+  useEffect(() => {
+    const pathParts = location.pathname.split('/');
+    if (pathParts[1] === 'projects' && pathParts[2]) {
+      const projectId = pathParts[2];
+      if (projectData[projectId]) {
+        setSelectedProject(projectId);
+      }
+    }
+  }, [location]);
 
   return (
     <div className="relative max-w-screen-2xl w-full mx-auto md:pl-[12rem]">
@@ -321,7 +336,7 @@ export default function ProtectedPage() {
               </svg>
             </button>
             <div className="p-4 md:p-6">
-              <WorkDetail {...projectData[selectedProject]} />
+              <WorkDetail project={projectData[selectedProject]} />
             </div>
           </div>
         </div>

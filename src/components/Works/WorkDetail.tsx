@@ -1,99 +1,96 @@
 import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Zoom from 'react-medium-image-zoom';
+import { ProjectData } from './Data/types';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'react-medium-image-zoom/dist/styles.css';
 
-interface SlideData {
-  title: string;
-  description?: string;
-  images: string[];
-  link?: string;
-}
-
-interface TimelineItem {
-  period: string;
-  phase: string;
-  description: string;
-  roles: string[];
-  activities?: {
-    category: string;
-    description: string;
-  }[];
-  achievements?: string[];
-  personalAchievements?: string[];
-}
-
-interface Challenge {
-  title: string;
-  description: string;
-  solution: string;
-}
-
-interface TechStack {
-  frontend: string[];
-  backend: string[];
-  infrastructure: string[];
-  tools: string[];
-}
-
-interface Achievement {
-  title: string;
-  value: string;
-  description: string;
-}
-
 interface Props {
-  period: string;
-  heading: string;
-  description: string;
-  roles: {
-    overall: string[];
-    details: {
-      title: string;
-      color: string;
-      items: string[];
-    }[];
-  };
-  solution?: {
-    overview: string;
-    approaches: {
-      title: string;
-      items: string[];
-    }[];
-  };
-  slides: SlideData[];
-  challenges?: Challenge[];
-  techStack?: TechStack;
-  achievements?: Achievement[];
-  timeline?: TimelineItem[];
+  project: ProjectData;
 }
 
-export default function WorkDetail({ period, heading, description, roles, solution, slides, challenges, techStack, achievements, timeline }: Props) {
+const getCategoryStyle = (category: string) => {
+  switch (category) {
+    case '実装':
+      return 'bg-teal-300 text-teal-900';
+    case '戦略':
+      return 'bg-pink-400 text-pink-900';
+    case 'デザイン':
+      return 'bg-yellow-300 text-yellow-900';
+    case '運営':
+      return 'bg-purple-300 text-purple-900';
+    case 'チームマネジメント':
+      return 'bg-blue-300 text-blue-900';
+    default:
+      return 'bg-gray-300 text-gray-900';
+  }
+};
+
+const getCategoryLabel = (category: string) => {
+  return category;
+};
+
+export default function WorkDetail({ project }: Props) {
   return (
     <div className="px-10 md:px-20">
       <h2 className="mt-20 font-bold text-gray-600">
-        <div className="text-[1rem]">{period}</div>
-        <div className="text-[2rem]">{heading}</div>
+        <div className="text-[1rem]">{project.period}</div>
+        <div className="text-[2rem]">{project.heading}</div>
         <span className="my-2 block w-full h-px bg-gray-300"></span>
       </h2>
 
-      <p className="mt-5 text-gray-600 text-[1.2rem] text-justify whitespace-pre-wrap">{description}</p>
+      <p className="mt-5 text-gray-600 text-[1.2rem] text-justify whitespace-pre-wrap">{project.description}</p>
+
+      {/* 0. プロダクト概要 */}
+      {project.overview && project.overview.product && (
+        <div className="mt-10">
+          <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">プロダクト概要</h3>
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-3">基本情報</h4>
+                <dl className="space-y-2">
+                  <div>
+                    <dt className="text-gray-600">プロダクト名</dt>
+                    <dd className="text-gray-800 font-medium">{project.overview.product.name}</dd>
+                  </div>
+                  <div>
+                    <dt className="text-gray-600">タイプ</dt>
+                    <dd className="text-gray-800 font-medium">{project.overview.product.type}</dd>
+                  </div>
+                  <div>
+                    <dt className="text-gray-600">ターゲット</dt>
+                    <dd className="text-gray-800 font-medium">{project.overview.product.target}</dd>
+                  </div>
+                </dl>
+              </div>
+              <div>
+                <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-3">主要機能</h4>
+                <ul className="space-y-2 list-disc ml-6 [&>li::marker]:text-gray-400">
+                  {project.overview.product.keyFeatures.map((feature, index) => (
+                    <li key={index} className="text-gray-600">{feature}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* 1. 課題背景 */}
-      {challenges && challenges.length > 0 && (
+      {project.challenges && project.challenges.issues && project.challenges.issues.length > 0 && (
         <div className="mt-10">
           <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">課題背景</h3>
           <div className="space-y-6">
-            {challenges.map((challenge, index) => (
+            {project.challenges.issues.map((issue, index) => (
               <div key={index} className="bg-gray-50 p-6 rounded-lg">
-                <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-3">{challenge.title}</h4>
+                <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-3">{issue.title}</h4>
                 <div className="space-y-4">
                   <div>
-                    <p className="text-gray-600">{challenge.description}</p>
+                    <p className="text-gray-600">{issue.description}</p>
                   </div>
                 </div>
               </div>
@@ -102,21 +99,62 @@ export default function WorkDetail({ period, heading, description, roles, soluti
         </div>
       )}
 
-      {/* 2. 解決アプローチ */}
-      <div className="mt-10">
-        <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">解決アプローチ</h3>
-        
-        {/* 解決アプローチの概要 */}
-        {solution && (
-          <div className="mb-8">
-            <p className="text-[1.2rem] text-gray-600 bg-gray-50 p-6 rounded-lg">{solution.overview}</p>
-          </div>
-        )}
+      {/* 2. 自分の役割 */}
+      {project.roles && (
+        <div className="mt-10">
+          <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">自分の役割</h3>
+          
+          {/* 全体の役割 */}
+          {project.roles.overall && project.roles.overall.length > 0 && (
+            <div className="mb-8">
+              <ul className="text-[1.2rem] flex items-start gap-2 bg-gray-50 p-6 rounded-lg">
+                {project.roles.overall.map((role, idx) => (
+                  <li key={idx} className="flex items-start">
+                    {idx > 0 && <span className="text-gray-500">/</span>}
+                    <span className="text-gray-600">{role}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
-        {/* 具体的なアプローチ */}
-        {solution && (
+          {/* 詳細な役割 */}
+          {project.roles.details && project.roles.details.length > 0 && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {project.roles.details.map((role, idx) => (
+                <div key={idx} className="bg-gray-50 p-6 rounded-lg">
+                  <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-3 flex items-center align-items-center">
+                    <span className={`inline-block w-5 h-5 rounded-full ${role.color} mr-2`}></span>
+                    {role.title}
+                  </h4>
+                  <ul className="space-y-2">
+                    {role.items.map((item, itemIdx) => (
+                      <li key={itemIdx} className="flex items-start">
+                        <span className="text-gray-500 mr-2">•</span>
+                        <span className="text-gray-600">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* 3. 解決アプローチ */}
+      {project.challenges && project.challenges.solution && (
+        <div className="mt-10">
+          <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">解決アプローチ</h3>
+          
+          {/* 解決アプローチの概要 */}
+          <div className="mb-8">
+            <p className="text-[1.2rem] text-gray-600 bg-gray-50 p-6 rounded-lg">{project.challenges.solution.overview}</p>
+          </div>
+
+          {/* 具体的なアプローチ */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {solution.approaches.map((approach) => (
+            {project.challenges.solution.approaches.map((approach) => (
               <div key={approach.title} className="bg-gray-50 p-6 rounded-lg">
                 <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-4">{approach.title}</h4>
                 <ul className="space-y-3 list-disc text-[1rem] ml-6 [&>li::marker]:text-gray-400">
@@ -127,147 +165,78 @@ export default function WorkDetail({ period, heading, description, roles, soluti
               </div>
             ))}
           </div>
-        )}
-
-        {/* 役割 */}
-        <div className="mt-10">
-          <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-4">担当役割</h4>
-          
-          {/* 全体の役割 */}
-          <div className="mb-8">
-            <div className="flex items-center gap-2 text-[1.2rem] text-gray-700 bg-gray-50 p-6 rounded-lg">
-              {roles.overall.map((role, index) => (
-                <div key={role} className="flex items-center">
-                  <span>{role}</span>
-                  {index < roles.overall.length - 1 && (
-                    <span className="mx-2 text-gray-400">/</span>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* 役割詳細 */}
-          <div>
-            <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-4">役割詳細</h4>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {roles.details.map((role) => (
-                <div key={role.title} className="bg-gray-50 p-6 rounded-lg">
-                  <h5 className="font-semibold text-[1.1rem] flex items-center mb-4">
-                    <span className={`inline-block mr-2 w-[1.1rem] h-[1.1rem] rounded-full ${role.color}`}></span>
-                    {role.title}
-                  </h5>
-                  <ul className="space-y-3 list-disc text-[1rem] ml-6 [&>li::marker]:text-gray-400">
-                    {role.items.map((item) => (
-                      <li key={item} className="text-gray-600">{item}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
-      </div>
+      )}
 
-      {/* 3. 成果 */}
-      {achievements && achievements.length > 0 && (
+      {/* 4. 成果 */}
+      {project.achievements && (
         <div className="mt-10">
           <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">成果</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {achievements.map((achievement, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-lg text-center">
-                <p className="text-[1.2rem] font-semibold text-gray-700">{achievement.title}</p>
-                <p className="text-[2rem] font-bold text-gray-800 my-2">{achievement.value}</p>
-                <p className="text-gray-600">{achievement.description}</p>
+          
+          {project.achievements && project.achievements.length > 0 && (
+            <div className="mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {project.achievements.map((achievement, index) => (
+                  <div key={index} className="bg-gray-50 p-6 rounded-lg text-center">
+                    <p className="text-[1.2rem] font-semibold text-gray-700">{achievement.title}</p>
+                    <p className="text-[2rem] font-bold text-gray-800 my-2">{achievement.value}</p>
+                    <p className="text-gray-600">{achievement.description}</p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* 5. 技術スタック */}
+      {project.techStack && (
+        <div className="mt-10">
+          <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">技術スタック</h3>
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <div className="flex flex-wrap gap-4">
+              {Object.entries(project.techStack).map(([category, technologies]) => (
+                <div key={category} className="flex-1 min-w-[200px]">
+                  <h4 className="text-[1rem] font-semibold text-gray-700 mb-2 capitalize">{category}</h4>
+                  <div className="flex flex-wrap gap-1.5">
+                    {technologies.map((tech: string, index: number) => (
+                      <span key={index} className="px-2 py-0.5 bg-gray-200 rounded text-gray-700 text-sm">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       )}
 
-      {/* 4. 技術スタック */}
-      {techStack && (
+      {/* 7. プロジェクトの歩み */}
+      {project.timeline && project.timeline.length > 0 && (
         <div className="mt-10">
-          <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">技術スタック</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {Object.entries(techStack).map(([category, technologies]) => (
-              <div key={category} className="bg-gray-50 p-6 rounded-lg">
-                <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-3 capitalize">{category}</h4>
-                <div className="flex flex-wrap gap-2">
-                  {technologies.map((tech: string, index: number) => (
-                    <span key={index} className="px-3 py-1 bg-gray-200 rounded-full text-gray-700 text-sm">
-                      {tech}
-                    </span>
+          <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">プロジェクトの歩み</h3>
+          <div className="space-y-8">
+            {project.timeline.map((phase, index) => (
+              <div key={index} className="bg-gray-50 p-6 rounded-lg">
+                <div className="flex justify-between items-center mb-4">
+                  <h4 className="text-[1.2rem] font-semibold text-gray-700">{phase.title}</h4>
+                  <span className="text-sm text-gray-500">{phase.period}</span>
+                </div>
+                <p className="text-gray-600 mb-6">{phase.description}</p>
+                <div className="space-y-3">
+                  <h5 className="text-[1rem] font-semibold text-gray-700 mb-3">私の取り組み</h5>
+                  {phase.achievements.map((achievement, i) => (
+                    <div key={i} className="flex items-start">
+                      <span className={`inline-block px-2 py-1 text-xs font-bold rounded-full mr-3 ${getCategoryStyle(achievement.category)}`}>
+                        {getCategoryLabel(achievement.category)}
+                      </span>
+                      <span className="text-gray-800">{achievement.text}</span>
+                    </div>
                   ))}
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      )}
-
-      {/* 5. プロジェクトの歩み */}
-      {timeline && timeline.length > 0 && (
-        <div className="mt-10">
-          <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">プロジェクトの歩み</h3>
-          <div className="relative">
-            <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-300"></div>
-            <div className="space-y-8">
-              {timeline.map((item, index) => (
-                <div key={index} className="relative pl-12">
-                  <div className="absolute left-0 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
-                    {index + 1}
-                  </div>
-                  <div className="bg-gray-50 p-6 rounded-lg">
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                      <h4 className="text-[1.2rem] font-semibold text-gray-700">{item.phase}</h4>
-                      <span className="text-gray-500 text-sm mt-1 md:mt-0">{item.period}</span>
-                    </div>
-                    <div className="mb-4">
-                      <p className="text-gray-600 whitespace-pre-wrap">{item.description}</p>
-                    </div>
-                    {item.activities && item.activities.length > 0 && (
-                      <div className="mb-4">
-                        <h5 className="text-gray-700 font-bold mb-2">実施内容</h5>
-                        {item.activities.map((activity, idx) => (
-                          <div key={idx} className="mb-3">
-                            <h6 className="text-gray-600 font-medium mb-1">{activity.category}</h6>
-                            <div className="ml-4">
-                              <p className="text-gray-600 text-sm">
-                                {activity.description}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                    <div className="mb-4">
-                      <h5 className="text-gray-700 font-bold mb-2">担当</h5>
-                      <div className="flex flex-wrap gap-2">
-                        {item.roles.map((role, idx) => (
-                          <span key={idx} className="px-3 py-1 bg-gray-200 rounded-full text-gray-700 text-sm">
-                            {role}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    {item.personalAchievements && item.personalAchievements.length > 0 && (
-                      <div>
-                        <h5 className="text-gray-700 font-bold mb-2">工夫したこと・成果</h5>
-                        <ul className="space-y-2">
-                          {item.personalAchievements.map((achievement, idx) => (
-                            <li key={idx} className="flex items-start">
-                              <span className="text-purple-500 mr-2">•</span>
-                              <span className="text-gray-600">{achievement}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       )}
@@ -283,7 +252,7 @@ export default function WorkDetail({ period, heading, description, roles, soluti
           pagination={{ clickable: true }}
           className="bg-gray-50 rounded-lg"
         >
-          {slides.map((slide, index) => (
+          {project.slides.map((slide, index) => (
             <SwiperSlide key={index} className="pt-10 pb-15 px-4 md:px-20">
               <div className="max-w-4xl mx-auto">
                 <h3 className="text-[1.5rem] font-bold text-gray-700 mb-4">{slide.title}</h3>
