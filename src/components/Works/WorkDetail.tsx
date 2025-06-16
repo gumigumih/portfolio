@@ -58,6 +58,13 @@ interface Props {
       items: string[];
     }[];
   };
+  solution?: {
+    overview: string;
+    approaches: {
+      title: string;
+      items: string[];
+    }[];
+  };
   slides: SlideData[];
   challenges?: Challenge[];
   techStack?: TechStack;
@@ -65,7 +72,7 @@ interface Props {
   timeline?: TimelineItem[];
 }
 
-export default function WorkDetail({ period, heading, description, roles, slides, challenges, techStack, achievements, timeline }: Props) {
+export default function WorkDetail({ period, heading, description, roles, solution, slides, challenges, techStack, achievements, timeline }: Props) {
   return (
     <div className="px-10 md:px-20">
       <h2 className="mt-20 font-bold text-gray-600">
@@ -76,44 +83,7 @@ export default function WorkDetail({ period, heading, description, roles, slides
 
       <p className="mt-5 text-gray-600 text-[1.2rem] text-justify whitespace-pre-wrap">{description}</p>
 
-      <div className="mt-10">
-        <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">役割</h3>
-        
-        {/* 全体の役割 */}
-        <div className="mb-8">
-          <div className="flex items-center gap-2 text-[1.2rem] text-gray-700 bg-gray-50 p-6 rounded-lg">
-            {roles.overall.map((role, index) => (
-              <div key={role} className="flex items-center">
-                <span>{role}</span>
-                {index < roles.overall.length - 1 && (
-                  <span className="mx-2 text-gray-400">/</span>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* 役割詳細 */}
-        <div>
-          <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-4">役割詳細</h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {roles.details.map((role) => (
-              <div key={role.title} className="bg-gray-50 p-6 rounded-lg">
-                <h5 className="font-semibold text-[1.1rem] flex items-center mb-4">
-                  <span className={`inline-block mr-2 w-[1.1rem] h-[1.1rem] rounded-full ${role.color}`}></span>
-                  {role.title}
-                </h5>
-                <ul className="space-y-3 list-disc text-[1rem] ml-6 [&>li::marker]:text-gray-400">
-                  {role.items.map((item) => (
-                    <li key={item} className="text-gray-600">{item}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
+      {/* 1. 課題背景 */}
       {challenges && challenges.length > 0 && (
         <div className="mt-10">
           <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">課題背景</h3>
@@ -132,6 +102,74 @@ export default function WorkDetail({ period, heading, description, roles, slides
         </div>
       )}
 
+      {/* 2. 解決アプローチ */}
+      <div className="mt-10">
+        <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">解決アプローチ</h3>
+        
+        {/* 解決アプローチの概要 */}
+        {solution && (
+          <div className="mb-8">
+            <p className="text-[1.2rem] text-gray-600 bg-gray-50 p-6 rounded-lg">{solution.overview}</p>
+          </div>
+        )}
+
+        {/* 具体的なアプローチ */}
+        {solution && (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {solution.approaches.map((approach) => (
+              <div key={approach.title} className="bg-gray-50 p-6 rounded-lg">
+                <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-4">{approach.title}</h4>
+                <ul className="space-y-3 list-disc text-[1rem] ml-6 [&>li::marker]:text-gray-400">
+                  {approach.items.map((item) => (
+                    <li key={item} className="text-gray-600">{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* 役割 */}
+        <div className="mt-10">
+          <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-4">担当役割</h4>
+          
+          {/* 全体の役割 */}
+          <div className="mb-8">
+            <div className="flex items-center gap-2 text-[1.2rem] text-gray-700 bg-gray-50 p-6 rounded-lg">
+              {roles.overall.map((role, index) => (
+                <div key={role} className="flex items-center">
+                  <span>{role}</span>
+                  {index < roles.overall.length - 1 && (
+                    <span className="mx-2 text-gray-400">/</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 役割詳細 */}
+          <div>
+            <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-4">役割詳細</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {roles.details.map((role) => (
+                <div key={role.title} className="bg-gray-50 p-6 rounded-lg">
+                  <h5 className="font-semibold text-[1.1rem] flex items-center mb-4">
+                    <span className={`inline-block mr-2 w-[1.1rem] h-[1.1rem] rounded-full ${role.color}`}></span>
+                    {role.title}
+                  </h5>
+                  <ul className="space-y-3 list-disc text-[1rem] ml-6 [&>li::marker]:text-gray-400">
+                    {role.items.map((item) => (
+                      <li key={item} className="text-gray-600">{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 3. 成果 */}
       {achievements && achievements.length > 0 && (
         <div className="mt-10">
           <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">成果</h3>
@@ -147,6 +185,7 @@ export default function WorkDetail({ period, heading, description, roles, slides
         </div>
       )}
 
+      {/* 4. 技術スタック */}
       {techStack && (
         <div className="mt-10">
           <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">技術スタック</h3>
@@ -167,6 +206,7 @@ export default function WorkDetail({ period, heading, description, roles, slides
         </div>
       )}
 
+      {/* 5. プロジェクトの歩み */}
       {timeline && timeline.length > 0 && (
         <div className="mt-10">
           <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">プロジェクトの歩み</h3>
@@ -232,6 +272,7 @@ export default function WorkDetail({ period, heading, description, roles, slides
         </div>
       )}
 
+      {/* 6. 具体的な制作物 */}
       <div className="mt-10">
         <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">具体的な制作物</h3>
         <Swiper
