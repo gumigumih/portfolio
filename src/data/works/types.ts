@@ -7,6 +7,7 @@ export interface ProjectData {
   heading: string;
   lead: string;
   coverImage: string;
+  productUrl?: string;
   description: string;
 
   overview?: {

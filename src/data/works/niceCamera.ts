@@ -13,6 +13,7 @@ export const niceCamera: ProjectData = {
   heading: 'NICE CAMERA',
   lead: 'アバタートラッキングアプリ',
   coverImage: image1,
+  productUrl: 'https://nicecamera.kidsplates.jp/',
   description: `UnityとOpenSeeFaceを活用した顔認識技術により、高品質なアバター表示と安定した動作を実現するリモート会議・ライブ配信用アプリ。
 ITリテラシーの低いユーザーでも直感的に操作できるUIを重視し、累計6,000人のユーザーに利用されています。`,
 
@@ -168,8 +169,9 @@ ITリテラシーの低いユーザーでも直感的に操作できるUIを重�
       achievements: [
         { category: "戦略", text: "料金プラン案をだして、有料と無料の機能の違いを確定" },
         { category: "デザイン", text: "UIリニューアル、機能拡張に耐えうるUIに変更" },
-        { category: "実装", text: "Laravelフレームワークを使用したアカウント管理システムの構築" },
-        { category: "実装", text: "Stripe APIを活用した課金システムの実装" },
+        { category: "実装", text: "サーバー・DB・APIの設計と実装" },
+        { category: "実装", text: "ユーザー管理・プラン管理システムの開発" },
+        { category: "実装", text: "Stripeを活用したサブスクリプション課金システムの実装" },
         { category: "実装", text: "アカウント管理サーバーの集計分析システムの構築" },
         { category: "運営", text: "ヘルプガイドサイトの設計と実装" }
       ]
