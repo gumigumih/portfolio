@@ -1,17 +1,17 @@
-import image1 from '../../../assets/images/works/9/image1.png';
-import image2 from '../../../assets/images/works/9/image2.png';
-import image3 from '../../../assets/images/works/9/image3.png';
-import image4 from '../../../assets/images/works/9/image4.png';
-import image5 from '../../../assets/images/works/9/image5.png';
-import image6 from '../../../assets/images/works/9/image6.png';
+import image1 from '../../assets/images/works/9/image1.png';
+import image2 from '../../assets/images/works/9/image2.png';
+import image3 from '../../assets/images/works/9/image3.png';
+import image4 from '../../assets/images/works/9/image4.png';
+import image5 from '../../assets/images/works/9/image5.png';
+import image6 from '../../assets/images/works/9/image6.png';
 
 const projectData = {
   type: 'tourism',
   period: '2022年9月～2023年3月',
   startDate: { year: 2022, month: 9 },
   endDate: { year: 2023, month: 3 },
-  heading: '文化財3DスキャンWEB公開システム',
-  lead: '文化財の3DスキャンデータをWEB上で公開するシステム',
+  heading: '文化財3Dビューアー',
+  lead: 'VR技術で文化財を没入感のある3D体験として公開するシステム',
   coverImage: image1,
   description: `本プロジェクトは、文化財の3DスキャンデータをWEB上で公開するシステムの開発です。
 ユーザーがスクロール操作でカメラアングルを次々と切り替えながら、魅せたい場所と角度を意図的に演出し、音声ガイドも再生できるインターフェースを実装しました。

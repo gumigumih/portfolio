@@ -1,7 +1,7 @@
-import image1 from '../../../assets/images/works/3/image1.png';
-import image2 from '../../../assets/images/works/3/image2.png';
-import image3 from '../../../assets/images/works/3/image3.png';
-import image4 from '../../../assets/images/works/3/image4.png';
+import image1 from '../../assets/images/works/3/image1.png';
+import image2 from '../../assets/images/works/3/image2.png';
+import image3 from '../../assets/images/works/3/image3.png';
+import image4 from '../../assets/images/works/3/image4.png';
 
 const projectData = {
   type: 'promotion',

@@ -1,4 +1,4 @@
-import image1 from '../../../assets/images/works/4/image1.png';
+import image1 from '../../assets/images/works/4/image1.png';
 
 const projectData = {
   type: 'product',

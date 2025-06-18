@@ -1,5 +1,5 @@
-import image1 from '../../../assets/images/works/11/image1.png';
-import image2 from '../../../assets/images/works/11/image2.png';
+import image1 from '../../assets/images/works/11/image1.png';
+import image2 from '../../assets/images/works/11/image2.png';
 
 const projectData = {
   type: 'avatar',

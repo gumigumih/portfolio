@@ -1,9 +1,9 @@
-import image1 from '../../../assets/images/works/13/image1.png';
-import image2 from '../../../assets/images/works/13/image2.png';
-import image3 from '../../../assets/images/works/13/image3.png';
-import image4 from '../../../assets/images/works/13/image4.png';
-import image5 from '../../../assets/images/works/13/image5.jpg';
-import image6 from '../../../assets/images/works/13/image6.png';
+import image1 from '../../assets/images/works/13/image1.png';
+import image2 from '../../assets/images/works/13/image2.png';
+import image3 from '../../assets/images/works/13/image3.png';
+import image4 from '../../assets/images/works/13/image4.png';
+import image5 from '../../assets/images/works/13/image5.jpg';
+import image6 from '../../assets/images/works/13/image6.png';
 
 const projectData = {
   type: 'product',
@@ -28,43 +28,48 @@ ITリテラシーの低いユーザーでも直感的に操作できるUIを重�
         title: 'プロダクト戦略',
         color: 'bg-pink-400',
         items: [
-          'プロダクトビジョン・ロードマップの策定',
-          '市場分析・競合調査',
-          '収益モデルの設計・実装（サブスクリプション課金）',
-          '展示会出展によるマーケット開拓',
+          'プロダクトビジョン・ロードマップの策定と実行',
+          '市場分析・競合調査に基づく差別化戦略の立案',
+          '収益モデルの設計とStripeを用いた課金システムの実装',
+          '展示会出展を通じた市場開拓とフィードバック収集',
+          'ユーザーフィードバックを基にした料金プランの試算・策定',
+          '展示会ブースデザイン・プロモーション資料の制作',
         ],
       },
       {
         title: 'プロダクト開発',
         color: 'bg-teal-300',
         items: [
-          '要件定義・機能設計',
-          '開発チームの技術指導・環境整備',
-          'CI/CDパイプラインの構築',
-          '品質管理・テスト戦略の策定',
-          'パフォーマンス最適化（30%向上）',
+          'サーバー設計・データベース設計・API設計',
+          'サーバー機能の開発・API実装',
+          '本番環境リリース・CI/CDの導入・アップデート管理',
+          'サーバー運用・エラー監視・Slack通知の導入',
+          'テスト計画の策定・実施・品質管理・デバッグ対応',
+          'Webサイトの設計・実装・UI最適化',
         ],
       },
       {
         title: 'ユーザー体験',
         color: 'bg-yellow-300',
         items: [
-          'UI/UXデザインの設計・改善',
-          'ユーザーテストの実施・分析',
-          'ヘルプページの作成',
-          'Discordコミュニティの運営',
-          'カスタマーサポート体制の構築',
+          'UI/UXデザインの設計・実装',
+          'ユーザーテストの実施とインサイト分析',
+          'ヘルプページの作成とサポート体制の構築',
+          'Discordコミュニティの運営とユーザーエンゲージメント向上',
+          'カスタマーサポート体制の構築と運用',
+          'ユーザーフィードバックに基づく継続的な改善',
         ],
       },
       {
         title: 'チームマネジメント',
         color: 'bg-purple-300',
         items: [
-          '開発チームの管理・スケジュール調整',
-          'Gitルールの策定・浸透',
-          'エラーハンドリングの標準化',
-          'チームの成長支援・技術指導',
-          '法務対応（利用規約・契約書）',
+          '開発チームのマネジメントとスケジュール最適化',
+          'Gitルールの策定・浸透と開発フローの標準化',
+          'エラーハンドリングの標準化と品質向上',
+          '品質管理プロセスの標準化と運用',
+          'チームの成長支援と技術力向上施策の実施',
+          '法務対応（利用規約・契約書）とコンプライアンス管理',
         ],
       },
     ]
@@ -74,12 +79,16 @@ ITリテラシーの低いユーザーでも直感的に操作できるUIを重�
   challenges: {
     issues: [
       {
-        title: "オンラインコミュニケーションの課題",
-        description: "オンライン会議や授業における「カメラオフによるコミュニケーションの難しさ」「プライバシーへの懸念」「盗撮リスク」といった課題を解決する必要がありました。",
+        title: "ビジネスモデルの確立",
+        description: "無料版から有料版への移行において、ユーザーに価値を感じてもらえる料金プランの設計と、Stripeを活用した課金システムの実装が大きな課題でした。特に、法人契約向けの代理店システムの構築には多くの時間を要しました。",
       },
       {
-        title: "ムーンショット計画への貢献",
-        description: "政府のムーンショット計画で目指す「一人10体以上のアバター操作」の第一歩として、アバター操作に慣れるためのツールとしても位置づけられています。",
+        title: "チーム開発の標準化",
+        description: "開発チームの効率化と品質向上のために、GitHub運用ルールの制定やテスト標準化が必要でした。また、チームメンバーの技術レベルに差がある中で、適切な技術指導と環境整備を行うことも課題でした。",
+      },
+      {
+        title: "ユーザー体験の最適化",
+        description: "ITリテラシーの低いユーザーでも直感的に操作できるUIの設計が課題でした。特に、機能の追加に伴うUIの複雑化を防ぎながら、使いやすさを維持することに苦労しました。また、ユーザーテストの実施と分析を通じて、継続的な改善を進める必要がありました。",
       }
     ]
   },
@@ -109,9 +118,9 @@ ITリテラシーの低いユーザーでも直感的に操作できるUIを重�
     backend: ['Laravel', 'PHP', 'Composer'],
     database: ['MySQL'],
     payment: ['Stripe'],
+    development: ['Docker Compose', 'Git', 'GitHub Actions'],
     design: ['XD', 'Photoshop', 'Adobe Express', 'Illustrator'],
-    analytics: ['Google Analytics', 'Google Tag Manager'],
-    development: ['Docker Compose', 'Git', 'GitHub Actions']
+    analytics: ['Google Analytics', 'Google Tag Manager', 'Looker Studio'],
   },
 
   // 6. 具体的な制作物
