@@ -2,6 +2,8 @@ import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Zoom from 'react-medium-image-zoom';
 import { ProjectData } from './Data/types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -12,21 +14,16 @@ interface Props {
   project: ProjectData;
 }
 
+const CATEGORY_STYLES = {
+  '実装': 'bg-teal-300 text-teal-900',
+  '戦略': 'bg-pink-400 text-pink-900',
+  'デザイン': 'bg-yellow-300 text-yellow-900',
+  '運営': 'bg-purple-300 text-purple-900',
+  'チームマネジメント': 'bg-blue-300 text-blue-900',
+} as const;
+
 const getCategoryStyle = (category: string) => {
-  switch (category) {
-    case '実装':
-      return 'bg-teal-300 text-teal-900';
-    case '戦略':
-      return 'bg-pink-400 text-pink-900';
-    case 'デザイン':
-      return 'bg-yellow-300 text-yellow-900';
-    case '運営':
-      return 'bg-purple-300 text-purple-900';
-    case 'チームマネジメント':
-      return 'bg-blue-300 text-blue-900';
-    default:
-      return 'bg-gray-300 text-gray-900';
-  }
+  return CATEGORY_STYLES[category as keyof typeof CATEGORY_STYLES] || 'bg-gray-300 text-gray-900';
 };
 
 const getCategoryLabel = (category: string) => {
@@ -43,6 +40,20 @@ export default function WorkDetail({ project }: Props) {
       </h2>
 
       <p className="mt-5 text-gray-600 text-[1.2rem] text-justify whitespace-pre-wrap">{project.description}</p>
+
+      {project.productUrl && (
+        <div className="mt-4 text-center">
+          <a 
+            href={project.productUrl} 
+            target="_blank" 
+            rel="noreferrer" 
+            className="inline-flex items-center text-blue-600 hover:text-blue-800 hover:underline transition-colors"
+          >
+            製品サイトを見る
+            <FontAwesomeIcon icon={faExternalLinkAlt} className="ml-1 text-sm" />
+          </a>
+        </div>
+      )}
 
       {/* 0. プロダクト概要 */}
       {project.overview && project.overview.product && (
@@ -194,13 +205,13 @@ export default function WorkDetail({ project }: Props) {
         <div className="mt-10">
           <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">技術スタック</h3>
           <div className="bg-gray-50 p-6 rounded-lg">
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-x-10 gap-y-4">
               {Object.entries(project.techStack).map(([category, technologies]) => (
-                <div key={category} className="flex-1 min-w-[200px]">
+                <div key={category} className="w-auto max-w-full">
                   <h4 className="text-[1rem] font-semibold text-gray-700 mb-2 capitalize">{category}</h4>
                   <div className="flex flex-wrap gap-1.5">
                     {technologies.map((tech: string, index: number) => (
-                      <span key={index} className="px-2 py-0.5 bg-gray-200 rounded text-gray-700 text-sm">
+                      <span key={index} className="px-2 py-0.5 bg-gray-200 rounded text-gray-700 text-sm whitespace-nowrap">
                         {tech}
                       </span>
                     ))}
