@@ -22,11 +22,17 @@ import HeartShape from '../UI/HeartShape.tsx';
 import FadeInSection from '../UI/FadeInSection.tsx';
 import WorkCard from '../Works/WorkCard.tsx';
 import WorkDetail from '../Works/WorkDetail.tsx';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendarAlt, faLayerGroup } from '@fortawesome/free-solid-svg-icons';
 
 type ProjectData = {
   period: string;
   heading: string;
   description: string;
+  startDate: {
+    year: number;
+    month: number;
+  };
   endDate: {
     year: number;
     month: number;
@@ -84,6 +90,8 @@ const projectData: { [key: string]: ProjectData } = {
 
 type ProjectType = 'product' | 'tourism' | 'avatar' | 'promotion';
 
+type SortOrder = 'chronological' | 'genre';
+
 const FILTER_CONFIG = [
   { type: 'all' as const, label: 'すべて', color: 'bg-gray-800' },
   { type: 'product' as const, label: 'プロダクト開発・運営', color: 'bg-blue-500' },
@@ -94,27 +102,32 @@ const FILTER_CONFIG = [
 
 export default function ProtectedPage() {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
-  const [selectedType, setSelectedType] = useState<ProjectType | 'all'>('all');
+  const [sortOrder, setSortOrder] = useState<SortOrder>('genre');
   const navigate = useNavigate();
   const location = useLocation();
 
   const filteredProjects = useMemo(() => {
-    if (selectedType === 'all') {
-      return Object.entries(projectData).sort((a, b) => {
+    let projects = Object.entries(projectData);
+    
+    if (sortOrder === 'chronological') {
+      return projects.sort((a, b) => {
         const dateA = new Date(a[1].endDate.year, a[1].endDate.month - 1);
         const dateB = new Date(b[1].endDate.year, b[1].endDate.month - 1);
         return dateB.getTime() - dateA.getTime();
+      });
+    } else {
+      return projects.sort((a, b) => {
+        const typeA = a[1].type;
+        const typeB = b[1].type;
+        if (typeA === typeB) {
+          const dateA = new Date(a[1].endDate.year, a[1].endDate.month - 1);
+          const dateB = new Date(b[1].endDate.year, b[1].endDate.month - 1);
+          return dateB.getTime() - dateA.getTime();
+        }
+        return typeA.localeCompare(typeB);
       });
     }
-
-    return Object.entries(projectData)
-      .filter(([_, project]) => project.type === selectedType)
-      .sort((a, b) => {
-        const dateA = new Date(a[1].endDate.year, a[1].endDate.month - 1);
-        const dateB = new Date(b[1].endDate.year, b[1].endDate.month - 1);
-        return dateB.getTime() - dateA.getTime();
-      });
-  }, [selectedType, projectData]);
+  }, [sortOrder, projectData]);
 
   useEffect(() => {
     if (selectedProject) {
@@ -218,25 +231,40 @@ export default function ProtectedPage() {
           </h2>
 
           {/* フィルタリングUI */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {FILTER_CONFIG.map(({ type, label, color }) => (
-              <button
-                key={type}
-                onClick={() => setSelectedType(type)}
-                className={`px-4 py-2 rounded-full text-[1rem] font-medium transition-colors
-                  ${selectedType === type
-                    ? `${color} text-white`
-                    : 'bg-white text-gray-600 hover:bg-gray-100'
-                  }`}
-              >
-                {label}
-              </button>
-            ))}
+          <div className="flex justify-center mb-12">
+            <div className="flex items-center gap-4">
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setSortOrder('chronological')}
+                  className={`px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-2
+                    ${sortOrder === 'chronological'
+                      ? 'bg-gray-700 text-white shadow-md'
+                      : 'bg-white text-gray-600 hover:bg-gray-100'
+                    }`}
+                  title="時系列順"
+                >
+                  <FontAwesomeIcon icon={faCalendarAlt} className="h-4 w-4" />
+                  時系列順
+                </button>
+                <button
+                  onClick={() => setSortOrder('genre')}
+                  className={`px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-2
+                    ${sortOrder === 'genre'
+                      ? 'bg-gray-700 text-white shadow-md'
+                      : 'bg-white text-gray-600 hover:bg-gray-100'
+                    }`}
+                  title="ジャンル順"
+                >
+                  <FontAwesomeIcon icon={faLayerGroup} className="h-4 w-4" />
+                  ジャンル順
+                </button>
+              </div>
+            </div>
           </div>
           
           {/* プロジェクトセクション */}
-          {FILTER_CONFIG.filter(config => config.type !== 'all').map(({ type, label }) => (
-            (selectedType === 'all' || selectedType === type) && (
+          {sortOrder === 'genre' ? (
+            FILTER_CONFIG.filter(config => config.type !== 'all').map(({ type, label }) => (
               <div key={type} className="mb-16 px-10">
                 <h3 className="text-xl font-bold text-gray-800 mb-8">{label}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -251,8 +279,51 @@ export default function ProtectedPage() {
                     ))}
                 </div>
               </div>
-            )
-          ))}
+            ))
+          ) : (
+            <div className="px-10">
+              {Object.entries(
+                filteredProjects.reduce((acc, [projectId, project]) => {
+                  const startYear = project.startDate.year;
+                  const endYear = project.endDate.year;
+                  const periodText = `${project.startDate.year}年${project.startDate.month}月 〜 ${project.endDate.year}年${project.endDate.month}月`;
+                  
+                  // 開始年と終了年が異なる場合、両方の年に追加
+                  if (startYear !== endYear) {
+                    if (!acc[startYear]) {
+                      acc[startYear] = [];
+                    }
+                    acc[startYear].push([projectId, project, 'start', periodText] as const);
+                  }
+                  
+                  if (!acc[endYear]) {
+                    acc[endYear] = [];
+                  }
+                  acc[endYear].push([projectId, project, 'end', periodText] as const);
+                  
+                  return acc;
+                }, {} as { [key: number]: [string, ProjectData, 'start' | 'end', string][] })
+              )
+                .sort(([yearA], [yearB]) => Number(yearB) - Number(yearA))
+                .map(([year, projects]) => {
+                  return (
+                    <div key={year} className="mb-16">
+                      <h3 className="text-xl font-bold text-gray-800 mb-8 flex items-center gap-2">{year}年</h3>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {projects.map(([projectId, project, type, periodText]) => (
+                          <div key={`${projectId}-${type}`}>
+                            <WorkCard
+                              project={project}
+                              onClick={() => handleProjectClick(projectId)}
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
+            </div>
+          )}
         </div>
       </FadeInSection>
 
