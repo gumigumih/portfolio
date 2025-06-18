@@ -18,10 +18,6 @@ import SkillMatrix from '../Skills/SkillMatrix.tsx';
 import ProductManagementSkills from '../Skills/ProductManagementSkills.tsx';
 import TechnicalSkillMap from '../Skills/TechnicalSkillMap.tsx';
 import SlideNav from '../Layout/SlideNav.tsx';
-import MajorProjects from '../Works/MajorProjects.tsx';
-import TourismProjects from '../Works/TourismProjects.tsx';
-import PromotionProjects from '../Works/PromotionProjects.tsx';
-import AvatarSupport from '../Works/AvatarSupport.tsx';
 import HeartShape from '../UI/HeartShape.tsx';
 import FadeInSection from '../UI/FadeInSection.tsx';
 import WorkCard from '../Works/WorkCard.tsx';
@@ -88,6 +84,14 @@ const projectData: { [key: string]: ProjectData } = {
 
 type ProjectType = 'product' | 'tourism' | 'avatar' | 'promotion';
 
+const FILTER_CONFIG = [
+  { type: 'all' as const, label: 'すべて', color: 'bg-gray-800' },
+  { type: 'product' as const, label: 'プロダクト開発・運営', color: 'bg-blue-500' },
+  { type: 'tourism' as const, label: '観光・地域振興系', color: 'bg-green-500' },
+  { type: 'avatar' as const, label: 'アバター活用支援', color: 'bg-purple-500' },
+  { type: 'promotion' as const, label: '販促・その他', color: 'bg-orange-500' },
+] as const;
+
 export default function ProtectedPage() {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
   const [selectedType, setSelectedType] = useState<ProjectType | 'all'>('all');
@@ -112,21 +116,6 @@ export default function ProtectedPage() {
       });
   }, [selectedType, projectData]);
 
-  const typeLabels: { [key in ProjectType | 'all']: string } = {
-    all: 'すべて',
-    product: 'プロダクト開発・運営',
-    tourism: '観光・地域振興系',
-    avatar: 'アバター活用支援',
-    promotion: '販促・その他',
-  };
-
-  const typeColors: { [key in ProjectType]: string } = {
-    product: 'bg-blue-500',
-    tourism: 'bg-green-500',
-    avatar: 'bg-purple-500',
-    promotion: 'bg-orange-500',
-  };
-
   useEffect(() => {
     if (selectedProject) {
       document.body.style.overflow = 'hidden';
@@ -141,12 +130,14 @@ export default function ProtectedPage() {
 
   const handleProjectClick = (projectId: string) => {
     setSelectedProject(projectId);
-    navigate(`/projects/${projectId}`, { replace: true });
+    const searchParams = new URLSearchParams(location.search);
+    navigate(`/projects/${projectId}${searchParams.toString() ? `?${searchParams.toString()}` : ''}`, { replace: true });
   };
 
   const handleCloseModal = () => {
     setSelectedProject(null);
-    navigate('/', { replace: true });
+    const searchParams = new URLSearchParams(location.search);
+    navigate(`/${searchParams.toString() ? `?${searchParams.toString()}` : ''}`, { replace: true });
   };
 
   // URLからプロジェクトIDを取得してモーダルを開く
@@ -228,13 +219,13 @@ export default function ProtectedPage() {
 
           {/* フィルタリングUI */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {Object.entries(typeLabels).map(([type, label]) => (
+            {FILTER_CONFIG.map(({ type, label, color }) => (
               <button
                 key={type}
-                onClick={() => setSelectedType(type as ProjectType | 'all')}
+                onClick={() => setSelectedType(type)}
                 className={`px-4 py-2 rounded-full text-[1rem] font-medium transition-colors
                   ${selectedType === type
-                    ? `${type === 'all' ? 'bg-gray-800' : typeColors[type as ProjectType]} text-white`
+                    ? `${color} text-white`
                     : 'bg-white text-gray-600 hover:bg-gray-100'
                   }`}
               >
@@ -243,77 +234,25 @@ export default function ProtectedPage() {
             ))}
           </div>
           
-          {/* プロダクト開発・運営 */}
-          {selectedType === 'all' || selectedType === 'product' ? (
-            <div className="mb-16 px-10">
-              <h3 className="text-xl font-bold text-gray-800 mb-8">プロダクト開発・運営</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredProjects
-                  .filter(([, project]) => project.type === 'product')
-                  .map(([projectId, project]) => (
-                    <WorkCard
-                      key={projectId}
-                      project={project}
-                      onClick={() => handleProjectClick(projectId)}
-                    />
-                  ))}
+          {/* プロジェクトセクション */}
+          {FILTER_CONFIG.filter(config => config.type !== 'all').map(({ type, label }) => (
+            (selectedType === 'all' || selectedType === type) && (
+              <div key={type} className="mb-16 px-10">
+                <h3 className="text-xl font-bold text-gray-800 mb-8">{label}</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {filteredProjects
+                    .filter(([, project]) => project.type === type)
+                    .map(([projectId, project]) => (
+                      <WorkCard
+                        key={projectId}
+                        project={project}
+                        onClick={() => handleProjectClick(projectId)}
+                      />
+                    ))}
+                </div>
               </div>
-            </div>
-          ) : null}
-
-          {/* 観光・地域振興系 */}
-          {selectedType === 'all' || selectedType === 'tourism' ? (
-            <div className="mb-16 px-10">
-              <h3 className="text-xl font-bold text-gray-800 mb-8">観光・地域振興系</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredProjects
-                  .filter(([, project]) => project.type === 'tourism')
-                  .map(([projectId, project]) => (
-                    <WorkCard
-                      key={projectId}
-                      project={project}
-                      onClick={() => handleProjectClick(projectId)}
-                    />
-                  ))}
-              </div>
-            </div>
-          ) : null}
-
-          {/* アバター活用支援 */}
-          {selectedType === 'all' || selectedType === 'avatar' ? (
-            <div className="mb-16 px-10">
-              <h3 className="text-xl font-bold text-gray-800 mb-8">アバター活用支援</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredProjects
-                  .filter(([, project]) => project.type === 'avatar')
-                  .map(([projectId, project]) => (
-                    <WorkCard
-                      key={projectId}
-                      project={project}
-                      onClick={() => handleProjectClick(projectId)}
-                    />
-                  ))}
-              </div>
-            </div>
-          ) : null}
-
-          {/* 販促・その他 */}
-          {selectedType === 'all' || selectedType === 'promotion' ? (
-            <div className="mb-16 px-10">
-              <h3 className="text-xl font-bold text-gray-800 mb-8">販促・その他</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredProjects
-                  .filter(([, project]) => project.type === 'promotion')
-                  .map(([projectId, project]) => (
-                    <WorkCard
-                      key={projectId}
-                      project={project}
-                      onClick={() => handleProjectClick(projectId)}
-                    />
-                  ))}
-              </div>
-            </div>
-          ) : null}
+            )
+          ))}
         </div>
       </FadeInSection>
 
