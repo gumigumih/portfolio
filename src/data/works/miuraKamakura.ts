@@ -1,3 +1,4 @@
+import { ProjectData } from './types';
 import image1 from '../../assets/images/works/5/image1.jpg';
 import image2 from '../../assets/images/works/5/image2.png';
 import image3 from '../../assets/images/works/5/image3.png';
@@ -20,11 +21,10 @@ import image19 from '../../assets/images/works/8/image4.png';
 import image20 from '../../assets/images/works/8/image5.png';
 import image21 from '../../assets/images/works/8/image6.png';
 
-const projectData = {
+export const miuraKamakura: ProjectData = {
   type: 'tourism',
-  period: '2023年4月～9月',
   startDate: { year: 2023, month: 4 },
-  endDate: { year: 2023, month: 9 },
+  endDate: { year: 2025, month: 3 },
   heading: '三浦半島・鎌倉の歴史体験デジタルコンテンツ',
   lead: '歴史体験をデジタルコンテンツとして開発',
   coverImage: image1,
@@ -230,4 +230,4 @@ const projectData = {
   ],
 };
 
-export default projectData; 
+export default miuraKamakura; 

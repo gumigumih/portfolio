@@ -1,3 +1,4 @@
+import { ProjectData } from './types';
 import image1 from '../../assets/images/works/9/image1.png';
 import image2 from '../../assets/images/works/9/image2.png';
 import image3 from '../../assets/images/works/9/image3.png';
@@ -5,9 +6,8 @@ import image4 from '../../assets/images/works/9/image4.png';
 import image5 from '../../assets/images/works/9/image5.png';
 import image6 from '../../assets/images/works/9/image6.png';
 
-const projectData = {
+export const culturalHeritage3D: ProjectData = {
   type: 'tourism',
-  period: '2022年9月～2023年3月',
   startDate: { year: 2022, month: 9 },
   endDate: { year: 2023, month: 3 },
   heading: '文化財3Dビューアー',
@@ -67,4 +67,4 @@ const projectData = {
   ],
 };
 
-export default projectData; 
+export default culturalHeritage3D; 

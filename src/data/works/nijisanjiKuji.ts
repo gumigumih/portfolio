@@ -1,13 +1,13 @@
+import { ProjectData } from './types';
 import image1 from '../../assets/images/works/1/image1.png';
 import image2 from '../../assets/images/works/1/image2.png';
 import image3 from '../../assets/images/works/1/image3.png';
 
-const projectData = {
+export const nijisanjiKuji: ProjectData = {
   type: 'avatar',
-  period: '2018年10月～2019年3月',
-  startDate: { year: 2018, month: 10 },
-  endDate: { year: 2019, month: 3 },
-  heading: 'にじさんじのくじじゅうじ',
+  startDate: { year: 2023, month: 4 },
+  endDate: { year: 2024, month: 3 },
+  heading: 'にじさんじくじ',
   lead: 'VTuberTV番組のVR収録支援',
   coverImage: image1,
   description: `本プロジェクトでは、AbemaTV「にじさんじのくじじゅうじ」のVR収録を支援するものです。
@@ -47,6 +47,6 @@ const projectData = {
       images: [image3],
     },
   ],
-};
+}; 
 
-export default projectData; 
+export default nijisanjiKuji;

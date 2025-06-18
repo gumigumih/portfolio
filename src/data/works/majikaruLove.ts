@@ -1,9 +1,9 @@
+import { ProjectData } from './types';
 import image1 from '../../assets/images/works/11/image1.png';
 import image2 from '../../assets/images/works/11/image2.png';
 
-const projectData = {
+export const majikaruLove: ProjectData = {
   type: 'avatar',
-  period: '2023年2月～2024年2月',
   startDate: { year: 2023, month: 2 },
   endDate: { year: 2024, month: 2 },
   heading: 'マヂカルラブリーの全力！アニシャド応援部',
@@ -50,6 +50,6 @@ const projectData = {
       images: [image2],
     },
   ]
-};
+}; 
 
-export default projectData; 
+export default majikaruLove;

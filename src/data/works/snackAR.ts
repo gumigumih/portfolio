@@ -3,9 +3,8 @@ import image2 from '../../assets/images/works/3/image2.png';
 import image3 from '../../assets/images/works/3/image3.png';
 import image4 from '../../assets/images/works/3/image4.png';
 
-const projectData = {
+export const snackAR: ProjectData = {
   type: 'promotion',
-  period: '2019年5月～2020年4月',
   startDate: { year: 2019, month: 5 },
   endDate: { year: 2020, month: 4 },
   heading: 'お菓子販促コンテンツ',
@@ -54,6 +53,6 @@ const projectData = {
       images: [image3, image4],
     },
   ],  
-};
+}; 
 
-export default projectData; 
+export default snackAR;

@@ -1,9 +1,9 @@
+import { ProjectData } from './types';
 import image1 from '../../assets/images/works/10/image1.png';
 import image2 from '../../assets/images/works/10/image2.png';
 
-const projectData = {
+export const streamingManager: ProjectData = {
   type: 'promotion',
-  period: '2023年6月～7月',
   startDate: { year: 2023, month: 6 },
   endDate: { year: 2023, month: 7 },
   heading: 'ストリーミング配信管理システム',
@@ -36,6 +36,6 @@ const projectData = {
       images: [image2],
     },
   ],
-};
+}; 
 
-export default projectData; 
+export default streamingManager;

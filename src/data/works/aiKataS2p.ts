@@ -1,3 +1,4 @@
+import { ProjectData } from './types';
 import image1a from '../../assets/images/works/14/image1a.png';
 import image1b from '../../assets/images/works/14/image1b.png';
 import image1c from '../../assets/images/works/14/image1c.png';
@@ -7,9 +8,8 @@ import image4 from '../../assets/images/works/14/image4.png';
 import image5 from '../../assets/images/works/14/image5.png';
 import image6 from '../../assets/images/works/14/image6.png';
 
-const projectData = {
+export const aiKataS2p: ProjectData = {
   type: 'product',
-  period: '2024年4月～2025年3月',
   startDate: { year: 2024, month: 4 },
   endDate: { year: 2025, month: 3 },
   heading: 'AI-KATA S2P',
@@ -178,4 +178,4 @@ Stripeを用いたサブスクリプション課金システムの実装や、�
   ]
 };
 
-export default projectData; 
+export default aiKataS2p;

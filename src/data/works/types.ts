@@ -2,7 +2,6 @@ export type ProjectType = 'product' | 'tourism' | 'avatar' | 'promotion';
 
 export interface ProjectData {
   type: ProjectType;
-  period: string;
   startDate: { year: number; month: number };
   endDate: { year: number; month: number };
   heading: string;

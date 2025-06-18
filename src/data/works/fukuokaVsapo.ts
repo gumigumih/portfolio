@@ -1,9 +1,9 @@
+import { ProjectData } from './types';
 import image1 from '../../assets/images/works/12/image1.png';
 import image2 from '../../assets/images/works/12/image2.png';
 
-const projectData = {
+export const fukuokaVsapo: ProjectData = {
   type: 'avatar',
-  period: '2023年4月～9月',
   startDate: { year: 2023, month: 4 },
   endDate: { year: 2023, month: 9 },
   heading: 'FukuokaVsapo',
@@ -54,4 +54,4 @@ const projectData = {
   ],
 };
 
-export default projectData; 
+export default fukuokaVsapo; 

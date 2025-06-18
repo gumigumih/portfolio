@@ -1,10 +1,10 @@
+import { ProjectData } from './types';
 import image1 from '../../assets/images/works/2/image1.png';
 import image2 from '../../assets/images/works/2/image2.png';
 import image3 from '../../assets/images/works/2/image3.png';
 
-const projectData = {
+export const youtubeScheduler: ProjectData = {
   type: 'promotion',
-  period: '2019年4月～5月',
   startDate: { year: 2019, month: 4 },
   endDate: { year: 2019, month: 5 },
   heading: 'YouTube Scheduler',
@@ -41,6 +41,6 @@ GASの最適化により処理時間を60秒から2秒に短縮し、業務効�
       images: [image3],
     },
   ],
-};
+}; 
 
-export default projectData; 
+export default youtubeScheduler;

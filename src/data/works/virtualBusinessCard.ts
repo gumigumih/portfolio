@@ -1,8 +1,8 @@
+import { ProjectData } from './types';
 import image1 from '../../assets/images/works/4/image1.png';
 
-const projectData = {
+export const virtualBusinessCard: ProjectData = {
   type: 'product',
-  period: '2020年4月',
   startDate: { year: 2020, month: 4 },
   endDate: { year: 2020, month: 4 },
   heading: 'バーチャル名刺背景ジェネレーター',
@@ -29,6 +29,6 @@ const projectData = {
       link: 'https://online-meishi.biz/',
     },
   ],
-};
+}; 
 
-export default projectData; 
+export default virtualBusinessCard;
