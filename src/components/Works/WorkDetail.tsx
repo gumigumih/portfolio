@@ -15,11 +15,11 @@ interface Props {
 }
 
 const CATEGORY_STYLES = {
-  '実装': 'bg-teal-300 text-teal-900',
-  '戦略': 'bg-pink-400 text-pink-900',
-  'デザイン': 'bg-yellow-300 text-yellow-900',
-  '運営': 'bg-purple-300 text-purple-900',
-  'チームマネジメント': 'bg-blue-300 text-blue-900',
+  '実装': 'bg-teal-200 text-teal-800',
+  '戦略': 'bg-pink-200 text-pink-800',
+  'デザイン': 'bg-yellow-200 text-yellow-800',
+  '運営': 'bg-purple-200 text-purple-800',
+  'チームマネジメント': 'bg-blue-200 text-blue-800',
 } as const;
 
 const getCategoryStyle = (category: string) => {
@@ -32,8 +32,8 @@ const getCategoryLabel = (category: string) => {
 
 export default function WorkDetail({ project }: Props) {
   return (
-    <div className="px-10 md:px-20">
-      <h2 className="mt-20 font-bold text-gray-600">
+    <div className="p-10 md:p-20">
+      <h2 className="font-bold text-gray-600">
         <div className="text-[1rem]">{project.period}</div>
         <div className="text-[2rem]">{project.heading}</div>
         <span className="my-2 block w-full h-px bg-gray-300"></span>
@@ -42,15 +42,15 @@ export default function WorkDetail({ project }: Props) {
       <p className="mt-5 text-gray-600 text-[1.2rem] text-justify whitespace-pre-wrap">{project.description}</p>
 
       {project.productUrl && (
-        <div className="mt-4 text-center">
+        <div className="mt-6 text-center">
           <a 
             href={project.productUrl} 
             target="_blank" 
             rel="noreferrer" 
-            className="inline-flex items-center text-blue-600 hover:text-blue-800 hover:underline transition-colors"
+            className="inline-flex items-center px-6 py-2 bg-white text-blue-600 border-1 border-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
           >
-            製品サイトを見る
-            <FontAwesomeIcon icon={faExternalLinkAlt} className="ml-1 text-sm" />
+            サイトへ
+            <FontAwesomeIcon icon={faExternalLinkAlt} className="ml-2 text-sm" />
           </a>
         </div>
       )}
@@ -117,7 +117,7 @@ export default function WorkDetail({ project }: Props) {
           
           {/* 全体の役割 */}
           {project.roles.overall && project.roles.overall.length > 0 && (
-            <div className="mb-8">
+            <div className="mb-6">
               <ul className="text-[1.2rem] flex items-start gap-2 bg-gray-50 p-6 rounded-lg">
                 {project.roles.overall.map((role, idx) => (
                   <li key={idx} className="flex items-start">
@@ -283,9 +283,10 @@ export default function WorkDetail({ project }: Props) {
                       href={slide.link} 
                       target="_blank" 
                       rel="noreferrer" 
-                      className="inline-block px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                      className="inline-flex items-center px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
                     >
                       サイトを見る
+                      <FontAwesomeIcon icon={faExternalLinkAlt} className="ml-2 text-sm" />
                     </a>
                   </div>
                 )}

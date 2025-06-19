@@ -231,7 +231,7 @@ export default function ProtectedPage() {
           </h2>
 
           {/* フィルタリングUI */}
-          <div className="flex justify-center mb-12">
+          <div className="flex justify-center -mt-10 mb-12">
             <div className="flex items-center gap-4">
               <div className="flex gap-2">
                 <button
