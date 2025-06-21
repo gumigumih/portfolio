@@ -24,6 +24,10 @@ export default function Login({ onAuthenticate }: LoginProps) {
     <div className="backdrop-blur-lg bg-white/40 shadow-sm rounded-lg p-8 max-w-md w-full border border-white/20">
       <h2 className="text-2xl font-semibold text-gray-800 text-center">パスワードを入力</h2>
       <p className="text-gray-600 text-center text-sm mt-2">このページを閲覧するにはパスワードが必要です。</p>
+      <p className="text-gray-500 text-center text-xs mt-3 border-t border-gray-300/30 pt-3">
+        ポートフォリオの閲覧をご希望の方は、<br />
+        メールにてお問い合わせください。
+      </p>
       {error && (
         <div className="flex items-center bg-red-100/40 border border-red-400/40 text-red-700 px-4 py-2 rounded-md mt-4">
           <FontAwesomeIcon icon={faExclamationCircle} className="mr-2" />

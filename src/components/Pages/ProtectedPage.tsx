@@ -13,13 +13,13 @@ import CulturalHeritage3DData from '../../data/works/culturalHeritage3D';
 import NijisanjiKujiData from '../../data/works/nijisanjiKuji';
 import YoutubeSchedulerData from '../../data/works/youtubeScheduler';
 import SnackARData from '../../data/works/snackAR';
-import imageMainvisual from '../../assets/images/mainvisual.png';
 import SkillMatrix from '../Skills/SkillMatrix.tsx';
 import ProductManagementSkills from '../Skills/ProductManagementSkills.tsx';
 import TechnicalSkillMap from '../Skills/TechnicalSkillMap.tsx';
 import SlideNav from '../Layout/SlideNav.tsx';
 import HeartShape from '../UI/HeartShape.tsx';
 import FadeInSection from '../UI/FadeInSection.tsx';
+import MainVisual from '../UI/MainVisual.tsx';
 import WorkCard from '../Works/WorkCard.tsx';
 import WorkDetail from '../Works/WorkDetail.tsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -169,24 +169,7 @@ export default function ProtectedPage() {
       <SlideNav />
 
       <FadeInSection>
-        <div
-          id="top"
-          className="w-full aspect-auto md:aspect-[16/9] flex flex-col md:flex-row justify-between items-center md:items-end relative"
-        >
-          {/* メインビジュアル */}
-          <img
-            src={imageMainvisual}
-            alt="MainVisual"
-            className="mt-20 md:mt-0 w-1/3 md:w-2/5 h-auto object-cover md:absolute md:left-0 md:bottom-0"
-          />
-
-          {/* テキストエリア */}
-          <div className="md:absolute md:top-1/2 md:right-0 z-10 px-5 md:pr-[min(5vw,5rem)] font-[Montserrat] font-medium text-center md:text-right w-full md:w-auto">
-            <h1 className="text-[min(8vw,4rem)] md:text-[min(6vw,6rem)]">MEGUMI WADA</h1>
-            <p className="text-[min(3vw,1.5rem)] md:text-[min(2.5vw,2.5rem)] -mt-2 text-gray-600">(旧姓 HAYASHIBARA)</p>
-            <p className="text-[min(5vw,2rem)] md:text-[min(4vw,4rem)]">Director</p>
-          </div>
-        </div>
+        <MainVisual />
       </FadeInSection>
 
       <FadeInSection>
