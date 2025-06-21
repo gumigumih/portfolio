@@ -14,7 +14,6 @@ import image12 from '../../assets/images/works/6/image3.png';
 import image13 from '../../assets/images/works/6/image4.png';
 import image14 from '../../assets/images/works/7/image1.png';
 import image15 from '../../assets/images/works/7/image2.png';
-import image16 from '../../assets/images/works/8/image1.png';
 import image17 from '../../assets/images/works/8/image2.png';
 import image18 from '../../assets/images/works/8/image3.png';
 import image19 from '../../assets/images/works/8/image4.png';
@@ -23,7 +22,7 @@ import image21 from '../../assets/images/works/8/image6.png';
 
 export const miuraKamakura: ProjectData = {
   type: 'tourism',
-  startDate: { year: 2023, month: 4 },
+  startDate: { year: 2020, month: 8 },
   endDate: { year: 2025, month: 3 },
   heading: '三浦半島・鎌倉の歴史体験デジタルコンテンツ',
   lead: '歴史体験をデジタルコンテンツとして開発',
@@ -71,46 +70,61 @@ export const miuraKamakura: ProjectData = {
   ],
   timeline: [
     {
-      period: '2020年8月～2021年3月',
-      title: '第1期：三浦一族の物語',
-      description: '三浦一族の物語を伝えるWEBサイトとARマンガの開発',
+      title: "第1期：三浦一族の物語",
+      period: "2020年8月～2021年3月",
+      description: "三浦一族の物語を伝えるWEBサイトとARマンガの開発",
       achievements: [
-        'WEBサイト制作（三浦一族紹介サイト）',
-        '4つの寺に多言語対応のWEB看板とARマンガを設置',
-        '写経・彩色・彫像のプログラム開発',
-        'VR体験の開発と専用WEBサイト制作'
+        { category: "マネジメント", text: "プロジェクト進行管理・タスク管理" },
+        { category: "エンジニアリング", text: "WebARコンテンツ（ARマンガ）の開発" },
+        { category: "デザイン", text: "WEBサイト品質チェック・改善対応" },
+        { category: "制作物", text: "WEBサイト制作（三浦一族紹介サイト）" },
+        { category: "制作物", text: "4つの寺に多言語対応のWEB看板とARマンガを設置" },
+        { category: "制作物", text: "写経・彩色・彫像のプログラム開発" },
+        { category: "制作物", text: "VR体験の開発と専用WEBサイト制作" }
       ]
     },
     {
-      period: '2021年7月～2022年3月',
-      title: '第2期：北条家の物語と和賀江嶋',
-      description: '北条家の物語と和賀江嶋のARコンテンツ開発',
+      title: "第2期：北条家の物語と和賀江嶋",
+      period: "2021年7月～2022年3月",
+      description: "北条家の物語と和賀江嶋のARコンテンツ開発",
       achievements: [
-        '5つの寺にARマンガを追加制作',
-        '対応言語を2か国語増加',
-        '北条家の物語WEBサイト制作',
-        '和賀江嶋の3Dモデル制作とGPS AR実装'
+        { category: "エンジニアリング", text: "ARマンガ追加開発" },
+        { category: "マネジメント", text: "多言語対応の翻訳管理" },
+        { category: "デザイン", text: "北条家WEBサイト制作" },
+        { category: "エンジニアリング", text: "GPS AR実装" },
+        { category: "制作物", text: "5つの寺にARマンガを追加制作" },
+        { category: "制作物", text: "対応言語を2か国語増加（5ヶ国語対応）" },
+        { category: "制作物", text: "北条家の物語WEBサイト制作" },
+        { category: "制作物", text: "和賀江嶋の3Dモデル制作とGPS AR実装" }
       ]
     },
     {
-      period: '2022年10月～2023年2月',
-      title: '第3期：バスツアー企画・実施',
-      description: 'デジタルコンテンツを活用したバスツアーの企画・実施',
+      title: "第3期：バスツアー企画・実施",
+      period: "2022年10月～2023年2月",
+      description: "デジタルコンテンツを活用したバスツアーの企画・実施",
       achievements: [
-        '源頼朝ゆかりの地を巡るバスツアー実施',
-        'ツアー紹介WEBサイト制作',
-        'デジタルコンテンツの活用方法の確立'
+        { category: "マネジメント", text: "バスツアー企画・調整" },
+        { category: "デザイン", text: "ツアー紹介WEBサイト制作" },
+        { category: "マネジメント", text: "デジタルコンテンツ活用戦略立案" },
+        { category: "エンジニアリング", text: "満足度計測フォーム開発" },
+        { category: "制作物", text: "源頼朝ゆかりの地を巡るバスツアー実施" },
+        { category: "制作物", text: "ツアー紹介WEBサイト制作" },
+        { category: "制作物", text: "デジタルコンテンツの活用方法の確立" }
       ]
     },
     {
-      period: '2024年7月～2025年3月',
-      title: '第4期：新規バスツアーと音声ガイド',
-      description: '新規バスツアーの企画と音声ガイドの開発',
+      title: "第4期：新規バスツアーと音声ガイド",
+      period: "2024年7月～2025年3月",
+      description: "新規バスツアーの企画と音声ガイドの開発",
       achievements: [
-        '三浦按針・ペリー・ヴェルニーゆかりの地を巡るバスツアー企画',
-        'AI音声生成を活用した多言語対応の音声ガイド開発',
-        '4つの神社への音声ガイド導入',
-        'バスツアーWEBサイトの改修'
+        { category: "エンジニアリング", text: "音声ガイドシステム設計・開発" },
+        { category: "エンジニアリング", text: "AI音声生成API実装" },
+        { category: "デザイン", text: "音声ガイドUI/UXデザイン" },
+        { category: "デザイン", text: "バスツアーWEBサイト改修" },
+        { category: "制作物", text: "三浦按針・ペリー・ヴェルニーゆかりの地を巡るバスツアー企画" },
+        { category: "制作物", text: "AI音声生成を活用した多言語対応の音声ガイド開発" },
+        { category: "制作物", text: "4つの神社への音声ガイド導入" },
+        { category: "制作物", text: "バスツアーWEBサイトの改修" }
       ]
     }
   ],
@@ -131,21 +145,18 @@ export const miuraKamakura: ProjectData = {
       description: 'AR歴史マンガ体験者アンケート'
     }
   ],
-  challenges: [
+  issues: [
     {
-      title: '多言語対応の課題',
-      description: '複数言語でのコンテンツ提供において、翻訳の品質管理とUIの一貫性維持が課題でした。また、各国語の文字数や表示の違いによるレイアウトの崩れも発生していました。',
-      solution: '翻訳管理システムを導入し、翻訳の品質を担保。また、レスポンシブデザインを徹底し、各国語の文字数差に対応できるUIを実装しました。さらに、言語切り替え時のレイアウトテストを自動化し、品質を維持しています。'
+      title: "多言語対応の管理と品質保証",
+      description: "5ヶ国語対応において、翻訳管理システムの導入と言語切り替えテストの自動化が必要でした。特に、文化的背景を考慮した翻訳品質の維持と、各言語でのUI表示崩れの対応に時間を要しました。"
     },
     {
-      title: 'オフライン環境でのAR体験',
-      description: '観光地でのAR体験において、インターネット接続が不安定な環境での安定した動作が課題でした。特に、GPS連動のARコンテンツでは、位置情報の精度とコンテンツの表示速度が問題となっていました。',
-      solution: 'オフライン対応のARコンテンツを実装し、事前ダウンロード機能を追加。また、GPS情報の補正アルゴリズムを開発し、位置精度を向上させました。さらに、コンテンツの最適化により、表示速度を改善しています。'
+      title: "オフライン環境でのAR体験の実現",
+      description: "現地の通信環境が不安定な場合でも、ARマンガが正常に動作するシステムの構築が課題でした。GPS補正アルゴリズムの開発とキャッシュシステムの最適化により、安定したAR体験を実現しました。"
     },
     {
-      title: '音声ガイドの多言語対応',
-      description: '多言語対応の音声ガイドにおいて、自然な音声の生成と、効率的なコンテンツ管理が課題でした。また、複数地点での音声切り替えの精度も問題となっていました。',
-      solution: 'AI音声生成APIを導入し、自然な音声を実現。また、音声コンテンツ管理システムを開発し、効率的な更新と配信を可能にしました。さらに、位置情報と連動した音声切り替えシステムを実装し、精度を向上させています。'
+      title: "AI音声生成による音声ガイドの実装",
+      description: "5ヶ国語対応の音声ガイドを効率的に制作するため、AI音声生成APIの導入と位置情報連動システムの実装が必要でした。品質の担保と運用コストのバランスを取ることが課題でした。"
     }
   ],
   techStack: {

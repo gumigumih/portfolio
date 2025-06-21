@@ -1,4 +1,4 @@
-import { ProjectData } from './Data/types';
+import { ProjectData } from '../../data/works/types';
 
 interface WorkCardProps {
   project: ProjectData;

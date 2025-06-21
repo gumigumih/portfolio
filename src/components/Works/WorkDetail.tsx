@@ -1,7 +1,7 @@
 import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Zoom from 'react-medium-image-zoom';
-import { ProjectData } from './Data/types';
+import { ProjectData } from '../../data/works/types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
@@ -34,7 +34,7 @@ export default function WorkDetail({ project }: Props) {
   return (
     <div className="p-10 md:p-20">
       <h2 className="font-bold text-gray-600">
-        <div className="text-[1rem]">{project.period}</div>
+        <div className="text-[1rem]">{project.startDate.year}年{project.startDate.month}月〜{project.endDate.year}年{project.endDate.month}月</div>
         <div className="text-[2rem]">{project.heading}</div>
         <span className="my-2 block w-full h-px bg-gray-300"></span>
       </h2>
@@ -92,11 +92,11 @@ export default function WorkDetail({ project }: Props) {
       )}
 
       {/* 1. 課題背景 */}
-      {project.challenges && project.challenges.issues && project.challenges.issues.length > 0 && (
+      {project.issues && project.issues.length > 0 && (
         <div className="mt-10">
           <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">課題背景</h3>
           <div className="space-y-6">
-            {project.challenges.issues.map((issue, index) => (
+            {project.issues.map((issue, index) => (
               <div key={index} className="bg-gray-50 p-6 rounded-lg">
                 <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-3">{issue.title}</h4>
                 <div className="space-y-4">
@@ -116,7 +116,7 @@ export default function WorkDetail({ project }: Props) {
           <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">自分の役割</h3>
           
           {/* 全体の役割 */}
-          {project.roles.overall && project.roles.overall.length > 0 && (
+          {'overall' in project.roles && project.roles.overall && project.roles.overall.length > 0 && (
             <div className="mb-6">
               <ul className="text-[1.2rem] flex items-start gap-2 bg-gray-50 p-6 rounded-lg">
                 {project.roles.overall.map((role, idx) => (
@@ -130,9 +130,10 @@ export default function WorkDetail({ project }: Props) {
           )}
 
           {/* 詳細な役割 */}
-          {project.roles.details && project.roles.details.length > 0 && (
+          {('details' in project.roles && project.roles.details && project.roles.details.length > 0) || 
+           (Array.isArray(project.roles) && project.roles.length > 0) ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {project.roles.details.map((role, idx) => (
+              {(Array.isArray(project.roles) ? project.roles : project.roles.details!).map((role, idx) => (
                 <div key={idx} className="bg-gray-50 p-6 rounded-lg">
                   <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-3 flex items-center align-items-center">
                     <span className={`inline-block w-5 h-5 rounded-full ${role.color} mr-2`}></span>
@@ -149,33 +150,7 @@ export default function WorkDetail({ project }: Props) {
                 </div>
               ))}
             </div>
-          )}
-        </div>
-      )}
-
-      {/* 3. 解決アプローチ */}
-      {project.challenges && project.challenges.solution && (
-        <div className="mt-10">
-          <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">解決アプローチ</h3>
-          
-          {/* 解決アプローチの概要 */}
-          <div className="mb-8">
-            <p className="text-[1.2rem] text-gray-600 bg-gray-50 p-6 rounded-lg">{project.challenges.solution.overview}</p>
-          </div>
-
-          {/* 具体的なアプローチ */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {project.challenges.solution.approaches.map((approach) => (
-              <div key={approach.title} className="bg-gray-50 p-6 rounded-lg">
-                <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-4">{approach.title}</h4>
-                <ul className="space-y-3 list-disc text-[1rem] ml-6 [&>li::marker]:text-gray-400">
-                  {approach.items.map((item) => (
-                    <li key={item} className="text-gray-600">{item}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          ) : null}
         </div>
       )}
 
@@ -253,17 +228,18 @@ export default function WorkDetail({ project }: Props) {
       )}
 
       {/* 6. 具体的な制作物 */}
-      <div className="mt-10">
-        <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">具体的な制作物</h3>
-        <Swiper
-          modules={[Navigation, Pagination]}
-          spaceBetween={50}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-          className="bg-gray-50 rounded-lg"
-        >
-          {project.slides.map((slide, index) => (
+      {project.slides && project.slides.length > 0 && (
+        <div className="mt-10">
+          <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">具体的な制作物</h3>
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={50}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            className="bg-gray-50 rounded-lg"
+          >
+            {project.slides.map((slide, index) => (
             <SwiperSlide key={index} className="pt-10 pb-15 px-4 md:px-20">
               <div className="max-w-4xl mx-auto">
                 <h3 className="text-[1.5rem] font-bold text-gray-700 mb-4">{slide.title}</h3>
@@ -292,9 +268,10 @@ export default function WorkDetail({ project }: Props) {
                 )}
               </div>
             </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+            ))}
+          </Swiper>
+        </div>
+      )}
     </div>
   );
 }

@@ -32,16 +32,10 @@ export interface ProjectData {
     items: string[];
   }[];
 
-  challenges?: {
-    overview: string;
-    solution: {
-      overview: string;
-      approaches: {
-        title: string;
-        items: string[];
-      }[];
-    };
-  };
+  issues?: {
+    title: string;
+    description: string;
+  }[];
 
   achievements?: {
     title: string;
@@ -67,6 +61,6 @@ export interface TimelineItem {
   title: string;
   period: string;
   description: string;
-  roles: string[];
-  achievements: string[];
+  roles?: string[];
+  achievements: { category: string; text: string; }[];
 } 
