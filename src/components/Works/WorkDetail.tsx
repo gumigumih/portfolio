@@ -1,7 +1,7 @@
 import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Zoom from 'react-medium-image-zoom';
-import { ProjectData } from '../../data/works/types';
+import { ProjectData, CategoryType } from '../../data/works/types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
@@ -14,19 +14,19 @@ interface Props {
   project: ProjectData;
 }
 
-const CATEGORY_STYLES = {
-  '実装': 'bg-teal-200 text-teal-800',
-  '戦略': 'bg-pink-200 text-pink-800',
-  'デザイン': 'bg-yellow-200 text-yellow-800',
-  '運営': 'bg-purple-200 text-purple-800',
-  'チームマネジメント': 'bg-blue-200 text-blue-800',
+const CATEGORY_STYLES: Record<CategoryType, string> = {
+  'プロダクト戦略': 'bg-pink-200 text-pink-800',
+  'プロジェクト推進': 'bg-blue-200 text-blue-800',
+  '技術開発': 'bg-teal-200 text-teal-800',
+  'デザイン・制作': 'bg-yellow-200 text-yellow-800',
+  '運用・改善': 'bg-purple-200 text-purple-800',
 } as const;
 
-const getCategoryStyle = (category: string) => {
-  return CATEGORY_STYLES[category as keyof typeof CATEGORY_STYLES] || 'bg-gray-300 text-gray-900';
+const getCategoryStyle = (category: CategoryType) => {
+  return CATEGORY_STYLES[category] || 'bg-gray-300 text-gray-900';
 };
 
-const getCategoryLabel = (category: string) => {
+const getCategoryLabel = (category: CategoryType) => {
   return category;
 };
 
@@ -55,41 +55,7 @@ export default function WorkDetail({ project }: Props) {
         </div>
       )}
 
-      {/* 0. プロダクト概要 */}
-      {project.overview && project.overview.product && (
-        <div className="mt-10">
-          <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">プロダクト概要</h3>
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-3">基本情報</h4>
-                <dl className="space-y-2">
-                  <div>
-                    <dt className="text-gray-600">プロダクト名</dt>
-                    <dd className="text-gray-800 font-medium">{project.overview.product.name}</dd>
-                  </div>
-                  <div>
-                    <dt className="text-gray-600">タイプ</dt>
-                    <dd className="text-gray-800 font-medium">{project.overview.product.type}</dd>
-                  </div>
-                  <div>
-                    <dt className="text-gray-600">ターゲット</dt>
-                    <dd className="text-gray-800 font-medium">{project.overview.product.target}</dd>
-                  </div>
-                </dl>
-              </div>
-              <div>
-                <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-3">主要機能</h4>
-                <ul className="space-y-2 list-disc ml-6 [&>li::marker]:text-gray-400">
-                  {project.overview.product.keyFeatures.map((feature, index) => (
-                    <li key={index} className="text-gray-600">{feature}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+
 
       {/* 1. 課題背景 */}
       {project.issues && project.issues.length > 0 && (
@@ -121,7 +87,7 @@ export default function WorkDetail({ project }: Props) {
               <ul className="text-[1.2rem] flex items-start gap-2 bg-gray-50 p-6 rounded-lg">
                 {project.roles.overall.map((role, idx) => (
                   <li key={idx} className="flex items-start">
-                    {idx > 0 && <span className="text-gray-500">/</span>}
+                    {idx > 0 && <span className="text-gray-500 mr-2">/</span>}
                     <span className="text-gray-600">{role}</span>
                   </li>
                 ))}
@@ -198,7 +164,7 @@ export default function WorkDetail({ project }: Props) {
         </div>
       )}
 
-      {/* 7. プロジェクトの歩み */}
+      {/* 6. プロジェクトの歩み */}
       {project.timeline && project.timeline.length > 0 && (
         <div className="mt-10">
           <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">プロジェクトの歩み</h3>
@@ -227,10 +193,10 @@ export default function WorkDetail({ project }: Props) {
         </div>
       )}
 
-      {/* 6. 具体的な制作物 */}
+      {/* 7. 成果物・実績 */}
       {project.slides && project.slides.length > 0 && (
         <div className="mt-10">
-          <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">具体的な制作物</h3>
+          <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">成果物・実績</h3>
           <Swiper
             modules={[Navigation, Pagination]}
             spaceBetween={50}

@@ -1,5 +1,7 @@
 export type ProjectType = 'product' | 'tourism' | 'avatar' | 'promotion';
 
+export type CategoryType = 'プロダクト戦略' | 'プロジェクト推進' | '技術開発' | 'デザイン・制作' | '運用・改善';
+
 export interface ProjectData {
   type: ProjectType;
   startDate: { year: number; month: number };
@@ -9,15 +11,6 @@ export interface ProjectData {
   coverImage: string;
   productUrl?: string;
   description: string;
-
-  overview?: {
-    product: {
-      name: string;
-      type: string;
-      target: string;
-      keyFeatures: string[];
-    };
-  };
 
   roles?: {
     overall?: string[];
@@ -62,5 +55,5 @@ export interface TimelineItem {
   period: string;
   description: string;
   roles?: string[];
-  achievements: { category: string; text: string; }[];
+  achievements: { category: CategoryType; text: string; }[];
 } 
