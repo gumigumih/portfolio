@@ -1,7 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { useAuth } from '../../contexts/AuthContext';
-import { ProjectType } from '../../data/works/types';
+import { ProjectData } from '../../data/works/types';
 import NiceCameraData from '../../data/works/niceCamera';
 import AiKataS2pData from '../../data/works/aiKataS2p';
 import MiuraKamakuraData from '../../data/works/miuraKamakura';
@@ -25,55 +24,6 @@ import WorkDetail from '../Works/WorkDetail.tsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt, faLayerGroup } from '@fortawesome/free-solid-svg-icons';
 
-type ProjectData = {
-  period: string;
-  heading: string;
-  description: string;
-  startDate: {
-    year: number;
-    month: number;
-  };
-  endDate: {
-    year: number;
-    month: number;
-  };
-  roles: {
-    title: string;
-    color: string;
-    items: string[];
-  }[];
-  slides: {
-    title: string;
-    description?: string;
-    images: string[];
-    link?: string;
-  }[];
-  challenges?: {
-    title: string;
-    description: string;
-    solution: string;
-  }[];
-  techStack?: {
-    frontend: string[];
-    backend: string[];
-    infrastructure: string[];
-    tools: string[];
-  };
-  achievements?: {
-    title: string;
-    value: string;
-    description: string;
-  }[];
-  timeline?: {
-    period: string;
-    title: string;
-    description: string;
-    achievements: string[];
-  }[];
-  coverImage?: string;
-  type: string;
-};
-
 const projectData: { [key: string]: ProjectData } = {
   virtualBusinessCard: VirtualBusinessCardData,
   culturalHeritage3D: CulturalHeritage3DData,
@@ -87,8 +37,6 @@ const projectData: { [key: string]: ProjectData } = {
   youtubeScheduler: YoutubeSchedulerData,
   snackAR: SnackARData,
 };
-
-type ProjectType = 'product' | 'tourism' | 'avatar' | 'promotion';
 
 type SortOrder = 'chronological' | 'genre';
 
@@ -107,7 +55,7 @@ export default function ProtectedPage() {
   const location = useLocation();
 
   const filteredProjects = useMemo(() => {
-    let projects = Object.entries(projectData);
+    const projects = Object.entries(projectData);
     
     if (sortOrder === 'chronological') {
       return projects.sort((a, b) => {
@@ -293,7 +241,7 @@ export default function ProtectedPage() {
                     <div key={year} className="mb-16">
                       <h3 className="text-xl font-bold text-gray-800 mb-8 flex items-center gap-2">{year}年</h3>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {projects.map(([projectId, project, type, periodText]) => (
+                        {projects.map(([projectId, project, type]) => (
                           <div key={`${projectId}-${type}`}>
                             <WorkCard
                               project={project}

@@ -20,6 +20,10 @@ const WorkCard = ({ project, onClick }: WorkCardProps) => {
     promotion: 'bg-orange-500'
   };
 
+  const formatPeriod = () => {
+    return `${project.startDate.year}年${project.startDate.month}月 〜 ${project.endDate.year}年${project.endDate.month}月`;
+  };
+
   return (
     <div
       className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow duration-300"
@@ -38,7 +42,7 @@ const WorkCard = ({ project, onClick }: WorkCardProps) => {
       <div className="p-4">
         <h3 className="text-[1.2rem] font-bold mb-1">{project.heading}</h3>
         <p className="text-gray-600 text-[1.1rem] mb-2">{project.lead}</p>
-        <p className="text-gray-500 text-[1rem]">{project.period}</p>
+        <p className="text-gray-500 text-[1rem]">{formatPeriod()}</p>
       </div>
     </div>
   );
