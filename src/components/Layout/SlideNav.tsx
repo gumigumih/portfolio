@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import parse from 'html-react-parser';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 // OUTLINE の項目
 const outlineLinks = [
@@ -7,22 +10,7 @@ const outlineLinks = [
   { id: 'ability', title: '強み' },
   { id: 'productManagementSkills', title: 'プロダクトマネジメントスキル' },
   { id: 'technicalSkills', title: 'テクニカルスキル' },
-  {
-    id: 'majorProjects',
-    title: "<span class='text-[0.9em]'>実績</span><br/>プロダクト開発・運営",
-  },
-  {
-    id: 'externalTeamManagement',
-    title: "<span class='text-[0.9em]'>実績</span><br/>観光・地域振興系",
-  },
-  {
-    id: 'clientWork',
-    title: "<span class='text-[0.9em]'>実績</span><br/>アバター活用支援",
-  },
-  {
-    id: 'promotion',
-    title: "<span class='text-[0.9em]'>実績</span><br/>販促・その他",
-  },
+  { id: 'projects', title: 'プロジェクト一覧' },
   { id: 'last', title: 'さいごに' },
 ];
 
@@ -33,28 +21,28 @@ const projects = [
     text: 'VTuberTV番組',
     textClass: 'right-0',
     row: 1,
-    jumpTo: 'work1',
+    jumpTo: 'nijisanjiKuji',
   },
   {
     start: { year: 2019, month: 5 },
     end: { year: 2019, month: 5 },
     text: 'Youtube管理アプリ',
     row: 2,
-    jumpTo: 'work2',
+    jumpTo: 'youtubeScheduler',
   },
   {
     start: { year: 2019, month: 5 },
     end: { year: 2020, month: 4 },
     text: 'お菓子パッケージARコンテンツ',
     row: 1,
-    jumpTo: 'work3',
+    jumpTo: 'snackAR',
   },
   {
     start: { year: 2020, month: 4 },
     end: { year: 2020, month: 4 },
     text: 'バーチャル名刺背景ジェネレーター',
     row: 2,
-    jumpTo: 'work4',
+    jumpTo: 'virtualBusinessCard',
   },
   {
     start: { year: 2020, month: 8 },
@@ -62,35 +50,35 @@ const projects = [
     text: '歴史体験型デジタルコンテンツ開発',
     textClass: 'tracking-[0.2rem]',
     row: 3,
-    jumpTo: 'work5',
+    jumpTo: 'miuraKamakura',
   },
   {
     start: { year: 2021, month: 7 },
     end: { year: 2022, month: 3 },
     text: '',
     row: 3,
-    jumpTo: 'work6',
+    jumpTo: 'streamingManager',
   },
   {
     start: { year: 2022, month: 10 },
     end: { year: 2023, month: 2 },
     text: '歴史体験コンテンツ活用・バスツアー企画',
     row: 3,
-    jumpTo: 'work7',
+    jumpTo: 'fukuokaVsapo',
   },
   {
     start: { year: 2024, month: 1 },
     end: { year: 2024, month: 1 },
     text: '',
     row: 3,
-    jumpTo: 'work7',
+    jumpTo: 'fukuokaVsapo',
   },
   {
     start: { year: 2024, month: 7 },
     end: { year: 2025, month: 3 },
     text: '新規バスツアー企画・音声ガイド開発',
     row: 3,
-    jumpTo: 'work8',
+    jumpTo: 'majikaruLove',
   },
   {
     start: { year: 2022, month: 9 },
@@ -98,14 +86,14 @@ const projects = [
     text: '文化財3Dスキャンプロジェクト',
     textClass: 'right-0',
     row: 1,
-    jumpTo: 'work9',
+    jumpTo: 'culturalHeritage3D',
   },
   {
     start: { year: 2023, month: 6 },
     end: { year: 2023, month: 7 },
     text: 'Youtube24時間配信システム',
     row: 1,
-    jumpTo: 'work10',
+    jumpTo: 'streamingManager',
   },
   {
     start: { year: 2023, month: 2 },
@@ -113,7 +101,7 @@ const projects = [
     text: 'TV番組3Dキャラ支援',
     textClass: 'left-[1rem] tracking-[0.2rem]',
     row: 2,
-    jumpTo: 'work11',
+    jumpTo: 'youtubeScheduler',
   },
   {
     start: { year: 2023, month: 12 },
@@ -127,21 +115,21 @@ const projects = [
     text: 'アバター個別相談アプリ',
     textClass: 'right-0',
     row: 5,
-    jumpTo: 'work12',
+    jumpTo: 'niceCamera',
   },
   {
     start: { year: 2020, month: 6 },
     end: { year: 2025, month: 3 },
     text: 'NICE CAMERA（アバタートラッキングアプリ）',
     row: 4,
-    jumpTo: 'work13',
+    jumpTo: 'niceCamera',
   },
   {
     start: { year: 2024, month: 3 },
     end: { year: 2025, month: 3 },
     text: 'AI-KATA S2P',
     row: 5,
-    jumpTo: 'work14',
+    jumpTo: 'aiKataS2p',
   },
 ];
 
@@ -156,6 +144,12 @@ const barSpaceY = 0.5;
 export default function SlideNav() {
   const [isTimelineOpen, setIsTimelineOpen] = useState(false);
   const [isOutlineOpen, setIsOutlineOpen] = useState(true);
+  const navigate = useNavigate();
+
+  const handleProjectClick = (projectId: string) => {
+    setIsTimelineOpen(false);
+    navigate(`/projects/${projectId}`);
+  };
 
   return (
     <div className='sticky top-0 ml-[min(-12vw,-12rem)] max-md:hidden z-50'>
@@ -166,10 +160,11 @@ export default function SlideNav() {
         }`}
       >
         <button
-          className="text-[1rem] font-bold pointer-event-none w-full text-left"
+          className="text-[1rem] font-bold pointer-event-none w-full text-left flex items-center gap-2"
           onClick={() => setIsOutlineOpen(!isOutlineOpen)}
         >
-          {isOutlineOpen ? '≪ OUTLINE' : '≫ OUTLINE'}
+          <FontAwesomeIcon icon={isOutlineOpen ? faChevronLeft : faChevronRight} className="text-sm" />
+          OUTLINE
         </button>
         <nav
           className={`transition-all duration-300 ease-in-out overflow-hidden ${
@@ -197,10 +192,11 @@ export default function SlideNav() {
       {/* 📌 TIMELINE メニュー */}
       <div className={`absolute top-0 left-0 w-full z-20`}>
         <button
-          className="absolute top-[1rem] left-[1rem] px-[0.8rem] bg-white/80 backdrop-blur-lg shadow-md rounded-lg text-[1rem] font-semibold z-20"
+          className="absolute top-[1rem] left-[1rem] px-[0.8rem] bg-white/80 backdrop-blur-lg shadow-md rounded-lg text-[1rem] font-semibold z-20 flex items-center gap-2"
           onClick={() => setIsTimelineOpen(!isTimelineOpen)}
         >
-          {isTimelineOpen ? '≪ TIMELINE' : '≫ TIMELINE'}
+          <FontAwesomeIcon icon={isTimelineOpen ? faChevronLeft : faChevronRight} className="text-sm" />
+          TIMELINE
         </button>
 
         <div
@@ -231,8 +227,7 @@ export default function SlideNav() {
                   const durationMonths =
                     (project.end.year - project.start.year) * 12 + (project.end.month - project.start.month) + 1;
                   const durationWidth = (durationMonths / totalMonths) * 100;
-                  const rowOffset = project.row - 1; // 各行のオフセットを計算
-                  console.log(rowOffset, durationMonths);
+                  const rowOffset = project.row - 1;
 
                   return (
                     <div
@@ -248,9 +243,9 @@ export default function SlideNav() {
                       <div
                         className={`absolute rounded-full shadow w-full h-full cursor-pointer hover:border-2 hover:border-gray-500 bg-white`}
                         onClick={() => {
-                          setIsTimelineOpen(!isTimelineOpen);
-                          const targetId = project.jumpTo || '';
-                          document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
+                          if (project.jumpTo) {
+                            handleProjectClick(project.jumpTo);
+                          }
                         }}
                       ></div>
                       <span
