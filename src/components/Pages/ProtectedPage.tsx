@@ -15,6 +15,7 @@ import SnackARData from '../../data/works/snackAR';
 import SkillMatrix from '../Skills/SkillMatrix.tsx';
 import ProductManagementSkills from '../Skills/ProductManagementSkills.tsx';
 import TechnicalSkillMap from '../Skills/TechnicalSkillMap.tsx';
+import AIToolsUsage from '../Skills/AIToolsUsage.tsx';
 import SlideNav from '../Layout/SlideNav.tsx';
 import HeartShape from '../UI/HeartShape.tsx';
 import FadeInSection from '../UI/FadeInSection.tsx';
@@ -121,6 +122,37 @@ export default function ProtectedPage() {
       </FadeInSection>
 
       <FadeInSection>
+        <div id="career">
+          <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
+            <span className="flex-grow h-px bg-gray-300"></span>
+            キャリアについて
+            <span className="flex-grow h-px bg-gray-300"></span>
+          </h2>
+
+          <div className="relative bg-white shadow-lg rounded-[1rem] p-[3rem] max-w-4xl mx-auto my-20 
+                  before:content-[''] before:absolute before:inset-0 before:bg-[linear-gradient(to_bottom,transparent_23%,#e5e7eb_24%,transparent_25%)] 
+                  before:bg-[length:100%_2.5rem] before:z-0"
+          >
+            <div className="relative z-10">
+              <p className="text-[1.2rem] leading-relaxed text-gray-700">
+                私は、WEBエンジニアとしてキャリアをスタートし、<br />
+                もともと持っていたデザイン技術を活かしてWEBエンジニア兼UIデザイナーとなり、<br />
+                現在は、受注開発でチーム制作を行うようになり、<br />
+                ディレクションする人間が必要になったため、WEBエンジニア兼UIデザイナー権PMとして活動しています。<br />
+                <br />
+                自社プロダクトを開発していく中で、広報やCS、法務対応など、<br />
+                プロダクト成長に必要な業務を積極的に引き受け、責任の範囲を広げてきました。<br />
+                結果的に、自社プロダクトではPdM領域の仕事をしていました。<br />
+                <br />
+                今後は、事業責任者と二人三脚でプロダクトを成長・推進する人を目指し、<br />
+                より大きなインパクトを生み出せるよう努めていきます。
+              </p>
+            </div>
+          </div>
+        </div>
+      </FadeInSection>
+
+      <FadeInSection>
         <div id="ability">
           <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
             <span className="flex-grow h-px bg-gray-300"></span>
@@ -150,6 +182,17 @@ export default function ProtectedPage() {
             <span className="flex-grow h-px bg-gray-300"></span>
           </h2>
           <TechnicalSkillMap />
+        </div>
+      </FadeInSection>
+
+      <FadeInSection>
+        <div id="aiTools">
+          <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
+            <span className="flex-grow h-px bg-gray-300"></span>
+            生成AI活用状況
+            <span className="flex-grow h-px bg-gray-300"></span>
+          </h2>
+          <AIToolsUsage />
         </div>
       </FadeInSection>
 
@@ -284,56 +327,47 @@ export default function ProtectedPage() {
       )}
 
       <FadeInSection>
-        <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
-          <span className="flex-grow h-px bg-gray-300"></span>
-          さいごに
-          <span className="flex-grow h-px bg-gray-300"></span>
-        </h2>
+        <div id="last">
+          <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
+            <span className="flex-grow h-px bg-gray-300"></span>
+            さいごに
+            <span className="flex-grow h-px bg-gray-300"></span>
+          </h2>
 
-        <div
-          id="last"
-          className="relative bg-white shadow-lg rounded-[1rem] p-[3rem] max-w-4xl mx-auto my-20 
+          <div className="relative bg-white shadow-lg rounded-[1rem] p-[3rem] max-w-4xl mx-auto my-20 
                   before:content-[''] before:absolute before:inset-0 before:bg-[linear-gradient(to_bottom,transparent_23%,#e5e7eb_24%,transparent_25%)] 
                   before:bg-[length:100%_2.5rem] before:z-0"
-        >
-          <div className="relative z-10">
-            <div className="relative w-[100px] h-[100px] mx-auto mb-10 animate-pulse duration-700">
-              <div className="absolute inset-0 blur-sm">
+          >
+            <div className="relative z-10">
+              <div className="relative w-[100px] h-[100px] mx-auto mb-10 animate-pulse duration-700">
+                <div className="absolute inset-0 blur-sm">
+                  <HeartShape />
+                </div>
+
                 <HeartShape />
               </div>
-
-              <HeartShape />
-            </div>
-            <p className="text-[1.2rem] leading-relaxed text-gray-700">
-              私は、ToCとToBの両方の領域で、それぞれの特性を活かしたプロダクトマネジメントを目指しています。<br />
-              ToCでは、ユーザーの心に響く価値提案と、明確な立ち位置の確立を通じて、<br />
-              持続的な成長を実現するプロダクトづくりを大切にしています。<br />
-              <br />
-              ToBでは、顧客の課題やニーズを深く理解し、<br />
-              ビジネスプロセスの改善と効率化を通じて、具体的な価値提供を実現します。<br />
-              技術・デザイン・ビジネスの知見を活かし、<br />
-              プロダクトの成功と組織の成長に貢献したいと考えています。<br />
-              <br />
-              最後までご覧いただき、ありがとうございました。<br />
-              もしご興味を持っていただけましたら、ぜひお気軽にご連絡ください。
-            </p>
-            <p className="text-right text-[1.2rem] mt-[3rem] text-gray-700">
-              <span className="block text-[1.4rem] text-pink-500 mb-1">和田 愛</span>
-              <a
-                href="mailto:info@meggumi.com"
-                className="inline-flex items-center gap-2 text-pink-400 underline hover:text-pink-600 transition"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  className="w-5 h-5 text-pink-400"
+              <p className="text-[1.2rem] leading-relaxed text-gray-700 text-center">
+                最後までご覧いただき、ありがとうございました。<br />
+                もしご興味を持っていただけましたら、ぜひお気軽にご連絡ください。
+              </p>
+              <p className="text-right text-[1.2rem] mt-[3rem] text-gray-700">
+                <span className="block text-[1.4rem] text-pink-500 mb-1">和田 愛</span>
+                <a
+                  href="mailto:info@meggumi.com"
+                  className="inline-flex items-center gap-2 text-pink-400 underline hover:text-pink-600 transition"
                 >
-                  <path d="M12 12.713l11.985-8.713H.015L12 12.713zM12 14.999l-12-8.714V20h24V6.285L12 14.999z" />
-                </svg>
-                info@meggumi.com
-              </a>
-            </p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    className="w-5 h-5 text-pink-400"
+                  >
+                    <path d="M12 12.713l11.985-8.713H.015L12 12.713zM12 14.999l-12-8.714V20h24V6.285L12 14.999z" />
+                  </svg>
+                  info@meggumi.com
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </FadeInSection>

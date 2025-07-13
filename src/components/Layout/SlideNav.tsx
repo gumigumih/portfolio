@@ -10,7 +10,9 @@ const outlineLinks = [
   { id: 'ability', title: '強み' },
   { id: 'productManagementSkills', title: 'プロダクトマネジメントスキル' },
   { id: 'technicalSkills', title: 'テクニカルスキル' },
+  { id: 'aiTools', title: '生成AI活用状況' },
   { id: 'projects', title: 'プロジェクト一覧' },
+  { id: 'career', title: 'キャリアについて' },
   { id: 'last', title: 'さいごに' },
 ];
 
