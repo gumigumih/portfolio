@@ -1,17 +1,28 @@
-const skills = {
+interface Skill {
+  name: string;
+  level: number;
+  isHeader?: boolean;
+}
+
+const skills: Record<string, { color: string; skillColor: string; skills: Skill[] }> = {
   "エンジニアリング": {
     color: 'bg-slate-400/40',
     skillColor: 'bg-slate-400',
     skills: [
+      { name: 'Frontend', level: 0, isHeader: true },
       { name: 'HTML/CSS/JS', level: 5 },
       { name: '- Vue.js', level: 3 },
+      { name: '- React', level: 1 },
       { name: '- A-Frame', level: 1 },
+      { name: 'Backend', level: 0, isHeader: true },
       { name: 'PHP', level: 3 },
       { name: '- Wordpress', level: 2 },
       { name: '- Laravel', level: 2 },
       { name: 'Python', level: 2 },
       { name: 'Ruby on Rails', level: 1 },
       { name: 'Perl', level: 1 },
+      { name: 'Mobile & Others', level: 0, isHeader: true },
+      { name: 'React Native', level: 1 },
       { name: 'GAS', level: 3 },
       { name: 'シェルスクリプト\nコマンドプロンプト', level: 3 },
       { name: 'DB設計', level: 3 },
@@ -23,7 +34,8 @@ const skills = {
     skills: [
       { name: 'Photoshop', level: 4 },
       { name: 'Illustrator', level: 4 },
-      { name: 'Adobe XD', level: 3 },
+      { name: 'Adobe XD', level: 4 },
+      { name: 'Figma', level: 2 },
       { name: 'Premiere Pro', level: 1 },
       { name: 'VRoid Studio', level: 1 },
       { name: 'Blender', level: 1 },
@@ -57,22 +69,34 @@ export default function SkillMap() {
           </h2>
           <ul className="mt-[2rem] space-y-[1rem]">
             {skillList.map((skill, idx) => (
-              <li key={idx} className="flex items-center justify-between">
-                <span className="whitespace-pre-line text-[1.2rem]">{skill.name}</span>
-                <div className="flex space-x-1">
-                  {Array(5)
-                    .fill(0)
-                    .map((_, i) => (
-                      <div
-                        key={i}
-                        className={`w-[1.2rem] h-[1.2rem] ${
-                          i < skill.level
-                            ? `${skillColor} rounded-sm`
-                            : 'bg-gray-200 scale-50 rounded-full'
-                        }`}
-                      ></div>
-                    ))}
-                </div>
+              <li key={idx} className={`flex items-center justify-between ${skill.isHeader ? 'mt-6 first:mt-0' : ''}`}>
+                {skill.isHeader ? (
+                  <div className="flex items-center gap-3 w-full">
+                    <div className="flex-1 h-px bg-gray-300"></div>
+                    <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider px-3 py-1 bg-gray-50 rounded-full border border-gray-200">
+                      {skill.name}
+                    </span>
+                    <div className="flex-1 h-px bg-gray-300"></div>
+                  </div>
+                ) : (
+                  <>
+                    <span className="whitespace-pre-line text-[1.2rem]">{skill.name}</span>
+                    <div className="flex space-x-1">
+                      {Array(5)
+                        .fill(0)
+                        .map((_, i) => (
+                          <div
+                            key={i}
+                            className={`w-[1.2rem] h-[1.2rem] ${
+                              i < skill.level
+                                ? `${skillColor} rounded-sm`
+                                : 'bg-gray-200 scale-50 rounded-full'
+                            }`}
+                          ></div>
+                        ))}
+                    </div>
+                  </>
+                )}
               </li>
             ))}
           </ul>

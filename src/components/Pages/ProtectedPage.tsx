@@ -12,8 +12,7 @@ import CulturalHeritage3DData from '../../data/works/culturalHeritage3D';
 import NijisanjiKujiData from '../../data/works/nijisanjiKuji';
 import YoutubeSchedulerData from '../../data/works/youtubeScheduler';
 import SnackARData from '../../data/works/snackAR';
-import SkillMatrix from '../Skills/SkillMatrix.tsx';
-import ProductManagementSkills from '../Skills/ProductManagementSkills.tsx';
+import CrossBorderSkills from '../Skills/CrossBorderSkills.tsx';
 import TechnicalSkillMap from '../Skills/TechnicalSkillMap.tsx';
 import AIToolsUsage from '../Skills/AIToolsUsage.tsx';
 import SlideNav from '../Layout/SlideNav.tsx';
@@ -135,17 +134,21 @@ export default function ProtectedPage() {
           >
             <div className="relative z-10">
               <p className="text-[1.2rem] leading-relaxed text-gray-700">
-                私は、WEBエンジニアとしてキャリアをスタートし、<br />
-                もともと持っていたデザイン技術を活かしてWEBエンジニア兼UIデザイナーとなり、<br />
-                現在は、受注開発でチーム制作を行うようになり、<br />
-                ディレクションする人間が必要になったため、WEBエンジニア兼UIデザイナー権PMとして活動しています。<br />
+                WEBエンジニアとしてキャリアをスタートし、<br />
+                デザイン技術も活かしてWEBエンジニア兼UIデザイナーとして活動してきました。<br />
+                現在は受注開発でチーム制作を行い、ディレクター職としてプロジェクト全体をリードしています。<br />
                 <br />
-                自社プロダクトを開発していく中で、広報やCS、法務対応など、<br />
-                プロダクト成長に必要な業務を積極的に引き受け、責任の範囲を広げてきました。<br />
-                結果的に、自社プロダクトではPdM領域の仕事をしていました。<br />
+                また、自社プロダクトの企画・開発・運営経験もあり、<br />
+                設計・開発からUIデザイン、展示会運営、法務対応、カスタマーサポートまで幅広く担当してきました。<br />
+                改善施策の立案・実行から収益化まで一貫して携わり、<br />
+                結果的に「フルサイクルエンジニア」と「PdM的立ち回り」を自然に行っており、<br />
+                これはまさに今の時代に求められる「越境型人材」そのものです。<br />
                 <br />
-                今後は、事業責任者と二人三脚でプロダクトを成長・推進する人を目指し、<br />
-                より大きなインパクトを生み出せるよう努めていきます。
+                特にプロダクトライフサイクル全体での価値提供と、<br />
+                持続的なビジネスモデルの構築に深く関心を持っています。<br />
+                <br />
+                今後はよりプロダクト志向を強め、<br />
+                持続的な価値創造にコミットする役割を目指しています。
               </p>
             </div>
           </div>
@@ -153,26 +156,29 @@ export default function ProtectedPage() {
       </FadeInSection>
 
       <FadeInSection>
-        <div id="ability">
+        <div id="skills">
           <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
             <span className="flex-grow h-px bg-gray-300"></span>
-            強み
+            スキル・強み
             <span className="flex-grow h-px bg-gray-300"></span>
           </h2>
-          <SkillMatrix />
+          
+          {/* 越境型人材としてのスキルセット */}
+          <div className="mb-16">
+            <h3 className="text-xl font-bold text-gray-800 mb-8 text-center">越境型人材としてのスキルセット</h3>
+            <CrossBorderSkills />
+          </div>
+
+          {/* 生成AI活用状況 */}
+          <div className="mb-16">
+            <h3 className="text-xl font-bold text-gray-800 mb-8 text-center">生成AI活用状況</h3>
+            <AIToolsUsage />
+          </div>
+
         </div>
       </FadeInSection>
 
-      <FadeInSection>
-        <div id="productManagementSkills">
-          <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
-            <span className="flex-grow h-px bg-gray-300"></span>
-            プロダクトマネジメントスキル
-            <span className="flex-grow h-px bg-gray-300"></span>
-          </h2>
-          <ProductManagementSkills />
-        </div>
-      </FadeInSection>
+
 
       <FadeInSection>
         <div id="technicalSkills">
@@ -185,16 +191,9 @@ export default function ProtectedPage() {
         </div>
       </FadeInSection>
 
-      <FadeInSection>
-        <div id="aiTools">
-          <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
-            <span className="flex-grow h-px bg-gray-300"></span>
-            生成AI活用状況
-            <span className="flex-grow h-px bg-gray-300"></span>
-          </h2>
-          <AIToolsUsage />
-        </div>
-      </FadeInSection>
+
+
+
 
       <FadeInSection>
         <div id="projects">

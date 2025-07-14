@@ -14,6 +14,8 @@ interface AITool {
   usage: UsageCategory[];
   icon: IconDefinition;
   color: string;
+  titleColor: string;
+  dotColor: string;
 }
 
 const aiTools: AITool[] = [
@@ -31,7 +33,9 @@ const aiTools: AITool[] = [
       }
     ],
     icon: faCode,
-    color: 'bg-blue-500'
+    color: 'bg-blue-500',
+    titleColor: 'text-blue-800',
+    dotColor: 'bg-blue-500'
   },
   {
     name: 'ChatGPT & Gemini',
@@ -51,7 +55,9 @@ const aiTools: AITool[] = [
       }
     ],
     icon: faBrain,
-    color: 'bg-green-500'
+    color: 'bg-green-500',
+    titleColor: 'text-green-800',
+    dotColor: 'bg-green-500'
   },
   {
     name: 'Notebook LM',
@@ -63,7 +69,7 @@ const aiTools: AITool[] = [
       },
       {
         title: '学習・セミナー',
-        items: ['参加セミナー内容のまとめ音声作成']
+        items: ['参加セミナー内容のまとめ', 'まとめ音声作成']
       },
       {
         title: '顧客対応',
@@ -71,13 +77,15 @@ const aiTools: AITool[] = [
       }
     ],
     icon: faLightbulb,
-    color: 'bg-purple-500'
+    color: 'bg-purple-500',
+    titleColor: 'text-purple-800',
+    dotColor: 'bg-purple-500'
   }
 ];
 
 export default function AIToolsUsage() {
   return (
-    <div className="max-w-6xl mx-auto px-6">
+    <div className="max-w-6xl mx-auto px-10">
       <div className="mb-8">
         <p className="text-lg text-gray-600 text-center leading-relaxed">
           生成AIツールを積極的に活用し、開発効率の向上と創造性の拡張を実現しています。
@@ -86,23 +94,23 @@ export default function AIToolsUsage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {aiTools.map((tool) => (
           <div
             key={tool.name}
-            className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border border-gray-100"
+            className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300"
           >
-            <div className="flex items-center gap-4 mb-4">
-              <div className={`${tool.color} text-white p-3 rounded-lg`}>
-                <FontAwesomeIcon icon={tool.icon} className="w-6 h-6" />
+            <div className="flex items-center gap-3 mb-4">
+              <div className={`${tool.color} text-white p-2 rounded-lg`}>
+                <FontAwesomeIcon icon={tool.icon} className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-800">{tool.name}</h3>
+                <h3 className={`text-lg font-bold ${tool.titleColor}`}>{tool.name}</h3>
                 <p className="text-sm text-gray-500">{tool.description}</p>
               </div>
             </div>
             
-            <div className="space-y-4">
+            <div className="space-y-3">
               <h4 className="font-semibold text-gray-700 text-sm uppercase tracking-wide">
                 主な活用場面
               </h4>
@@ -112,14 +120,12 @@ export default function AIToolsUsage() {
                     <h5 className="text-sm font-medium text-gray-600 border-b border-gray-200 pb-1">
                       {category.title}
                     </h5>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="space-y-2">
                       {category.items.map((item, itemIndex) => (
-                        <span
-                          key={itemIndex}
-                          className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
-                        >
-                          {item}
-                        </span>
+                        <div key={itemIndex} className="flex items-center gap-2">
+                          <span className={`w-2 h-2 ${tool.dotColor} rounded-full`}></span>
+                          <span className="text-sm text-gray-700">{item}</span>
+                        </div>
                       ))}
                     </div>
                   </div>
@@ -130,14 +136,15 @@ export default function AIToolsUsage() {
         ))}
       </div>
 
-      <div className="mt-12 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8 border border-blue-100">
-        <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">
+      <div className="mt-8 bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+        <h3 className="text-lg font-bold text-gray-800 mb-4 text-center flex items-center justify-center gap-2">
+          <FontAwesomeIcon icon={faLightbulb} className="w-5 h-5" />
           AI活用による効果
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="text-center">
-            <div className="bg-blue-500 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
-              <FontAwesomeIcon icon={faCode} className="w-6 h-6" />
+            <div className="bg-blue-500 text-white w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3">
+              <FontAwesomeIcon icon={faCode} className="w-5 h-5" />
             </div>
             <h4 className="font-semibold text-gray-800 mb-2">開発効率の向上</h4>
             <p className="text-sm text-gray-600">
@@ -145,8 +152,8 @@ export default function AIToolsUsage() {
             </p>
           </div>
           <div className="text-center">
-            <div className="bg-green-500 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
-              <FontAwesomeIcon icon={faLightbulb} className="w-6 h-6" />
+            <div className="bg-green-500 text-white w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3">
+              <FontAwesomeIcon icon={faLightbulb} className="w-5 h-5" />
             </div>
             <h4 className="font-semibold text-gray-800 mb-2">創造性の拡張</h4>
             <p className="text-sm text-gray-600">
@@ -154,8 +161,8 @@ export default function AIToolsUsage() {
             </p>
           </div>
           <div className="text-center">
-            <div className="bg-purple-500 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
-              <FontAwesomeIcon icon={faBrain} className="w-6 h-6" />
+            <div className="bg-purple-500 text-white w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3">
+              <FontAwesomeIcon icon={faBrain} className="w-5 h-5" />
             </div>
             <h4 className="font-semibold text-gray-800 mb-2">学習の加速</h4>
             <p className="text-sm text-gray-600">
