@@ -6,13 +6,10 @@ import { useNavigate } from 'react-router-dom';
 
 // OUTLINE の項目
 const outlineLinks = [
-  { id: 'top', title: 'TOP' },
-  { id: 'ability', title: '強み' },
-  { id: 'productManagementSkills', title: 'プロダクトマネジメントスキル' },
-  { id: 'technicalSkills', title: 'テクニカルスキル' },
-  { id: 'aiTools', title: '生成AI活用状況' },
-  { id: 'projects', title: 'プロジェクト一覧' },
   { id: 'career', title: 'キャリアについて' },
+  { id: 'skills', title: 'スキル・強み' },
+  { id: 'technicalSkills', title: 'テクニカルスキル' },
+  { id: 'projects', title: 'プロジェクト一覧' },
   { id: 'last', title: 'さいごに' },
 ];
 
