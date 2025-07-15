@@ -1,6 +1,6 @@
 import { ProjectData } from './types';
-import image1 from '../../assets/images/works/11/image1.png';
-import image2 from '../../assets/images/works/11/image2.png';
+import image1 from '../../assets/images/works/majikaruLove/image1.png';
+import image2 from '../../assets/images/works/majikaruLove/image2.png';
 
 export const majikaruLove: ProjectData = {
   type: 'avatar',

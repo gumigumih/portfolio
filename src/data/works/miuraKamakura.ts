@@ -1,24 +1,24 @@
 import { ProjectData } from './types';
-import image1 from '../../assets/images/works/5/image1.jpg';
-import image2 from '../../assets/images/works/5/image2.png';
-import image3 from '../../assets/images/works/5/image3.png';
-import image4 from '../../assets/images/works/5/image4.png';
-import image5 from '../../assets/images/works/5/image5.png';
-import image6 from '../../assets/images/works/5/image6.png';
-import image7 from '../../assets/images/works/5/image7.png';
-import image8 from '../../assets/images/works/5/image8.png';
-import image9 from '../../assets/images/works/5/image9.png';
-import image10 from '../../assets/images/works/6/image1.jpg';
-import image11 from '../../assets/images/works/6/image2.png';
-import image12 from '../../assets/images/works/6/image3.png';
-import image13 from '../../assets/images/works/6/image4.png';
-import image14 from '../../assets/images/works/7/image1.png';
-import image15 from '../../assets/images/works/7/image2.png';
-import image17 from '../../assets/images/works/8/image2.png';
-import image18 from '../../assets/images/works/8/image3.png';
-import image19 from '../../assets/images/works/8/image4.png';
-import image20 from '../../assets/images/works/8/image5.png';
-import image21 from '../../assets/images/works/8/image6.png';
+import image1 from '../../assets/images/works/miuraKamakura/image1.jpg';
+import image2 from '../../assets/images/works/miuraKamakura/image2.png';
+import image3 from '../../assets/images/works/miuraKamakura/image3.png';
+import image4 from '../../assets/images/works/miuraKamakura/image4.png';
+import image5 from '../../assets/images/works/miuraKamakura/image5.png';
+import image6 from '../../assets/images/works/miuraKamakura/image6.png';
+import image7 from '../../assets/images/works/miuraKamakura/image7.png';
+import image8 from '../../assets/images/works/miuraKamakura/image8.png';
+import image9 from '../../assets/images/works/miuraKamakura/image9.png';
+import image10 from '../../assets/images/works/miuraKamakura/image1.jpg';
+import image11 from '../../assets/images/works/miuraKamakura/image2.png';
+import image12 from '../../assets/images/works/miuraKamakura/image3.png';
+import image13 from '../../assets/images/works/miuraKamakura/image4.png';
+import image14 from '../../assets/images/works/miuraKamakura/image1.png';
+import image15 from '../../assets/images/works/miuraKamakura/image2.png';
+import image17 from '../../assets/images/works/miuraKamakura/image2.png';
+import image18 from '../../assets/images/works/miuraKamakura/image3.png';
+import image19 from '../../assets/images/works/miuraKamakura/image4.png';
+import image20 from '../../assets/images/works/miuraKamakura/image5.png';
+import image21 from '../../assets/images/works/miuraKamakura/image6.png';
 
 export const miuraKamakura: ProjectData = {
   type: 'tourism',

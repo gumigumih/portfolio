@@ -1,6 +1,6 @@
 import { ProjectData } from './types';
-import image1 from '../../assets/images/works/10/image1.png';
-import image2 from '../../assets/images/works/10/image2.png';
+import image1 from '../../assets/images/works/streamingManager/image1.png';
+import image2 from '../../assets/images/works/streamingManager/image2.png';
 
 export const streamingManager: ProjectData = {
   type: 'promotion',

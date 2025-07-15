@@ -1,12 +1,13 @@
 import { ProjectData } from './types';
-import image1a from '../../assets/images/works/14/image1a.png';
-import image1b from '../../assets/images/works/14/image1b.png';
-import image1c from '../../assets/images/works/14/image1c.png';
-import image2 from '../../assets/images/works/14/image2.png';
-import image3 from '../../assets/images/works/14/image3.png';
-import image4 from '../../assets/images/works/14/image4.png';
-import image5 from '../../assets/images/works/14/image5.png';
-import image6 from '../../assets/images/works/14/image6.png';
+import image1a from '../../assets/images/works/aiKataS2p/image1a.png';
+import image1b from '../../assets/images/works/aiKataS2p/image1b.png';
+import image1c from '../../assets/images/works/aiKataS2p/image1c.png';
+import image2 from '../../assets/images/works/aiKataS2p/image2.png';
+import image3 from '../../assets/images/works/aiKataS2p/image3.png';
+import image4 from '../../assets/images/works/aiKataS2p/image4.png';
+import image5 from '../../assets/images/works/aiKataS2p/image5.png';
+import image6 from '../../assets/images/works/aiKataS2p/image6.png';
+import thumbnail from '../../assets/images/works/aiKataS2p/thumbnail.png';
 
 export const aiKataS2p: ProjectData = {
   type: 'product',
@@ -14,7 +15,8 @@ export const aiKataS2p: ProjectData = {
   endDate: { year: 2025, month: 3 },
   heading: 'AI-KATA S2P',
   lead: 'AIによるイラスト解析・キャラクター生成ツール',
-  coverImage: image1a,
+  coverImage: thumbnail,
+  thumbnail,
   productUrl: 'https://aikatas2p.kidsplates.jp/',
   description: `AI-KATA S2Pは、子どもたちの描いたイラストをAIが解析し、キャラクターを生成する教育ツールです。
 展示バージョンからリリースバージョンへの移行を担当し、システム設計から機能改善、料金プラン設計までを実施。

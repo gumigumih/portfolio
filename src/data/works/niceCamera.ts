@@ -1,10 +1,11 @@
 import { ProjectData } from './types';
-import image1 from '../../assets/images/works/13/image1.png';
-import image2 from '../../assets/images/works/13/image2.png';
-import image3 from '../../assets/images/works/13/image3.png';
-import image4 from '../../assets/images/works/13/image4.png';
-import image5 from '../../assets/images/works/13/image5.jpg';
-import image6 from '../../assets/images/works/13/image6.png';
+import image1 from '../../assets/images/works/niceCamera/image1.png';
+import image2 from '../../assets/images/works/niceCamera/image2.png';
+import image3 from '../../assets/images/works/niceCamera/image3.png';
+import image4 from '../../assets/images/works/niceCamera/image4.png';
+import image5 from '../../assets/images/works/niceCamera/image5.jpg';
+import image6 from '../../assets/images/works/niceCamera/image6.png';
+import thumbnail from '../../assets/images/works/niceCamera/thumbnail.png';
 
 export const niceCamera: ProjectData = {
   type: 'product',
@@ -12,7 +13,8 @@ export const niceCamera: ProjectData = {
   endDate: { year: 2025, month: 3 },
   heading: 'NICE CAMERA',
   lead: 'アバタートラッキングアプリ',
-  coverImage: image1,
+  coverImage: thumbnail,
+  thumbnail,
   productUrl: 'https://nicecamera.kidsplates.jp/',
   description: `UnityとOpenSeeFaceを活用した顔認識技術により、高品質なアバター表示と安定した動作を実現するリモート会議・ライブ配信用アプリ。
 ITリテラシーの低いユーザーでも直感的に操作できるUIを重視し、累計6,000人のユーザーに利用されています。`,

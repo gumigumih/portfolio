@@ -9,6 +9,8 @@ export interface ProjectData {
   heading: string;
   lead: string;
   coverImage: string;
+  /** サムネイル画像（あれば） */
+  thumbnail?: string;
   productUrl?: string;
   description: string;
 

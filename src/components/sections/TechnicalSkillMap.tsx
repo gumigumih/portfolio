@@ -97,9 +97,9 @@ export default function SkillMap() {
             <h2 className={`text-[min(5vw,1.5rem)] font-bold mb-4 flex items-center justify-center gap-3 ${textColor}`}>
               <span className={`${iconBg} text-white p-2 rounded-lg`}>
                 <FontAwesomeIcon icon={icon} className="w-6 h-6" />
-              </span>
+            </span>
               {category}
-            </h2>
+          </h2>
             <div className="mt-[2rem] space-y-6">
               {(() => {
                 // サブカテゴリごとにグループ化
@@ -122,35 +122,35 @@ export default function SkillMap() {
                           <FontAwesomeIcon icon={subCategoryIcons[group.header.name]} className="w-4 h-4" />
                         )}
                         {group.header.name}
-                      </span>
-                    </div>
+                    </span>
+                  </div>
                     <ul className="space-y-2">
                       {group.items.map((skill, idx) => (
                         <li key={idx} className="flex items-center justify-between">
                           <span className="whitespace-pre-line text-[min(4vw,1.1rem)]">{skill.name}</span>
-                          <div className="flex space-x-1">
-                            {Array(5)
-                              .fill(0)
-                              .map((_, i) => (
-                                <div
-                                  key={i}
-                                  className={`w-[1.2rem] h-[1.2rem] ${
-                                    i < skill.level
-                                      ? `${skillColor} rounded-sm`
-                                      : 'bg-gray-200 scale-50 rounded-full'
-                                  }`}
-                                ></div>
-                              ))}
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="flex space-x-1">
+                      {Array(5)
+                        .fill(0)
+                        .map((_, i) => (
+                          <div
+                            key={i}
+                            className={`w-[1.2rem] h-[1.2rem] ${
+                              i < skill.level
+                                ? `${skillColor} rounded-sm`
+                                : 'bg-gray-200 scale-50 rounded-full'
+                            }`}
+                          ></div>
+                        ))}
+                    </div>
+              </li>
+            ))}
+          </ul>
                   </div>
                 ));
               })()}
             </div>
-          </div>
-        ))}
+        </div>
+      ))}
       </div>
     </div>
   );

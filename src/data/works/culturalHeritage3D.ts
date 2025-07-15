@@ -1,10 +1,10 @@
 import { ProjectData } from './types';
-import image1 from '../../assets/images/works/9/image1.png';
-import image2 from '../../assets/images/works/9/image2.png';
-import image3 from '../../assets/images/works/9/image3.png';
-import image4 from '../../assets/images/works/9/image4.png';
-import image5 from '../../assets/images/works/9/image5.png';
-import image6 from '../../assets/images/works/9/image6.png';
+import image1 from '../../assets/images/works/culturalHeritage3D/image1.png';
+import image2 from '../../assets/images/works/culturalHeritage3D/image2.png';
+import image3 from '../../assets/images/works/culturalHeritage3D/image3.png';
+import image4 from '../../assets/images/works/culturalHeritage3D/image4.png';
+import image5 from '../../assets/images/works/culturalHeritage3D/image5.png';
+import image6 from '../../assets/images/works/culturalHeritage3D/image6.png';
 
 export const culturalHeritage3D: ProjectData = {
   type: 'tourism',

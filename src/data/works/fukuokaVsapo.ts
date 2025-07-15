@@ -1,6 +1,7 @@
 import { ProjectData } from './types';
-import image1 from '../../assets/images/works/12/image1.png';
-import image2 from '../../assets/images/works/12/image2.png';
+import image1 from '../../assets/images/works/fukuokaVsapo/image1.png';
+import image2 from '../../assets/images/works/fukuokaVsapo/image2.png';
+import thumbnail from '../../assets/images/works/fukuokaVsapo/thumbnail.png';
 
 export const fukuokaVsapo: ProjectData = {
   type: 'avatar',
@@ -8,7 +9,7 @@ export const fukuokaVsapo: ProjectData = {
   endDate: { year: 2023, month: 9 },
   heading: 'FukuokaVsapo',
   lead: '引きこもり支援のアバター個別相談アプリ',
-  coverImage: image1,
+  coverImage: thumbnail,
   description: `本プロジェクトは、福岡市の観光案内をアバターで行うアプリの開発です。
 クライアントの要件を整理し、仕様決定・UI/UXデザイン・3Dアバター制作を担当しました。
 相談の予約システムとアカウント管理は別企業が開発し、アプリからログイン後、予約がある場合に入室できるようAPI連携を実装しました。`,

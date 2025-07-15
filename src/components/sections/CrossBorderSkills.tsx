@@ -109,15 +109,15 @@ export default function CrossBorderSkills() {
             <h4 className={`text-[min(5vw,1.5rem)] font-bold ${cat.textColor} mb-3 flex items-center gap-3`}>
               <div className={`${cat.iconBg} text-white p-2 rounded-lg`}>
                 <FontAwesomeIcon icon={cat.icon} className="w-5 h-5" />
-              </div>
+            </div>
               {cat.name}
-            </h4>
+          </h4>
             <div className="space-y-3 text-[min(4vw,1.1rem)] text-gray-700">
               {cat.items.map((item, idx) => (
                 <div key={idx} className="flex items-center gap-2">
                   <span className={`w-2 h-2 ${cat.dotColor} rounded-full`}></span>
                   {item}
-                </div>
+            </div>
               ))}
             </div>
             <div className={`mt-3 text-[min(4vw,1.1rem)] ${cat.roleColor} font-medium`}>
@@ -125,19 +125,19 @@ export default function CrossBorderSkills() {
             </div>
           </div>
         ))}
-      </div>
+          </div>
       {/* 越境型人材の価値は下部に横並びカードで表示 */}
       <div className="mt-16 bg-white rounded-xl p-8 border border-gray-200 shadow-lg">
         <h3 className="text-[min(5vw,1.5rem)] font-bold text-gray-800 mb-8 text-center flex items-center justify-center gap-2">
           <FontAwesomeIcon icon={faLightbulb} className="w-5 h-5" />
-          越境型人材の価値
+            越境型人材の価値
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {crossBorderEffectCards.map(card => (
             <div key={card.title} className="text-center">
               <div className={`${card.bg} text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4`}>
                 <FontAwesomeIcon icon={card.icon} className="w-5 h-5" />
-              </div>
+            </div>
               <h4 className="font-semibold text-gray-800 mb-3 text-[min(4vw,1.1rem)]">{card.title}</h4>
               <p className="text-[min(4vw,1.1rem)] text-gray-600">
                 {card.description}
