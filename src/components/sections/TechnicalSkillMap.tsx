@@ -4,10 +4,30 @@ interface Skill {
   isHeader?: boolean;
 }
 
-const skills: Record<string, { color: string; skillColor: string; skills: Skill[] }> = {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCode, faPalette, faLayerGroup, faChartBar, faBroadcastTower, faWrench } from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+
+// categoryMetaの内容をskillsに統合
+
+// サブカテゴリ名ごとのアイコン割り当て
+const subCategoryIcons: Record<string, IconDefinition> = {
+  'グラフィック': faPalette,
+  'UI/UX': faLayerGroup,
+  '3D・動画': faLayerGroup,
+  'ツール・分析': faChartBar,
+  '配信・SNS運用': faBroadcastTower,
+  'Frontend': faLayerGroup,
+  'Backend': faLayerGroup,
+  'Mobile & Others': faWrench,
+};
+
+const skills: Record<string, { skillColor: string; icon: IconDefinition; textColor: string; iconBg: string; skills: Skill[] }> = {
   "エンジニアリング": {
-    color: 'bg-slate-400/40',
-    skillColor: 'bg-slate-400',
+    skillColor: 'bg-green-500',
+    icon: faCode,
+    textColor: 'text-green-800',
+    iconBg: 'bg-green-500',
     skills: [
       { name: 'Frontend', level: 0, isHeader: true },
       { name: 'HTML/CSS/JS', level: 5 },
@@ -28,29 +48,38 @@ const skills: Record<string, { color: string; skillColor: string; skills: Skill[
       { name: 'DB設計', level: 3 },
     ],
   },
-  "デザイン": {
-    color: 'bg-slate-400/40',
-    skillColor: 'bg-slate-400',
+  "デザイン・クリエイティブ": {
+    skillColor: 'bg-purple-500',
+    icon: faPalette,
+    textColor: 'text-purple-800',
+    iconBg: 'bg-purple-500',
     skills: [
+      { name: 'グラフィック', level: 0, isHeader: true },
       { name: 'Photoshop', level: 4 },
       { name: 'Illustrator', level: 4 },
+      { name: 'UI/UX', level: 0, isHeader: true },
       { name: 'Adobe XD', level: 4 },
       { name: 'Figma', level: 2 },
+      { name: '3D・動画', level: 0, isHeader: true },
       { name: 'Premiere Pro', level: 1 },
       { name: 'VRoid Studio', level: 1 },
       { name: 'Blender', level: 1 },
       { name: 'Unity', level: 2 },
     ],
   },
-  "その他": {
-    color: 'bg-slate-400/40',
-    skillColor: 'bg-slate-400',
+  "ツール・分析・運用": {
+    skillColor: 'bg-blue-500',
+    icon: faChartBar,
+    textColor: 'text-blue-800',
+    iconBg: 'bg-blue-500',
     skills: [
+      { name: 'ツール・分析', level: 0, isHeader: true },
       { name: 'Git', level: 3 },
-      { name: 'OBS Studio', level: 2 },
       { name: 'Google Analytics', level: 3 },
       { name: 'Google Tag Manager', level: 3 },
       { name: 'Google Looker Studio', level: 1 },
+      { name: '配信・SNS運用', level: 0, isHeader: true },
+      { name: 'OBS Studio', level: 2 },
       { name: 'Meta Business Suite', level: 3 },
     ],
   },
@@ -58,50 +87,71 @@ const skills: Record<string, { color: string; skillColor: string; skills: Skill[
 
 export default function SkillMap() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-[2.5rem] mt-[2.5rem] w-[80%] mx-auto">
-      {Object.entries(skills).map(([category, { color, skillColor, skills: skillList }]) => (
-        <div key={category}>
-          <h2 className="text-[2rem] md:text-[2.5rem] font-bold text-center">
-            <span className="relative inline-block">
-              <span className={`absolute inset-x-0 bottom-1 h-4 ${color}`}></span>
-              <span className="relative z-1">{category}</span>
-            </span>
-          </h2>
-          <ul className="mt-[2rem] space-y-[1rem]">
-            {skillList.map((skill, idx) => (
-              <li key={idx} className={`flex items-center justify-between ${skill.isHeader ? 'mt-6 first:mt-0' : ''}`}>
-                {skill.isHeader ? (
-                  <div className="flex items-center gap-3 w-full">
-                    <div className="flex-1 h-px bg-gray-300"></div>
-                    <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider px-3 py-1 bg-gray-50 rounded-full border border-gray-200">
-                      {skill.name}
-                    </span>
-                    <div className="flex-1 h-px bg-gray-300"></div>
-                  </div>
-                ) : (
-                  <>
-                    <span className="whitespace-pre-line text-[1.2rem]">{skill.name}</span>
-                    <div className="flex space-x-1">
-                      {Array(5)
-                        .fill(0)
-                        .map((_, i) => (
-                          <div
-                            key={i}
-                            className={`w-[1.2rem] h-[1.2rem] ${
-                              i < skill.level
-                                ? `${skillColor} rounded-sm`
-                                : 'bg-gray-200 scale-50 rounded-full'
-                            }`}
-                          ></div>
-                        ))}
+    <div className="max-w-6xl mx-auto px-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {Object.entries(skills).map(([category, { skillColor, skills: skillList, icon, textColor, iconBg }]) => (
+          <div
+            key={category}
+            className="bg-white rounded-2xl shadow-lg p-8 flex flex-col h-full"
+          >
+            <h2 className={`text-[min(5vw,1.5rem)] font-bold mb-4 flex items-center justify-center gap-3 ${textColor}`}>
+              <span className={`${iconBg} text-white p-2 rounded-lg`}>
+                <FontAwesomeIcon icon={icon} className="w-6 h-6" />
+              </span>
+              {category}
+            </h2>
+            <div className="mt-[2rem] space-y-6">
+              {(() => {
+                // サブカテゴリごとにグループ化
+                const groups: { header: Skill; items: Skill[] }[] = [];
+                let currentGroup: { header: Skill | null; items: Skill[] } = { header: null, items: [] };
+                skillList.forEach((skill) => {
+                  if (skill.isHeader) {
+                    if (currentGroup.header) groups.push(currentGroup as { header: Skill; items: Skill[] });
+                    currentGroup = { header: skill, items: [] };
+                  } else {
+                    currentGroup.items.push(skill);
+                  }
+                });
+                if (currentGroup.header) groups.push(currentGroup as { header: Skill; items: Skill[] });
+                return groups.map((group, gidx) => (
+                  <div key={gidx}>
+                    <div className="flex items-center gap-3 w-full mb-2">
+                      <span className="inline-flex items-center gap-2 font-bold text-gray-600 text-[min(4.5vw,1.15rem)] text-left pb-1 bg-transparent">
+                        {subCategoryIcons[group.header.name] && (
+                          <FontAwesomeIcon icon={subCategoryIcons[group.header.name]} className="w-4 h-4" />
+                        )}
+                        {group.header.name}
+                      </span>
                     </div>
-                  </>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
+                    <ul className="space-y-2">
+                      {group.items.map((skill, idx) => (
+                        <li key={idx} className="flex items-center justify-between">
+                          <span className="whitespace-pre-line text-[min(4vw,1.1rem)]">{skill.name}</span>
+                          <div className="flex space-x-1">
+                            {Array(5)
+                              .fill(0)
+                              .map((_, i) => (
+                                <div
+                                  key={i}
+                                  className={`w-[1.2rem] h-[1.2rem] ${
+                                    i < skill.level
+                                      ? `${skillColor} rounded-sm`
+                                      : 'bg-gray-200 scale-50 rounded-full'
+                                  }`}
+                                ></div>
+                              ))}
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ));
+              })()}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

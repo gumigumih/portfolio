@@ -214,7 +214,7 @@ export default function WorkDetail({ project }: Props) {
                   {slide.images.map((img, i) => (
                     <div key={i} className="flex justify-center">
                       <Zoom>
-                        <img src={img} alt="" className="max-h-[500px] w-auto object-contain cursor-zoom-in rounded-lg shadow-md" />
+                        <img src={img} alt="" className="max-h-[500px] w-auto object-contain cursor-zoom-in rounded-lg shadow-lg" />
                       </Zoom>
                     </div>
                   ))}

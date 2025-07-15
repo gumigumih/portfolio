@@ -6,11 +6,13 @@ import { useNavigate } from 'react-router-dom';
 
 // OUTLINE の項目
 const outlineLinks = [
-  { id: 'career', title: 'キャリアについて' },
-  { id: 'skills', title: 'スキル・強み' },
-  { id: 'technicalSkills', title: 'テクニカルスキル' },
-  { id: 'projects', title: 'プロジェクト一覧' },
-  { id: 'last', title: 'さいごに' },
+  { id: 'career', title: 'キャリアについて', sub: false },
+  { id: 'skills', title: 'スキル・強み', sub: false },
+  { id: 'cross-border-skills', title: '越境型人材としてのスキルセット', sub: true },
+  { id: 'technical-skills', title: 'テクニカルスキル', sub: true },
+  { id: 'ai-tools-usage', title: '生成AI活用状況', sub: false },
+  { id: 'projects', title: 'プロジェクト一覧', sub: false },
+  { id: 'last', title: 'さいごに', sub: false },
 ];
 
 const projects = [
@@ -154,7 +156,7 @@ export default function SlideNav() {
     <div className='sticky top-0 ml-[min(-12vw,-12rem)] max-md:hidden z-50'>
       {/* 📌 OUTLINE メニュー */}
       <div
-        className={`transition-all absolute top-[3rem] left-[1rem] bg-white/80 backdrop-blur-lg shadow-md rounded-lg cursor-pointer z-20 ${
+        className={`transition-all absolute top-[3rem] left-[1rem] bg-white/80 backdrop-blur-lg shadow-lg rounded-lg cursor-pointer z-20 ${
           isOutlineOpen ? 'py-[0.3rem] px-[0.8rem]' : 'px-[0.8rem] py-0'
         }`}
       >
@@ -179,7 +181,10 @@ export default function SlideNav() {
                 onClick={() => {
                   document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="text-[1rem] text-gray-700 hover:text-blue-500 transition duration-200 py-[0.3rem] border-b border-gray-300 last:border-0"
+                className={
+                  `${item.sub ? 'pl-4 text-sm text-gray-500' : 'text-[1rem] text-gray-700'} ` +
+                  'hover:text-blue-500 transition duration-200 py-[0.3rem] border-b border-gray-300 last:border-0'
+                }
               >
                 {parse(item.title)}
               </li>
@@ -191,7 +196,7 @@ export default function SlideNav() {
       {/* 📌 TIMELINE メニュー */}
       <div className={`absolute top-0 left-0 w-full z-20`}>
         <button
-          className="absolute top-[1rem] left-[1rem] px-[0.8rem] bg-white/80 backdrop-blur-lg shadow-md rounded-lg text-[1rem] font-semibold z-20 flex items-center gap-2"
+          className="absolute top-[1rem] left-[1rem] px-[0.8rem] bg-white/80 backdrop-blur-lg shadow-lg rounded-lg text-[1rem] font-semibold z-20 flex items-center gap-2"
           onClick={() => setIsTimelineOpen(!isTimelineOpen)}
         >
           <FontAwesomeIcon icon={isTimelineOpen ? faChevronLeft : faChevronRight} className="text-sm" />
@@ -199,7 +204,7 @@ export default function SlideNav() {
         </button>
 
         <div
-          className={`w-full bg-gray-100 overflow-x-hidden rounded-b-lg shadow-md transition-all duration-500 ease-in-out
+          className={`w-full bg-gray-100 overflow-x-hidden rounded-b-lg shadow-lg transition-all duration-500 ease-in-out
             ${isTimelineOpen ? 'max-h-screen opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-4'}`}
         >
           <div className="py-[1rem] pr-[2rem] ml-[6rem] overflow-x-scroll">

@@ -1,190 +1,149 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLayerGroup, faPalette, faCode, faUsers, faEye } from '@fortawesome/free-solid-svg-icons';
+import { faLayerGroup, faPalette, faCode, faUsers, faEye, faLightbulb, faBrain } from '@fortawesome/free-solid-svg-icons';
+
+const categoryMetaList = [
+  {
+    name: 'プロダクト戦略',
+    icon: faLayerGroup,
+    iconBg: 'bg-blue-500',
+    textColor: 'text-blue-800',
+    dotColor: 'bg-blue-500',
+    roleColor: 'text-blue-600',
+    role: 'PdM、プロダクト戦略',
+    items: [
+      '要件整理・見積もり',
+      '仕様・要件定義',
+      '検証ループの設計',
+      '料金プラン・販売文脈設計',
+    ],
+  },
+  {
+    name: 'デザイン・UX',
+    icon: faPalette,
+    iconBg: 'bg-purple-500',
+    textColor: 'text-purple-800',
+    dotColor: 'bg-purple-500',
+    roleColor: 'text-purple-600',
+    role: 'デザイナー、UX設計者',
+    items: [
+      'UIデザイン',
+      'ロゴ制作',
+      'バナー制作',
+      'ユーザー体験設計',
+    ],
+  },
+  {
+    name: 'エンジニアリング',
+    icon: faCode,
+    iconBg: 'bg-green-500',
+    textColor: 'text-green-800',
+    dotColor: 'bg-green-500',
+    roleColor: 'text-green-600',
+    role: 'フルスタックエンジニア',
+    items: [
+      'Webアプリ開発',
+      'Unityアプリディレクション',
+      'DB設計',
+      'システム設計',
+    ],
+  },
+  {
+    name: 'プロジェクトマネジメント',
+    icon: faUsers,
+    iconBg: 'bg-orange-500',
+    textColor: 'text-orange-800',
+    dotColor: 'bg-orange-500',
+    roleColor: 'text-orange-600',
+    role: 'PM、ディレクター',
+    items: [
+      'チームマネジメント',
+      'タスク管理',
+      '要件共有',
+      '外注管理',
+    ],
+  },
+  {
+    name: 'カスタマーサクセス',
+    icon: faEye,
+    iconBg: 'bg-red-500',
+    textColor: 'text-red-800',
+    dotColor: 'bg-red-500',
+    roleColor: 'text-red-600',
+    role: 'CS、プロダクト運用',
+    items: [
+      'サポート対応',
+      '改善提案',
+      'アナウンス文作成',
+      'チームの心理的安全性',
+    ],
+  },
+];
+
+const crossBorderEffectCards = [
+  {
+    icon: faCode,
+    bg: 'bg-blue-500',
+    title: '全体最適化の視点',
+    description: '事業・組織全体を俯瞰し、最適な意思決定やリソース配分を実現。',
+  },
+  {
+    icon: faLightbulb,
+    bg: 'bg-green-500',
+    title: 'コミュニケーションコスト削減',
+    description: '複数領域を横断する知見で、部門間の連携や情報伝達をスムーズに。',
+  },
+  {
+    icon: faBrain,
+    bg: 'bg-purple-500',
+    title: '迅速な意思決定',
+    description: '幅広い経験を活かし、状況に応じた柔軟かつスピーディな判断が可能。',
+  },
+];
 
 export default function CrossBorderSkills() {
   return (
     <div className="max-w-6xl mx-auto px-10">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {/* プロダクト戦略 */}
-        <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300">
-          <h4 className="text-lg font-bold text-blue-800 mb-3 flex items-center gap-3">
-            <div className="bg-blue-500 text-white p-2 rounded-lg">
-              <FontAwesomeIcon icon={faLayerGroup} className="w-5 h-5" />
+        {categoryMetaList.map((cat) => (
+          <div key={cat.name} className="bg-white p-6 rounded-xl border border-gray-200 shadow-lg hover:shadow-lg transition-all duration-300">
+            <h4 className={`text-[min(5vw,1.5rem)] font-bold ${cat.textColor} mb-3 flex items-center gap-3`}>
+              <div className={`${cat.iconBg} text-white p-2 rounded-lg`}>
+                <FontAwesomeIcon icon={cat.icon} className="w-5 h-5" />
+              </div>
+              {cat.name}
+            </h4>
+            <div className="space-y-3 text-[min(4vw,1.1rem)] text-gray-700">
+              {cat.items.map((item, idx) => (
+                <div key={idx} className="flex items-center gap-2">
+                  <span className={`w-2 h-2 ${cat.dotColor} rounded-full`}></span>
+                  {item}
+                </div>
+              ))}
             </div>
-            プロダクト戦略
-          </h4>
-          <div className="space-y-2 text-sm text-gray-700">
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-              要件整理・見積もり
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-              仕様・要件定義
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-              検証ループの設計
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-              料金プラン・販売文脈設計
+            <div className={`mt-3 text-[min(4vw,1.1rem)] ${cat.roleColor} font-medium`}>
+              役割: {cat.role}
             </div>
           </div>
-          <div className="mt-3 text-xs text-blue-600 font-medium">
-            役割: PdM、プロダクト戦略
-          </div>
-        </div>
-
-        {/* デザイン・UX */}
-        <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300">
-          <h4 className="text-lg font-bold text-purple-800 mb-3 flex items-center gap-3">
-            <div className="bg-purple-500 text-white p-2 rounded-lg">
-              <FontAwesomeIcon icon={faPalette} className="w-5 h-5" />
+        ))}
+      </div>
+      {/* 越境型人材の価値は下部に横並びカードで表示 */}
+      <div className="mt-16 bg-white rounded-xl p-8 border border-gray-200 shadow-lg">
+        <h3 className="text-[min(5vw,1.5rem)] font-bold text-gray-800 mb-8 text-center flex items-center justify-center gap-2">
+          <FontAwesomeIcon icon={faLightbulb} className="w-5 h-5" />
+          越境型人材の価値
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {crossBorderEffectCards.map(card => (
+            <div key={card.title} className="text-center">
+              <div className={`${card.bg} text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4`}>
+                <FontAwesomeIcon icon={card.icon} className="w-5 h-5" />
+              </div>
+              <h4 className="font-semibold text-gray-800 mb-3 text-[min(4vw,1.1rem)]">{card.title}</h4>
+              <p className="text-[min(4vw,1.1rem)] text-gray-600">
+                {card.description}
+              </p>
             </div>
-            デザイン・UX
-          </h4>
-          <div className="space-y-2 text-sm text-gray-700">
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
-              UIデザイン
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
-              ロゴ制作
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
-              バナー制作
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
-              ユーザー体験設計
-            </div>
-          </div>
-          <div className="mt-3 text-xs text-purple-600 font-medium">
-            役割: デザイナー、UX設計者
-          </div>
-        </div>
-
-        {/* エンジニアリング */}
-        <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300">
-          <h4 className="text-lg font-bold text-green-800 mb-3 flex items-center gap-3">
-            <div className="bg-green-500 text-white p-2 rounded-lg">
-              <FontAwesomeIcon icon={faCode} className="w-5 h-5" />
-            </div>
-            エンジニアリング
-          </h4>
-          <div className="space-y-2 text-sm text-gray-700">
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-              Webアプリ開発
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-              Unityアプリディレクション
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-              DB設計
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-              システム設計
-            </div>
-          </div>
-          <div className="mt-3 text-xs text-green-600 font-medium">
-            役割: フルスタックエンジニア
-          </div>
-        </div>
-
-        {/* プロジェクトマネジメント */}
-        <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300">
-          <h4 className="text-lg font-bold text-orange-800 mb-3 flex items-center gap-3">
-            <div className="bg-orange-500 text-white p-2 rounded-lg">
-              <FontAwesomeIcon icon={faUsers} className="w-5 h-5" />
-            </div>
-            プロジェクトマネジメント
-          </h4>
-          <div className="space-y-2 text-sm text-gray-700">
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-              チームマネジメント
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-              タスク管理
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-              要件共有
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-              外注管理
-            </div>
-          </div>
-          <div className="mt-3 text-xs text-orange-600 font-medium">
-            役割: PM、ディレクター
-          </div>
-        </div>
-
-        {/* カスタマーサクセス */}
-        <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300">
-          <h4 className="text-lg font-bold text-red-800 mb-3 flex items-center gap-3">
-            <div className="bg-red-500 text-white p-2 rounded-lg">
-              <FontAwesomeIcon icon={faEye} className="w-5 h-5" />
-            </div>
-            カスタマーサクセス
-          </h4>
-          <div className="space-y-2 text-sm text-gray-700">
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-              サポート対応
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-              改善提案
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-              アナウンス文作成
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-              チームの心理的安全性
-            </div>
-          </div>
-          <div className="mt-3 text-xs text-red-600 font-medium">
-            役割: CS、プロダクト運用
-          </div>
-        </div>
-
-        {/* 越境型人材の価値 */}
-        <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 md:col-span-2 lg:col-span-1">
-          <h4 className="text-lg font-bold text-gray-800 mb-3 flex items-center gap-3">
-            <div className="bg-gray-500 text-white p-2 rounded-lg">
-              <FontAwesomeIcon icon={faLayerGroup} className="w-5 h-5" />
-            </div>
-            越境型人材の価値
-          </h4>
-          <div className="space-y-2 text-sm text-gray-700">
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-gray-500 rounded-full"></span>
-              全体最適化の視点
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-gray-500 rounded-full"></span>
-              コミュニケーションコスト削減
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-gray-500 rounded-full"></span>
-              迅速な意思決定
-            </div>
-          </div>
-          <div className="mt-3 text-xs text-gray-600 font-medium">
-            フルサイクルエンジニア × PdM的立ち回り
-          </div>
+          ))}
         </div>
       </div>
     </div>

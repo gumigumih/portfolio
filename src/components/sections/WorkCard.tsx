@@ -26,7 +26,7 @@ const WorkCard = ({ project, onClick }: WorkCardProps) => {
 
   return (
     <div
-      className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow duration-300"
+      className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300"
       onClick={onClick}
     >
       <div className="relative h-48">
