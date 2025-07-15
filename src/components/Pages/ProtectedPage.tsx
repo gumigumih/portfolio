@@ -2,13 +2,9 @@ import { useProtectedPage } from '../../hooks/useProtectedPage';
 import CrossBorderSkills from '../sections/CrossBorderSkills';
 import AIToolsUsage from '../sections/AIToolsUsage';
 import SlideNav from '../layout/SlideNav';
-import HeartShape from '../ui/icons/HeartShape';
 import FadeInSection from '../ui/animations/FadeInSection';
 import MainVisual from '../sections/MainVisual';
-import WorkCard from '../sections/WorkCard';
 import WorkDetail from '../sections/WorkDetail';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendarAlt, faLayerGroup } from '@fortawesome/free-solid-svg-icons';
 import { ProjectData } from '../../data/works/types';
 import virtualBusinessCard from '../../data/works/virtualBusinessCard';
 import culturalHeritage3D from '../../data/works/culturalHeritage3D';
@@ -40,15 +36,13 @@ const projectData: { [key: string]: ProjectData } = {
   snackAR: snackAR,
 };
 
-// type SortOrder = 'chronological' | 'genre'; // 未使用のため削除
-
 const FILTER_CONFIG = [
-  { type: 'all' as const, label: 'すべて', color: 'bg-gray-800' },
-  { type: 'product' as const, label: 'プロダクト開発・運営', color: 'bg-blue-500' },
-  { type: 'tourism' as const, label: '観光・地域振興系', color: 'bg-green-500' },
-  { type: 'avatar' as const, label: 'アバター活用支援', color: 'bg-purple-500' },
-  { type: 'promotion' as const, label: '販促・その他', color: 'bg-orange-500' },
-] as const;
+  { type: 'all', label: 'すべて', color: 'bg-gray-800' },
+  { type: 'product', label: 'プロダクト開発・運営', color: 'bg-blue-500' },
+  { type: 'tourism', label: '観光・地域振興系', color: 'bg-green-500' },
+  { type: 'avatar', label: 'アバター活用支援', color: 'bg-purple-500' },
+  { type: 'promotion', label: '販促・その他', color: 'bg-orange-500' },
+];
 
 export default function ProtectedPage() {
   const {
@@ -60,6 +54,12 @@ export default function ProtectedPage() {
     handleProjectClick,
     handleCloseModal,
   } = useProtectedPage();
+  // setSortOrder型対応
+  const handleSortOrder = (order: string) => {
+    if (order === 'chronological' || order === 'genre') {
+      setSortOrder(order);
+    }
+  };
   return (
     <div className="relative max-w-screen-2xl w-full mx-auto md:pl-[12rem]">
       <SlideNav />
@@ -119,7 +119,7 @@ export default function ProtectedPage() {
           <ProjectListSection
             filteredProjects={filteredProjects}
             sortOrder={sortOrder}
-            setSortOrder={setSortOrder}
+            setSortOrder={handleSortOrder}
             handleProjectClick={handleProjectClick}
             selectedProject={selectedProject}
             handleCloseModal={handleCloseModal}

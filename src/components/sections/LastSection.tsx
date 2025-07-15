@@ -1,4 +1,3 @@
-import React from 'react';
 import HeartShape from '../ui/icons/HeartShape';
 
 export default function LastSection() {
