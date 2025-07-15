@@ -1,12 +1,12 @@
 import { useProtectedPage } from '../../hooks/useProtectedPage';
-import CrossBorderSkills from '../features/skills/CrossBorderSkills';
-import AIToolsUsage from '../features/skills/AIToolsUsage';
+import CrossBorderSkills from '../sections/CrossBorderSkills';
+import AIToolsUsage from '../sections/AIToolsUsage';
 import SlideNav from '../layout/SlideNav';
-import HeartShape from '../ui/HeartShape';
-import FadeInSection from '../ui/FadeInSection';
-import MainVisual from '../ui/MainVisual';
-import WorkCard from '../features/works/WorkCard';
-import WorkDetail from '../features/works/WorkDetail';
+import HeartShape from '../ui/icons/HeartShape';
+import FadeInSection from '../ui/animations/FadeInSection';
+import MainVisual from '../sections/MainVisual';
+import WorkCard from '../sections/WorkCard';
+import WorkDetail from '../sections/WorkDetail';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt, faLayerGroup } from '@fortawesome/free-solid-svg-icons';
 import { ProjectData } from '../../data/works/types';
@@ -21,6 +21,7 @@ import aiKataS2p from '../../data/works/aiKataS2p';
 import nijisanjiKuji from '../../data/works/nijisanjiKuji';
 import youtubeScheduler from '../../data/works/youtubeScheduler';
 import snackAR from '../../data/works/snackAR';
+import TechnicalSkillMap from '../sections/TechnicalSkillMap';
 
 const projectData: { [key: string]: ProjectData } = {
   virtualBusinessCard: virtualBusinessCard,
@@ -131,9 +132,7 @@ export default function ProtectedPage() {
             テクニカルスキル
             <span className="flex-grow h-px bg-gray-300"></span>
           </h2>
-          {/* TechnicalSkillMap component was removed from imports, so this section will be empty or require a new import */}
-          {/* For now, keeping the structure but noting the missing import */}
-          {/* <TechnicalSkillMap /> */}
+          <TechnicalSkillMap />
         </div>
       </FadeInSection>
 

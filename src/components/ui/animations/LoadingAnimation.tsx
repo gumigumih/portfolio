@@ -1,4 +1,4 @@
-import HeartShape from "./HeartShape";
+import HeartShape from "../icons/HeartShape";
 
 export default function LoadingAnimation() {
   return (

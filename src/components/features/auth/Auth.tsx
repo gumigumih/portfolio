@@ -1,8 +1,8 @@
 import { useAuth } from '../../../hooks/useAuth';
 import Login from './Login';
 import ProtectedPage from '../../../components/pages/ProtectedPage';
-import LoadingAnimation from '../../../components/ui/LoadingAnimation';
-import MainVisual from '../../../components/ui/MainVisual';
+import LoadingAnimation from '../../../components/ui/animations/LoadingAnimation';
+import MainVisual from '../../../components/sections/MainVisual';
 
 export default function Auth() {
   const { authenticated, setAuthenticated, isChecking } = useAuth();
