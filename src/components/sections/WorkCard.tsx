@@ -42,7 +42,27 @@ const WorkCard = ({ project, onClick }: WorkCardProps) => {
       <div className="p-4">
         <h3 className="text-[1.2rem] font-bold mb-1">{project.heading}</h3>
         <p className="text-gray-600 text-[1.1rem] mb-2">{project.lead}</p>
-        <p className="text-gray-500 text-[1rem]">{formatPeriod()}</p>
+        <p className="text-gray-500 text-[1rem] mb-2">{formatPeriod()}</p>
+        {project.achievements && project.achievements.length > 0 && (
+          <div className="grid grid-cols-1 gap-3 mt-3">
+            {project.achievements.slice(0, 4).map((achievement, index) => (
+              <div
+                key={index}
+                className="bg-gray-50 rounded-xl border border-gray-200 p-4 flex flex-col items-center hover:scale-[1.03] transition-transform duration-200"
+              >
+                <div className="text-gray-700 font-semibold text-[1rem] mb-1 text-center">
+                  {achievement.title}
+                </div>
+                <div className="text-[1.3rem] font-extrabold text-gray-800 mb-1 leading-none">
+                  {achievement.value}
+                </div>
+                <div className="text-gray-600 text-[0.95rem] text-center whitespace-pre-line">
+                  {achievement.description}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

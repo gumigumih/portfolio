@@ -3,6 +3,7 @@ import image1 from '../../assets/images/works/snackAR/image1.png';
 import image2 from '../../assets/images/works/snackAR/image2.png';
 import image3 from '../../assets/images/works/snackAR/image3.png';
 import image4 from '../../assets/images/works/snackAR/image4.png';
+import thumbnail from '../../assets/images/works/snackAR/thumbnail.png';
 
 export const snackAR: ProjectData = {
   type: 'promotion',
@@ -10,7 +11,7 @@ export const snackAR: ProjectData = {
   endDate: { year: 2020, month: 4 },
   heading: 'お菓子販促コンテンツ',
   lead: 'ARコンテンツによるお菓子パッケージプロモーション',
-  coverImage: image1,
+  coverImage: thumbnail,
   description: `本プロジェクトは、お菓子のパッケージにQRコードを掲載し、ARコンテンツを活用したプロモーションを行うものです。
 受験・行楽シーズン向けに、合格祈願AR、ひらがなクイズ、顔ハメフィルターの制作を担当しました。`,
 

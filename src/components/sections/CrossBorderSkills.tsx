@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLayerGroup, faPalette, faCode, faUsers, faEye, faLightbulb, faBrain } from '@fortawesome/free-solid-svg-icons';
+import { faBullhorn } from '@fortawesome/free-solid-svg-icons';
 
 const categoryMetaList = [
   {
@@ -11,10 +12,15 @@ const categoryMetaList = [
     roleColor: 'text-blue-600',
     role: 'PdM、プロダクト戦略',
     items: [
-      '要件整理・見積もり',
-      '仕様・要件定義',
-      '検証ループの設計',
-      '料金プラン・販売文脈設計',
+      'ビジョン策定・ロードマップ',
+      '市場/競合分析',
+      '課金モデル・システム構築',
+      '料金プラン・機能設計',
+      '展示会運営',
+      'ユーザーインタビュー・SNS反応分析',
+      'Discord運営・意見収集',
+      'パートナー/代理店設計',
+      '法務・コンプラ対応',
     ],
   },
   {
@@ -24,12 +30,14 @@ const categoryMetaList = [
     textColor: 'text-purple-800',
     dotColor: 'bg-purple-500',
     roleColor: 'text-purple-600',
-    role: 'デザイナー、UX設計者',
+    role: 'メインUIデザイナー、UX設計者',
     items: [
       'UIデザイン',
       'ロゴ制作',
-      'バナー制作',
-      'ユーザー体験設計',
+      'SNS告知用バナー制作',
+      'ストア掲載用バナー制作',
+      'UX改善提案・UIデザイン',
+      '展示会用チラシ・ポスター制作',
     ],
   },
   {
@@ -39,12 +47,15 @@ const categoryMetaList = [
     textColor: 'text-green-800',
     dotColor: 'bg-green-500',
     roleColor: 'text-green-600',
-    role: 'フルスタックエンジニア',
+    role: 'メインWEBエンジニア、フルスタックエンジニア',
     items: [
       'Webアプリ開発',
-      'Unityアプリディレクション',
+      'GASアプリ開発',
       'DB設計',
       'システム設計',
+      'コーポレートサイト制作・運営',
+      'プロダクトサイト制作・運営',
+      'Stripe月額課金システム構築',
     ],
   },
   {
@@ -58,8 +69,12 @@ const categoryMetaList = [
     items: [
       'チームマネジメント',
       'タスク管理',
-      '要件共有',
+      'プロジェクト要件・仕様共有',
       '外注管理',
+      'チームコミュニケーション促進',
+      '技術・ノウハウ蓄積',
+      'アバターアプリ用3Dキャラクター制作管理',
+      'Unityアプリディレクション',
     ],
   },
   {
@@ -71,10 +86,30 @@ const categoryMetaList = [
     roleColor: 'text-red-600',
     role: 'CS、プロダクト運用',
     items: [
-      'サポート対応',
+      '問い合わせサポート対応',
       '改善提案',
-      'アナウンス文作成',
-      'チームの心理的安全性',
+      'Discordコミュニティ運営',
+      'アップデートお知らせ文作成',
+      '法人向け契約更新サポート',
+      'ユーザーフィードバック時の操作案内・サポート',
+      'ヘルプページの作成・サポート体制の構築',
+    ],
+  },
+  {
+    name: '広報・マーケティング',
+    icon: faBullhorn,
+    iconBg: 'bg-pink-500',
+    textColor: 'text-pink-800',
+    dotColor: 'bg-pink-500',
+    roleColor: 'text-pink-600',
+    role: '広報・マーケター',
+    items: [
+      'プレスリリース',
+      'SNS運用',
+      'イベント告知・集客',
+      '展示会企画・出展・運営',
+      '展示会でのリード獲得・フォロー',
+      '展示会でのキャンペーン実施・運営',
     ],
   },
 ];

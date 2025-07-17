@@ -66,6 +66,11 @@ export const virtualBusinessCard: ProjectData = {
       title: "アクティブユーザー",
       value: "500+",
       description: "日常的な利用者数"
+    },
+    {
+      title: "超短期間リリース",
+      value: "3日",
+      description: "発案から開発・リリースまで3日で完遂"
     }
   ],
 

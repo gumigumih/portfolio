@@ -111,19 +111,19 @@ ITリテラシーの低いユーザーでも直感的に操作できるUIを重�
   // 4. 成果と実績
   achievements: [
     {
-      title: "ユーザー数",
-      value: "6,000+",
-      description: "累計ユーザー数"
+      title: "代理店展開",
+      value: "3社",
+      description: "販売代理店の獲得・展開"
     },
     {
-      title: "導入実績",
-      value: "16",
-      description: "企業・団体・学校"
+      title: "ユーザーコミュニティ",
+      value: "Discord運営",
+      description: "スタンプコンテスト企画・運営によるエンゲージメント向上"
     },
     {
-      title: "代理店",
-      value: "3",
-      description: "販売代理店"
+      title: "サブスクリプション導入",
+      value: "Stripe実装",
+      description: "課金システムの設計・実装・運用まで一貫して担当"
     },
   ],
 
