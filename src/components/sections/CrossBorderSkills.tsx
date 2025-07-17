@@ -162,7 +162,7 @@ export default function CrossBorderSkills() {
         ))}
           </div>
       {/* 越境型人材の価値は下部に横並びカードで表示 */}
-      <div className="mt-16 bg-white rounded-xl p-8 border border-gray-200 shadow-lg">
+      <div className="mt-8 bg-white rounded-xl p-8 border border-gray-200 shadow-lg">
         <h3 className="text-[min(5vw,1.5rem)] font-bold text-gray-800 mb-8 text-center flex items-center justify-center gap-2">
           <FontAwesomeIcon icon={faLightbulb} className="w-5 h-5" />
             越境型人材の価値
