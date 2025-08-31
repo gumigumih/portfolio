@@ -163,7 +163,7 @@ export default function AIToolsUsage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {aiEffectCards.map(card => (
             <div key={card.title} className="text-center">
-              <div className={`${card.bg} text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4`}>
+              <div className="bg-gray-500 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                 <FontAwesomeIcon icon={card.icon} className="w-5 h-5" />
               </div>
               <h4 className="font-semibold text-gray-800 mb-3 text-[min(4vw,1.1rem)]">{card.title}</h4>

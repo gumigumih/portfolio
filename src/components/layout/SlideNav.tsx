@@ -9,6 +9,8 @@ const outlineLinks = [
   { id: 'career', title: 'キャリアについて', sub: false },
   { id: 'skills', title: 'スキル・強み', sub: false },
   { id: 'cross-border-skills', title: '越境型人材としてのスキルセット', sub: true },
+  { id: 'product-strategy', title: 'プロダクト戦略・マネジメント', sub: true },
+  { id: 'integrated-process', title: '統合プロダクト開発プロセス', sub: true },
   { id: 'technical-skills', title: 'テクニカルスキル', sub: true },
   { id: 'ai-tools-usage', title: '生成AI活用状況', sub: false },
   { id: 'projects', title: 'プロジェクト一覧', sub: false },

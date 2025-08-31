@@ -1,6 +1,8 @@
 import { useProtectedPage } from '../../hooks/useProtectedPage';
 import CrossBorderSkills from '../sections/CrossBorderSkills';
 import AIToolsUsage from '../sections/AIToolsUsage';
+import ProductDevelopmentSection from '../sections/ProductDevelopmentSection';
+import ProductStrategySection from '../sections/ProductStrategySection';
 import SlideNav from '../layout/SlideNav';
 import FadeInSection from '../ui/animations/FadeInSection';
 import MainVisual from '../sections/MainVisual';
@@ -84,6 +86,18 @@ export default function ProtectedPage() {
           <div id="cross-border-skills" className="mb-16">
             <h3 className="text-xl font-bold text-gray-800 mb-8 text-center">越境型人材としてのスキルセット</h3>
             <CrossBorderSkills />
+          </div>
+
+          {/* プロダクト戦略・マネジメント */}
+          <div id="product-strategy" className="mb-16">
+            <h3 className="text-xl font-bold text-gray-800 mb-8 text-center">プロダクト戦略・マネジメント</h3>
+            <ProductStrategySection />
+          </div>
+
+          {/* 統合プロダクト開発プロセス */}
+          <div id="integrated-process" className="mb-16">
+            <h3 className="text-xl font-bold text-gray-800 mb-8 text-center">統合プロダクト開発プロセス</h3>
+            <ProductDevelopmentSection />
           </div>
 
           {/* テクニカルスキル */}
