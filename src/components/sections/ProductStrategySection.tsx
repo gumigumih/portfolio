@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLightbulb, faChartLine, faUsers, faCogs } from '@fortawesome/free-solid-svg-icons';
+import { faLightbulb, faChartLine, faUsers } from '@fortawesome/free-solid-svg-icons';
 
 const productStrategyPrinciples = [
   {
