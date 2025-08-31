@@ -94,9 +94,9 @@ export default function ProtectedPage() {
             <ProductStrategySection />
           </div>
 
-          {/* 統合プロダクト開発プロセス */}
+          {/* プロダクト開発プロセス */}
           <div id="integrated-process" className="mb-16">
-            <h3 className="text-xl font-bold text-gray-800 mb-8 text-center">統合プロダクト開発プロセス</h3>
+            <h3 className="text-xl font-bold text-gray-800 mb-8 text-center">プロダクト開発プロセス</h3>
             <ProductDevelopmentSection />
           </div>
 
