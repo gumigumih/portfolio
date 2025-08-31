@@ -17,13 +17,14 @@ export default function CareerSection() {
             <span className="bg-gray-100 px-1 rounded font-semibold">ユーザーの声に基づいた改善</span>を重ね、5年間でプロダクトの成長に貢献しました。<br />
             <br />
             多岐にわたるプロジェクトをディレクションする中で、<br />
-            <span className="bg-gray-100 px-1 rounded font-semibold">Webエンジニアリング</span>と<span className="bg-gray-100 px-1 rounded font-semibold">UIデザイン</span>を強みとする<span className="bg-yellow-100 px-1 rounded font-bold">「T型人材」</span>として成長しました。<br />
+            <span className="bg-yellow-100 px-1 rounded font-bold">ジェネラリストとして幅広い経験を持ちながら、WebエンジニアリングとUIデザインという2つの専門性を強みとしています</span>。<br />
             特定分野での深い技術力と、PM・ディレクション業務で身につけた<span className="bg-gray-100 px-1 rounded font-semibold">幅広い知識・経験</span>を併せ持ち、<br />
             開発・デザイン・ビジネスの橋渡し役として、プロダクト全体を最適化する意思決定ができるようになりました。<br />
             <br />
+            また、他分野の専門家との交流を通じて、<span className="bg-gray-100 px-1 rounded font-semibold">プロダクトを多角的に捉える</span>ことができ、<br />
             改善施策の立案・実行から収益化まで一貫して携わり、<br />
-            結果的に<span className="bg-gray-100 px-1 rounded font-semibold">「フルサイクルエンジニア」</span>と<span className="bg-gray-100 px-1 rounded font-semibold">「PdM的立ち回り」</span>を自然に行えるようになり、<br />
-            これはまさに今の時代に求められる<span className="bg-yellow-100 px-1 rounded font-bold">「越境型人材」</span>そのものです。<br />
+            結果的に<span className="bg-gray-100 px-1 rounded font-semibold">「フルサイクルエンジニア」</span>と<span className="bg-gray-100 px-1 rounded font-semibold">「PdM的立ち回り」</span>を自然に行えるようになりました。<br />
+            これはまさに今の時代に求められる<span className="bg-yellow-100 px-1 rounded font-bold">総合的なプロダクト開発力</span>そのものです。<br />
             <br />
             特に<span className="bg-gray-100 px-1 rounded font-semibold">ユーザーの声に基づいた改善</span>と、<br />
             <span className="bg-gray-100 px-1 rounded font-semibold">持続的な価値創造</span>に深く関心を持っています。
