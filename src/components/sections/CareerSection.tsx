@@ -11,21 +11,22 @@ export default function CareerSection() {
         before:bg-[length:100%_2.5rem] before:z-0">
         <div className="relative z-10">
           <p className="text-[1.2rem] leading-relaxed text-gray-700">
-            WEBエンジニアとしてキャリアをスタートし、<br />
-            デザイン技術も活かしてWEBエンジニア兼UIデザイナーとして活動してきました。<br />
-            現在は受注開発でチーム制作を行い、ディレクター職としてプロジェクト全体をリードしています。<br />
+            新卒で入社したベンチャー企業では、<span className="bg-gray-100 px-1 rounded font-semibold">受託開発プロジェクトのPM</span>を務めながら、<br />
+            同時に<span className="bg-gray-100 px-1 rounded font-semibold">自社プロダクトの立ち上げから運用</span>まで一貫して担当しました。<br />
+            要件定義、UI設計・実装、マーケティング、カスタマーサポートまで幅広い業務を経験し、<br />
+            <span className="bg-gray-100 px-1 rounded font-semibold">ユーザーの声に基づいた改善</span>を重ね、5年間でプロダクトの成長に貢献しました。<br />
             <br />
-            また、自社プロダクトの企画・開発・運営経験もあり、<br />
-            設計・開発からUIデザイン、展示会運営、法務対応、カスタマーサポートまで幅広く担当してきました。<br />
+            多岐にわたるプロジェクトをディレクションする中で、<br />
+            <span className="bg-gray-100 px-1 rounded font-semibold">Webエンジニアリング</span>と<span className="bg-gray-100 px-1 rounded font-semibold">UIデザイン</span>を強みとする<span className="bg-yellow-100 px-1 rounded font-bold">「T型人材」</span>として成長しました。<br />
+            特定分野での深い技術力と、PM・ディレクション業務で身につけた<span className="bg-gray-100 px-1 rounded font-semibold">幅広い知識・経験</span>を併せ持ち、<br />
+            開発・デザイン・ビジネスの橋渡し役として、プロダクト全体を最適化する意思決定ができるようになりました。<br />
+            <br />
             改善施策の立案・実行から収益化まで一貫して携わり、<br />
-            結果的に「フルサイクルエンジニア」と「PdM的立ち回り」を自然に行っており、<br />
-            これはまさに今の時代に求められる「越境型人材」そのものです。<br />
+            結果的に<span className="bg-gray-100 px-1 rounded font-semibold">「フルサイクルエンジニア」</span>と<span className="bg-gray-100 px-1 rounded font-semibold">「PdM的立ち回り」</span>を自然に行えるようになり、<br />
+            これはまさに今の時代に求められる<span className="bg-yellow-100 px-1 rounded font-bold">「越境型人材」</span>そのものです。<br />
             <br />
-            特にプロダクトライフサイクル全体での価値提供と、<br />
-            持続的なビジネスモデルの構築に深く関心を持っています。<br />
-            <br />
-            今後はよりプロダクト志向を強め、<br />
-            持続的な価値創造にコミットする役割を目指しています。
+            特に<span className="bg-gray-100 px-1 rounded font-semibold">ユーザーの声に基づいた改善</span>と、<br />
+            <span className="bg-gray-100 px-1 rounded font-semibold">持続的な価値創造</span>に深く関心を持っています。
           </p>
         </div>
       </div>

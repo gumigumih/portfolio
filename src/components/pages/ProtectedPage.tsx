@@ -63,7 +63,7 @@ export default function ProtectedPage() {
     }
   };
   return (
-    <div className="relative max-w-screen-2xl w-full mx-auto md:pl-[12rem]">
+    <div className="relative max-w-screen-2xl w-full mx-auto md:pl-[12rem] pb-1">
       <SlideNav />
 
       <FadeInSection>
