@@ -94,22 +94,22 @@ const designPrinciples = [
 
 const engineeringPrinciples = [
   {
-    title: 'ユーザー中心の技術設計',
-    description: '技術的な制約を理解しつつ、ユーザー体験を最優先にした実装を行う',
+    title: '再利用可能な部品設計',
+    description: 'コンポーネント化とモジュール設計により、開発効率と保守性を向上させる',
     icon: faCode,
     color: 'bg-blue-500',
     textColor: 'text-blue-800'
   },
   {
-    title: '保守性と拡張性の重視',
-    description: '長期的に運用・改善できるよう、保守しやすく拡張可能な設計を心がける',
+    title: '責務の分離と疎結合',
+    description: '単一責任原則に従い、各コンポーネントの責務を明確に分離する',
     icon: faCogs,
     color: 'bg-green-500',
     textColor: 'text-green-800'
   },
   {
-    title: 'セキュリティとパフォーマンスの両立',
-    description: '安全性を確保しながら、高速で快適なユーザー体験を提供する',
+    title: '技術選定の最適化',
+    description: '既存の知見を最大限活かしつつ、プロジェクトに最適な技術を選定する',
     icon: faRocket,
     color: 'bg-purple-500',
     textColor: 'text-purple-800'

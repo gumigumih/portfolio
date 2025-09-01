@@ -1,9 +1,11 @@
 import React from 'react';
 import WorkCard from './WorkCard';
 import WorkDetail from './WorkDetail';
+import Button from '../ui/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt, faLayerGroup } from '@fortawesome/free-solid-svg-icons';
 import { ProjectData } from '../../data/works/types';
+import { FILTER_CONFIG } from '../../constants/projectTypes';
 
 interface ProjectListSectionProps {
   filteredProjects: [string, ProjectData][];
@@ -13,7 +15,6 @@ interface ProjectListSectionProps {
   selectedProject: string | null;
   handleCloseModal: () => void;
   projectData: { [key: string]: ProjectData };
-  FILTER_CONFIG: { type: string; label: string; color: string }[];
 }
 
 const ProjectListSection: React.FC<ProjectListSectionProps> = ({
@@ -24,7 +25,6 @@ const ProjectListSection: React.FC<ProjectListSectionProps> = ({
   selectedProject,
   handleCloseModal,
   projectData,
-  FILTER_CONFIG,
 }) => {
   return (
     <>
@@ -32,30 +32,22 @@ const ProjectListSection: React.FC<ProjectListSectionProps> = ({
       <div className="flex justify-center -mt-10 mb-12">
         <div className="flex items-center gap-4">
           <div className="flex gap-2">
-            <button
+            <Button
+              variant={sortOrder === 'chronological' ? 'primary' : 'secondary'}
               onClick={() => setSortOrder('chronological')}
-              className={`px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-2
-                ${sortOrder === 'chronological'
-                  ? 'bg-gray-700 text-white shadow-lg'
-                  : 'bg-white text-gray-600 hover:bg-gray-100'
-                }`}
+              icon={<FontAwesomeIcon icon={faCalendarAlt} className="h-4 w-4" />}
               title="時系列順"
             >
-              <FontAwesomeIcon icon={faCalendarAlt} className="h-4 w-4" />
               時系列順
-            </button>
-            <button
+            </Button>
+            <Button
+              variant={sortOrder === 'genre' ? 'primary' : 'secondary'}
               onClick={() => setSortOrder('genre')}
-              className={`px-4 py-2 rounded-full transition-all duration-200 flex items-center gap-2
-                ${sortOrder === 'genre'
-                  ? 'bg-gray-700 text-white shadow-lg'
-                  : 'bg-white text-gray-600 hover:bg-gray-100'
-                }`}
+              icon={<FontAwesomeIcon icon={faLayerGroup} className="h-4 w-4" />}
               title="ジャンル順"
             >
-              <FontAwesomeIcon icon={faLayerGroup} className="h-4 w-4" />
               ジャンル順
-            </button>
+            </Button>
           </div>
         </div>
       </div>
