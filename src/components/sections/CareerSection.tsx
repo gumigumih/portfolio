@@ -17,7 +17,7 @@ export default function CareerSection() {
           特定分野での深い技術力と、PM・ディレクション業務で身につけた<HighlightedText>幅広い知識・経験</HighlightedText>を併せ持ち、<br />
           開発・デザイン・ビジネスの橋渡し役として、プロダクト全体を最適化する意思決定ができるようになりました。<br />
           <br />
-          また、他分野の専門家との交流を通じて、<HighlightedText>プロダクトを多角的に捉える</HighlightedText>ことができ、<br />
+          <HighlightedText>プロダクトを多角的に捉える</HighlightedText>ことができ、<br />
           改善施策の立案・実行から収益化まで一貫して携わり、<br />
           結果的に<HighlightedText>「フルサイクルエンジニア」</HighlightedText>と<HighlightedText>「PdM的立ち回り」</HighlightedText>を自然に行えるようになりました。<br />
           これはまさに今の時代に求められる<HighlightedText variant="emphasis">総合的なプロダクト開発力</HighlightedText>そのものです。<br />
