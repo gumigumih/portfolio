@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { productStrategyPrinciples } from '../../data/productStrategy';
 import { StrategyCard, SectionTitle, FadeInGrid } from '../ui';
 

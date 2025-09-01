@@ -1,4 +1,4 @@
-import React from 'react';
+
 import HeartShape from '../ui/icons/HeartShape';
 import { DividerTitle, NotebookPaper } from '../ui';
 

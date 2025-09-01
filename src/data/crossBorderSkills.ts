@@ -1,4 +1,4 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { faLayerGroup, faPalette, faCode, faUsers, faEye, faLightbulb, faBrain, faBullhorn } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 

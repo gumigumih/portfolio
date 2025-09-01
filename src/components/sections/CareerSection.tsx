@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { DividerTitle, NotebookPaper, HighlightedText } from '../ui';
 
 export default function CareerSection() {

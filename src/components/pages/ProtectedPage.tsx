@@ -38,13 +38,7 @@ const projectData: { [key: string]: ProjectData } = {
   snackAR: snackAR,
 };
 
-const FILTER_CONFIG = [
-  { type: 'all', label: 'すべて', color: 'bg-gray-800' },
-  { type: 'product', label: 'プロダクト開発・運営', color: 'bg-blue-500' },
-  { type: 'tourism', label: '観光・地域振興系', color: 'bg-green-500' },
-  { type: 'avatar', label: 'アバター活用支援', color: 'bg-purple-500' },
-  { type: 'promotion', label: '販促・その他', color: 'bg-orange-500' },
-];
+
 
 export default function ProtectedPage() {
   const {
@@ -138,7 +132,6 @@ export default function ProtectedPage() {
             selectedProject={selectedProject}
             handleCloseModal={handleCloseModal}
             projectData={projectData}
-            FILTER_CONFIG={FILTER_CONFIG}
           />
         </div>
       </FadeInSection>

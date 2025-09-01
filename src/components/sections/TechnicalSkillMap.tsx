@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { skills, subCategoryIcons } from '../../data/skills';
 import { SectionTitle, Card, SkillLevel } from '../ui';
