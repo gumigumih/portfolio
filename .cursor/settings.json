@@ -1,0 +1,15 @@
+{
+  "filePatterns": {
+    "components": "src/components/**/*.tsx",
+    "data": "src/data/**/*.ts",
+    "utils": "src/utils/**/*.ts",
+    "constants": "src/constants/**/*.ts"
+  },
+  "projectStructure": {
+    "components": "src/components/",
+    "data": "src/data/",
+    "utils": "src/utils/",
+    "constants": "src/constants/",
+    "types": "src/types/"
+  }
+}
