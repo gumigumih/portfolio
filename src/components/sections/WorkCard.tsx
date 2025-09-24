@@ -12,7 +12,7 @@ interface WorkCardProps {
 const WorkCard = ({ project, onClick }: WorkCardProps) => {
   return (
     <Card onClick={onClick}>
-      <div className="relative h-48">
+      <div className="relative h-48 -m-6 mb-0">
         <img
           src={project.coverImage}
           alt={project.heading}
@@ -20,7 +20,7 @@ const WorkCard = ({ project, onClick }: WorkCardProps) => {
         />
         <ProjectTypeBadge type={project.type} />
       </div>
-      <div className="p-4">
+      <div className="pt-4">
         <h3 className="text-[1.2rem] font-bold mb-1">{project.heading}</h3>
         <p className="text-gray-600 text-[1.1rem] mb-2">{project.lead}</p>
         <p className="text-gray-500 text-[1rem] mb-2">
