@@ -1,5 +1,5 @@
 
-import { faCode, faLightbulb, faBrain, faLayerGroup, faWrench, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faLightbulb, faBrain, faLayerGroup, faWrench, faUsers, faPalette } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 export interface ToolUsage {
@@ -33,72 +33,73 @@ export const subCategoryIcons: Record<string, IconDefinition> = {
   '学習・検証': faBrain,
   '会議・プロジェクト': faLayerGroup,
   '学習・セミナー': faBrain,
+  'デザイン': faPalette,
   '顧客対応': faUsers,
 };
 
 export const toolMetaList: AITool[] = [
   {
-    name: 'Cursor',
+    name: 'AIコーディング支援',
     icon: faCode,
     color: 'bg-blue-500',
     titleColor: 'text-blue-800',
     dotColor: 'bg-blue-500',
-    description: 'AI搭載コードエディタ',
+    description: 'Cursor, Gemini, Codex等を活用',
     usage: [
       {
         title: '開発',
-        items: ['コーディング', 'リファクタリング', 'コードレビュー']
+        items: ['コーディング支援', 'リファクタリング提案', 'コードレビュー支援']
       },
       {
         title: 'ドキュメント',
-        items: ['要件定義書作成', '仕様作成', '文章作成']
+        items: ['要件定義・仕様の壁打ち', 'ドキュメント構成案の作成', '文章校正・提案']
       }
     ]
   },
   {
-    name: 'ChatGPT & Gemini',
+    name: '汎用AIチャット',
     icon: faBrain,
     color: 'bg-green-500',
     titleColor: 'text-green-800',
     dotColor: 'bg-green-500',
-    description: '汎用AIチャットボット（併用）',
+    description: 'ChatGPT, Gemini等を活用',
     usage: [
       {
         title: '企画・アイデア',
-        items: ['企画アイディア出し', 'デザインアイディア（画像生成）']
+        items: ['企画の壁打ち・アイデア出し', 'デザインコンセプトの提案']
       },
       {
         title: 'コミュニケーション',
-        items: ['メール返信サポート', 'SNS用文章添削']
+        items: ['メール・チャット返信案の作成', 'SNS投稿文の複数パターン作成']
       },
       {
         title: '学習・検証',
-        items: ['学習支援', 'ファクトチェック']
+        items: ['不明点の質問・深掘り', '情報ソースの多角的な検証']
       }
     ]
   },
   {
-    name: 'Notebook LM',
+    name: 'AIドキュメント活用',
     icon: faLightbulb,
     color: 'bg-purple-500',
     titleColor: 'text-purple-800',
     dotColor: 'bg-purple-500',
-    description: 'GoogleのAI研究アシスタント',
+    description: 'Notebook LM等を活用',
     usage: [
       {
         title: '会議・プロジェクト',
-        items: ['会議の議事録のまとめ', 'プロジェクト文章の整理・活用']
+        items: ['議事録の要約・タスク洗い出し', 'プロジェクト関連資料の横断検索']
       },
       {
         title: '学習・セミナー',
-        items: ['参加セミナー内容のまとめ', 'まとめ音声作成']
+        items: ['セミナー内容の要約・Q&A作成']
       },
       {
         title: '顧客対応',
-        items: ['お客様サポート']
+        items: ['問い合わせ内容の要約・返信案作成']
       }
     ]
-  },
+  }
 ];
 
 export const aiEffectCards: AIEffectCard[] = [
