@@ -1,4 +1,4 @@
-import { DividerTitle, NotebookPaper, HighlightedText, VennDiagram } from '../ui';
+import { DividerTitle, NotebookPaper } from '../ui';
 
 export default function AboutSection() {
   return (
@@ -19,5 +19,3 @@ export default function AboutSection() {
     </section>
   );
 }
-
-

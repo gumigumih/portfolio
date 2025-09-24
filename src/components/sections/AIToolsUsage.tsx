@@ -1,7 +1,6 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
-import { toolMetaList, aiEffectCards, subCategoryIcons } from '../../data/aiTools';
+import { toolMetaList, subCategoryIcons } from '../../data/aiTools';
 import { Card } from '../ui';
 
 export default function AIToolsUsage() {

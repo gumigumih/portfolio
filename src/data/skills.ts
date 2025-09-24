@@ -1,5 +1,5 @@
 
-import { faCode, faPalette, faLayerGroup, faChartBar, faBroadcastTower, faWrench, faObjectGroup, faCube, faDatabase } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faPalette, faChartBar, faBroadcastTower, faWrench, faObjectGroup, faCube, faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 export interface Skill {

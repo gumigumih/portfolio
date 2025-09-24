@@ -1,7 +1,7 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { skills, subCategoryIcons } from '../../data/skills'; // SkillGroup, Skill などの型インポートは不要になる場合があります
-import { Card, SkillLevel, DividerTitle } from '../ui';
+import { Card, SkillLevel } from '../ui';
 
 export default function SkillMap() {
   return (
