@@ -2,17 +2,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 import { toolMetaList, aiEffectCards, subCategoryIcons } from '../../data/aiTools';
-import { SectionTitle, Card } from '../ui';
+import { Card } from '../ui';
 
 export default function AIToolsUsage() {
   return (
-    <section className="py-16">
+    <section>
       <div className="max-w-6xl mx-auto px-10">
-        <SectionTitle
-          title="AIツール活用"
-          subtitle="生成AIツールを積極的に活用し、開発効率の向上と創造性の拡張を実現しています。各ツールの特性を理解し、適切な場面で使い分けることで、より高品質なアウトプットを生み出しています。"
-        />
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {toolMetaList.map((tool) => (
             <Card key={tool.name} className="p-8">

@@ -1,8 +1,5 @@
 import { useProtectedPage } from '../../hooks/useProtectedPage';
-import CrossBorderSkills from '../sections/CrossBorderSkills';
 import AIToolsUsage from '../sections/AIToolsUsage';
-import ProductDevelopmentSection from '../sections/ProductDevelopmentSection';
-import ProductStrategySection from '../sections/ProductStrategySection';
 import SlideNav from '../layout/SlideNav';
 import FadeInSection from '../ui/animations/FadeInSection';
 import MainVisual from '../sections/MainVisual';
@@ -20,7 +17,9 @@ import nijisanjiKuji from '../../data/works/nijisanjiKuji';
 import youtubeScheduler from '../../data/works/youtubeScheduler';
 import snackAR from '../../data/works/snackAR';
 import TechnicalSkillMap from '../sections/TechnicalSkillMap';
-import CareerSection from '../sections/CareerSection';
+import AboutSection from '../sections/AboutSection';
+import { DividerTitle } from '../ui';
+import StrengthsSection from '../sections/StrengthsSection';
 import LastSection from '../sections/LastSection';
 import ProjectListSection from '../sections/ProjectListSection';
 
@@ -60,70 +59,43 @@ export default function ProtectedPage() {
     <div className="relative max-w-screen-2xl w-full mx-auto md:pl-[12rem] pb-1">
       <SlideNav />
 
+      {/* メインビジュアル */}
       <FadeInSection>
         <MainVisual />
       </FadeInSection>
 
+      {/* 自己紹介 */}
       <FadeInSection>
-        <CareerSection />
+        <AboutSection />
       </FadeInSection>
 
+      {/* 強み */}
       <FadeInSection>
         <div id="skills">
-          <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
-            <span className="flex-grow h-px bg-gray-300"></span>
-            スキル・強み
-            <span className="flex-grow h-px bg-gray-300"></span>
-          </h2>
-          
-          {/* 越境型人材としてのスキルセット */}
-          <div id="cross-border-skills" className="mb-16">
-            <h3 className="text-xl font-bold text-gray-800 mb-8 text-center">越境型人材としてのスキルセット</h3>
-            <CrossBorderSkills />
-          </div>
+          <DividerTitle>強み</DividerTitle>
+          <StrengthsSection />
+        </div>
+      </FadeInSection>
 
-          {/* プロダクト戦略・マネジメント */}
-          <div id="product-strategy" className="mb-16">
-            <h3 className="text-xl font-bold text-gray-800 mb-8 text-center">プロダクト戦略・マネジメント</h3>
-            <ProductStrategySection />
-          </div>
-
-          {/* プロダクト開発プロセス */}
-          <div id="integrated-process" className="mb-16">
-            <h3 className="text-xl font-bold text-gray-800 mb-8 text-center">プロダクト開発プロセス</h3>
-            <ProductDevelopmentSection />
-          </div>
-
-          {/* テクニカルスキル */}
-          <div id="technical-skills" className="mb-16">
-            <h3 className="text-xl font-bold text-gray-800 mb-8 text-center">テクニカルスキル</h3>
-            <TechnicalSkillMap />
-          </div>
-
+      {/* テクニカルスキル */}
+      <FadeInSection>
+        <div id="technical-skills">
+          <DividerTitle>テクニカルスキル</DividerTitle>
+          <TechnicalSkillMap />
         </div>
       </FadeInSection>
 
       {/* 生成AI活用状況：独立セクション */}
       <FadeInSection>
         <div id="ai-tools-usage">
-          <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
-            <span className="flex-grow h-px bg-gray-300"></span>
-            生成AI活用状況
-            <span className="flex-grow h-px bg-gray-300"></span>
-          </h2>
+          <DividerTitle>生成AI活用状況</DividerTitle>
           <AIToolsUsage />
         </div>
       </FadeInSection>
 
-
       <FadeInSection>
         <div id="projects">
-          <h2 className="my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center">
-            <span className="flex-grow h-px bg-gray-300"></span>
-            プロジェクト一覧
-            <span className="flex-grow h-px bg-gray-300"></span>
-          </h2>
-
+          <DividerTitle>プロジェクト一覧</DividerTitle>
           <ProjectListSection
             filteredProjects={filteredProjects}
             sortOrder={sortOrder}
@@ -167,4 +139,3 @@ export default function ProtectedPage() {
     </div>
   );
 }
-

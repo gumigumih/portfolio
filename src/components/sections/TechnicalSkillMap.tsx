@@ -1,17 +1,12 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { skills, subCategoryIcons } from '../../data/skills';
-import { SectionTitle, Card, SkillLevel } from '../ui';
+import { Card, SkillLevel, DividerTitle } from '../ui';
 
 export default function SkillMap() {
   return (
-    <section className="py-16">
+    <section>
       <div className="max-w-6xl mx-auto px-10">
-        <SectionTitle
-          title="テクニカルスキルマップ"
-          subtitle="エンジニアリング、デザイン、ツール運用まで幅広いスキルを習得しています"
-        />
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {Object.entries(skills).map(([category, { skillColor, skills: skillList, icon, textColor, iconBg }]) => (
             <Card key={category} className="p-8 flex flex-col h-full">

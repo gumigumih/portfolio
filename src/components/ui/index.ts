@@ -11,3 +11,4 @@ export { default as DividerTitle } from './DividerTitle';
 export { default as SkillLevel } from './SkillLevel';
 export { default as FadeInSection } from './animations/FadeInSection';
 export { default as LoadingAnimation } from './animations/LoadingAnimation';
+export { default as VennDiagram } from './VennDiagram';
