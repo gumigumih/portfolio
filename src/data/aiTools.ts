@@ -17,13 +17,6 @@ export interface AITool {
   usage: ToolUsage[];
 }
 
-export interface AIEffectCard {
-  icon: IconDefinition;
-  bg: string;
-  title: string;
-  description: string;
-}
-
 // サブカテゴリ名ごとのアイコン割り当て
 export const subCategoryIcons: Record<string, IconDefinition> = {
   '開発': faCode,
@@ -100,25 +93,4 @@ export const toolMetaList: AITool[] = [
       }
     ]
   }
-];
-
-export const aiEffectCards: AIEffectCard[] = [
-  {
-    icon: faCode,
-    bg: 'bg-blue-500',
-    title: '開発効率の向上',
-    description: 'コーディング時間の短縮と品質向上を実現',
-  },
-  {
-    icon: faLightbulb,
-    bg: 'bg-green-500',
-    title: '創造性の拡張',
-    description: '新しいアイデアの発想と問題解決の多様化',
-  },
-  {
-    icon: faBrain,
-    bg: 'bg-purple-500',
-    title: '学習の加速',
-    description: '新しい技術や概念の理解を迅速化',
-  },
 ];

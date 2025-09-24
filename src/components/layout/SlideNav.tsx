@@ -6,12 +6,9 @@ import { useNavigate } from 'react-router-dom';
 
 // OUTLINE の項目
 const outlineLinks = [
-  { id: 'career', title: 'キャリアについて', sub: false },
-  { id: 'skills', title: 'スキル・強み', sub: false },
-  { id: 'cross-border-skills', title: '越境型人材としてのスキルセット', sub: true },
-  { id: 'product-strategy', title: 'プロダクト戦略・マネジメント', sub: true },
-  { id: 'integrated-process', title: 'プロダクト開発プロセス', sub: true },
-  { id: 'technical-skills', title: 'テクニカルスキル', sub: true },
+  { id: 'about', title: '自己紹介', sub: false },
+  { id: 'strengths', title: '強み', sub: false },
+  { id: 'skills', title: 'テクニカルスキル', sub: false },
   { id: 'ai-tools-usage', title: '生成AI活用状況', sub: false },
   { id: 'projects', title: 'プロジェクト一覧', sub: false },
   { id: 'last', title: 'さいごに', sub: false },
@@ -185,6 +182,7 @@ export default function SlideNav() {
                 }}
                 className={
                   `${item.sub ? 'pl-4 text-sm text-gray-500' : 'text-[1rem] text-gray-700'} ` +
+                  `${item.sub ? 'pl-6 text-sm text-gray-500' : 'text-[1rem] text-gray-700'} ` +
                   'hover:text-blue-500 transition duration-200 py-[0.3rem] border-b border-gray-300 last:border-0'
                 }
               >

@@ -71,7 +71,7 @@ export default function ProtectedPage() {
 
       {/* 強み */}
       <FadeInSection>
-        <div id="skills">
+        <div id="strengths">
           <DividerTitle>強み</DividerTitle>
           <StrengthsSection />
         </div>
@@ -79,7 +79,7 @@ export default function ProtectedPage() {
 
       {/* テクニカルスキル */}
       <FadeInSection>
-        <div id="technical-skills">
+        <div id="skills">
           <DividerTitle>テクニカルスキル</DividerTitle>
           <TechnicalSkillMap />
         </div>
