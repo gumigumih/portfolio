@@ -2,6 +2,8 @@
 
 @import 'tailwindcss';
 
+/* Keep the palette simple and neutral */
+
 @media (max-width: 768px) {
   .swiper-button-prev {
     top: auto !important;

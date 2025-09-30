@@ -27,17 +27,17 @@ export default function TimelineSection({ project }: Props) {
 
   return (
     <div className="mt-10">
-      <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">プロジェクトの歩み</h3>
+      <h3 className="text-2xl font-bold text-gray-600 mb-5">プロジェクトの歩み</h3>
       <div className="space-y-8">
         {project.timeline.map((phase, index) => (
           <div key={index} className="bg-gray-50 p-6 rounded-lg">
             <div className="flex justify-between items-center mb-4">
-              <h4 className="text-[1.2rem] font-semibold text-gray-700">{phase.title}</h4>
+              <h4 className="text-xl font-semibold text-gray-700">{phase.title}</h4>
               <span className="text-sm text-gray-500">{phase.period}</span>
             </div>
             <p className="text-gray-600 mb-6">{phase.description}</p>
             <div className="space-y-3">
-              <h5 className="text-[1rem] font-semibold text-gray-700 mb-3">私の取り組み</h5>
+              <h5 className="text-base font-semibold text-gray-700 mb-3">私の取り組み</h5>
               {phase.achievements.map((achievement, i) => (
                 <div key={i} className="flex items-start">
                   <span className={`inline-block px-2 py-1 text-xs font-bold rounded-full mr-3 ${getCategoryStyle(achievement.category)}`}>

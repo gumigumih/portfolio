@@ -21,7 +21,7 @@ export default function SkillMap() {
                 {skillGroups.map((group, gidx) => (
                   <div key={gidx} className="space-y-2">
                     <div className="flex items-center gap-3 w-full mb-2">
-                      <span className="inline-flex items-center gap-2 font-bold text-gray-600 text-[min(4.5vw,1.15rem)] text-left pb-1 bg-transparent">
+                      <span className="inline-flex items-center gap-2 font-bold text-gray-600 text-base md:text-lg text-left pb-1 bg-transparent">
                         {subCategoryIcons[group.title] && (
                           <FontAwesomeIcon icon={subCategoryIcons[group.title]} className="w-4 h-4" />
                         )}
@@ -30,7 +30,7 @@ export default function SkillMap() {
                     </div>
                     {group.items.map((item, sidx) => (
                       <div key={sidx} className="flex items-center justify-between">
-                        <span className="text-[min(4vw,1.1rem)] text-gray-700 whitespace-pre-line">
+                        <span className="text-base md:text-lg text-gray-700 whitespace-pre-line">
                           {item.title}
                         </span>
                         <SkillLevel level={item.level} color={skillColor} />

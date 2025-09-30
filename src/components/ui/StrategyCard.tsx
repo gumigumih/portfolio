@@ -24,14 +24,14 @@ const StrategyCard: React.FC<StrategyCardProps> = ({
 }) => {
   return (
     <Card className={`p-8 flex flex-col h-full ${className}`} hover={false}>
-      <h3 className={`text-[min(5vw,1.5rem)] font-bold mb-4 flex items-center justify-center gap-3 ${textColor}`}>
+      <h3 className={`text-xl md:text-2xl font-bold mb-4 flex items-center justify-center gap-3 ${textColor}`}>
         <span className={`${color} text-white p-2 rounded-lg`}>
           <FontAwesomeIcon icon={icon} className="w-6 h-6" />
         </span>
         {title}
       </h3>
       
-      <p className="text-[min(4vw,1.1rem)] text-gray-600 leading-relaxed mb-6">
+      <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6">
         {description}
       </p>
       
@@ -39,7 +39,7 @@ const StrategyCard: React.FC<StrategyCardProps> = ({
         {principles.map((principle, index) => (
           <li key={index} className="flex items-start gap-3">
             <div className={`${color} w-2 h-2 rounded-full mt-2 flex-shrink-0`} />
-            <span className="text-[min(4vw,1.1rem)] text-gray-700 leading-relaxed">
+            <span className="text-base md:text-lg text-gray-700 leading-relaxed">
               {principle}
             </span>
           </li>

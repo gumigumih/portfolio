@@ -49,13 +49,13 @@ const Card: React.FC<CardProps> = ({
           </h3>
         )}
         {subtitle && (
-          <p className="text-[min(4vw,1.1rem)] text-gray-500 -mt-4 mb-4 text-center">{subtitle}</p>
+          <p className="text-base md:text-lg text-gray-500 -mt-4 mb-4 text-center">{subtitle}</p>
         )}
         <div className="flex flex-col flex-grow">{children}</div>
         {footerContent && (
           <div className={`relative -m-6 mt-6 p-6 pt-8 rounded-b-xl ${footerBg}`}>
             <div className="absolute top-0 left-0 w-full h-4 bg-white" style={{ clipPath: 'polygon(0 0, 100% 0, 50% 100%)' }} />
-            <p className={`font-semibold text-[1.2rem] ${textColor}`}>
+            <p className={`font-semibold text-xl ${textColor}`}>
               {footerContent}
             </p>
           </div>

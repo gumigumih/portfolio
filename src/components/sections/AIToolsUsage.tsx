@@ -20,7 +20,7 @@ export default function AIToolsUsage() {
               <div className="space-y-6">
                 {tool.usage.map((category, categoryIndex) => (
                   <div key={categoryIndex} className="space-y-2">
-                    <span className="inline-flex items-center gap-2 font-bold text-gray-600 text-[min(4.5vw,1.15rem)] text-left mb-3 pb-1 bg-transparent">
+                    <span className="inline-flex items-center gap-2 font-bold text-gray-600 text-base md:text-lg text-left mb-3 pb-1 bg-transparent">
                       {subCategoryIcons[category.title] && (
                         <FontAwesomeIcon icon={subCategoryIcons[category.title]} className="w-4 h-4" />
                       )}
@@ -30,7 +30,7 @@ export default function AIToolsUsage() {
                       {category.items.map((item, itemIndex) => (
                         <div key={itemIndex} className="flex items-center gap-3">
                           <span className={`w-2 h-2 ${tool.dotColor} rounded-full`}></span>
-                          <span className="text-[min(4vw,1.1rem)] text-gray-700">{item}</span>
+                          <span className="text-base md:text-lg text-gray-700">{item}</span>
                         </div>
                       ))}
                     </div>

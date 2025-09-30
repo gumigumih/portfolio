@@ -130,11 +130,11 @@ export default function ProductDevelopmentSection() {
                 </div>
                 <span className={`text-2xl font-bold ${process.textColor}`}>{process.step}</span>
               </div>
-              <h4 className={`text-[min(5vw,1.5rem)] font-bold ${process.textColor} mb-2`}>{process.title}</h4>
-              <p className="text-[min(4vw,1.1rem)] text-gray-600 mb-4">{process.description}</p>
+              <h4 className={`text-xl md:text-2xl font-bold ${process.textColor} mb-2`}>{process.title}</h4>
+              <p className="text-base md:text-lg text-gray-600 mb-4">{process.description}</p>
               <ul className="space-y-2">
                                   {process.details.map((detail, idx) => (
-                    <li key={idx} className="text-[min(4vw,1.1rem)] text-gray-600 flex items-start gap-2">
+                    <li key={idx} className="text-base md:text-lg text-gray-600 flex items-start gap-2">
                       <span className={`w-2 h-2 ${process.color} rounded-full mt-2 flex-shrink-0`}></span>
                       {detail}
                     </li>
@@ -147,7 +147,7 @@ export default function ProductDevelopmentSection() {
 
       {/* デザイン原則 */}
       <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-lg mb-12">
-        <h3 className="text-[min(5vw,1.5rem)] font-bold text-gray-800 mb-8 text-center flex items-center justify-center gap-2">
+        <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-8 text-center flex items-center justify-center gap-2">
           <FontAwesomeIcon icon={faUsers} className="w-5 h-5" />
           デザイン原則
         </h3>
@@ -157,8 +157,8 @@ export default function ProductDevelopmentSection() {
               <div className="bg-gray-500 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                 <FontAwesomeIcon icon={principle.icon} className="w-5 h-5" />
               </div>
-              <h4 className="font-semibold text-gray-800 mb-3 text-[min(4vw,1.1rem)]">{principle.title}</h4>
-              <p className="text-[min(4vw,1.1rem)] text-gray-600">
+              <h4 className="font-semibold text-gray-800 mb-3 text-base md:text-lg">{principle.title}</h4>
+              <p className="text-base md:text-lg text-gray-600">
                 {principle.description}
               </p>
             </div>
@@ -168,7 +168,7 @@ export default function ProductDevelopmentSection() {
 
       {/* エンジニアリング原則 */}
       <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-lg mb-12">
-        <h3 className="text-[min(5vw,1.5rem)] font-bold text-gray-800 mb-8 text-center flex items-center justify-center gap-2">
+        <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-8 text-center flex items-center justify-center gap-2">
           <FontAwesomeIcon icon={faCode} className="w-5 h-5" />
           エンジニアリング原則
         </h3>
@@ -178,8 +178,8 @@ export default function ProductDevelopmentSection() {
               <div className="bg-gray-500 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                 <FontAwesomeIcon icon={principle.icon} className="w-5 h-5" />
               </div>
-              <h4 className="font-semibold text-gray-800 mb-3 text-[min(4vw,1.1rem)]">{principle.title}</h4>
-              <p className="text-[min(4vw,1.1rem)] text-gray-600">
+              <h4 className="font-semibold text-gray-800 mb-3 text-base md:text-lg">{principle.title}</h4>
+              <p className="text-base md:text-lg text-gray-600">
                 {principle.description}
               </p>
             </div>

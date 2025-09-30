@@ -19,7 +19,7 @@ export default function StrengthsSection() {
             top: 'bg-amber-300',
           }}
         />
-        <div className="mt-6 text-center md:text-left text-[1.2rem]">
+        <div className="mt-6 text-center md:text-left text-xl">
           <p>
             だから——<HighlightedText variant="emphasis">任せて安心、プロジェクトを前に進めるPM</HighlightedText>
           </p>
@@ -41,7 +41,7 @@ export default function StrengthsSection() {
             footerContent={strength.conclusion}
             footerBg={strength.footerBg}
           >
-            <div className="text-[1.2rem] text-gray-700 space-y-4 flex-grow">
+            <div className="text-xl text-gray-700 space-y-4 flex-grow">
               {strength.content.map((text, index) => (
                 <p key={index}>{text}</p>
               ))}

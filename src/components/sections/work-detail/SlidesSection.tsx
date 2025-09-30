@@ -21,7 +21,7 @@ export default function SlidesSection({ project }: Props) {
 
   return (
     <div className="mt-10">
-      <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">成果物・実績</h3>
+      <h3 className="text-2xl font-bold text-gray-600 mb-5">成果物・実績</h3>
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={50}
@@ -33,8 +33,8 @@ export default function SlidesSection({ project }: Props) {
         {project.slides.map((slide, index) => (
           <SwiperSlide key={index} className="pt-10 pb-15 px-4 md:px-20">
             <div className="max-w-4xl mx-auto">
-              <h3 className="text-[1.5rem] font-bold text-gray-700 mb-4">{slide.title}</h3>
-              <p className="text-[1.1rem] mb-8 text-justify text-gray-600 leading-relaxed">{slide.description ?? ""}</p>
+              <h3 className="text-2xl font-bold text-gray-700 mb-4">{slide.title}</h3>
+              <p className="text-lg mb-8 text-justify text-gray-600 leading-relaxed">{slide.description ?? ""}</p>
               <div className={`grid ${slide.images.length > 1 ? 'grid-cols-2' : 'grid-cols-1'} gap-6`}>
                 {slide.images.map((img, i) => (
                   <div key={i} className="flex justify-center">

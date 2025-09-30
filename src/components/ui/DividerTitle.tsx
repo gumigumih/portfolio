@@ -10,7 +10,7 @@ const DividerTitle: React.FC<DividerTitleProps> = ({
   className = ''
 }) => {
   return (
-    <h2 className={`my-20 flex items-center gap-4 text-[1.5rem] font-bold text-gray-600 text-center ${className}`}>
+    <h2 className={`my-20 flex items-center gap-4 text-2xl font-bold text-gray-600 text-center ${className}`}>
       <span className="flex-grow h-px bg-gray-300"></span>
       {children}
       <span className="flex-grow h-px bg-gray-300"></span>

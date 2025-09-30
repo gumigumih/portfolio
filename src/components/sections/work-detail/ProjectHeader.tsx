@@ -10,14 +10,14 @@ export default function ProjectHeader({ project }: Props) {
   return (
     <>
       <h2 className="font-bold text-gray-600">
-        <div className="text-[1rem]">
+        <div className="text-base">
           {project.startDate.year}年{project.startDate.month}月〜{project.endDate.year}年{project.endDate.month}月
         </div>
-        <div className="text-[2rem]">{project.heading}</div>
+        <div className="text-3xl">{project.heading}</div>
         <span className="my-2 block w-full h-px bg-gray-300"></span>
       </h2>
 
-      <p className="mt-5 text-gray-600 text-[1.2rem] text-justify whitespace-pre-wrap">
+      <p className="mt-5 text-gray-600 text-xl text-justify whitespace-pre-wrap">
         {project.description}
       </p>
 

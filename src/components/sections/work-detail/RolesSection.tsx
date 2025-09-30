@@ -11,12 +11,12 @@ export default function RolesSection({ project }: Props) {
 
   return (
     <div className="mt-10">
-      <h3 className="text-[1.5rem] font-bold text-gray-600 mb-5">自分の役割</h3>
+      <h3 className="text-2xl font-bold text-gray-600 mb-5">自分の役割</h3>
       
       {/* 全体の役割 */}
       {'overall' in project.roles && project.roles.overall && project.roles.overall.length > 0 && (
         <div className="mb-6">
-          <ul className="text-[1.2rem] flex items-start gap-2 bg-gray-50 p-6 rounded-lg">
+          <ul className="text-xl flex items-start gap-2 bg-gray-50 p-6 rounded-lg">
             {project.roles.overall.map((role, idx) => (
               <li key={idx} className="flex items-start">
                 {idx > 0 && <span className="text-gray-500 mr-2">/</span>}
@@ -33,7 +33,7 @@ export default function RolesSection({ project }: Props) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {(Array.isArray(project.roles) ? project.roles : project.roles.details!).map((role, idx) => (
             <div key={idx} className="bg-gray-50 p-6 rounded-lg">
-              <h4 className="text-[1.2rem] font-semibold text-gray-700 mb-3 flex items-center align-items-center">
+              <h4 className="text-xl font-semibold text-gray-700 mb-3 flex items-center align-items-center">
                 <span className={`inline-block w-5 h-5 rounded-full ${role.color} mr-2`}></span>
                 {role.title}
               </h4>

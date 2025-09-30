@@ -1,24 +1,24 @@
 
 import HeartShape from '../ui/icons/HeartShape';
-import { DividerTitle, NotebookPaper } from '../ui';
+import { DividerTitle } from '../ui';
 
 export default function LastSection() {
   return (
     <section id="last">
       <DividerTitle>さいごに</DividerTitle>
-      <NotebookPaper>
+      <div className="max-w-3xl mx-auto px-6 md:px-8 py-12 md:py-16">
         <div className="relative w-[100px] h-[100px] mx-auto mb-10 animate-pulse duration-700">
           <div className="absolute inset-0 blur-sm">
             <HeartShape />
           </div>
           <HeartShape />
         </div>
-        <p className="text-[1.2rem] leading-relaxed text-gray-700 text-center">
+        <p className="text-xl leading-relaxed text-gray-700 text-center">
           最後までご覧いただき、ありがとうございました。<br />
           もしご興味を持っていただけましたら、ぜひお気軽にご連絡ください。
         </p>
-        <p className="text-right text-[1.2rem] mt-[3rem] text-gray-700">
-          <span className="block text-[1.4rem] text-pink-500 mb-1">和田 愛</span>
+        <p className="text-right text-xl mt-[3rem] text-gray-700">
+          <span className="block text-2xl text-pink-500 mb-1">和田 愛</span>
           <a
             href="mailto:info@meggumi.com"
             className="inline-flex items-center gap-2 text-pink-400 underline hover:text-pink-600 transition"
@@ -34,7 +34,7 @@ export default function LastSection() {
             info@meggumi.com
           </a>
         </p>
-      </NotebookPaper>
+      </div>
     </section>
   );
-} 
+}

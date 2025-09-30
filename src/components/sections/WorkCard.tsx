@@ -21,9 +21,9 @@ const WorkCard = ({ project, onClick }: WorkCardProps) => {
         <ProjectTypeBadge type={project.type} />
       </div>
       <div className="pt-4">
-        <h3 className="text-[1.2rem] font-bold mb-1">{project.heading}</h3>
-        <p className="text-gray-600 text-[1.1rem] mb-2">{project.lead}</p>
-        <p className="text-gray-500 text-[1rem] mb-2">
+        <h3 className="text-xl font-bold mb-1">{project.heading}</h3>
+        <p className="text-gray-600 text-lg mb-2">{project.lead}</p>
+        <p className="text-gray-500 text-base mb-2">
           {formatProjectPeriod(project.startDate, project.endDate)}
         </p>
         {project.achievements && project.achievements.length > 0 && (

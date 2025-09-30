@@ -36,32 +36,32 @@ const VennDiagram: React.FC<VennDiagramProps> = ({
             {/* Left */}
             <div className={`absolute w-[58%] h-[58%] rounded-full ${colors.left ? `${colors.left}/50` : 'bg-indigo-300/50'} left-[0%] top-[42%] mix-blend-multiply`} />
             {inside?.left && (
-              <div className="absolute w-[58%] h-[58%] left-[0%] top-[42%] flex items-center justify-center text-indigo-800 text-[1rem] md:text-[1.05rem] font-semibold text-center px-2 leading-snug">
+              <div className="absolute w-[58%] h-[58%] left-[0%] top-[42%] flex items-center justify-center text-indigo-800 text-base md:text-base font-semibold text-center px-2 leading-snug">
                 {inside.left}
               </div>
             )}
             {/* Right */}
             <div className={`absolute w-[58%] h-[58%] rounded-full ${colors.right ? `${colors.right}/50` : 'bg-emerald-300/50'} right-[0%] top-[42%] mix-blend-multiply`} />
             {inside?.right && (
-              <div className="absolute w-[58%] h-[58%] right-[0%] top-[42%] flex items-center justify-center text-emerald-800 text-[1rem] md:text-[1.05rem] font-semibold text-center px-2 leading-snug">
+              <div className="absolute w-[58%] h-[58%] right-[0%] top-[42%] flex items-center justify-center text-emerald-800 text-base md:text-base font-semibold text-center px-2 leading-snug">
                 {inside.right}
               </div>
             )}
             {/* Top */}
             <div className={`absolute w-[58%] h-[58%] rounded-full ${colors.top ? `${colors.top}/50` : 'bg-amber-300/50'} left-1/2 -translate-x-1/2 top-[5%] mix-blend-multiply`} />
             {inside?.top && (
-              <div className="absolute w-[58%] h-[58%] left-1/2 -translate-x-1/2 top-[5%] flex items-center justify-center text-amber-900 text-[1rem] md:text-[1.05rem] font-semibold text-center px-2 leading-snug">
+              <div className="absolute w-[58%] h-[58%] left-1/2 -translate-x-1/2 top-[5%] flex items-center justify-center text-amber-900 text-base md:text-base font-semibold text-center px-2 leading-snug">
                 {inside.top}
               </div>
             )}
           {/* Center text */}
           {labels.center && !inside?.center && (
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-gray-700 text-[1rem] md:text-[1.05rem] font-semibold leading-snug">
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-gray-700 text-base md:text-base font-semibold leading-snug">
               {labels.center}
             </div>
           )}
           {inside?.center && (
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-gray-800 text-[1rem] md:text-[1.05rem] font-semibold leading-snug">
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-gray-800 text-base md:text-base font-semibold leading-snug">
               {inside.center}
             </div>
           )}

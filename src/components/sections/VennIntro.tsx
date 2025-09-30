@@ -11,7 +11,7 @@ export default function VennIntro() {
           top: 'プロジェクト推進力',
         }}
       />
-      <div className="mt-6 text-center md:text-left text-[1.2rem]">
+      <div className="mt-6 text-center md:text-left text-xl">
         <p>
           だから——<HighlightedText variant="emphasis">任せて安心、プロジェクトを前に進めるPM</HighlightedText>
         </p>

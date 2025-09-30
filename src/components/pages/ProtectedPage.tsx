@@ -22,6 +22,7 @@ import { DividerTitle } from '../ui';
 import StrengthsSection from '../sections/StrengthsSection';
 import LastSection from '../sections/LastSection';
 import ProjectListSection from '../sections/ProjectListSection';
+import PrinciplesSection from '../sections/PrinciplesSection';
 
 const projectData: { [key: string]: ProjectData } = {
   virtualBusinessCard: virtualBusinessCard,
@@ -56,86 +57,101 @@ export default function ProtectedPage() {
     }
   };
   return (
-    <div className="relative max-w-screen-2xl w-full mx-auto md:pl-[12rem] pb-1">
-      <SlideNav />
-
-      {/* メインビジュアル */}
-      <FadeInSection>
-        <MainVisual />
-      </FadeInSection>
-
-      {/* 自己紹介 */}
-      <FadeInSection>
-        <AboutSection />
-      </FadeInSection>
-
-      {/* 強み */}
-      <FadeInSection>
-        <div id="strengths">
-          <DividerTitle>強み</DividerTitle>
-          <StrengthsSection />
+    <>
+      <div className="">
+        <div class="max-w-screen-xl w-full mx-auto">
+          {/* メインビジュアル */}
+          <FadeInSection>
+            <MainVisual />
+          </FadeInSection>
         </div>
-      </FadeInSection>
+      </div>
 
-      {/* テクニカルスキル */}
-      <FadeInSection>
-        <div id="skills">
-          <DividerTitle>テクニカルスキル</DividerTitle>
-          <TechnicalSkillMap />
-        </div>
-      </FadeInSection>
+      <div className="relative max-w-screen-2xl w-full mx-auto lg:pl-[24rem] pb-1">
 
-      {/* 生成AI活用状況：独立セクション */}
-      <FadeInSection>
-        <div id="ai-tools-usage">
-          <DividerTitle>生成AI活用状況</DividerTitle>
-          <AIToolsUsage />
-        </div>
-      </FadeInSection>
+        <SlideNav />
 
-      <FadeInSection>
-        <div id="projects">
-          <DividerTitle>プロジェクト一覧</DividerTitle>
-          <ProjectListSection
-            filteredProjects={filteredProjects}
-            sortOrder={sortOrder}
-            setSortOrder={handleSortOrder}
-            handleProjectClick={handleProjectClick}
-            selectedProject={selectedProject}
-            handleCloseModal={handleCloseModal}
-            projectData={projectData}
-          />
-        </div>
-      </FadeInSection>
+        {/* 自己紹介 */}
+        <FadeInSection>
+          <AboutSection />
+        </FadeInSection>
 
-      {/* モーダル */}
-      {selectedProject && (
-        <div 
-          className="fixed inset-0 bg-white/50 bg-opacity-50 z-50 flex items-center justify-center p-0 md:p-4"
-          onClick={handleCloseModal}
-        >
+        {/* 考え方 */}
+        <FadeInSection>
+          <div id="principles">
+            <DividerTitle>考え方</DividerTitle>
+            <PrinciplesSection />
+          </div>
+        </FadeInSection>
+
+        {/* 強み */}
+        <FadeInSection>
+          <div id="strengths">
+            <DividerTitle>強み</DividerTitle>
+            <StrengthsSection />
+          </div>
+        </FadeInSection>
+
+        {/* テクニカルスキル */}
+        <FadeInSection>
+          <div id="skills">
+            <DividerTitle>テクニカルスキル</DividerTitle>
+            <TechnicalSkillMap />
+          </div>
+        </FadeInSection>
+
+        {/* 生成AI活用状況：独立セクション */}
+        <FadeInSection>
+          <div id="ai-tools-usage">
+            <DividerTitle>生成AI活用状況</DividerTitle>
+            <AIToolsUsage />
+          </div>
+        </FadeInSection>
+
+        <FadeInSection>
+          <div id="projects">
+            <DividerTitle>プロジェクト一覧</DividerTitle>
+            <ProjectListSection
+              filteredProjects={filteredProjects}
+              sortOrder={sortOrder}
+              setSortOrder={handleSortOrder}
+              handleProjectClick={handleProjectClick}
+              selectedProject={selectedProject}
+              handleCloseModal={handleCloseModal}
+              projectData={projectData}
+            />
+          </div>
+        </FadeInSection>
+
+        {/* モーダル */}
+        {selectedProject && (
           <div 
-            className="bg-white shadow-lg rounded-none md:rounded-lg w-full h-full md:max-w-7xl md:max-h-[90vh] overflow-y-auto"
-            onClick={(e) => e.stopPropagation()}
+            className="fixed inset-0 bg-white/50 bg-opacity-50 z-50 flex items-center justify-center p-0 md:p-4"
+            onClick={handleCloseModal}
           >
-            <button
-              onClick={handleCloseModal}
-              className="fixed top-4 right-4 md:top-6 md:right-6 text-gray-500 hover:text-gray-700 z-50 bg-white rounded-full p-2 shadow-lg"
+            <div 
+              className="bg-white shadow-lg rounded-none md:rounded-lg w-full h-full md:max-w-7xl md:max-h-[90vh] overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            <div className="p-4 md:p-6">
-              <WorkDetail project={projectData[selectedProject]} />
+              <button
+                onClick={handleCloseModal}
+                className="fixed top-4 right-4 md:top-6 md:right-6 text-gray-500 hover:text-gray-700 z-50 bg-white rounded-full p-2 shadow-lg"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              <div className="p-4 md:p-6">
+                <WorkDetail project={projectData[selectedProject]} />
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-      <FadeInSection>
-        <LastSection />
-      </FadeInSection>
-    </div>
+        <FadeInSection>
+          <LastSection />
+        </FadeInSection>
+      </div>
+    </>
   );
 }

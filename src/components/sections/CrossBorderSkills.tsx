@@ -142,13 +142,13 @@ export default function CrossBorderSkills() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {categoryMetaList.map((cat) => (
           <div key={cat.name} className="bg-white p-6 rounded-xl border border-gray-200 shadow-lg hover:shadow-lg transition-all duration-300">
-            <h4 className={`text-[min(5vw,1.5rem)] font-bold ${cat.textColor} mb-3 flex items-center gap-3`}>
+            <h4 className={`text-xl md:text-2xl font-bold ${cat.textColor} mb-3 flex items-center gap-3`}>
               <div className={`${cat.iconBg} text-white p-2 rounded-lg`}>
                 <FontAwesomeIcon icon={cat.icon} className="w-5 h-5" />
             </div>
               {cat.name}
           </h4>
-            <div className="space-y-3 text-[min(4vw,1.1rem)] text-gray-700">
+            <div className="space-y-3 text-base md:text-lg text-gray-700">
               {cat.items.map((item, idx) => (
                 <div key={idx} className="flex items-center gap-2">
                   <span className={`w-2 h-2 ${cat.dotColor} rounded-full`}></span>
@@ -156,7 +156,7 @@ export default function CrossBorderSkills() {
             </div>
               ))}
             </div>
-            <div className={`mt-3 text-[min(4vw,1.1rem)] ${cat.roleColor} font-medium`}>
+            <div className={`mt-3 text-base md:text-lg ${cat.roleColor} font-medium`}>
               役割: {cat.role}
             </div>
           </div>
@@ -164,7 +164,7 @@ export default function CrossBorderSkills() {
           </div>
       {/* 越境型人材の価値は下部に横並びカードで表示 */}
       <div className="mt-8 bg-white rounded-xl p-8 border border-gray-200 shadow-lg">
-        <h3 className="text-[min(5vw,1.5rem)] font-bold text-gray-800 mb-8 text-center flex items-center justify-center gap-2">
+        <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-8 text-center flex items-center justify-center gap-2">
           <FontAwesomeIcon icon={faLightbulb} className="w-5 h-5" />
             越境型人材の価値
         </h3>
@@ -174,8 +174,8 @@ export default function CrossBorderSkills() {
               <div className={`${card.bg} text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4`}>
                 <FontAwesomeIcon icon={card.icon} className="w-5 h-5" />
             </div>
-              <h4 className="font-semibold text-gray-800 mb-3 text-[min(4vw,1.1rem)]">{card.title}</h4>
-              <p className="text-[min(4vw,1.1rem)] text-gray-600">
+              <h4 className="font-semibold text-gray-800 mb-3 text-base md:text-lg">{card.title}</h4>
+              <p className="text-base md:text-lg text-gray-600">
                 {card.description}
               </p>
             </div>
