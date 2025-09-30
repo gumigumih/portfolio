@@ -58,13 +58,11 @@ export default function ProtectedPage() {
   };
   return (
     <>
-      <div className="">
-        <div class="max-w-screen-xl w-full mx-auto">
-          {/* メインビジュアル */}
-          <FadeInSection>
-            <MainVisual />
-          </FadeInSection>
-        </div>
+      <div className="max-w-screen-xl w-full mx-auto">
+        {/* メインビジュアル */}
+        <FadeInSection>
+          <MainVisual />
+        </FadeInSection>
       </div>
 
       <div className="relative max-w-screen-2xl w-full mx-auto lg:pl-[24rem] pb-1">
