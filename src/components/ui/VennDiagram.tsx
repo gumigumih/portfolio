@@ -13,7 +13,12 @@ interface VennDiagramProps {
     top?: string;
     center?: string;
   };
-  colors?: {
+  circleColors?: {
+    left?: string;
+    right?: string;
+    top?: string;
+  };
+  textColors?: {
     left?: string;
     right?: string;
     top?: string;
@@ -29,29 +34,35 @@ const VennDiagram: React.FC<VennDiagramProps> = ({
   textColors = {},
   className = '',
 }) => {
+  const leftBg = circleColors.left || (circleColors.left ? `${circleColors.left}/50` : 'bg-indigo-300/50');
+  const rightBg = circleColors.right || (circleColors.right ? `${circleColors.right}/50` : 'bg-emerald-300/50');
+  const topBg = circleColors.top || (circleColors.top ? `${circleColors.top}/50` : 'bg-amber-300/50');
+  const leftText = textColors.left || 'text-indigo-800';
+  const rightText = textColors.right || 'text-emerald-800';
+  const topText = textColors.top || 'text-amber-900';
   return (
     <div className={`relative w-full aspect-square ${className}`}>
       {/* circles */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="relative w-[100%] h-[100%]">
             {/* Left */}
-            <div className={`absolute w-[58%] h-[58%] rounded-full ${circleColors.left} left-[0%] top-[42%] mix-blend-multiply`} />
+            <div className={`absolute w-[58%] h-[58%] rounded-full ${leftBg} left-[0%] top-[42%] mix-blend-multiply`} />
             {inside?.left && (
-              <div className={`absolute w-[58%] h-[58%] left-[0%] top-[42%] flex items-center justify-center ${textColors.left} text-base md:text-base font-semibold text-center px-2 leading-snug`}>
+              <div className={`absolute w-[58%] h-[58%] left-[0%] top-[42%] flex items-center justify-center ${leftText} text-base md:text-base font-semibold text-center px-2 leading-snug`}>
                 {inside.left}
               </div>
             )}
             {/* Right */}
-            <div className={`absolute w-[58%] h-[58%] rounded-full ${circleColors.right} right-[0%] top-[42%] mix-blend-multiply`} />
+            <div className={`absolute w-[58%] h-[58%] rounded-full ${rightBg} right-[0%] top-[42%] mix-blend-multiply`} />
             {inside?.right && (
-              <div className={`absolute w-[58%] h-[58%] right-[0%] top-[42%] flex items-center justify-center ${textColors.right} text-base md:text-base font-semibold text-center px-2 leading-snug`}>
+              <div className={`absolute w-[58%] h-[58%] right-[0%] top-[42%] flex items-center justify-center ${rightText} text-base md:text-base font-semibold text-center px-2 leading-snug`}>
                 {inside.right}
               </div>
             )}
             {/* Top */}
-            <div className={`absolute w-[58%] h-[58%] rounded-full ${circleColors.top} left-1/2 -translate-x-1/2 top-[5%] mix-blend-multiply`} />
+            <div className={`absolute w-[58%] h-[58%] rounded-full ${topBg} left-1/2 -translate-x-1/2 top-[5%] mix-blend-multiply`} />
             {inside?.top && (
-              <div className={`absolute w-[58%] h-[58%] left-1/2 -translate-x-1/2 top-[5%] flex items-center justify-center ${textColors.top} text-base md:text-base font-semibold text-center px-2 leading-snug`}>
+              <div className={`absolute w-[58%] h-[58%] left-1/2 -translate-x-1/2 top-[5%] flex items-center justify-center ${topText} text-base md:text-base font-semibold text-center px-2 leading-snug`}>
                 {inside.top}
               </div>
             )}
