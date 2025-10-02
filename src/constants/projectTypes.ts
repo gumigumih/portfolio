@@ -6,10 +6,10 @@ export const PROJECT_TYPE_LABELS: { [key: string]: string } = {
 };
 
 export const PROJECT_TYPE_COLORS: { [key: string]: string } = {
-  product: 'bg-blue-500',
-  tourism: 'bg-green-500',
-  avatar: 'bg-purple-500',
-  promotion: 'bg-orange-500'
+  product: 'bg-sky-500',
+  tourism: 'bg-teal-500',
+  avatar: 'bg-indigo-500',
+  promotion: 'bg-amber-500'
 };
 
 export const FILTER_CONFIG = [

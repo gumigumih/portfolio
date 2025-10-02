@@ -13,10 +13,15 @@ export default function StrengthsSection() {
             right: strengths[2].title,
             top: strengths[0].title,
           }}
-          colors={{
-            left: 'bg-indigo-300',
-            right: 'bg-emerald-300',
-            top: 'bg-amber-300',
+          circleColors={{
+            left: 'bg-sky-300/50',
+            right: 'bg-pink-300/50',
+            top: 'bg-amber-300/50',
+          }}
+          textColors={{
+            left: 'text-sky-800',
+            right: 'text-pink-800',
+            top: 'text-amber-900',
           }}
         />
         <div className="mt-6 text-center md:text-left text-xl">

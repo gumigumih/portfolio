@@ -34,9 +34,9 @@ export const toolMetaList: AITool[] = [
   {
     name: 'AIコーディング支援',
     icon: faCode,
-    color: 'bg-blue-500',
-    titleColor: 'text-blue-800',
-    dotColor: 'bg-blue-500',
+    color: 'bg-sky-500',
+    titleColor: 'text-sky-800',
+    dotColor: 'bg-sky-500',
     description: 'Cursor, Gemini, Codex等を活用',
     usage: [
       {
@@ -52,9 +52,9 @@ export const toolMetaList: AITool[] = [
   {
     name: '汎用AIチャット',
     icon: faBrain,
-    color: 'bg-green-500',
-    titleColor: 'text-green-800',
-    dotColor: 'bg-green-500',
+    color: 'bg-teal-500',
+    titleColor: 'text-teal-800',
+    dotColor: 'bg-teal-500',
     description: 'ChatGPT, Gemini等を活用',
     usage: [
       {
@@ -74,9 +74,9 @@ export const toolMetaList: AITool[] = [
   {
     name: 'AIドキュメント活用',
     icon: faLightbulb,
-    color: 'bg-purple-500',
-    titleColor: 'text-purple-800',
-    dotColor: 'bg-purple-500',
+    color: 'bg-indigo-500',
+    titleColor: 'text-indigo-800',
+    dotColor: 'bg-indigo-500',
     description: 'Notebook LM等を活用',
     usage: [
       {

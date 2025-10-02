@@ -36,10 +36,10 @@ export const subCategoryIcons: Record<string, IconDefinition> = {
 export const skills: SkillCategory[] = [
   {
     title: "エンジニアリング",
-    skillColor: 'bg-green-500',
+    skillColor: 'bg-sky-500',
     icon: faCode,
-    textColor: 'text-green-800',
-    iconBg: 'bg-green-500',
+    textColor: 'text-sky-800',
+    iconBg: 'bg-sky-500',
     skills: [
       {
         title: 'Frontend',
@@ -74,10 +74,10 @@ export const skills: SkillCategory[] = [
   },
   {
     title: "デザイン・クリエイティブ",
-    skillColor: 'bg-purple-500',
+    skillColor: 'bg-pink-500',
     icon: faPalette,
-    textColor: 'text-purple-800',
-    iconBg: 'bg-purple-500',
+    textColor: 'text-pink-800',
+    iconBg: 'bg-pink-500',
     skills: [
       {
         title: 'グラフィック',
@@ -106,10 +106,10 @@ export const skills: SkillCategory[] = [
   },
   {
     title: "ツール・分析・運用",
-    skillColor: 'bg-blue-500',
+    skillColor: 'bg-amber-500',
     icon: faChartBar,
-    textColor: 'text-blue-800',
-    iconBg: 'bg-blue-500',
+    textColor: 'text-amber-800',
+    iconBg: 'bg-amber-500',
     skills: [
       {
         title: 'ツール・分析',

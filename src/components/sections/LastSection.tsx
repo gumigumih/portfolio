@@ -18,16 +18,16 @@ export default function LastSection() {
           もしご興味を持っていただけましたら、ぜひお気軽にご連絡ください。
         </p>
         <p className="text-right text-xl mt-[3rem] text-gray-700">
-          <span className="block text-2xl text-pink-500 mb-1">和田 愛</span>
+          <span className="block text-2xl mb-1">和田 愛</span>
           <a
             href="mailto:info@meggumi.com"
-            className="inline-flex items-center gap-2 text-pink-400 underline hover:text-pink-600 transition"
+            className="inline-flex items-center gap-2 underline hover:text-pink-600 transition"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
               viewBox="0 0 24 24"
-              className="w-5 h-5 text-pink-400"
+              className="w-5 h-5"
             >
               <path d="M12 12.713l11.985-8.713H.015L12 12.713zM12 14.999l-12-8.714V20h24V6.285L12 14.999z" />
             </svg>
