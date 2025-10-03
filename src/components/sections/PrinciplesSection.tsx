@@ -23,7 +23,7 @@ export default function PrinciplesSection() {
 
             <div className="mt-8 grid gap-6 md:grid-cols-2">
               <div className="rounded-2xl border border-white/60 bg-white/75 p-6 shadow-inner">
-                <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.25em] text-slate-500">
+                <div className="flex items-center gap-2 text-xl font-semibold tracking-tight text-slate-900">
                   <span className="h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true" />
                   課題解決
                 </div>
@@ -43,7 +43,7 @@ export default function PrinciplesSection() {
               </div>
 
               <div className="rounded-2xl border border-white/60 bg-white/75 p-6 shadow-inner">
-                <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.25em] text-slate-500">
+                <div className="flex items-center gap-2 text-xl font-semibold tracking-tight text-slate-900">
                   <span className="h-2 w-2 rounded-full bg-sky-400" aria-hidden="true" />
                   価値共創
                 </div>
@@ -63,36 +63,20 @@ export default function PrinciplesSection() {
               </div>
             </div>
 
-            <div className="mt-12 grid gap-6 md:grid-cols-[1fr_auto_1fr] md:items-stretch">
-              <div className="rounded-2xl border border-white/70 bg-white/70 p-6 text-sm md:text-base text-slate-700">
-                <p className="font-semibold text-slate-800">課題解決</p>
-                <p className="mt-2 leading-relaxed">
-                  課題を構造化し、優先度を設計。解決策を実装して成果まで導くプロセスを高速に回します。
-                </p>
-              </div>
-
-              <div className="relative flex items-center justify-center">
-                <div className="relative flex min-h-[9rem] min-w-[9rem] items-center justify-center rounded-full border border-slate-200/70 bg-amber-100/90 px-8 py-8 text-center shadow-lg">
-                  <span className="flex flex-col items-center gap-1 text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">
-                    <span className="text-sm font-semibold text-slate-900 tracking-tight">成果が出る</span>
-                    <span className="text-[11px] text-slate-400">×</span>
-                    <span className="text-sm font-semibold text-slate-900 tracking-tight">長く愛される</span>
-                  </span>
-                </div>
-              </div>
-
-              <div className="rounded-2xl border border-white/70 bg-white/70 p-6 text-sm md:text-base text-slate-700">
-                <p className="font-semibold text-slate-800">価値共創</p>
-×                <p className="mt-2 leading-relaxed">
-                  ユーザーと共感を育みながら、感情的価値と楽しさの広がりを共創し、体験の愛着を高めます。
-                </p>
+            <div className="mt-12 relative flex items-center justify-center">
+              <div className="relative flex min-h-[9rem] min-w-[9rem] items-center justify-center rounded-full border border-slate-200/70 bg-amber-100/90 px-8 py-8 text-center shadow-lg">
+                <span className="flex flex-col items-center gap-1 text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">
+                  <span className="text-sm font-semibold text-slate-900 tracking-tight">成果が出る</span>
+                  <span className="text-[11px] text-slate-400">×</span>
+                  <span className="text-sm font-semibold text-slate-900 tracking-tight">長く愛される</span>
+                </span>
               </div>
             </div>
           </div>
         </div>
 
         <div className="mt-16 rounded-3xl border border-black/5 bg-white/80 p-8 backdrop-blur-sm shadow-md md:p-12">
-          <span className="inline-flex items-center rounded-full bg-black/5 px-4 py-1 text-xs font-semibold tracking-[0.35em] uppercase text-black/60">
+          <span className="inline-flex items-center rounded-full border border-slate-200/80 bg-white/80 px-4 py-1 text-xs font-semibold tracking-[0.3em] uppercase text-slate-500">
             PRINCIPLES
           </span>
           <h3 className="mt-6 text-3xl md:text-4xl font-semibold tracking-tight text-black">
@@ -102,25 +86,34 @@ export default function PrinciplesSection() {
             PMとしての意思決定・優先順位付けの拠り所にしている3つの「良い◯◯」です。
           </p>
 
-          <div className="mt-10 grid grid-cols-1 gap-8 leading-relaxed md:grid-cols-3 md:gap-12">
+            <div className="mt-10 grid grid-cols-1 gap-8 leading-relaxed md:grid-cols-3 md:gap-12">
             <div className="rounded-2xl border border-black/5 bg-white/80 p-6 shadow-sm">
-              <h4 className="text-xl md:text-2xl font-semibold">良いプロダクト</h4>
-              <p className="mt-3 text-base md:text-lg text-black/80">
-                ユーザー（個人／組織）の課題を最小の形で解決し、施策の成果につなげること。
+              <h4 className="flex items-center gap-2 text-xl font-semibold text-slate-900">
+                <span className="h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true" />
+                良いプロダクト
+              </h4>
+              <p className="mt-4 text-sm md:text-base text-slate-700">
+                課題を的確に解決し、日常や業務に持続的な価値をもたらすこと
               </p>
             </div>
 
             <div className="rounded-2xl border border-black/5 bg-white/80 p-6 shadow-sm">
-              <h4 className="text-xl md:text-2xl font-semibold">良いUX</h4>
-              <p className="mt-3 text-base md:text-lg text-black/80">
-                ユーザーが迷わず最短で目的を達成し、そのプロセスで成果を実感できること。
+              <h4 className="flex items-center gap-2 text-xl font-semibold text-slate-900">
+                <span className="h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true" />
+                良いUX
+              </h4>
+              <p className="mt-4 text-sm md:text-base text-slate-700">
+                迷わず目的にたどり着けて、そのプロセスで心地よく、価値を実感できること
               </p>
             </div>
 
             <div className="rounded-2xl border border-black/5 bg-white/80 p-6 shadow-sm">
-              <h4 className="text-xl md:text-2xl font-semibold">良いクリエイティブ</h4>
-              <p className="mt-3 text-base md:text-lg text-black/80">
-                目的・目標・意図を的確に表現し、達成へ導く品質を備えていること。
+              <h4 className="flex items-center gap-2 text-xl font-semibold text-slate-900">
+                <span className="h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true" />
+                良いクリエイティブ
+              </h4>
+              <p className="mt-4 text-sm md:text-base text-slate-700">
+                目的や意図を的確に表現し、感情や行動をポジティブに動かすこと
               </p>
             </div>
           </div>
