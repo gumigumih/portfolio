@@ -3,7 +3,7 @@ export default function PrinciplesSection() {
     <section className="text-black">
       <div className="max-w-5xl mx-auto px-6 md:px-8 py-20 md:py-32">
 
-        <div className="mt-16 rounded-3xl border border-black/5 bg-white/80 p-8 backdrop-blur-sm shadow-md md:p-12">
+        <div className="rounded-3xl border border-black/5 bg-white/80 p-8 backdrop-blur-sm shadow-md md:p-12">
           <span className="inline-flex items-center rounded-full border border-slate-200/80 bg-white/80 px-4 py-1 text-xs font-semibold tracking-[0.3em] uppercase text-slate-500">
             PRINCIPLES
           </span>
