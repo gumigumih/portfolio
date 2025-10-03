@@ -36,7 +36,7 @@ export default function MainVisual() {
               プロジェクトデザイン／UXリード
             </span>
             <h1 className="text-5xl font-semibold tracking-tight text-slate-900 md:text-6xl lg:text-7xl">
-              和田 めぐみ
+              Megumi Wada
             </h1>
             <div className="grid gap-3 sm:inline-grid sm:grid-flow-col sm:auto-cols-fr">
               <a
