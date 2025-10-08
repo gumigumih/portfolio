@@ -20,8 +20,8 @@ export default function MainVisual() {
                 <div className="flex h-10 w-2 items-center justify-center rounded-xl bg-slate-900 text-[11px] font-semibold leading-tight text-white">
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-slate-900 leading-tight">Emotion × Structure</p>
-                  <p className="text-xs font-medium text-slate-600 leading-tight">感情を支える構造を設計するディレクター</p>
+                  <p className="text-xs font-medium text-slate-600 leading-tight">熱量を、動かす仕組みへ。</p>
+                  <p className="text-sm font-semibold text-slate-900 leading-tight">Creative × Project Director</p>
                 </div>
               </div>
             </div>
