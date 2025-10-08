@@ -17,14 +17,11 @@ export default function MainVisual() {
                 className="relative rounded-[2rem] border border-white shadow-xl"
               />
               <div className="absolute -bottom-10 left-1/2 flex w-[85%] -translate-x-1/2 items-center gap-3 rounded-2xl border border-slate-200 bg-white px-5 py-3 shadow-lg">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 text-[11px] font-semibold leading-tight text-white">
-                  PL
-                  <br />
-                  UX
+                <div className="flex h-10 w-2 items-center justify-center rounded-xl bg-slate-900 text-[11px] font-semibold leading-tight text-white">
                 </div>
                 <div>
-                  <p className="text-xs font-semibold tracking-[0.35em] text-slate-400">フォーカス</p>
-                  <p className="text-sm font-medium text-slate-700">課題解決 × 価値共創の設計</p>
+                  <p className="text-sm font-semibold text-slate-900 leading-tight">Emotion × Structure</p>
+                  <p className="text-xs font-medium text-slate-600 leading-tight">感情を支える構造を設計するディレクター</p>
                 </div>
               </div>
             </div>
@@ -33,7 +30,7 @@ export default function MainVisual() {
           <div className="order-1 space-y-6 font-[Montserrat] lg:order-2 lg:text-left">
             <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">
               <span className="h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true" />
-              プロジェクトデザイン／UXリード
+              プロジェクトディレクター／UXリード
             </span>
             <h1 className="text-5xl font-semibold tracking-tight text-slate-900 md:text-6xl lg:text-7xl">
               Megumi Wada

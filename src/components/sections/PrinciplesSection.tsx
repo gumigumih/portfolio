@@ -21,7 +21,8 @@ export default function PrinciplesSection() {
                 良いプロダクト
               </h4>
               <p className="mt-4 text-sm md:text-base text-slate-700">
-                課題を的確に解決し、日常や業務に持続的な価値をもたらすこと
+                感情が届く導線と、チームが安心して動ける土台があること。<br />
+                ユーザーの“体験”と、現場の“実現性”の両立が取れているもの。
               </p>
             </div>
 
@@ -31,7 +32,8 @@ export default function PrinciplesSection() {
                 良いUX
               </h4>
               <p className="mt-4 text-sm md:text-base text-slate-700">
-                迷わず目的にたどり着けて、そのプロセスで心地よく、価値を実感できること
+                迷わず使えて、感情の流れを邪魔しないこと。<br />
+                情報・動線・体験の設計が、自然に人の心を動かすこと。
               </p>
             </div>
 
@@ -41,7 +43,8 @@ export default function PrinciplesSection() {
                 良いクリエイティブ
               </h4>
               <p className="mt-4 text-sm md:text-base text-slate-700">
-                目的や意図を的確に表現し、感情や行動をポジティブに動かすこと
+                目的を的確に伝えながら、感情を引き出す表現であること。<br />
+                世界観やトーンが整理され、体験の意図がぶれないこと。
               </p>
             </div>
           </div>
