@@ -1,4 +1,4 @@
-import { ProjectData } from '../../../data/works/types';
+import type { ProjectData } from '../../../data/works/types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 

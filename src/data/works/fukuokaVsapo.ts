@@ -1,4 +1,4 @@
-import { ProjectData } from './types';
+import type { ProjectData } from './types';
 import image1 from '../../assets/images/works/fukuokaVsapo/image1.png';
 import image2 from '../../assets/images/works/fukuokaVsapo/image2.png';
 import thumbnail from '../../assets/images/works/fukuokaVsapo/thumbnail.png';

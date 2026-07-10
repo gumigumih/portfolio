@@ -1,0 +1,36 @@
+---
+import App from '../../App'
+import '../../index.css'
+
+export function getStaticPaths() {
+  const projectIds = [
+    'virtualBusinessCard',
+    'culturalHeritage3D',
+    'streamingManager',
+    'miuraKamakura',
+    'majikaruLove',
+    'fukuokaVsapo',
+    'niceCamera',
+    'aiKataS2p',
+    'nijisanjiKuji',
+    'youtubeScheduler',
+    'snackAR',
+  ]
+
+  return projectIds.map((projectId) => ({
+    params: { projectId },
+  }))
+}
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PORTFOLIO 和田愛</title>
+  </head>
+  <body>
+    <App client:only="react" />
+  </body>
+</html>

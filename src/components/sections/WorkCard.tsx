@@ -1,4 +1,4 @@
-import { ProjectData } from '../../data/works/types';
+import type { ProjectData } from '../../data/works/types';
 import Card from '../ui/Card';
 import ProjectTypeBadge from '../ui/ProjectTypeBadge';
 import AchievementCard from '../ui/AchievementCard';

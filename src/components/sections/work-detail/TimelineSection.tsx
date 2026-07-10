@@ -1,4 +1,4 @@
-import { ProjectData, CategoryType } from '../../../data/works/types';
+import type { ProjectData, CategoryType } from '../../../data/works/types';
 
 interface Props {
   project: ProjectData;

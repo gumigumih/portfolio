@@ -1,6 +1,6 @@
 # Cloudflare Pages setup
 
-Cloudflare Pages で `portfolio.meggumi.com` を公開し、Pages Functions で Basic 認証をかけるための手順です。
+Cloudflare Pages で Astro build の `dist` を配信し、`portfolio.meggumi.com` に Pages Functions で Basic 認証をかけるための手順です。
 
 ## 1. Pages プロジェクトを作成する
 

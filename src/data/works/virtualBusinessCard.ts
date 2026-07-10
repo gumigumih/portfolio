@@ -1,4 +1,4 @@
-import { ProjectData } from './types';
+import type { ProjectData } from './types';
 import image1 from '../../assets/images/works/virtualBusinessCard/image1.png';
 
 export const virtualBusinessCard: ProjectData = {

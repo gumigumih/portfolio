@@ -1,6 +1,6 @@
 
 import { faCode, faLightbulb, faBrain, faLayerGroup, faWrench, faUsers, faPalette } from '@fortawesome/free-solid-svg-icons';
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 export interface ToolUsage {
   title: string;

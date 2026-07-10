@@ -4,7 +4,7 @@ import SlideNav from '../layout/SlideNav';
 import FadeInSection from '../ui/animations/FadeInSection';
 import MainVisual from '../sections/MainVisual';
 import WorkDetail from '../sections/WorkDetail';
-import { ProjectData } from '../../data/works/types';
+import type { ProjectData } from '../../data/works/types';
 import virtualBusinessCard from '../../data/works/virtualBusinessCard';
 import culturalHeritage3D from '../../data/works/culturalHeritage3D';
 import streamingManager from '../../data/works/streamingManager';

@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { ProjectData } from '../data/works/types';
+import type { ProjectData } from '../data/works/types';
 import NiceCameraData from '../data/works/niceCamera';
 import AiKataS2pData from '../data/works/aiKataS2p';
 import MiuraKamakuraData from '../data/works/miuraKamakura';

@@ -1,6 +1,6 @@
 # gumigumih portfolio
 
-React + TypeScript + Vite portfolio site.
+Astro + React + TypeScript portfolio site.
 
 ## Development
 

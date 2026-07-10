@@ -1,7 +1,7 @@
 import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Zoom from 'react-medium-image-zoom';
-import { ProjectData } from '../../../data/works/types';
+import type { ProjectData } from '../../../data/works/types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 

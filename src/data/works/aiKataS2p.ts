@@ -1,4 +1,4 @@
-import { ProjectData } from './types';
+import type { ProjectData } from './types';
 import image1a from '../../assets/images/works/aiKataS2p/image1a.png';
 import image1b from '../../assets/images/works/aiKataS2p/image1b.png';
 import image1c from '../../assets/images/works/aiKataS2p/image1c.png';

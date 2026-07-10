@@ -1,4 +1,4 @@
-import { ProjectData } from './types';
+import type { ProjectData } from './types';
 import image1 from '../../assets/images/works/snackAR/image1.png';
 import image2 from '../../assets/images/works/snackAR/image2.png';
 import image3 from '../../assets/images/works/snackAR/image3.png';

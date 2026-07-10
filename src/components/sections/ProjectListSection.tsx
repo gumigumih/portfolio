@@ -4,7 +4,7 @@ import WorkDetail from './WorkDetail';
 import Button from '../ui/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt, faLayerGroup } from '@fortawesome/free-solid-svg-icons';
-import { ProjectData } from '../../data/works/types';
+import type { ProjectData } from '../../data/works/types';
 import { FILTER_CONFIG } from '../../constants/projectTypes';
 
 interface ProjectListSectionProps {
