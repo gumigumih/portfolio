@@ -21,26 +21,26 @@ export default function SlidesSection({ project }: Props) {
   }
 
   return (
-    <div className="mt-10">
-      <h3 className="text-2xl font-bold text-gray-600 mb-5">成果物・実績</h3>
+    <section className="border-t border-slate-200 pt-8">
+      <h3 className="text-xl font-bold text-slate-900 md:text-2xl">成果物・実績</h3>
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={50}
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
-        className="bg-gray-50 rounded-lg"
+        className="mt-5 border border-slate-200 bg-white"
       >
         {project.slides.map((slide, index) => (
-          <SwiperSlide key={index} className="pt-10 pb-15 px-4 md:px-20">
+          <SwiperSlide key={index} className="px-4 pb-14 pt-8 md:px-16 md:pt-10">
             <div className="max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold text-gray-700 mb-4">{slide.title}</h3>
-              <p className="text-lg mb-8 text-justify text-gray-600 leading-relaxed">{slide.description ?? ""}</p>
+              <h3 className="mb-3 text-2xl font-bold text-slate-900">{slide.title}</h3>
+              <p className="mb-8 leading-8 text-slate-600">{slide.description ?? ""}</p>
               <div className={`grid ${slide.images.length > 1 ? 'grid-cols-2' : 'grid-cols-1'} gap-6`}>
                 {slide.images.map((img, i) => (
                   <div key={i} className="flex justify-center">
                     <Zoom>
-                      <img src={imageSrc(img)} alt="" className="max-h-[500px] w-auto cursor-zoom-in rounded-lg border border-slate-200 object-contain" />
+                      <img src={imageSrc(img)} alt="" className="max-h-[500px] w-auto cursor-zoom-in border border-slate-200 object-contain" />
                     </Zoom>
                   </div>
                 ))}
@@ -51,7 +51,7 @@ export default function SlidesSection({ project }: Props) {
                     href={slide.link} 
                     target="_blank" 
                     rel="noreferrer" 
-                    className="inline-flex cursor-pointer items-center rounded-lg bg-blue-500 px-6 py-2 text-white transition-colors hover:bg-blue-600"
+                    className="inline-flex cursor-pointer items-center bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-700"
                   >
                     サイトを見る
                     <FontAwesomeIcon icon={faExternalLinkAlt} className="ml-2 text-sm" />
@@ -62,6 +62,6 @@ export default function SlidesSection({ project }: Props) {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </section>
   );
 }

@@ -26,30 +26,32 @@ export default function TimelineSection({ project }: Props) {
   }
 
   return (
-    <div className="mt-10">
-      <h3 className="text-2xl font-bold text-gray-600 mb-5">プロジェクトの歩み</h3>
-      <div className="space-y-8">
+    <section className="border-t border-slate-200 pt-8">
+      <h3 className="text-xl font-bold text-slate-900 md:text-2xl">プロジェクトの歩み</h3>
+      <div className="mt-6 space-y-5">
         {project.timeline.map((phase, index) => (
-          <div key={index} className="bg-gray-50 p-6 rounded-lg">
-            <div className="flex justify-between items-center mb-4">
-              <h4 className="text-xl font-semibold text-gray-700">{phase.title}</h4>
-              <span className="text-sm text-gray-500">{phase.period}</span>
-            </div>
-            <p className="text-gray-600 mb-6">{phase.description}</p>
-            <div className="space-y-3">
-              <h5 className="text-base font-semibold text-gray-700 mb-3">私の取り組み</h5>
-              {phase.achievements.map((achievement, i) => (
-                <div key={i} className="flex items-start">
-                  <span className={`inline-block px-2 py-1 text-xs font-bold rounded-full mr-3 ${getCategoryStyle(achievement.category)}`}>
-                    {getCategoryLabel(achievement.category)}
-                  </span>
-                  <span className="text-gray-800">{achievement.text}</span>
-                </div>
-              ))}
+          <div key={index} className="border-l-2 border-slate-300 pl-5">
+            <div className="border border-slate-200 bg-white p-5">
+              <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
+                <h4 className="text-lg font-semibold text-slate-900">{phase.title}</h4>
+                <span className="shrink-0 text-sm font-semibold text-slate-500">{phase.period}</span>
+              </div>
+              <p className="mt-3 leading-7 text-slate-600">{phase.description}</p>
+              <div className="mt-5 space-y-3">
+                <h5 className="text-sm font-semibold text-slate-900">私の取り組み</h5>
+                {phase.achievements.map((achievement, i) => (
+                  <div key={i} className="flex flex-col gap-2 sm:flex-row sm:items-start">
+                    <span className={`inline-flex w-fit px-2 py-1 text-xs font-bold ${getCategoryStyle(achievement.category)}`}>
+                      {getCategoryLabel(achievement.category)}
+                    </span>
+                    <span className="leading-7 text-slate-700">{achievement.text}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

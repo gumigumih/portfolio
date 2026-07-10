@@ -1,0 +1,6 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#f8fafc"/>
+  <rect x="80" y="72" width="1440" height="756" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="800" y="458" text-anchor="middle" font-family="'Hiragino Sans', 'Yu Gothic', 'Noto Sans JP', sans-serif" font-size="96" font-weight="700" letter-spacing="0.12em" fill="#334155">非公開</text>
+  <text x="800" y="530" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="600" letter-spacing="0.16em" fill="#94a3b8">PRIVATE CASE STUDY</text>
+</svg>

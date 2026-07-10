@@ -1,13 +1,15 @@
 import type { ProjectData } from './types';
-import coverImage from '../../assets/images/mainvisual.png';
+import thumbnail from '../../assets/images/works/aiConversationApp/thumbnail.png';
 
 export const aiConversationApp: ProjectData = {
   type: 'technical',
-  startDate: { year: 2025, month: 4 },
+  startDate: { year: 2025, month: 10 },
   endDate: { year: 2026, month: 7 },
+  isOngoing: true,
   heading: 'AI対話アプリ（非公開案件）',
   lead: '技術的な意思決定と開発推進を支える技術PM',
-  coverImage,
+  coverImage: thumbnail,
+  thumbnail,
   description: `大手企業が提供するAI対話型アプリにおいて、収束フェーズの技術PM / プレイングテックリードとして参画。
 プロジェクト全体・システム設計・実装の視点を行き来しながら、技術的な判断材料の整理、WebSocket・Redis・Firestoreを中心としたリアルタイム通信基盤の設計整理、設計レビュー、PRレビュー、品質改善、通知基盤のアーキテクチャ検討を担当しました。`,
 
@@ -99,8 +101,8 @@ export const aiConversationApp: ProjectData = {
   timeline: [
     {
       title: '構造的な技術課題の整理',
-      period: '2025年4月〜',
-      description: '再接続、ACK、永続化などの品質課題を、WebSocket・Redis・Firestoreの責務整理として分解。',
+      period: '2025年10月〜',
+      description: '再接続、ACK、永続化などの品質課題を、WebSocket・Firestoreの責務整理として分解。',
       achievements: [
         { category: '技術開発', text: 'リアルタイム通信基盤の責務と状態管理の論点を整理' },
         { category: 'プロジェクト推進', text: 'PM・開発会社・技術チーム間の認識合わせを支援' },
@@ -108,7 +110,7 @@ export const aiConversationApp: ProjectData = {
     },
     {
       title: 'レビュー体制と品質改善の支援',
-      period: '2025年後半〜',
+      period: '2026年4月〜',
       description: '設計レビュー・PRレビューを通じて、個別修正ではなく品質観点で改善できる体制を支援。',
       achievements: [
         { category: '技術開発', text: '設計観点・実装観点でのレビューとフィードバックを実施' },
@@ -117,7 +119,7 @@ export const aiConversationApp: ProjectData = {
     },
     {
       title: '通知基盤のアーキテクチャ検討',
-      period: '2026年〜',
+      period: '2026年6月〜',
       description: 'OneSignal導入に向けて、通知要件・マーケティング施策・既存アーキテクチャの接続を検討。',
       achievements: [
         { category: 'プロダクト戦略', text: 'Push通知基盤と施策要件の整理' },

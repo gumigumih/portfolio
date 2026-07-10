@@ -10,16 +10,16 @@ export default function TechStackSection({ project }: Props) {
   }
 
   return (
-    <div className="mt-10">
-      <h3 className="text-2xl font-bold text-gray-600 mb-5">技術スタック</h3>
-      <div className="bg-gray-50 p-6 rounded-lg">
-        <div className="flex flex-wrap gap-x-10 gap-y-4">
+    <section className="border-t border-slate-200 pt-8">
+      <h3 className="text-xl font-bold text-slate-900 md:text-2xl">技術スタック</h3>
+      <div className="mt-5 border border-slate-200 bg-white p-5">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
           {Object.entries(project.techStack).map(([category, technologies]) => (
-            <div key={category} className="w-auto max-w-full">
-              <h4 className="text-base font-semibold text-gray-700 mb-2 capitalize">{category}</h4>
+            <div key={category}>
+              <h4 className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">{category}</h4>
               <div className="flex flex-wrap gap-1.5">
                 {technologies.map((tech: string, index: number) => (
-                  <span key={index} className="px-2 py-0.5 bg-gray-200 rounded text-gray-700 text-sm whitespace-nowrap">
+                  <span key={index} className="whitespace-nowrap bg-slate-100 px-2 py-1 text-sm text-slate-700">
                     {tech}
                   </span>
                 ))}
@@ -28,6 +28,6 @@ export default function TechStackSection({ project }: Props) {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

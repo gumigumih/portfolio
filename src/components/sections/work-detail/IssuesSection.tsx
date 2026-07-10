@@ -10,20 +10,17 @@ export default function IssuesSection({ project }: Props) {
   }
 
   return (
-    <div className="mt-10">
-      <h3 className="text-2xl font-bold text-gray-600 mb-5">課題背景</h3>
-      <div className="space-y-6">
+    <section className="border-t border-slate-200 pt-8">
+      <h3 className="text-xl font-bold text-slate-900 md:text-2xl">課題背景</h3>
+      <div className="mt-5 space-y-4">
         {project.issues.map((issue, index) => (
-          <div key={index} className="bg-gray-50 p-6 rounded-lg">
-            <h4 className="text-xl font-semibold text-gray-700 mb-3">{issue.title}</h4>
-            <div className="space-y-4">
-              <div>
-                <p className="text-gray-600">{issue.description}</p>
-              </div>
-            </div>
+          <div key={index} className="border border-slate-200 bg-white p-5">
+            <p className="text-xs font-semibold tracking-[0.16em] text-slate-400">ISSUE {String(index + 1).padStart(2, '0')}</p>
+            <h4 className="mt-2 text-lg font-semibold text-slate-900">{issue.title}</h4>
+            <p className="mt-3 leading-7 text-slate-600">{issue.description}</p>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

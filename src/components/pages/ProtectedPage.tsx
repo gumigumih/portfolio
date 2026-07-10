@@ -149,7 +149,7 @@ export default function ProtectedPage() {
           {/* モーダル */}
           {selectedProject && (
             <div 
-              className="fixed inset-0 z-50 flex cursor-pointer items-center justify-center bg-white/50 bg-opacity-50 p-0 md:p-4"
+              className="fixed inset-0 z-50 flex cursor-pointer items-center justify-center bg-slate-950/35 p-0 md:p-4"
               onClick={handleCloseModal}
             >
               <div 

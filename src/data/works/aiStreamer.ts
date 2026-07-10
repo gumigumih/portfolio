@@ -99,7 +99,7 @@ export const aiStreamer: ProjectData = {
     },
     {
       title: '音声合成サービス変更への対応整理',
-      period: '2025年',
+      period: '2026年5月',
       description: '音声合成サービス変更に伴い、キャラクター表現やUnity側改修への影響を整理しながら開発を推進。',
       achievements: [
         { category: 'プロジェクト推進', text: '変更内容とUnity側の対応範囲を整理' },
@@ -108,7 +108,7 @@ export const aiStreamer: ProjectData = {
     },
     {
       title: '複数キャラクター対応の進行管理',
-      period: '2025年7月',
+      period: '2026年5月',
       description: '5キャラクター対応に向けたUnity側の改修について、タスク・進捗・確認事項を整理し、自身でも改修を担当。',
       achievements: [
         { category: 'プロジェクト推進', text: 'Unity開発の進行管理を担当' },

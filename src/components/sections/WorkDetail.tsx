@@ -15,14 +15,16 @@ interface Props {
 
 export default function WorkDetail({ project }: Props) {
   return (
-    <div className="p-10 md:p-20">
+    <article className="mx-auto max-w-5xl px-4 py-8 md:px-10 md:py-12">
       <ProjectHeader project={project} />
-      <IssuesSection project={project} />
-      <RolesSection project={project} />
-      <AchievementsSection project={project} />
-      <TechStackSection project={project} />
-      <TimelineSection project={project} />
-      <SlidesSection project={project} />
-    </div>
+      <div className="mt-12 space-y-14">
+        <IssuesSection project={project} />
+        <RolesSection project={project} />
+        <AchievementsSection project={project} />
+        <TechStackSection project={project} />
+        <TimelineSection project={project} />
+        <SlidesSection project={project} />
+      </div>
+    </article>
   );
 }

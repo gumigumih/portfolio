@@ -16,6 +16,7 @@ export interface ProjectData {
   type: ProjectType;
   startDate: { year: number; month: number };
   endDate: { year: number; month: number };
+  isOngoing?: boolean;
   heading: string;
   lead: string;
   coverImage: ImageSource;

@@ -10,20 +10,20 @@ export default function AchievementsSection({ project }: Props) {
   }
 
   return (
-    <div className="mt-10">
-      <h3 className="text-2xl font-bold text-gray-600 mb-5">成果</h3>
+    <section className="border-t border-slate-200 pt-8">
+      <h3 className="text-xl font-bold text-slate-900 md:text-2xl">成果</h3>
       
-      <div className="mb-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="mt-5">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           {project.achievements.map((achievement, index) => (
-            <div key={index} className="bg-gray-50 p-6 rounded-lg text-center">
-              <p className="text-xl font-semibold text-gray-700">{achievement.title}</p>
-              <p className="text-3xl font-bold text-gray-800 my-2">{achievement.value}</p>
-              <p className="text-gray-600">{achievement.description}</p>
+            <div key={index} className="border border-slate-200 bg-white p-5">
+              <p className="text-sm font-semibold text-slate-500">{achievement.title}</p>
+              <p className="my-2 text-3xl font-bold text-slate-900">{achievement.value}</p>
+              <p className="text-sm leading-6 text-slate-600">{achievement.description}</p>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

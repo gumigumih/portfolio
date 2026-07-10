@@ -55,7 +55,7 @@ const WorkCard = ({ project, onClick }: WorkCardProps) => {
           </div>
         )}
         <p className="mt-3 text-xs font-medium uppercase tracking-[0.2em] text-slate-400">
-          {formatProjectPeriod(project.startDate, project.endDate)}
+          {formatProjectPeriod(project.startDate, project.endDate, project.isOngoing)}
         </p>
         {project.achievements && project.achievements.length > 0 && (
           <div className="mt-5 grid grid-cols-1 gap-3">
