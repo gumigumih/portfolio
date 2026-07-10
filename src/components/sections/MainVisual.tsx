@@ -21,8 +21,8 @@ export default function MainVisual() {
                 <div className="flex h-10 w-2 items-center justify-center rounded-xl bg-slate-900 text-[11px] font-semibold leading-tight text-white">
                 </div>
                 <div>
-                  <p className="text-xs font-medium text-slate-600 leading-tight">熱量を、動かす仕組みへ。</p>
-                  <p className="text-sm font-semibold text-slate-900 leading-tight">Creative × Project Director</p>
+                  <p className="text-xs font-medium text-slate-600 leading-tight">役割を切り替え、前へ進める。</p>
+                  <p className="text-sm font-semibold text-slate-900 leading-tight">Technical PM / Playing Tech Lead</p>
                 </div>
               </div>
             </div>
@@ -31,31 +31,35 @@ export default function MainVisual() {
           <div className="order-1 space-y-6 font-[Montserrat] lg:order-2 lg:text-left">
             <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">
               <span className="h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true" />
-              プロジェクトディレクター／UXリード
+              技術PM／プレイングテックリード
             </span>
             <h1 className="text-5xl font-semibold tracking-tight text-slate-900 md:text-6xl lg:text-7xl">
               Megumi Wada
             </h1>
+            <p className="max-w-2xl text-xl font-semibold leading-relaxed text-slate-800 md:text-2xl">
+              プロジェクト・設計・実装の視点をつなぎ、
+              技術的な意思決定と開発推進を支えます。
+            </p>
             <div className="grid gap-3 sm:inline-grid sm:grid-flow-col sm:auto-cols-fr">
               <a
                 href="#projects"
-                className="inline-flex items-center justify-center rounded-full border border-slate-900 bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-800"
+                className="inline-flex cursor-pointer items-center justify-center rounded-full border border-slate-900 bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-slate-800"
               >
                 プロジェクトを見る
               </a>
               <a
                 href="#last"
-                className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-white/80"
+                className="inline-flex cursor-pointer items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-white/80"
               >
                 コンタクト
               </a>
             </div>
 
             <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.3em] text-slate-400">
-              <span className="rounded-full border border-slate-200 bg-white/60 px-3 py-1">プロダクト戦略</span>
-              <span className="rounded-full border border-slate-200 bg-white/60 px-3 py-1">UI設計</span>
-              <span className="rounded-full border border-slate-200 bg-white/60 px-3 py-1">Webエンジニアリング</span>
-              <span className="rounded-full border border-slate-200 bg-white/60 px-3 py-1">クリエイティブディレクション</span>
+              <span className="rounded-full border border-slate-200 bg-white/60 px-3 py-1">判断材料の整理</span>
+              <span className="rounded-full border border-slate-200 bg-white/60 px-3 py-1">要件化</span>
+              <span className="rounded-full border border-slate-200 bg-white/60 px-3 py-1">設計・PRレビュー</span>
+              <span className="rounded-full border border-slate-200 bg-white/60 px-3 py-1">開発推進</span>
             </div>
           </div>
         </div>

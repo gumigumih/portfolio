@@ -14,15 +14,15 @@ interface AchievementCardProps {
 const AchievementCard: React.FC<AchievementCardProps> = ({ achievement, className = '' }) => {
   return (
     <div
-      className={`bg-gray-50 rounded-xl border border-gray-200 p-4 flex flex-col items-center hover:scale-[1.03] transition-transform duration-200 ${className}`}
+      className={`border border-slate-200 bg-slate-50 p-3 ${className}`}
     >
-      <div className="text-gray-700 font-semibold text-base mb-1 text-center">
+      <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
         {achievement.title}
       </div>
-      <div className="text-xl font-extrabold text-gray-800 mb-1 leading-none">
+      <div className="mt-2 text-lg font-semibold leading-tight text-slate-900">
         {achievement.value}
       </div>
-      <div className="text-gray-600 text-base text-center whitespace-pre-line">
+      <div className="mt-1 text-sm leading-relaxed text-slate-600 whitespace-pre-line">
         {achievement.description}
       </div>
     </div>

@@ -40,7 +40,7 @@ export default function SlidesSection({ project }: Props) {
                 {slide.images.map((img, i) => (
                   <div key={i} className="flex justify-center">
                     <Zoom>
-                      <img src={imageSrc(img)} alt="" className="max-h-[500px] w-auto object-contain cursor-zoom-in rounded-lg shadow-lg" />
+                      <img src={imageSrc(img)} alt="" className="max-h-[500px] w-auto cursor-zoom-in rounded-lg border border-slate-200 object-contain" />
                     </Zoom>
                   </div>
                 ))}
@@ -51,7 +51,7 @@ export default function SlidesSection({ project }: Props) {
                     href={slide.link} 
                     target="_blank" 
                     rel="noreferrer" 
-                    className="inline-flex items-center px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                    className="inline-flex cursor-pointer items-center rounded-lg bg-blue-500 px-6 py-2 text-white transition-colors hover:bg-blue-600"
                   >
                     サイトを見る
                     <FontAwesomeIcon icon={faExternalLinkAlt} className="ml-2 text-sm" />

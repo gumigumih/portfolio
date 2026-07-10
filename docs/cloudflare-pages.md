@@ -63,15 +63,7 @@ Cloudflare Pages の Git連携を使うため、`main` へ push すると Cloudf
 
 ## 5. GitHub Pages から移行する場合
 
-このリポジトリには GitHub Pages 用の `CNAME` が残っています。
-
-```text
-portfolio.meggumi.com
-```
-
-Cloudflare Pages の配信ではこのファイルは使いません。GitHub Pages を完全に使わなくなったタイミングで削除してかまいません。
-
-GitHub Pages 用の workflow は削除済みです。Cloudflare Pages は GitHub 連携で `main` への push を検知して自動デプロイします。
+GitHub Pages 用の `CNAME` と workflow は削除済みです。Cloudflare Pages は GitHub 連携で `main` への push を検知して自動デプロイします。
 
 ## 6. ローカル確認
 

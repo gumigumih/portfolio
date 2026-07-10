@@ -27,7 +27,7 @@ export default function ProjectHeader({ project }: Props) {
             href={project.productUrl} 
             target="_blank" 
             rel="noreferrer" 
-            className="inline-flex items-center px-6 py-2 bg-white text-blue-600 border-1 border-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
+            className="border-1 inline-flex cursor-pointer items-center rounded-lg border-blue-600 bg-white px-6 py-2 text-blue-600 transition-colors hover:bg-blue-50"
           >
             サイトへ
             <FontAwesomeIcon icon={faExternalLinkAlt} className="ml-2 text-sm" />

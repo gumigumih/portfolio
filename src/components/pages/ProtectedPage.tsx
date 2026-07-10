@@ -16,6 +16,7 @@ import aiKataS2p from '../../data/works/aiKataS2p';
 import nijisanjiKuji from '../../data/works/nijisanjiKuji';
 import youtubeScheduler from '../../data/works/youtubeScheduler';
 import snackAR from '../../data/works/snackAR';
+import aiConversationApp from '../../data/works/aiConversationApp';
 import TechnicalSkillMap from '../sections/TechnicalSkillMap';
 import AboutSection from '../sections/AboutSection';
 import { DividerTitle } from '../ui';
@@ -23,8 +24,10 @@ import StrengthsSection from '../sections/StrengthsSection';
 import LastSection from '../sections/LastSection';
 import ProjectListSection from '../sections/ProjectListSection';
 import PrinciplesSection from '../sections/PrinciplesSection';
+import HowIWorkSection from '../sections/HowIWorkSection';
 
 const projectData: { [key: string]: ProjectData } = {
+  aiConversationApp: aiConversationApp,
   virtualBusinessCard: virtualBusinessCard,
   culturalHeritage3D: culturalHeritage3D,
   streamingManager: streamingManager,
@@ -52,7 +55,7 @@ export default function ProtectedPage() {
   } = useProtectedPage();
   // setSortOrder型対応
   const handleSortOrder = (order: string) => {
-    if (order === 'chronological' || order === 'genre') {
+    if (order === 'chronological' || order === 'domain') {
       setSortOrder(order);
     }
   };
@@ -91,6 +94,14 @@ export default function ProtectedPage() {
             <div id="principles">
               <DividerTitle>考え方</DividerTitle>
               <PrinciplesSection />
+            </div>
+          </FadeInSection>
+
+          {/* 進め方 */}
+          <FadeInSection>
+            <div id="how-i-work">
+              <DividerTitle>進め方</DividerTitle>
+              <HowIWorkSection />
             </div>
           </FadeInSection>
 
@@ -136,16 +147,16 @@ export default function ProtectedPage() {
           {/* モーダル */}
           {selectedProject && (
             <div 
-              className="fixed inset-0 bg-white/50 bg-opacity-50 z-50 flex items-center justify-center p-0 md:p-4"
+              className="fixed inset-0 z-50 flex cursor-pointer items-center justify-center bg-white/50 bg-opacity-50 p-0 md:p-4"
               onClick={handleCloseModal}
             >
               <div 
-                className="bg-white shadow-lg rounded-none md:rounded-lg w-full h-full md:max-w-7xl md:max-h-[90vh] overflow-y-auto"
+                className="h-full w-full cursor-default overflow-y-auto rounded-none bg-white shadow-lg md:max-h-[90vh] md:max-w-7xl md:rounded-lg"
                 onClick={(e) => e.stopPropagation()}
               >
                 <button
                   onClick={handleCloseModal}
-                  className="fixed top-4 right-4 md:top-6 md:right-6 text-gray-500 hover:text-gray-700 z-50 bg-white rounded-full p-2 shadow-lg"
+                  className="fixed right-4 top-4 z-50 cursor-pointer rounded-full bg-white p-2 text-gray-500 shadow-lg hover:text-gray-700 md:right-6 md:top-6"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

@@ -24,7 +24,7 @@ const Button: React.FC<ButtonProps> = ({
   const baseClasses = 'inline-flex items-center gap-2 rounded-full transition-all duration-200 font-medium';
   
   const variantClasses = {
-    primary: 'bg-gray-700 text-white shadow-lg hover:bg-gray-600',
+    primary: 'bg-gray-700 text-white hover:bg-gray-600',
     secondary: 'bg-white text-gray-600 hover:bg-gray-100',
     outline: 'border border-gray-300 bg-white text-gray-600 hover:bg-gray-50'
   };

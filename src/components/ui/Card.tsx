@@ -31,8 +31,8 @@ const Card: React.FC<CardProps> = ({
   footerContent,
   footerBg,
 }) => {
-  const baseClasses = 'bg-white rounded-lg shadow-lg overflow-hidden';
-  const hoverClasses = hover ? 'cursor-pointer hover:shadow-xl transition-shadow duration-300' : '';
+  const baseClasses = 'bg-white rounded-lg border border-slate-200 overflow-hidden';
+  const hoverClasses = hover ? 'cursor-pointer hover:shadow-sm transition-shadow duration-300' : '';
   const clickableClasses = onClick ? 'cursor-pointer' : '';
   
   const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`;
