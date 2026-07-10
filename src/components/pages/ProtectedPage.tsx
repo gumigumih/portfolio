@@ -17,6 +17,7 @@ import nijisanjiKuji from '../../data/works/nijisanjiKuji';
 import youtubeScheduler from '../../data/works/youtubeScheduler';
 import snackAR from '../../data/works/snackAR';
 import aiConversationApp from '../../data/works/aiConversationApp';
+import aiStreamer from '../../data/works/aiStreamer';
 import TechnicalSkillMap from '../sections/TechnicalSkillMap';
 import AboutSection from '../sections/AboutSection';
 import { DividerTitle } from '../ui';
@@ -28,6 +29,7 @@ import HowIWorkSection from '../sections/HowIWorkSection';
 
 const projectData: { [key: string]: ProjectData } = {
   aiConversationApp: aiConversationApp,
+  aiStreamer: aiStreamer,
   virtualBusinessCard: virtualBusinessCard,
   culturalHeritage3D: culturalHeritage3D,
   streamingManager: streamingManager,

@@ -6,8 +6,8 @@ import thumbnail from '../../assets/images/works/nijisanjiKuji/thumbnail.png';
 
 export const nijisanjiKuji: ProjectData = {
   type: 'avatar',
-  startDate: { year: 2023, month: 4 },
-  endDate: { year: 2024, month: 3 },
+  startDate: { year: 2018, month: 10 },
+  endDate: { year: 2019, month: 3 },
   heading: 'にじさんじくじ',
   lead: 'VTuberTV番組のVR収録支援',
   coverImage: thumbnail,
@@ -30,8 +30,8 @@ export const nijisanjiKuji: ProjectData = {
   // 3. 自分の役割
   roles: {
     overall: [
-      'VR技術サポート',
-      'プロジェクト管理'
+      'VRテクニカルスタッフ',
+      '制作進行'
     ],
     details: [
       {

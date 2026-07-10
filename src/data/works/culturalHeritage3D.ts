@@ -33,7 +33,7 @@ export const culturalHeritage3D: ProjectData = {
   roles: {
     overall: [
       'プロジェクトマネージャー',
-      'メインエンジニア'
+      'Webエンジニア'
     ],
     details: [
       {

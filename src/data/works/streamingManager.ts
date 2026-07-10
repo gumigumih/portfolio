@@ -28,7 +28,7 @@ export const streamingManager: ProjectData = {
   // 3. 自分の役割
   roles: {
     overall: [
-      'システムエンジニア',
+      'Webエンジニア',
       'サーバーエンジニア'
     ],
     details: [

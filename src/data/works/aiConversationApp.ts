@@ -30,8 +30,6 @@ export const aiConversationApp: ProjectData = {
     overall: [
       '技術PM',
       'プレイングテックリード',
-      'エンジニア',
-      '設計レビュー・PRレビュー',
     ],
     details: [
       {

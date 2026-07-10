@@ -49,7 +49,7 @@ export const miuraKamakura: ProjectData = {
   roles: {
     details: [
       {
-        title: 'プロジェクトマネジメント',
+        title: 'プロジェクト推進',
         color: 'bg-pink-400',
         items: [
           'ガントチャートを活用した複数制作物の進捗と納期管理',

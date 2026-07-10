@@ -2,7 +2,7 @@ import type { ProjectData } from './types';
 import image1 from '../../assets/images/works/virtualBusinessCard/image1.png';
 
 export const virtualBusinessCard: ProjectData = {
-  type: 'product',
+  type: 'tool',
   startDate: { year: 2020, month: 4 },
   endDate: { year: 2020, month: 4 },
   heading: 'バーチャル名刺背景ジェネレーター',
@@ -28,8 +28,8 @@ export const virtualBusinessCard: ProjectData = {
   // 3. 自分の役割
   roles: {
     overall: [
-      'メインエンジニア',
-      'プロダクト戦略'
+      'Webエンジニア',
+      'UI/UXデザイナー'
     ],
     details: [
       {

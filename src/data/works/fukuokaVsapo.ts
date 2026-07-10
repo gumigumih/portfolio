@@ -4,15 +4,15 @@ import image2 from '../../assets/images/works/fukuokaVsapo/image2.png';
 import thumbnail from '../../assets/images/works/fukuokaVsapo/thumbnail.png';
 
 export const fukuokaVsapo: ProjectData = {
-  type: 'avatar',
+  type: 'product',
   startDate: { year: 2023, month: 4 },
   endDate: { year: 2023, month: 9 },
   heading: 'FukuokaVsapo',
   lead: '引きこもり支援のアバター個別相談アプリ',
   coverImage: thumbnail,
-  description: `本プロジェクトは、福岡市の観光案内をアバターで行うアプリの開発です。
-クライアントの要件を整理し、仕様決定・UI/UXデザイン・3Dアバター制作を担当しました。
-相談の予約システムとアカウント管理は別企業が開発し、アプリからログイン後、予約がある場合に入室できるようAPI連携を実装しました。`,
+  description: `本プロジェクトは、引きこもり支援を目的としたアバター個別相談アプリの開発です。
+開発ディレクターとして、クライアント要件の整理、画面フロー・仕様整理、UI/UXデザイン、3Dアバター制作、外部開発会社との連携を担当しました。
+相談予約システムとアカウント管理は別企業が開発し、ログイン後に予約状態に応じて相談ルームへ入室できるよう、API連携仕様の整理と統合確認を行いました。`,
 
   // 2. 課題
   issues: [
@@ -29,9 +29,9 @@ export const fukuokaVsapo: ProjectData = {
   // 3. 自分の役割
   roles: {
     overall: [
-      'プロジェクトマネージャー',
+      '開発ディレクター',
       'UI/UXデザイナー',
-      '3Dアバター制作者'
+      '3Dアーティスト'
     ],
     details: [
       {
@@ -43,17 +43,17 @@ export const fukuokaVsapo: ProjectData = {
         ],
       },
       {
-        title: 'プロジェクト推進',
+        title: '開発ディレクション',
         color: 'bg-blue-400',
         items: [
-          'プロジェクト全体の管理',
-          '開発チーム管理',
-          '関係者との調整・仕様説明資料の作成',
+          '開発全体の進行管理',
+          '開発チーム・外部開発会社との仕様調整',
+          '関係者との認識合わせ・仕様説明資料の作成',
           '品質管理・テスト・デバッグ作業の監督',
         ],
       },
       {
-        title: '技術開発',
+        title: '連携仕様整理',
         color: 'bg-teal-300',
         items: [
           'API連携の仕様調整と実装監督',

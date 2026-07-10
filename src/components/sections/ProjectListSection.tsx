@@ -87,35 +87,27 @@ const ProjectListSection: React.FC<ProjectListSectionProps> = ({
         <div className="mx-auto max-w-6xl px-6 md:px-10">
           {Object.entries(
             filteredProjects.reduce((acc, [projectId, project]) => {
-              const startYear = project.startDate.year;
-              const endYear = project.endDate.year;
-              const periodText = `${project.startDate.year}年${project.startDate.month}月 〜 ${project.endDate.year}年${project.endDate.month}月`;
-              if (startYear !== endYear) {
-                if (!acc[startYear]) {
-                  acc[startYear] = [];
-                }
-                acc[startYear].push([projectId, project, 'start', periodText] as const);
+              const fiscalYear = project.endDate.month >= 4 ? project.endDate.year : project.endDate.year - 1;
+              if (!acc[fiscalYear]) {
+                acc[fiscalYear] = [];
               }
-              if (!acc[endYear]) {
-                acc[endYear] = [];
-              }
-              acc[endYear].push([projectId, project, 'end', periodText] as const);
+              acc[fiscalYear].push([projectId, project]);
               return acc;
-            }, {} as { [key: number]: [string, ProjectData, 'start' | 'end', string][] })
+            }, {} as { [key: number]: [string, ProjectData][] })
           )
             .sort(([yearA], [yearB]) => Number(yearB) - Number(yearA))
             .map(([year, projects]) => {
               return (
                 <section key={year} className="mb-14">
                   <div className="mb-6 flex items-center gap-4 border-b border-slate-200 pb-3">
-                    <h3 className="text-lg font-semibold text-slate-900">{year}年</h3>
+                    <h3 className="text-lg font-semibold text-slate-900">{year}年度</h3>
                     <span className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
                       {projects.length} Entries
                     </span>
                   </div>
                   <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-                    {projects.map(([projectId, project, type]) => (
-                      <div key={`${projectId}-${type}`}>
+                    {projects.map(([projectId, project]) => (
+                      <div key={projectId}>
                         <WorkCard
                           project={project}
                           onClick={() => handleProjectClick(projectId)}

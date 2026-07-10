@@ -1,4 +1,4 @@
-export type ProjectType = 'technical' | 'product' | 'tourism' | 'avatar' | 'promotion';
+export type ProjectType = 'technical' | 'product' | 'tool' | 'tourism' | 'avatar' | 'promotion';
 
 export type CategoryType = 'プロダクト戦略' | 'プロジェクト推進' | '技術開発' | 'デザイン・制作' | '運用・改善';
 

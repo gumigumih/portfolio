@@ -13,9 +13,11 @@ import NijisanjiKujiData from '../data/works/nijisanjiKuji';
 import YoutubeSchedulerData from '../data/works/youtubeScheduler';
 import SnackARData from '../data/works/snackAR';
 import AiConversationAppData from '../data/works/aiConversationApp';
+import AiStreamerData from '../data/works/aiStreamer';
 
 const projectData: { [key: string]: ProjectData } = {
   aiConversationApp: AiConversationAppData,
+  aiStreamer: AiStreamerData,
   virtualBusinessCard: VirtualBusinessCardData,
   culturalHeritage3D: CulturalHeritage3DData,
   streamingManager: StreamingManagerData,
@@ -33,7 +35,7 @@ type SortOrder = 'chronological' | 'domain';
 
 export function useProtectedPage() {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
-  const [sortOrder, setSortOrder] = useState<SortOrder>('domain');
+  const [sortOrder, setSortOrder] = useState<SortOrder>('chronological');
   const navigate = useNavigate();
   const location = useLocation();
 
