@@ -4,6 +4,7 @@ import Zoom from 'react-medium-image-zoom';
 import type { ProjectData } from '../../../data/works/types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { imageSrc } from '../../../utils/imageSrc';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -39,7 +40,7 @@ export default function SlidesSection({ project }: Props) {
                 {slide.images.map((img, i) => (
                   <div key={i} className="flex justify-center">
                     <Zoom>
-                      <img src={img} alt="" className="max-h-[500px] w-auto object-contain cursor-zoom-in rounded-lg shadow-lg" />
+                      <img src={imageSrc(img)} alt="" className="max-h-[500px] w-auto object-contain cursor-zoom-in rounded-lg shadow-lg" />
                     </Zoom>
                   </div>
                 ))}

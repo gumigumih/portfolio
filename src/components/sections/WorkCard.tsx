@@ -3,6 +3,7 @@ import Card from '../ui/Card';
 import ProjectTypeBadge from '../ui/ProjectTypeBadge';
 import AchievementCard from '../ui/AchievementCard';
 import { formatProjectPeriod } from '../../utils/dateUtils';
+import { imageSrc } from '../../utils/imageSrc';
 
 interface WorkCardProps {
   project: ProjectData;
@@ -14,7 +15,7 @@ const WorkCard = ({ project, onClick }: WorkCardProps) => {
     <Card onClick={onClick}>
       <div className="relative h-48 -m-6 mb-0">
         <img
-          src={project.coverImage}
+          src={imageSrc(project.coverImage)}
           alt={project.heading}
           className="w-full h-full object-cover"
         />

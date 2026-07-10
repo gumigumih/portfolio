@@ -1,4 +1,5 @@
 import imageMainvisual from '../../assets/images/mainvisual.png';
+import { imageSrc } from '../../utils/imageSrc';
 
 export default function MainVisual() {
   return (
@@ -12,7 +13,7 @@ export default function MainVisual() {
             <div className="relative w-full max-w-[26rem]">
               <div className="absolute -inset-6 rounded-[2.5rem] border border-slate-200/60 bg-white/70 backdrop-blur-md shadow-[0_25px_55px_-20px_rgba(15,23,42,0.45)]" aria-hidden="true" />
               <img
-                src={imageMainvisual}
+                src={imageSrc(imageMainvisual)}
                 alt="MainVisual"
                 className="relative rounded-[2rem] border border-white shadow-xl"
               />
