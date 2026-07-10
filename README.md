@@ -1,54 +1,58 @@
-# React + TypeScript + Vite
+# gumigumih portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + TypeScript + Vite portfolio site.
 
-Currently, two official plugins are available:
+## Development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```sh
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Build
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```sh
+npm run build
 ```
+
+## Cloudflare Pages
+
+This project is configured for Cloudflare Pages with Basic authentication provided by a Pages Function middleware.
+
+Cloudflare Pages settings:
+
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Production URL: Cloudflare Pages default `*.pages.dev` URL
+- Custom domain: `portfolio.meggumi.com`
+
+Set these encrypted secrets in Cloudflare Pages before deploying:
+
+- `BASIC_AUTH_USERNAME`
+- `BASIC_AUTH_PASSWORD`
+
+Optional environment variable:
+
+- `BASIC_AUTH_REALM`
+
+For local Pages Functions testing, create `.dev.vars` from the example file:
+
+```sh
+cp .dev.vars.example .dev.vars
+```
+
+Then run the built site with Wrangler:
+
+```sh
+npm run build
+npx wrangler pages dev dist
+```
+
+Deploy with the Cloudflare Pages Git integration. GitHub Pages deployment workflow has been removed.
+
+Manual deployment with Wrangler is also possible:
+
+```sh
+npx wrangler pages deploy dist
+```
+
+See [docs/cloudflare-pages.md](docs/cloudflare-pages.md) for the Cloudflare Pages, custom domain, and Basic auth setup steps.

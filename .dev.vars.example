@@ -1,0 +1,3 @@
+BASIC_AUTH_USERNAME="your-username"
+BASIC_AUTH_PASSWORD="your-password"
+BASIC_AUTH_REALM="Portfolio"
