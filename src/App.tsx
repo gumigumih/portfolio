@@ -1,10 +1,10 @@
-import Auth from './components/features/auth/Auth';
+import ProtectedPage from './components/pages/ProtectedPage';
 import './App.css';
 
 function App() {
   return (
     <>
-      <Auth />
+      <ProtectedPage />
     </>
   )
 }
